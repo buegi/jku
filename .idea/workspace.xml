@@ -20,7 +20,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\stefa\AppData\Roaming\Subversion</configuration>
@@ -34,5 +34,15 @@
       <updated>1581097095402</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1581097133556">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097133556" />
+    <state x="1418" y="916" key="SettingsEditor" timestamp="1581097181304">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097181304" />
   </component>
 </project>
