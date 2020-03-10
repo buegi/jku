@@ -91,7 +91,7 @@ public class TodosMain {
     }
 
     private static void printMenu() {
-        System.out.println("===============================================");
+        System.out.println("=======================================================");
         System.out.println("(a) Add test data");
         System.out.println("(b) Print all todos");
         System.out.println("(c) Print all todos until a specific date");
@@ -101,20 +101,17 @@ public class TodosMain {
         System.out.println("(g) Print all open todos for a specific date");
         System.out.println("(h) Delete all done todos until a specific date");
         System.out.println("(x) End");
-        System.out.println("===============================================");
+        System.out.println("=======================================================");
         System.out.print("What do you want to do? : ");
     }
 
     private static LocalDate inputDate() {
         System.out.print("Please input year: ");
         int year = In.readInt();
-        System.out.println();
         System.out.print("Please input month: ");
         int month = In.readInt();
-        System.out.println();
         System.out.print("Please input day: ");
         int day = In.readInt();
-        System.out.println();
         LocalDate date = LocalDate.of(year, month, day);
         return date;
     }
@@ -132,6 +129,10 @@ public class TodosMain {
     }
 
     private static void printTodos(Todo[] todoList) {
+        if (todoList.length <= 0) {
+            System.out.println("No Todos for your input found!");
+            return;
+        }
         for (int i = 0; i < todoList.length; i++) {
             System.out.println(todoList[i].toString());
         }

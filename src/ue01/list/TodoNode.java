@@ -2,14 +2,13 @@ package ue01.list;
 
 import ue01.data.Todo;
 
-public class TodoNode {
+public final class TodoNode {
 
     private Todo todo;
     private TodoNode next;
 
-    TodoNode(Todo todo, TodoNode next) {
+    TodoNode(Todo todo) {
         this.todo = todo;
-        this.next = next;
     }
 
     public Todo getTodo() {

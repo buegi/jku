@@ -10,11 +10,11 @@ public class Todo {
 
     private static int counter = 0;
 
-    public Todo(String description, LocalDate date, State state) {
+    public Todo(String description, LocalDate date) {
         this.id = counter++;
         this.description = description;
         this.date = date;
-        this.state = state;
+        this.state = State.OPEN;
     }
 
     // getters
@@ -42,6 +42,6 @@ public class Todo {
     // Override
     @Override
     public String toString() {
-        return ("id: " + id + date + " - " + description + " : " + state);
+        return (id + ": " + date + " - " + String.format("%-32s", description) + " : " + state);
     }
 }
