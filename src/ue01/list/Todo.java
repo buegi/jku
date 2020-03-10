@@ -10,8 +10,8 @@ public class Todo {
 
     private static int counter = 0;
 
-    public static enum State {
-        OPEN, DONE;
+    public enum State {
+        OPEN, DONE
     }
 
     public Todo(String description, LocalDate date) {
@@ -21,7 +21,6 @@ public class Todo {
         this.state = State.OPEN;
     }
 
-    // getters
     public int getId() {
         return this.id;
     }
@@ -38,7 +37,6 @@ public class Todo {
         return this.state;
     }
 
-    // setter(s)
     public void setState(State newState) {
         this.state = newState;
     }
