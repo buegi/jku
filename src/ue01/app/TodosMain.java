@@ -2,6 +2,8 @@ package ue01.app;
 
 import inout.In;
 import inout.Out;
+import ue01.data.Todo;
+import ue01.list.TodoList;
 import ue01.list.TodoManager;
 
 import java.time.LocalDate;
@@ -12,10 +14,6 @@ public class TodosMain {
 
         TodoManager todoManager = new TodoManager();
 
-        // addTestData();
-
-        // TODO: Test TodoManager
-
         char menuAction;
         do {
             printMenu();
@@ -24,43 +22,43 @@ public class TodosMain {
             switch (menuAction) {
 
                 case 'a':
+                    // aus den Daten ihren TodoManager befüllen
                     addTestData(todoManager);
                     break;
 
                 case 'b':
-                    todoManager.printAllTodos();
+                    // alle Todos ausgeben
+                    printTodos(todoManager.getAllTodos());
                     break;
 
                 case 'c':
-                    LocalDate cDate = inputDate();
-                    todoManager.printAllDoneTodosUntilDate(cDate);
+                    // die Todos bis zu einem bestimmten Datum ausgeben
+                    printTodos(todoManager.getAllTodosUntil(inputDate()));
                     break;
 
                 case 'd':
-                    todoManager.setTodosToDone();
+                    // einige Todos abschließen
+                    // TODO
                     break;
 
                 case 'e':
-                    todoManager.printAllDoneTodos();
+                    // die abgeschlossenen Todos ausgeben
+                    printTodos(todoManager.getAllDoneTodos());
                     break;
 
                 case 'f':
-                    todoManager.printAllOpenTodos();
+                    // die noch offenen Todos ausgeben
+                    printTodos(todoManager.getAllOpenTodos());
                     break;
 
                 case 'g':
-                    LocalDate gDate = inputDate();
-                    todoManager.printAllOpenTodosPerDate(gDate);
+                    // die offenen zu einem bestimmten Datum ausgeben
+                    printTodos(todoManager.getAllOpenTodosUntil(inputDate()));
                     break;
 
                 case 'h':
-
-                    break;
-
-                case 'i':
-                    String description = inputDescription();
-                    LocalDate iDate = inputDate();
-                    todoManager.addTodo(description, iDate);
+                    // die abgeschlossenen bis einem Datum löschen
+                    todoManager.removeDoneTodosUntil(inputDate());
                     break;
 
                 case 'x':
@@ -75,7 +73,7 @@ public class TodosMain {
     }
 
     private static void addTestData(TodoManager todoManager) {
-        In.open("todos.txt");
+        In.open("src/ue01/app/todos.txt");
         if (!In.done()) {
             Out.println("Cannot open file todos.txt");
             return;
@@ -85,8 +83,8 @@ public class TodosMain {
             int month = In.readInt();
             int day = In.readInt();
             String description = In.readString();
-            // TODO: Add todo with year, month, and day to manager
             year = In.readInt();
+            // TODO: Add todo with year, month, and day to manager
             todoManager.addTodo(description, LocalDate.of(year, month, day));
         }
         In.close();
@@ -102,7 +100,6 @@ public class TodosMain {
         System.out.println("(f) Print all open todos");
         System.out.println("(g) Print all open todos for a specific date");
         System.out.println("(h) Delete all done todos until a specific date");
-        System.out.println("(i) Add Todo per description and date");
         System.out.println("(x) End");
         System.out.println("===============================================");
         System.out.print("What do you want to do? : ");
@@ -132,5 +129,11 @@ public class TodosMain {
         System.out.println();
         int id = In.readInt();
         return id;
+    }
+
+    private static void printTodos(Todo[] todoList) {
+        for (int i = 0; i < todoList.length; i++) {
+            System.out.println(todoList[i].toString());
+        }
     }
 }

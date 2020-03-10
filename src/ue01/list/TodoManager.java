@@ -1,5 +1,6 @@
 package ue01.list;
 
+import ue01.data.State;
 import ue01.data.Todo;
 
 import java.time.LocalDate;
@@ -12,18 +13,7 @@ public class TodoManager {
         this.todoList = new TodoList();
     }
 
-    public void printAllTodos() {
-        //TODO
-        System.out.println("All Todos: ");
-        System.out.println("===========");
-        System.out.println("TODO 1");
-        System.out.println("TODO 2");
-        System.out.println("TODO 3");
-        System.out.println("TODO 4");
-        System.out.println("TODO 5");
-        System.out.println("===========");
-    }
-
+    // Anfügen eines neuen Todos mit Beschreibung und Datum
     public void addTodo(String description, LocalDate date) {
         boolean success = this.todoList.insert(description, date);
         if (success) {
@@ -33,38 +23,46 @@ public class TodoManager {
         }
     }
 
-    public Todo getTodo(int id) {
-        return todoList.lookup(id);
+    // Suche nach einem Todo mit gegebener Id
+    public Todo[] getTodo(int id) {
+        return todoList.get(id);
     }
 
-
-
-    public void printAllOpenTodosPerDate(LocalDate date) {
-        // TODO
+    // Zugriff auf alle Todos
+    public Todo[] getAllTodos() {
+        return todoList.get(null, null);
     }
 
-    public void printAllOpenTodos() {
-        // TODO
+    // Zugriff auf alle Todos bis zu einem bestimmten Datum
+    public Todo[] getAllTodosUntil(LocalDate date) {
+        return todoList.get(date, null);
     }
 
-    public void printAllOpenTodosUntilDate() {
-        // TODO
+    // Zugriff auf alle offenen Todos
+    public Todo[] getAllOpenTodos() {
+        return todoList.get(null, State.OPEN);
     }
 
-    public void printAllDoneTodos() {
-        // TODO
+    // Zugriff auf offene Todos bis zu einem bestimmten Datum
+    public Todo[] getAllOpenTodosUntil(LocalDate date) {
+        return todoList.get(date, State.OPEN);
     }
 
-    public void setTodosToDone() {
-        // TODO
+    // Zugriff auf alle erledigten Todos
+    public Todo[] getAllDoneTodos() {
+        return todoList.get(null, State.DONE);
     }
 
-    public void printAllDoneTodosUntilDate(LocalDate date) {
-        // TODO
+    // Zugriff auf erledigte Todos bis zu einem bestimmten Datum
+    public Todo[] getAllDoneTodosUntil(LocalDate date) {
+        return todoList.get(date, State.DONE);
     }
 
-    public void deleteAllDoneTodosUntilDate(LocalDate date) {
-        // TODO
+    // die abgeschlossenen bis zu einem Datum löschen
+    public void removeDoneTodosUntil(LocalDate date) {
+        Todo[] toBeRemoved = getAllDoneTodosUntil(date);
+        for (int i = 0; i < toBeRemoved.length; i++) {
+            todoList.remove(todoList.lookup(toBeRemoved[i].getId()));
+        }
     }
-
 }

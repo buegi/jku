@@ -41,18 +41,21 @@ public class TodoList {
             prev = prev.getNext();
         }
         prev.setNext(node.getNext());
-
-        // TODO
-
+        this.noOfEntries--;
     }
 
-    public Todo lookup(String name) {
-        // TODO
-        return null;
-    }
 
-    public Todo lookup(int id) {
-        // TODO
+    public TodoNode lookup(int id) {
+        if (head == null) {
+            return null;
+        }
+        TodoNode current = head;
+        while (current != null) {
+            if (current.getTodo().getId() == id) {
+                return current;
+            }
+            current = current.getNext();
+        }
         return null;
     }
 
@@ -61,6 +64,16 @@ public class TodoList {
         return 0;
     }
 
+    Todo[] get(int id) {
+        Todo[] temp = new Todo[1];
+        TodoNode found = lookup(id);
+        if (found == null) {
+            return new Todo[0];
+        } else {
+            temp[0] = found.getTodo();
+            return temp;
+        }
+    }
 
     Todo[] get(LocalDate until, State state) {
         int size = count(until, state);
