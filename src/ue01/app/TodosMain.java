@@ -119,7 +119,6 @@ public class TodosMain {
         return date;
     }
 
-    // TODO
     private static int inputTodos() {
         System.out.println("Please enter the Todo you want to set done:");
         int setDone = In.readInt();

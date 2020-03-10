@@ -158,7 +158,6 @@ public class TodoList {
     }
 
     private int count(LocalDate until, Todo.State state) {
-        // TODO
         int counter = -1;
 
         if (until == null && state == null) {
