@@ -3,7 +3,6 @@ package ue01.app;
 import inout.In;
 import inout.Out;
 import ue01.data.Todo;
-import ue01.list.TodoList;
 import ue01.list.TodoManager;
 
 import java.time.LocalDate;
@@ -38,6 +37,7 @@ public class TodosMain {
 
                 case 'd':
                     // einige Todos abschließen
+                    int[] toBeRemoved = inputTodos();
                     // TODO
                     break;
 
@@ -95,7 +95,7 @@ public class TodosMain {
         System.out.println("(a) Add test data");
         System.out.println("(b) Print all todos");
         System.out.println("(c) Print all todos until a specific date");
-        System.out.println("(d) Set specific todos to done");
+        System.out.println("(d) Set specific todos to done (comma separated");
         System.out.println("(e) Print all done todos");
         System.out.println("(f) Print all open todos");
         System.out.println("(g) Print all open todos for a specific date");
@@ -116,10 +116,17 @@ public class TodosMain {
         return date;
     }
 
-    private static String inputDescription() {
-        System.out.println();
-        String description = In.readString();
-        return description;
+    private static int[] inputTodos() {
+        System.out.println("Please enter the comma separated Ids of the Todos you want to set to Done (e.g. 1,2,3,4)");
+        String inputTodos = In.readString();
+        System.out.println(inputTodos);
+        String[] parts = inputTodos.split(" ");
+        int[] todoIds = new int[parts.length];
+        for (int i = 0; i < todoIds.length; i++) {
+            todoIds[i] = Integer.parseInt(parts[i]);
+            System.out.println(todoIds[i]);
+        }
+        return todoIds;
     }
 
     private static int inputId() {
