@@ -91,7 +91,7 @@ public class TodosMain {
     }
 
     private static void printMenu() {
-        System.out.println("=======================================================");
+        System.out.println("====================   Menu   =========================");
         System.out.println("(a) Add test data");
         System.out.println("(b) Print all todos");
         System.out.println("(c) Print all todos until a specific date");
