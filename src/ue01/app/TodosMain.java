@@ -21,48 +21,49 @@ public class TodosMain {
             switch (menuAction) {
 
                 case 'a':
-                    // aus den Daten ihren TodoManager befüllen
+                    System.out.println("Op (a), Add test data: ");
                     addTestData(todoManager);
                     break;
 
                 case 'b':
-                    // alle Todos ausgeben
+                    System.out.println("Op (b), Print all todos: ");
                     printTodos(todoManager.getAllTodos());
                     break;
 
                 case 'c':
-                    // die Todos bis zu einem bestimmten Datum ausgeben
+                    System.out.println("Op (c), Print all todos until a specific date: ");
                     printTodos(todoManager.getAllTodosUntil(inputDate()));
                     break;
 
                 case 'd':
-                    // einige Todos abschließen
-                    int[] toBeRemoved = inputTodos();
-                    // TODO
+                    System.out.println("Op (d), Set todo to done: ");
+                    int toFinish = inputTodos();
+                    Todo[] temp = todoManager.setDone(toFinish);
+                    printTodos(temp);
                     break;
 
                 case 'e':
-                    // die abgeschlossenen Todos ausgeben
+                    System.out.println("Op (e), Print all done todos: ");
                     printTodos(todoManager.getAllDoneTodos());
                     break;
 
                 case 'f':
-                    // die noch offenen Todos ausgeben
+                    System.out.println("Op (f) Print all open todos: ");
                     printTodos(todoManager.getAllOpenTodos());
                     break;
 
                 case 'g':
-                    // die offenen zu einem bestimmten Datum ausgeben
-                    printTodos(todoManager.getAllOpenTodosUntil(inputDate()));
+                    System.out.println("Op (g), Print all open todos for a specific date: ");
+                    printTodos(todoManager.getAllOpenTodosPerDate(inputDate()));
                     break;
 
                 case 'h':
-                    // die abgeschlossenen bis einem Datum löschen
-                    todoManager.removeDoneTodosUntil(inputDate());
+                    System.out.println("Op (h) Delete all done todos until a specific date: ");
+                    printTodos(todoManager.removeDoneTodosUntil(inputDate()));
                     break;
 
                 case 'x':
-                    System.out.println("Bye!");
+                    System.out.println("Op (x), Bye!");
                     break;
 
                 default:
@@ -84,8 +85,7 @@ public class TodosMain {
             int day = In.readInt();
             String description = In.readString();
             year = In.readInt();
-            // TODO: Add todo with year, month, and day to manager
-            todoManager.addTodo(description, LocalDate.of(year, month, day));
+            printTodos(todoManager.addTodo(description, LocalDate.of(year, month, day)));
         }
         In.close();
     }
@@ -95,7 +95,7 @@ public class TodosMain {
         System.out.println("(a) Add test data");
         System.out.println("(b) Print all todos");
         System.out.println("(c) Print all todos until a specific date");
-        System.out.println("(d) Set specific todos to done (comma separated");
+        System.out.println("(d) Set todo to done");
         System.out.println("(e) Print all done todos");
         System.out.println("(f) Print all open todos");
         System.out.println("(g) Print all open todos for a specific date");
@@ -112,21 +112,19 @@ public class TodosMain {
         int month = In.readInt();
         System.out.print("Please input day: ");
         int day = In.readInt();
+        if (month < 1 || month > 12 || day < 1 || day > 31) {
+            System.out.println("Invalid input");
+            return null;
+        }
         LocalDate date = LocalDate.of(year, month, day);
         return date;
     }
 
-    private static int[] inputTodos() {
-        System.out.println("Please enter the comma separated Ids of the Todos you want to set to Done (e.g. 1,2,3,4)");
-        String inputTodos = In.readString();
-        System.out.println(inputTodos);
-        String[] parts = inputTodos.split(" ");
-        int[] todoIds = new int[parts.length];
-        for (int i = 0; i < todoIds.length; i++) {
-            todoIds[i] = Integer.parseInt(parts[i]);
-            System.out.println(todoIds[i]);
-        }
-        return todoIds;
+    // TODO
+    private static int inputTodos() {
+        System.out.println("Please enter the Todo you want to set done:");
+        int setDone = In.readInt();
+        return setDone;
     }
 
     private static int inputId() {
@@ -140,8 +138,8 @@ public class TodosMain {
             System.out.println("No Todos for your input found!");
             return;
         }
-        for (int i = 0; i < todoList.length; i++) {
-            System.out.println(todoList[i].toString());
+        for (Todo todo : todoList) {
+            System.out.println(todo.toString());
         }
     }
 }

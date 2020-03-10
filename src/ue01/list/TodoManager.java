@@ -14,18 +14,21 @@ public class TodoManager {
     }
 
     // Anfügen eines neuen Todos mit Beschreibung und Datum
-    public void addTodo(String description, LocalDate date) {
-        boolean success = this.todoList.insert(description, date);
-        if (success) {
-            System.out.print("Todo successfully added!");
-        } else {
-            System.out.print("Todo could not be added!");
-        }
+    public Todo[] addTodo(String description, LocalDate date) {
+        return this.todoList.insert(description, date);
     }
 
     // Suche nach einem Todo mit gegebener Id
     public Todo[] getTodo(int id) {
         return todoList.get(id);
+    }
+
+    public Todo[] setDone(int id) {
+        Todo[] finished = getTodo(id);
+        for (Todo todo : finished) {
+            todo.setState(State.DONE);
+        }
+        return finished;
     }
 
     // Zugriff auf alle Todos
@@ -58,11 +61,16 @@ public class TodoManager {
         return todoList.get(date, State.DONE);
     }
 
+    public Todo[] getAllOpenTodosPerDate(LocalDate date) {
+        return todoList.get(date);
+    }
+
     // die abgeschlossenen bis zu einem Datum löschen
-    public void removeDoneTodosUntil(LocalDate date) {
+    public Todo[] removeDoneTodosUntil(LocalDate date) {
         Todo[] toBeRemoved = getAllDoneTodosUntil(date);
-        for (int i = 0; i < toBeRemoved.length; i++) {
-            todoList.remove(todoList.lookup(toBeRemoved[i].getId()));
+        for (Todo todo : toBeRemoved) {
+            todoList.remove(todoList.lookup(todo.getId()));
         }
+        return toBeRemoved;
     }
 }
