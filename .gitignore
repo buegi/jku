@@ -1,0 +1,6 @@
+# IntelliJ config
+.idea
+*.iml
+
+# Compilation path
+out
