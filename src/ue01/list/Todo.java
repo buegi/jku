@@ -14,36 +14,36 @@ public class Todo {
         OPEN, DONE
     }
 
-    public Todo(String description, LocalDate date) {
+    Todo(String description, LocalDate date) {
         this.id = counter++;
         this.description = description;
         this.date = date;
         this.state = State.OPEN;
     }
 
-    public int getId() {
+    int getId() {
         return this.id;
     }
 
-    public String getDescr() {
+    String getDescr() {
         return this.description;
     }
 
-    public LocalDate getDate() {
+    LocalDate getDate() {
         return this.date;
     }
 
-    public State getState() {
+    State getState() {
         return this.state;
     }
 
-    public void setState(State newState) {
+    void setState(State newState) {
         this.state = newState;
     }
 
     // Override
     @Override
     public String toString() {
-        return (id + ": " + date + " - " + String.format("%-32s", description) + " : " + state);
+        return (this.id + ": " + this.date + " - " + String.format("%-32s", this.description) + " : " + this.state);
     }
 }
