@@ -65,8 +65,8 @@ public class TodoManager {
     // die abgeschlossenen bis zu einem Datum löschen
     public Todo[] removeDoneTodosUntil(LocalDate date) {
         Todo[] toBeRemoved = getAllDoneTodosUntil(date);
-        for (Todo todo : toBeRemoved) {
-            todoList.remove(todoList.lookup(todo.getId()));
+        for (int i = 0; i < toBeRemoved.length; i++) {
+            todoList.remove(todoList.lookup(toBeRemoved[i].getId()));
         }
         return toBeRemoved;
     }
