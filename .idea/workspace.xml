@@ -271,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583878451210</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="ok">
+      <created>1583879248268</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1583879248268</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,12 +333,12 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1583878450579">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1583879247745">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583856578639" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583878450579" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583879247745" />
     <state width="2602" height="500" key="GridCell.Tab.0.bottom" timestamp="1583877481669">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
