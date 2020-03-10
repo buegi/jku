@@ -1,8 +1,5 @@
 package ue01.list;
 
-import ue01.data.State;
-import ue01.data.Todo;
-
 import java.time.LocalDate;
 
 public class TodoManager {
@@ -26,7 +23,7 @@ public class TodoManager {
     public Todo[] setDone(int id) {
         Todo[] finished = getTodo(id);
         for (Todo todo : finished) {
-            todo.setState(State.DONE);
+            todo.setState(Todo.State.DONE);
         }
         return finished;
     }
@@ -43,22 +40,22 @@ public class TodoManager {
 
     // Zugriff auf alle offenen Todos
     public Todo[] getAllOpenTodos() {
-        return todoList.get(null, State.OPEN);
+        return todoList.get(null, Todo.State.OPEN);
     }
 
     // Zugriff auf offene Todos bis zu einem bestimmten Datum
     public Todo[] getAllOpenTodosUntil(LocalDate date) {
-        return todoList.get(date, State.OPEN);
+        return todoList.get(date, Todo.State.OPEN);
     }
 
     // Zugriff auf alle erledigten Todos
     public Todo[] getAllDoneTodos() {
-        return todoList.get(null, State.DONE);
+        return todoList.get(null, Todo.State.DONE);
     }
 
     // Zugriff auf erledigte Todos bis zu einem bestimmten Datum
     public Todo[] getAllDoneTodosUntil(LocalDate date) {
-        return todoList.get(date, State.DONE);
+        return todoList.get(date, Todo.State.DONE);
     }
 
     public Todo[] getAllOpenTodosPerDate(LocalDate date) {

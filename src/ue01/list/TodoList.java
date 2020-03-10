@@ -1,8 +1,5 @@
 package ue01.list;
 
-import ue01.data.State;
-import ue01.data.Todo;
-
 import java.time.LocalDate;
 
 public class TodoList {
@@ -10,12 +7,12 @@ public class TodoList {
     private TodoNode head;
     private int noOfEntries;
 
-    public TodoList() {
+    TodoList() {
         this.head = null;
         this.noOfEntries = 0;
     }
 
-    public TodoNode getHead() {
+    TodoNode getHead() {
         return this.head;
     }
 
@@ -23,11 +20,11 @@ public class TodoList {
         this.head = newHead;
     }
 
-    public boolean isEmpty() {
+    boolean isEmpty() {
         return this.noOfEntries == 0;
     }
 
-    public Todo[] insert(String description, LocalDate date) {
+    Todo[] insert(String description, LocalDate date) {
         TodoNode previous = null;
         TodoNode current = head;
         while (current != null && date.isAfter(current.getTodo().getDate())) {
@@ -47,7 +44,7 @@ public class TodoList {
         return val;
     }
 
-    public void remove(TodoNode node) {
+    void remove(TodoNode node) {
         if (node == null) {
             return;
         }
@@ -62,7 +59,7 @@ public class TodoList {
         this.noOfEntries--;
     }
 
-    public TodoNode lookup(int id) {
+    TodoNode lookup(int id) {
         if (head == null) {
             return null;
         }
@@ -76,53 +73,11 @@ public class TodoList {
         return null;
     }
 
-    private int count(LocalDate until, State state) {
-        // TODO
-        int counter = -1;
-
-        if (until == null && state == null) {
-            counter = noOfEntries;
-            return counter;
-        }
-
-        if (until != null && state == null) {
-            counter = 0;
-            TodoNode current = head;
-            while (current != null && (current.getTodo().getDate().isEqual(until) || (current.getTodo().getDate().isBefore(until)))) {
-                counter++;
-                current = current.getNext();
-            }
-        }
-
-        if (until == null && state != null) {
-            counter = 0;
-            TodoNode current = head;
-            while (current != null) {
-                if (state == current.getTodo().getState()) {
-                    counter++;
-                }
-                current = current.getNext();
-            }
-        }
-
-        if (until != null && state != null) {
-            counter = 0;
-            TodoNode current = head;
-            while (current != null) {
-                if (state == current.getTodo().getState() && (current.getTodo().getDate().isEqual(until) || (current.getTodo().getDate().isBefore(until)))) {
-                    counter++;
-                }
-                current = current.getNext();
-            }
-        }
-        return counter;
-    }
-
     Todo[] get(LocalDate strictDate) {
         int size = 0;
         TodoNode current = head;
         while (current != null) {
-            if (current.getTodo().getDate().isEqual(strictDate) && current.getTodo().getState() == State.OPEN) {
+            if (current.getTodo().getDate().isEqual(strictDate) && current.getTodo().getState() == Todo.State.OPEN) {
                 size++;
             }
             current = current.getNext();
@@ -131,7 +86,7 @@ public class TodoList {
         Todo[] todoList = new Todo[size];
         int counter = 0;
         while (current != null) {
-            if (current.getTodo().getDate().isEqual(strictDate) && current.getTodo().getState() == State.OPEN) {
+            if (current.getTodo().getDate().isEqual(strictDate) && current.getTodo().getState() == Todo.State.OPEN) {
                 todoList[counter] = current.getTodo();
                 counter++;
             }
@@ -151,7 +106,7 @@ public class TodoList {
         }
     }
 
-    Todo[] get(LocalDate until, State state) {
+    Todo[] get(LocalDate until, Todo.State state) {
         int size = count(until, state);
         if (size <= 0) {
             return new Todo[0];
@@ -200,5 +155,47 @@ public class TodoList {
             }
         }
         return todoList;
+    }
+
+    private int count(LocalDate until, Todo.State state) {
+        // TODO
+        int counter = -1;
+
+        if (until == null && state == null) {
+            counter = noOfEntries;
+            return counter;
+        }
+
+        if (until != null && state == null) {
+            counter = 0;
+            TodoNode current = head;
+            while (current != null && (current.getTodo().getDate().isEqual(until) || (current.getTodo().getDate().isBefore(until)))) {
+                counter++;
+                current = current.getNext();
+            }
+        }
+
+        if (until == null && state != null) {
+            counter = 0;
+            TodoNode current = head;
+            while (current != null) {
+                if (state == current.getTodo().getState()) {
+                    counter++;
+                }
+                current = current.getNext();
+            }
+        }
+
+        if (until != null && state != null) {
+            counter = 0;
+            TodoNode current = head;
+            while (current != null) {
+                if (state == current.getTodo().getState() && (current.getTodo().getDate().isEqual(until) || (current.getTodo().getDate().isBefore(until)))) {
+                    counter++;
+                }
+                current = current.getNext();
+            }
+        }
+        return counter;
     }
 }

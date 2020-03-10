@@ -4,6 +4,11 @@
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ue01/app/TodosMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue01/app/TodosMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/data/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/data/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue01/list/Todo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/list/TodoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue01/list/TodoList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/list/TodoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue01/list/TodoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/list/TodoNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue01/list/TodoNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583852642767</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ok">
+      <created>1583853240910</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1583853240910</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ok">
+      <created>1583853259468</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1583853259468</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,44 +258,48 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1772" y="1045" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583827462425" />
-    <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583816373370">
+    <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583854657286">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583816373370" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1583853240360">
+    <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1583853258974">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853240360" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853258974" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
-    <state width="1108" height="500" key="GridCell.Tab.0.bottom" timestamp="1583853039716">
+    <state width="2634" height="541" key="GridCell.Tab.0.bottom" timestamp="1583855227469">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1108" height="500" key="GridCell.Tab.0.bottom/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853039716" />
+    <state width="2634" height="541" key="GridCell.Tab.0.bottom/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855227469" />
     <state width="1724" height="346" key="GridCell.Tab.0.bottom/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
-    <state width="1108" height="500" key="GridCell.Tab.0.center" timestamp="1583853039716">
+    <state width="2634" height="541" key="GridCell.Tab.0.center" timestamp="1583855227469">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1108" height="500" key="GridCell.Tab.0.center/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853039716" />
+    <state width="2634" height="541" key="GridCell.Tab.0.center/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855227469" />
     <state width="1724" height="346" key="GridCell.Tab.0.center/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
-    <state width="1108" height="500" key="GridCell.Tab.0.left" timestamp="1583853039716">
+    <state width="2634" height="541" key="GridCell.Tab.0.left" timestamp="1583855227468">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1108" height="500" key="GridCell.Tab.0.left/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853039716" />
+    <state width="2634" height="541" key="GridCell.Tab.0.left/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855227468" />
     <state width="1724" height="346" key="GridCell.Tab.0.left/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
-    <state width="1108" height="500" key="GridCell.Tab.0.right" timestamp="1583853039716">
+    <state width="2634" height="541" key="GridCell.Tab.0.right" timestamp="1583855227469">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state width="1108" height="500" key="GridCell.Tab.0.right/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853039716" />
+    <state width="2634" height="541" key="GridCell.Tab.0.right/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855227469" />
     <state width="1724" height="346" key="GridCell.Tab.0.right/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
+    <state x="1734" y="854" key="RollbackChangesDialog" timestamp="1583855233514">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1734" y="854" key="RollbackChangesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855233514" />
     <state x="1418" y="916" key="SettingsEditor" timestamp="1583432924041">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583432924041" />
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097244151" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1583853242490">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1583853261092">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853242490" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583853261092" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
     <state x="1710" y="740" width="607" height="804" key="find.popup" timestamp="1583851883167">
       <screen x="0" y="0" width="3840" height="2120" />
@@ -287,5 +310,9 @@
     </state>
     <state x="1299" y="894" key="new project wizard/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583827446904" />
     <state x="1299" y="894" key="new project wizard/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097292221" />
+    <state x="1571" y="654" width="672" height="678" key="search.everywhere.popup" timestamp="1583854972253">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1571" y="654" width="672" height="678" key="search.everywhere.popup/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854972253" />
   </component>
 </project>

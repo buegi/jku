@@ -1,7 +1,5 @@
 package ue01.list;
 
-import ue01.data.Todo;
-
 public final class TodoNode {
 
     private Todo todo;
@@ -11,19 +9,19 @@ public final class TodoNode {
         this.todo = todo;
     }
 
-    public Todo getTodo() {
+    Todo getTodo() {
         return this.todo;
     }
 
-    public TodoNode getNext() {
+    TodoNode getNext() {
         return this.next;
     }
 
-    public void setTodo(Todo todo) {
+    void setTodo(Todo todo) {
         this.todo = todo;
     }
 
-    public void setNext(TodoNode next) {
+    void setNext(TodoNode next) {
         this.next = next;
     }
 }

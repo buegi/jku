@@ -2,7 +2,7 @@ package ue01.app;
 
 import inout.In;
 import inout.Out;
-import ue01.data.Todo;
+import ue01.list.Todo;
 import ue01.list.TodoManager;
 
 import java.time.LocalDate;
@@ -12,7 +12,6 @@ public class TodosMain {
     public static void main(String[] args) {
 
         TodoManager todoManager = new TodoManager();
-
         char menuAction;
         do {
             printMenu();
@@ -125,12 +124,6 @@ public class TodosMain {
         System.out.println("Please enter the Todo you want to set done:");
         int setDone = In.readInt();
         return setDone;
-    }
-
-    private static int inputId() {
-        System.out.println();
-        int id = In.readInt();
-        return id;
     }
 
     private static void printTodos(Todo[] todoList) {

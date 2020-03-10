@@ -1,4 +1,4 @@
-package ue01.data;
+package ue01.list;
 
 import java.time.LocalDate;
 
@@ -9,6 +9,10 @@ public class Todo {
     private State state;
 
     private static int counter = 0;
+
+    public static enum State {
+        OPEN, DONE;
+    }
 
     public Todo(String description, LocalDate date) {
         this.id = counter++;
