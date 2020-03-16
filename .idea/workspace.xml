@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="" />
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ue02/Cargo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue02/Transporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,10 +47,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\intellij\git\swe2-ij\src\ue02\test" />
+      <recent name="C:\dev\intellij\git\swe2-ij\src\ue02" />
+      <recent name="C:\dev\intellij\git\swe2-ij\src\inout" />
       <recent name="C:\dev\intellij\git\swe2-ij" />
       <recent name="C:\dev\intellij\git\swe2-ij\swe2\src\ue01\app" />
-      <recent name="C:\dev\intellij\git\swe2-ij\ex01\src\todos\app" />
-      <recent name="C:\dev\intellij\git\swe2-ij\ex01\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -283,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583879789268</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ok">
+      <created>1584326724156</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1584326724156</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,12 +350,12 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1583879788640">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1584326723555">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583856578639" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583879788640" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1584326723555" />
     <state width="1098" height="500" key="GridCell.Tab.0.bottom" timestamp="1583879804098">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -381,12 +393,12 @@
     </state>
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583432924041" />
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097244151" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1583879790559">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1584326726284">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855243894" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583879790559" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1584326726284" />
     <state x="1710" y="740" width="607" height="804" key="find.popup" timestamp="1583851883167">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
