@@ -1,4 +1,4 @@
-package ue02;
+package ue02.transport;
 
 /**
  * Represents a location that can be reached by a transporter. As a
@@ -31,7 +31,7 @@ public class Location {
      * @param name      The name of the location.
      * @param xCoord    The x-coordinate of the location.
      * @param yCoord    The y-coordinate of the location.
-     * @param continent The country of this location.
+     // * @param continent The country of this location.
      */
     public Location(String name, int xCoord, int yCoord, Country country) {
         super();

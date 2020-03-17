@@ -1,4 +1,4 @@
-package ue02;
+package ue02.transport;
 
 public class Cargo {
 
@@ -38,6 +38,6 @@ public class Cargo {
 
     @Override
     public String toString() {
-        return "Description:" + this.getDescription() + " Type:" + this.getType() + " Weight:" + this.getWeight();
+        return this.getDescription() + ", Type:" + this.getType() + ", Weight:" + this.getWeight();
     }
 }

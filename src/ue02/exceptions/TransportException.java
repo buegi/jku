@@ -1,17 +1,21 @@
 package ue02.exceptions;
 
-import ue02.transporters.Transporter;
+import ue02.transport.Transporter;
 
-public class TransportException extends Exception {
+public abstract class TransportException extends Exception {
 
-    private final Transporter transporter;
+    protected final Transporter transporter;
 
-    public TransportException(String msg, Transporter transporter) {
-        super(msg);
+    public TransportException(Transporter transporter) {
+        super();
         this.transporter = transporter;
     }
 
     public Transporter getTransporter() {
         return this.transporter;
+    }
+
+    public String toString() {
+        return "EXCEPTION: " + this.transporter.toString();
     }
 }

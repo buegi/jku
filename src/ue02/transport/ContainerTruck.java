@@ -1,12 +1,9 @@
-package ue02.transporters;
+package ue02.transport;
 
-import ue02.Cargo;
-import ue02.CargoType;
-import ue02.Location;
 import ue02.exceptions.CargoException;
 import ue02.exceptions.InvalidCargoException;
 
-public class ContainerTruck extends OverlandTransporter {
+public class ContainerTruck extends LandTransporter {
 
     public ContainerTruck(String description, int transportCosts, int maxWeight, Location actualLocation) {
         super(description, transportCosts, maxWeight, actualLocation);
@@ -15,9 +12,14 @@ public class ContainerTruck extends OverlandTransporter {
     @Override
     public void load(Cargo cargo) throws CargoException {
         if (cargo.getType() != CargoType.SOLID) {
-            throw new InvalidCargoException("Invalid CargoType: " + CargoType.SOLID, this, cargo);
+            throw new InvalidCargoException(this, cargo);
         } else {
             super.load(cargo);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "ContainerTruck:" + super.toString();
     }
 }

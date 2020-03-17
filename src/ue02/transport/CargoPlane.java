@@ -1,31 +1,30 @@
-package ue02.transporters;
+package ue02.transport;
 
-import ue02.Cargo;
-import ue02.CargoType;
-import ue02.Location;
 import ue02.exceptions.CargoException;
 import ue02.exceptions.InvalidCargoException;
 import ue02.exceptions.TransportException;
 
-public class CargoPlane extends Transporter {
-
-    static final double STARTINGCOSTS = 50.0d;
-    static final double LANDINGCOSTS = 50.0d;
+public class CargoPlane extends AirTransporter {
 
     public CargoPlane(String description, int transportCosts, int maxWeight, Location actualLocation) {
         super(description, transportCosts, maxWeight, actualLocation);
     }
 
     public double goTo(Location destination) throws TransportException {
-        return super.goTo(destination) + STARTINGCOSTS + LANDINGCOSTS;
+        return super.goTo(destination) + this.getStartingCosts() + this.getLandingCosts();
     }
 
     @Override
     public void load(Cargo cargo) throws CargoException {
         if (cargo.getType() != CargoType.SOLID) {
-            throw new InvalidCargoException("Invalid CargoType: " + CargoType.SOLID, this, cargo);
+            throw new InvalidCargoException(this, cargo);
         } else {
             super.load(cargo);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "CargoPlane:" + super.toString() + ", Starting Costs: " + this.getStartingCosts() + ", Landing Costs: " + this.getLandingCosts();
     }
 }

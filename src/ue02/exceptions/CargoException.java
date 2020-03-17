@@ -1,18 +1,23 @@
 package ue02.exceptions;
 
-import ue02.Cargo;
-import ue02.transporters.Transporter;
+import ue02.transport.Cargo;
+import ue02.transport.Transporter;
 
-public class CargoException extends TransportException {
+public abstract class CargoException extends TransportException {
 
-    private final Cargo cargo;
+    protected final Cargo cargo;
 
-    public CargoException(String msg, Transporter transporter, Cargo cargo) {
-        super(msg, transporter);
+    public CargoException(Transporter transporter, Cargo cargo) {
+        super(transporter);
         this.cargo = cargo;
     }
 
     public Cargo getCargo() {
         return this.cargo;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " FAILED TO LOAD " + this.cargo.toString();
     }
 }

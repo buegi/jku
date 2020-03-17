@@ -1,4 +1,4 @@
-package ue02;
+package ue02.transport;
 
 /**
  * Enumeration for a set of countries which are serviced by the transport company.

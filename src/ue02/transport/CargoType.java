@@ -1,4 +1,4 @@
-package ue02;
+package ue02.transport;
 
 public enum CargoType {
     SOLID, LIQUID

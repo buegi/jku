@@ -1,18 +1,16 @@
-package ue02.transporters;
+package ue02.transport;
 
-import ue02.Cargo;
-import ue02.Location;
 import ue02.exceptions.CargoException;
 import ue02.exceptions.OverloadedException;
 import ue02.exceptions.TransportException;
 
-public abstract class Transporter extends Object {
+public abstract class Transporter {
 
-    private String description;
-    private int maxWeight;
-    private int transportCosts;
-    private Location actualLocation;
-    private Cargo actualCargo;
+    protected String description;
+    protected int maxWeight;
+    protected int transportCosts;
+    protected Location actualLocation;
+    protected Cargo actualCargo;
 
     public Transporter(String description, int transportCosts, int maxWeight, Location actualLocation) {
         this.description = description;
@@ -62,26 +60,26 @@ public abstract class Transporter extends Object {
     }
 
     public double goTo(Location destination) throws TransportException {
-        return actualLocation.getDistance(destination) * transportCosts;
+        return this.actualLocation.getDistance(destination) * this.transportCosts;
     }
 
     public void load(Cargo cargo) throws CargoException {
-        if (actualCargo != null || cargo.getWeight() > maxWeight) {
-            throw new OverloadedException("Transporter overloaded!", this, cargo);
+        if (this.actualCargo != null || cargo.getWeight() > this.maxWeight) {
+            throw new OverloadedException(this, cargo);
         } else {
-            actualCargo = cargo;
+            this.actualCargo = cargo;
         }
     }
 
     public Cargo unload() {
-        Cargo actual = actualCargo;
-        actualCargo = null;
+        Cargo actual = this.actualCargo;
+        this.actualCargo = null;
         return actual;
     }
 
     @Override
     public String toString() {
-        return "Description:" + this.getDescription() + " Costs:" + this.getTransportCosts() + " MaxWeight:" + this.getMaxWeight() + " Actual Location:"
-                + this.getActualLocation() + " Actual Cargo:" + this.getActualCargo();
+        return this.getDescription() + ", Costs:" + this.getTransportCosts() + ", Maximum Weight:" + this.getMaxWeight() + ", Actual location:"
+                + this.getActualLocation() + ", Actual cargo:" + this.getActualCargo();
     }
 }
