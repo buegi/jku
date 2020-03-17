@@ -1,6 +1,8 @@
 package ue02;
 
-public abstract class Transporter {
+import ue02.exceptions.OverloadedException;
+
+public abstract class Transporter extends Object{
 
     private String description;
     private int maxWeight;
@@ -48,7 +50,10 @@ public abstract class Transporter {
         return this.actualLocation;
     }
 
-    void goTo(Location destination) {
-        this.actualLocation = destination;
-    }
+    abstract double goTo(Location destination);
+
+    abstract void load(Cargo cargo) throws OverloadedException;
+
+    abstract Cargo unload();
+
 }
