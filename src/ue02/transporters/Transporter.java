@@ -14,61 +14,74 @@ public abstract class Transporter extends Object {
     private Location actualLocation;
     private Cargo actualCargo;
 
-    Transporter(String description, int maxWeight, int transportCosts, Location actualLocation, Cargo actualCargo) {
+    public Transporter(String description, int transportCosts, int maxWeight, Location actualLocation) {
         this.description = description;
-        this.maxWeight = maxWeight;
         this.transportCosts = transportCosts;
+        this.maxWeight = maxWeight;
         this.actualLocation = actualLocation;
-        this.actualCargo = actualCargo;
     }
 
-    void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return this.description;
     }
 
-    void setMaxWeight(int maxWeight) {
+    public void setMaxWeight(int maxWeight) {
         this.maxWeight = maxWeight;
     }
 
-    int getMaxWeight() {
+    public int getMaxWeight() {
         return this.maxWeight;
     }
 
-    void setTransportCosts(int transportCosts) {
+    public void setActualCargo(Cargo cargo) {
+        this.actualCargo = cargo;
+    }
+
+    public Cargo getActualCargo() {
+        return this.actualCargo;
+    }
+
+    public void setTransportCosts(int transportCosts) {
         this.transportCosts = transportCosts;
     }
 
-    int getTransportCosts() {
+    public int getTransportCosts() {
         return this.transportCosts;
     }
 
-    void setActualLocation(Location destination) {
+    public void setActualLocation(Location destination) {
         this.actualLocation = destination;
     }
 
-    Location getActualLocation() {
+    public Location getActualLocation() {
         return this.actualLocation;
     }
 
-    double goTo(Location destination) throws TransportException {
+    public double goTo(Location destination) throws TransportException {
         return actualLocation.getDistance(destination) * transportCosts;
     }
 
-    void load(Cargo cargo) throws CargoException {
+    public void load(Cargo cargo) throws CargoException {
         if (actualCargo != null || cargo.getWeight() > maxWeight) {
-            throw new OverloadedException(this, cargo);
+            throw new OverloadedException("Transporter overloaded!", this, cargo);
         } else {
             actualCargo = cargo;
         }
     }
 
-    Cargo unload() {
+    public Cargo unload() {
         Cargo actual = actualCargo;
         actualCargo = null;
         return actual;
+    }
+
+    @Override
+    public String toString() {
+        return "Description:" + this.getDescription() + " Costs:" + this.getTransportCosts() + " MaxWeight:" + this.getMaxWeight() + " Actual Location:"
+                + this.getActualLocation() + " Actual Cargo:" + this.getActualCargo();
     }
 }

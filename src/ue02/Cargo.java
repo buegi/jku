@@ -6,22 +6,38 @@ public class Cargo {
     private CargoType type;
     private int weight;
 
-    private enum CargoType {
-        SOLID, LIQUID
+    public Cargo(CargoType type, String description, int weight) {
+        this.description = description;
+        this.type = type;
+        this.weight = weight;
     }
 
-    void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return this.description;
     }
-    void setCargoType(CargoType type) {
+
+    public void setType(CargoType type) {
         this.type = type;
     }
-    CargoType getCargotype() {
+
+    public CargoType getType() {
         return this.type;
     }
 
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Description:" + this.getDescription() + " Type:" + this.getType() + " Weight:" + this.getWeight();
+    }
 }
