@@ -1,8 +1,12 @@
-package ue02;
+package ue02.transporters;
 
+import ue02.Cargo;
+import ue02.Location;
+import ue02.exceptions.CargoException;
 import ue02.exceptions.OverloadedException;
+import ue02.exceptions.TransportException;
 
-public abstract class Transporter extends Object{
+public abstract class Transporter extends Object {
 
     private String description;
     private int maxWeight;
@@ -50,10 +54,21 @@ public abstract class Transporter extends Object{
         return this.actualLocation;
     }
 
-    abstract double goTo(Location destination);
+    double goTo(Location destination) throws TransportException {
+        return actualLocation.getDistance(destination) * transportCosts;
+    }
 
-    abstract void load(Cargo cargo) throws OverloadedException;
+    void load(Cargo cargo) throws CargoException {
+        if (actualCargo != null || cargo.getWeight() > maxWeight) {
+            throw new OverloadedException(this, cargo);
+        } else {
+            actualCargo = cargo;
+        }
+    }
 
-    abstract Cargo unload();
-
+    Cargo unload() {
+        Cargo actual = actualCargo;
+        actualCargo = null;
+        return actual;
+    }
 }
