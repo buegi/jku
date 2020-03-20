@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ue03/Example.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/composite/Atomic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/composite/Composite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/composite/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/composite/ElementApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/order/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/order/ElementApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/order/Leaf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/order/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/person/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/person/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/person/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/person/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Primitive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/app/Snowman.java" afterDir="false" />
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/Atomic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/composite/Atomic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/Composite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/composite/Composite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/composite/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/ElementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/composite/ElementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/order/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/ElementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/order/ElementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/Leaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/order/Leaf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/order/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/person/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/person/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/person/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Primitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Primitive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue03/demo/shapes/app/Snowman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584731459923</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="ok">
+      <created>1584731985403</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1584731985403</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -452,12 +458,12 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1584731459308">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1584732166615">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583856578639" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1584731459308" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1584732166615" />
     <state width="1103" height="316" key="GridCell.Tab.0.bottom" timestamp="1584455711674">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -495,12 +501,12 @@
     </state>
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583432924041" />
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097244151" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1584731461051">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1584731987048">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855243894" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1584731461051" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1584731987048" />
     <state x="1710" y="740" width="607" height="804" key="find.popup" timestamp="1583851883167">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>

@@ -8,19 +8,23 @@ import java.awt.Color;
  * Class representing rectangular shapes.
  */
 public class Rectangle extends Primitive {
-	
-	/** Width of the rectangle. */
+
+    /**
+     * Width of the rectangle.
+     */
     private final int width;
-    
-    /** Height of the rectangle. */
+
+    /**
+     * Height of the rectangle.
+     */
     private final int height;
-    
+
     /**
      * Constructor initalizing position, width and heigth.
-     * 
-     * @param x the x-coordinate of the position
-     * @param y the y-coordinate of the position
-     * @param width the width of this rectangle
+     *
+     * @param x      the x-coordinate of the position
+     * @param y      the y-coordinate of the position
+     * @param width  the width of this rectangle
      * @param height the heigth of this rectangle
      */
     public Rectangle(int x, int y, int width, int height) {
@@ -29,35 +33,35 @@ public class Rectangle extends Primitive {
         this.height = height;
     }
 
-	/* (non-Javadoc)
-	 * @see shapes.Shape#getLeft()
-	 */
-	@Override
-	public int getLeft() {
-		return getX();
-	}
+    /* (non-Javadoc)
+     * @see shapes.Shape#getLeft()
+     */
+    @Override
+    public int getLeft() {
+        return getX();
+    }
 
-	/* (non-Javadoc)
-	 * @see shapes.Shape#getTop()
-	 */
-	@Override
-	public int getTop() {
-		return getY();
-	}
+    /* (non-Javadoc)
+     * @see shapes.Shape#getTop()
+     */
+    @Override
+    public int getTop() {
+        return getY();
+    }
 
-	/* (non-Javadoc)
-	 * @see shapes.Shape#getWidth()
-	 */
-	@Override
+    /* (non-Javadoc)
+     * @see shapes.Shape#getWidth()
+     */
+    @Override
     public int getWidth() {
         return width;
     }
-    
-	/* (non-Javadoc)
-	 * @see shapes.Shape#getHeight()
-	 */
-	@Override
-	public int getHeight() {
+
+    /* (non-Javadoc)
+     * @see shapes.Shape#getHeight()
+     */
+    @Override
+    public int getHeight() {
         return height;
     }
 
@@ -65,7 +69,7 @@ public class Rectangle extends Primitive {
      * @see shapes.Shape#draw()
      */
     @Override
-	public void draw() {
+    public void draw() {
         Window.fillRectangle(getX(), getY(), getWidth(), getHeight(), Color.GRAY);
     }
 }
