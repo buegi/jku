@@ -2,10 +2,13 @@ package ue03;
 
 public abstract class Item implements Priced {
 
-    private String name;
+    private final String name;
     private int power;
     private int coolDown;
 
+    public Item(String name) {
+        this.name = name;
+    }
 
     // Implementiert das Interface Priced.
     // Überschreiben Sie getDiscountPercent(DiscountRate rate) so, dass bei einer Rabattrate
@@ -14,9 +17,32 @@ public abstract class Item implements Priced {
 
 
     @Override
+    public float getDiscount(DiscountRate rate) {
+        switch (rate) {
+            case LOW:
+                return 0.01f;
+
+            case MEDIUM:
+                return 0.05f;
+
+            case HIGH:
+                return 0.15f;
+
+            default:
+                return 0.0f;
+        }
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public abstract float getPower();
+
+    public abstract float getCoolDown();
+
+    @Override
     public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                '}';
+        return this.name;
     }
 }

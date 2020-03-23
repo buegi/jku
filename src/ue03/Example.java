@@ -1,7 +1,5 @@
 package ue03;
 
-import at.jku.ssw.potion.*;
-
 public class Example {
 
     public static void main(String[] args) {
@@ -14,9 +12,9 @@ public class Example {
                 spiderLeg);
         System.out.println(nightpotion.toString());
         System.out.println(nightpotion.getPrice());
-        System.out.println(nightpotion.getReducedPrice(DiscountRate.High));
+        System.out.println(nightpotion.getReducedPrice(DiscountRate.HIGH));
         System.out.println(nightpotion.getReducedPrice());
         System.out.println(nightpotion.getPower());
-        System.out.println(nightpotion.getCooldown());
+        System.out.println(nightpotion.getCoolDown());
     }
 }
