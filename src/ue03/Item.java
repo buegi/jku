@@ -3,8 +3,6 @@ package ue03;
 public abstract class Item implements Priced {
 
     private final String name;
-    protected float power;
-    protected float coolDown;
 
     public Item(String name) {
         this.name = name;

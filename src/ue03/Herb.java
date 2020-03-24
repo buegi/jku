@@ -2,6 +2,9 @@ package ue03;
 
 public class Herb extends Resource {
 
+    private float power;
+    private float coolDown;
+
     public Herb(String name, float power, float coolDown) {
         super(name);
         this.power = power;

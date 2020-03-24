@@ -2,6 +2,8 @@ package ue03;
 
 public class Example {
 
+    // commented out, to use own main method
+
 //    public static void main(String[] args) {
 //        Item chives = new Herb("Schnittlauch", 10, 5);
 //        Item spiderLeg = new AnimalProduct("Spinnenbein");
