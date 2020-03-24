@@ -40,12 +40,12 @@ public class Potion extends Item {
 
     @Override
     public String toString() {
-        StringBuilder s = new StringBuilder();
-
+        StringBuilder sb = new StringBuilder("Potion: ");
+        sb.append(super.toString()).append("[");
         for (Item i : ingredients) {
-            s.append(i.toString() + ", ");
+            sb.append(i.toString()).append(", ");
         }
-
-        return "Potion: " + super.toString() + "[ " + s + " ]";
+        sb.delete(sb.length() - 2, sb.length());
+        return sb.append("]").toString();
     }
 }

@@ -15,7 +15,6 @@ public abstract class Item implements Priced {
     // von LOW 1% Rabatt, bei MEDIUM 5% Rabatt und bei HIGH 15% Rabatt zurückgegeben wird.
     // Überschreiben sie getPrice() nicht, dies wird von den Unterklassen implementiert.
 
-
     @Override
     public float getDiscountPercent(DiscountRate rate) {
         switch (rate) {

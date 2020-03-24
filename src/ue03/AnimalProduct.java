@@ -14,7 +14,7 @@ public class AnimalProduct extends Resource {
     }
 
     public float getCoolDown() {
-        return this.COOLDOWN;
+        return COOLDOWN;
     }
 
     @Override

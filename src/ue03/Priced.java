@@ -19,7 +19,7 @@ public interface Priced {
     // Liefert den Rabatt (in Einheit „Geld“), also jene Menge an Geld, die gespart wird, wenn der
     // Rabattprozentsatz der angegebenen Rabattrate angewendet wird
     default public float getDiscount(DiscountRate rate) {
-        return this.getDiscount(rate) * this.getPrice();
+        return this.getDiscountPercent(rate) * this.getPrice();
     }
 
     // Liefert den Standardrabatt (in Einheit „Geld“), also jene Menge an Geld, die gespart wird, wenn der
