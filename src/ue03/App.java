@@ -14,10 +14,11 @@ public class App {
         Item worm = new AnimalProduct("Wurm");
         Item egg = new AnimalProduct("Ei");
 
-        // Potion (consists of the herbs and animalproducts from above)
-        Item pukePotion = new Potion("Kotztrank", dill, chives, curry, spiderLeg, worm, egg);
+        // Potions (consists of the herbs and animalproducts from above and a potion)
+        Item anyPotion = new Potion("EinTrank", curry, worm, egg);
+        Item pukePotion = new Potion("Kotztrank", dill, chives, curry, spiderLeg, worm, egg, anyPotion);
 
-
+        // Test outputs
         System.out.println(dill.toString());
         System.out.println("Price: " + dill.getPrice());
         System.out.println("ReducedPrice (HIGH): " + dill.getReducedPrice(DiscountRate.HIGH));
