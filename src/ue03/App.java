@@ -15,7 +15,7 @@ public class App {
         Item egg = new AnimalProduct("Ei");
 
         // Potion (consists of the herbs and animalproducts from above)
-        Item pukePotion = new Potion("Dunkeltrank", dill, chives, curry, spiderLeg, worm, egg);
+        Item pukePotion = new Potion("Kotztrank", dill, chives, curry, spiderLeg, worm, egg);
 
 
         System.out.println(dill.toString());
@@ -24,6 +24,14 @@ public class App {
         System.out.println("ReducedPrice: " + dill.getReducedPrice());
         System.out.println("Power: " + dill.getPower());
         System.out.println("CoolDown: " + dill.getCoolDown());
+        System.out.println();
+        System.out.println(pukePotion.toString());
+        System.out.println("Price: " + pukePotion.getPrice());
+        System.out.println("ReducedPrice (HIGH): " + pukePotion.getReducedPrice(DiscountRate.HIGH));
+        System.out.println("ReducedPrice: " + pukePotion.getReducedPrice());
+        System.out.println("Power: " + pukePotion.getPower());
+        System.out.println("CoolDown: " + pukePotion.getCoolDown());
+
 
     }
 }
