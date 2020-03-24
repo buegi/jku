@@ -3,8 +3,8 @@ package ue03;
 public abstract class Item implements Priced {
 
     private final String name;
-    private int power;
-    private int coolDown;
+    protected float power;
+    protected float coolDown;
 
     public Item(String name) {
         this.name = name;
@@ -17,7 +17,7 @@ public abstract class Item implements Priced {
 
 
     @Override
-    public float getDiscount(DiscountRate rate) {
+    public float getDiscountPercent(DiscountRate rate) {
         switch (rate) {
             case LOW:
                 return 0.01f;

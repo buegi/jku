@@ -10,7 +10,7 @@ public class AnimalProduct extends Resource {
 
     @Override
     public float getPower() {
-        return (this.getPrice() * 2);
+        return (this.getPrice() * 2f);
     }
 
     public float getCoolDown() {
@@ -20,10 +20,5 @@ public class AnimalProduct extends Resource {
     @Override
     public String toString() {
         return "AnimalProduct: " + super.toString();
-    }
-
-    @Override
-    public float getDiscountPercent(DiscountRate rate) {
-        return super.getDiscount(DiscountRate.LOW);
     }
 }

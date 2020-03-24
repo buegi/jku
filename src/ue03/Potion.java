@@ -9,7 +9,6 @@ public class Potion extends Item {
         this.ingredients = ingredients;
     }
 
-
     @Override
     public float getPower() {
         float sumPower = 0;
@@ -36,11 +35,17 @@ public class Potion extends Item {
         for (Item i : ingredients) {
             price = price + i.getPrice();
         }
-        return price * 1.2f;
+        return (price * 1.2f);
     }
 
     @Override
-    public float getDiscountPercent(DiscountRate rate) {
-        return 0;
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+
+        for (Item i : ingredients) {
+            s.append(i.toString() + ", ");
+        }
+
+        return "Potion: " + super.toString() + "[ " + s + " ]";
     }
 }

@@ -3,13 +3,12 @@ package ue03;
 public interface Priced {
 
     // Liefert den Preis (in Einheit „Geld“) des jeweiligen Produktes.
-    float getPrice();
+    abstract float getPrice();
 
     // Liefert den Rabattprozentsatz des jeweiligen Produktes, abhängig von der übergebenen Rabattrate
-    float getDiscountPercent(DiscountRate rate);
+    abstract float getDiscountPercent(DiscountRate rate);
 
-
-    // defaults
+    // DEFAULTS
 
     // Liefert den Standard-Rabattprozentsatz. Diese Methode soll standardmäßig den Rabattprozentsatz
     // liefern, der mit der Rabattrate DiscountRate.LOW erzielt wird.
@@ -20,7 +19,7 @@ public interface Priced {
     // Liefert den Rabatt (in Einheit „Geld“), also jene Menge an Geld, die gespart wird, wenn der
     // Rabattprozentsatz der angegebenen Rabattrate angewendet wird
     default public float getDiscount(DiscountRate rate) {
-        return this.getPrice() - (this.getDiscount(rate) * this.getPrice());
+        return this.getDiscount(rate) * this.getPrice();
     }
 
     // Liefert den Standardrabatt (in Einheit „Geld“), also jene Menge an Geld, die gespart wird, wenn der
@@ -38,6 +37,6 @@ public interface Priced {
     // Liefert den verbilligten Preis, also jene Menge an Geld, die bezahlt werden muss, wenn vom
     // Originalpreis der Standardrabatt abgezogen wird
     default public float getReducedPrice() {
-        return this.getPrice() - this.getDiscount();
+        return this.getPrice() - (this.getDiscount() * this.getDiscountPercent());
     }
 }
