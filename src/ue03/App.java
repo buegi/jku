@@ -31,7 +31,5 @@ public class App {
         System.out.println("ReducedPrice: " + pukePotion.getReducedPrice());
         System.out.println("Power: " + pukePotion.getPower());
         System.out.println("CoolDown: " + pukePotion.getCoolDown());
-
-
     }
 }

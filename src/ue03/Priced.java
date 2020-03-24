@@ -37,6 +37,6 @@ public interface Priced {
     // Liefert den verbilligten Preis, also jene Menge an Geld, die bezahlt werden muss, wenn vom
     // Originalpreis der Standardrabatt abgezogen wird
     default public float getReducedPrice() {
-        return this.getPrice() - (this.getDiscount() * this.getDiscountPercent());
+        return this.getPrice() - (this.getPrice() * this.getDiscountPercent());
     }
 }
