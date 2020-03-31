@@ -24,5 +24,4 @@ public interface Processor {
      * @return The name.
      */
     String getName();
-
 }

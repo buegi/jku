@@ -2,13 +2,14 @@ package ue04.app;
 
 import ue04.data.Data;
 import ue04.processing.Processor;
+import ue04.processing.Processors;
 
 import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Data data = Data.readFromFile("data.csv");
+        Data data = Data.readFromFile("src/ue04/data/data.csv");
         Processor[] processors = {
                 new Processors.PercentScaler(),
                 Processors.scale(-20, 123),
@@ -23,7 +24,6 @@ public class Main {
             data = p.process(data);
             System.out.println(String.format("   after: %s", data));
         }
-        data.writeToFile("data_processed.csv");
+        data.writeToFile("src/ue04/data/data_processed.csv");
     }
-
 }
