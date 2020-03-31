@@ -34,7 +34,7 @@ public class Processors {
         }
 
         public String getName() {
-            return "[" + this.getMin() + ", " + this.getMax() + "]";
+            return "Scaler(min=" + this.getMin() + ", max=" + this.getMax() + ")";
         }
     }
 
@@ -84,8 +84,8 @@ public class Processors {
 
     // TODO: 4) oeffentliche, statische, innere Klasse "PercentScaler"
     public static class PercentScaler extends Scaler {
-        private final int MIN = 0;
-        private final int MAX = 100;
+        private final double MIN = 0.0d;
+        private final double MAX = 100.0d;
 
         @Override
         double getMin() {
@@ -101,7 +101,6 @@ public class Processors {
 
     // TODO: 5) private, statische, innere Klasse "Clipper"
     private static class Clipper implements Processor {
-
         private boolean clipLower, clipUpper;
         private double lower, upper;
 
@@ -114,15 +113,12 @@ public class Processors {
 
         @Override
         public Data process(Data data) {
-
-            // TODO
             double[] result = new double[data.size()];
 
             if (clipUpper && clipLower) {
                 int counter = 0;
                 for (double val : data) {
-                    result[counter] = val < lower ? lower : val;
-                    result[counter] = val > upper ? upper : val;
+                    result[counter] = (val < lower) ? lower : (val > upper) ? upper : val;
                     counter++;
                 }
                 return new Data(result);
@@ -152,15 +148,15 @@ public class Processors {
         public String getName() {
 
             if (clipLower && clipUpper) {
-                return "ClipLower: " + lower + " ClipUpper: " + upper;
+                return "Clipper(lower=" + lower + ", upper=" + upper + ")";
             }
             if (clipUpper) {
-                return "ClipUpper: " + upper;
+                return "Clipper(upper=" + upper + ")";
             }
             if (clipLower) {
-                return "ClipLower: " + lower;
+                return "Clipper(lower=" + lower + ")";
             }
-            return "No Clips defined";
+            return "Clipper(no clips defined)";
         }
     }
 
