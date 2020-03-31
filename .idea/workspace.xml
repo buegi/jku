@@ -1,41 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="ok">
-      <change afterPath="$PROJECT_DIR$/src/ue04/app/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/data/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/data/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Drawable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Moveable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Primitive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Rect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/Text.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes1/app/Snowman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes2/Drawable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes2/Moveable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes2/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes2/Text.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes2/app/Snowman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes3/Drawable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes3/Moveable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes3/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes3/Text.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes3/app/Snowman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes3/app/Snowman2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/Animation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/Drawable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/Moveable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/Text.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/app/Snowman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/demo/shapes4/app/Snowman2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/processing/Processor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue04/processing/Processors.java" afterDir="false" />
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/data/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue04/data/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/processing/Processors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue04/processing/Processors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,20 +127,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ok">
-      <created>1581097668269</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1581097668269</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ok">
-      <created>1581097742549</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1581097742549</updated>
     </task>
     <task id="LOCAL-00007" summary="ok">
       <created>1581097912707</created>
@@ -502,7 +457,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585074695547</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="ok">
+      <created>1585409647941</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1585409647942</updated>
+    </task>
+    <task id="LOCAL-00055" summary="ok">
+      <created>1585409754747</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1585409754747</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,12 +527,12 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1585409647233">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1585409754353">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583856578639" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409647233" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state width="1348" height="620" key="GridCell.Tab.0.bottom" timestamp="1585074731944">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -618,12 +587,12 @@
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583432924041" />
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097244151" />
     <state x="1418" y="916" key="SettingsEditor/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585005002315" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1585409649520">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1585409756076">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855243894" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409649520" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1710" y="740" width="607" height="804" key="find.popup" timestamp="1583851883167">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
