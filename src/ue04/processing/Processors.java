@@ -20,10 +20,8 @@ public class Processors {
 
         @Override
         public Data process(Data data) {
-
             double dataMin = DataUtil.min(data);
             double dataMax = DataUtil.max(data);
-
             double[] result = new double[data.size()];
             int counter = 0;
 
@@ -43,8 +41,6 @@ public class Processors {
 
     // TODO: 2) oeffentliche, statische Methode "Processor scale(double min, double max)"
     public static Processor scale(double min, double max) {
-
-        // TODO
         return new Processors.Scaler() {
             @Override
             double getMin() {
@@ -60,8 +56,6 @@ public class Processors {
 
     // TODO: 3) oeffentliche, statische Methode "Processor standardize()"
     public static Processor standardize() {
-
-        // TODO
         return new Processor() {
 
             @Override
@@ -127,12 +121,8 @@ public class Processors {
             if (clipUpper && clipLower) {
                 int counter = 0;
                 for (double val : data) {
-                    if (val < lower) {
-                        result[counter] = lower;
-                    }
-                    if (val > upper) {
-                        result[counter] = upper;
-                    }
+                    result[counter] = val < lower ? lower : val;
+                    result[counter] = val > upper ? upper : val;
                     counter++;
                 }
                 return new Data(result);
@@ -141,9 +131,7 @@ public class Processors {
             if (clipUpper) {
                 int counter = 0;
                 for (double val : data) {
-                    if (val > upper) {
-                        result[counter] = upper;
-                    }
+                    result[counter] = val > upper ? upper : val;
                     counter++;
                 }
                 return new Data(result);
@@ -152,9 +140,7 @@ public class Processors {
             if (clipLower) {
                 int counter = 0;
                 for (double val : data) {
-                    if (val < lower) {
-                        result[counter] = lower;
-                    }
+                    result[counter] = val < lower ? lower : val;
                     counter++;
                 }
                 return new Data(result);
