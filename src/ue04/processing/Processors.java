@@ -60,10 +60,8 @@ public class Processors {
 
             @Override
             public Data process(Data data) {
-
                 double dataAvg = DataUtil.avg(data);
                 double dataStd = DataUtil.std(data);
-
                 double[] result = new double[data.size()];
                 int counter = 0;
 
