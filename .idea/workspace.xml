@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/app/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/app/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/genericproblems/G.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/genericproblems/GException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list1/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list1/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list1/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list2/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list2/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list2/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list3/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list3/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list3/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list4/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list4/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list4/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/persons/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/persons/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/demo/persons/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/map/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/map/SortedMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ue05/persons.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -542,22 +563,13 @@
     </state>
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
-    <state x="785" y="229" key="CommitChangelistDialog2" timestamp="1586336706164">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="1407" y="573" key="CommitChangelistDialog2" timestamp="1585692436054">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583856578639" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
-    <state x="785" y="229" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586336706164" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="360" y="120" width="1200" height="800" key="DiffContextDialog" timestamp="1586336679584">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="360" y="120" width="1200" height="800" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586336679584" />
-    <state x="726" y="303" key="FileChooserDialogImpl" timestamp="1586336364106">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="726" y="303" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586336364106" />
     <state width="1199" height="254" key="GridCell.Tab.0.bottom" timestamp="1585692439837">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -610,13 +622,12 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1734" y="854" key="RollbackChangesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855233514" />
-    <state x="426" y="123" key="SettingsEditor" timestamp="1586336533391">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="1418" y="916" key="SettingsEditor" timestamp="1585005002315">
+      <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583432924041" />
     <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097244151" />
     <state x="1418" y="916" key="SettingsEditor/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585005002315" />
-    <state x="426" y="123" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586336533391" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2" timestamp="1585692109691">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -624,18 +635,10 @@
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586336185871">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586336185871" />
     <state x="1710" y="740" width="607" height="804" key="find.popup" timestamp="1583851883167">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1710" y="740" width="607" height="804" key="find.popup/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583851883167" />
-    <state x="709" y="311" key="git4idea.merge.GitPullDialog" timestamp="1586336812138">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="709" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586336812138" />
     <state x="1299" y="894" key="new project wizard" timestamp="1583827446904">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
