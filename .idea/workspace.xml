@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ue05/app/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/app/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/genericproblems/G.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/genericproblems/GException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list1/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list1/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list1/ListApp1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list2/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list2/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list2/ListApp1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list3/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list3/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list3/ListApp1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list4/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list4/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/list4/ListApp1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/persons/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/persons/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/demo/persons/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/map/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/map/SortedMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue05/persons.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1XUOEXlRCVg1LE2eoXV04XR9WCJ" />
   <component name="ProjectLevelVcsManager">
@@ -161,13 +138,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00016" summary="ok">
-      <created>1583853240910</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1583853240910</updated>
     </task>
     <task id="LOCAL-00017" summary="ok">
       <created>1583853259468</created>
@@ -505,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585692436484</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="ok">
+      <created>1586337170821</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1586337170821</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -635,6 +612,10 @@
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586337218395">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586337218395" />
     <state x="1710" y="740" width="607" height="804" key="find.popup" timestamp="1583851883167">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
