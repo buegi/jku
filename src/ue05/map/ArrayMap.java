@@ -36,8 +36,8 @@ public class ArrayMap<K, V> implements Map<K, V> {
 
     protected int indexOf(K key) {
         int index = 0;
-        while (index < entries.length && entries[index] != null) {
-            if (entries[index].getKey().equals(key)) {
+        while (index < this.entries.length && this.entries[index] != null) {
+            if (this.entries[index].getKey().equals(key)) {
                 return index;
             }
             index++;
@@ -46,20 +46,20 @@ public class ArrayMap<K, V> implements Map<K, V> {
     }
 
     public void put(K key, V value) {
-        if (contains(key)) {
-            entries[indexOf(key)] = new SimpleEntry<K, V>(key, value);
+        if (this.contains(key)) {
+            this.entries[indexOf(key)] = new SimpleEntry<K, V>(key, value);
         } else {
-            if (nEntries >= entries.length) {
-                entries = Arrays.copyOf(entries, entries.length * 2);
+            if (this.nEntries >= this.entries.length) {
+                this.entries = Arrays.copyOf(this.entries, (this.entries.length * 2));
             }
-            entries[nEntries] = new SimpleEntry<K, V>(key, value);
-            nEntries++;
+            this.entries[this.nEntries] = new SimpleEntry<K, V>(key, value);
+            this.nEntries++;
         }
     }
 
     @Override
     public V get(K key) {
-        if (contains(key)) {
+        if (this.contains(key)) {
             return this.entries[this.indexOf(key)].getValue();
         }
         return null;
@@ -67,14 +67,14 @@ public class ArrayMap<K, V> implements Map<K, V> {
 
     @Override
     public boolean contains(K key) {
-        return this.indexOf(key) == -1 ? false : true;
+        return this.indexOf(key) != -1;
     }
 
     @Override
     public boolean remove(K key) {
         int index = this.indexOf(key);
         if (index >= 0) {
-            System.arraycopy(this.entries, index + 1, this.entries, index, this.size() - index);
+            System.arraycopy(this.entries, index + 1, this.entries, index, (this.size() - index));
             this.nEntries--;
             return true;
         }
@@ -106,7 +106,7 @@ public class ArrayMap<K, V> implements Map<K, V> {
 
     @Override
     public Iterator<V> valueIterator() {
-        return new Iterator<V>() {
+        return new Iterator<>() {
 
             private int index = 0;
 
