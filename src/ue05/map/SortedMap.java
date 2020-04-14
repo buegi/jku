@@ -8,6 +8,5 @@ package ue05.map;
  * @param <K> The type of the keys. Must be {@link Comparable}.
  * @param <V> The type of the values.
  */
-public interface SortedMap /* TODO */ {
-
+public interface SortedMap<K extends Comparable<? super K>, V> extends Map<K, V> {
 }
