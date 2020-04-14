@@ -24,6 +24,7 @@ public class ArraySortedMap<K extends Comparable<? super K>, V> extends ArrayMap
         }
     }
 
+    @Override
     protected int indexOf(K key) {
         int index = 0;
         while (index < this.entries.length && this.entries[index] != null && key.compareTo(this.entries[index].getKey()) >= 0) {
