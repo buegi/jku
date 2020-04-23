@@ -94,7 +94,7 @@ public class ArrayMap<K, V> implements Map<K, V> {
 
             @Override
             public boolean hasNext() {
-                return (index < entries.length) && (entries[index] != null);
+                return index < size();
             }
 
             @Override
@@ -112,7 +112,7 @@ public class ArrayMap<K, V> implements Map<K, V> {
 
             @Override
             public boolean hasNext() {
-                return (index < entries.length) && (entries[index] != null);
+                return index < size();
             }
 
             @Override
@@ -130,7 +130,7 @@ public class ArrayMap<K, V> implements Map<K, V> {
 
             @Override
             public boolean hasNext() {
-                return (index < entries.length) && (entries[index] != null);
+                return index < size();
             }
 
             @Override

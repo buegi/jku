@@ -20,19 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ue06/demo/list/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/demo/list/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/demo/list/ListHofDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/demo/list/MiscDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/list/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/list/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/map/ArrayMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/map/ArraySortedMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/map/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/map/SortedMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/map/app/AssignmentRecordsMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ue06/map/app/Grade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/map/ArrayMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ue05/map/ArrayMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,13 +156,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00025" summary="ok">
-      <created>1583877489927</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1583877489927</updated>
     </task>
     <task id="LOCAL-00026" summary="ok">
       <created>1583878133337</created>
@@ -511,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586901408088</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="ok">
+      <created>1587666049102</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1587666049102</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -571,7 +560,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1586901407685">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1587666048500">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -579,7 +568,7 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586901407685" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1587666048500" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1586336426426">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -659,7 +648,7 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1806" y="736" width="570" height="524" key="StructurePopup/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586886772515" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1586901409675">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1587666050960">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825876601" />
@@ -667,7 +656,7 @@
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586901409675" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1587666050960" />
     <state x="2085" y="1016" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586337326300">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
