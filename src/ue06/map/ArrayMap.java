@@ -19,8 +19,8 @@ public class ArrayMap<K, V> implements Map<K, V> {
                 resize();
             }
             entries[nEntries] = new AEntry<K, V>(key, value);
+            nEntries++;
         }
-        nEntries++;
     }
 
     @Override
