@@ -8,8 +8,8 @@ import java.util.function.BiPredicate;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+import ue06.demo.list.List;
 import ue06.list.LinkedList;
-import ue06.list.List;
 
 /**
  * A map from keys to values.
@@ -106,14 +106,46 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
     // TODO: Higher order functions for Map
 
     // map
+    default <R> Map<K, R> map(BiFunction<? super K, ? super V, ? extends R> mapper) {
+        // TODO
+        return null;
+    }
 
     // filter 
+    default Map<K, V> filter(BiPredicate<? super K, ? super V> predicate) {
+        // TODO
+        return null;
+    }
 
     // forEach
+    default void forEach(BiConsumer<? super K, ? super V> action) {
+        // TODO
+        for (Entry<K, V> entry : this) {
+            action.accept(entry.getKey(), entry.getValue());
+        }
+    }
 
-    // reduce 
+    // reduce
+    default <R> R reduce(R initial, BiFunction<R, Entry<? super K, ? super V>, R> acc) {
+        // TODO
+        return null;
+    }
 
     // find
+    default Optional<Entry<K, V>> find(BiPredicate<? super K, ? super V> predicate) {
+        // TODO
+        for (Entry<K, V> entry : this) {
+            if (predicate.test(entry.getKey(), entry.getValue())) {
+                return Optional.of(entry);
+            }
+        }
+        return Optional.empty();
+    }
 
-    // group 
+    // group
+//    default <G, R> Map<G, List<R>> group(
+//            BiFunction<? super K, ? super V, G> groupingFn,
+//            BiFunction<? super K, ? super V, R> valueFn)
+
+    // TODO
 }
