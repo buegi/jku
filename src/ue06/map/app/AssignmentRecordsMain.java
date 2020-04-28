@@ -45,7 +45,6 @@ public class AssignmentRecordsMain {
 
         // TODO:  Negative results
         Map<String, List<Integer>> negative;
-        // filter von map und filter, reduce, size von list
         negative = records.filter((k, v) -> {
             List<Integer> posSolved = v.filter(x -> x >= 8);
             int avgPoints = (v.filter(x -> x >= 8).reduce(0, Integer::sum)) / posSolved.size();
