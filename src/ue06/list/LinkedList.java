@@ -1,7 +1,5 @@
 package ue06.list;
 
-import ue03.Item;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.StringJoiner;
