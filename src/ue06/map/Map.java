@@ -8,8 +8,8 @@ import java.util.function.BiPredicate;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import ue06.demo.list.List;
 import ue06.list.LinkedList;
+import ue06.list.List;
 
 /**
  * A map from keys to values.

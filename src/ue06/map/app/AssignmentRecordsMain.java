@@ -71,7 +71,19 @@ public class AssignmentRecordsMain {
 
         // TODO:  Grouping students by grades
         Map<Grade, List<String>> gradesDistr;
-        gradesDistr = grades.group((a, b) -> b, (a, b) -> a);
+        gradesDistr = records.map((k, v) -> v.filter(val -> val >= 8)).map((k, v) -> {
+            double avgPoints = v.reduce(0, Integer::sum) / v.size();
+            if (avgPoints < 12 || v.size() < 9) {
+                return Grade.INSUFFICIENT;
+            } else if (avgPoints < 15) {
+                return Grade.SUFFICIENT;
+            } else if (avgPoints < 18) {
+                return Grade.SATISFACTORY;
+            } else if (avgPoints < 21) {
+                return Grade.GOOD;
+            }
+            return Grade.EXCELLENT;
+        }).group((a, b) -> b, (a, b) -> a);
         System.out.println("gradesDistr: " + gradesDistr.toString());
     }
 }
