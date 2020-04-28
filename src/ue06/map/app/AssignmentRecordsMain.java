@@ -71,7 +71,7 @@ public class AssignmentRecordsMain {
 
         // TODO:  Grouping students by grades
         Map<Grade, List<String>> gradesDistr;
-        gradesDistr = grades.group((k,v) -> v, (k, v) -> k);
+        gradesDistr = grades.group((a, b) -> b, (a, b) -> a);
         System.out.println("gradesDistr: " + gradesDistr.toString());
     }
 }
