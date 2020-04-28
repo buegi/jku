@@ -155,13 +155,15 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
             BiFunction<? super K, ? super V, G> groupingFn,
             BiFunction<? super K, ? super V, R> valueFn) {
         Map<G, List<R>> result = new ArrayMap<G, List<R>>();
-
         for (Entry<K, V> entry : this) {
-            G key = groupingFn.apply(entry.getKey(), entry.getValue());
-            R val = valueFn.apply(entry.getKey(), entry.getValue());
-
-
-
+            final G key = groupingFn.apply(entry.getKey(), entry.getValue());
+            final R val = valueFn.apply(entry.getKey(), entry.getValue());
+            final List<R> list = result.get(key);
+            if (list == null) {
+                result.put(key, List.of(val));
+            } else {
+                list.add(val);
+            }
         }
         return result;
     }
