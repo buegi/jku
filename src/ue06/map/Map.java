@@ -104,10 +104,8 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
     Iterator<Entry<K, V>> iterator();
 
     // TODO: Higher order functions for Map
-
-    // map
+    // TODO map
     default <R> Map<K, R> map(BiFunction<? super K, ? super V, ? extends R> mapper) {
-        // TODO
         Map<K, R> result = new ArrayMap<K, R>();
         for (Entry<K, V> entry : this) {
             result.put(entry.getKey(), mapper.apply(entry.getKey(), entry.getValue()));
@@ -115,9 +113,8 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
         return result;
     }
 
-    // filter 
+    // TODO filter
     default Map<K, V> filter(BiPredicate<? super K, ? super V> predicate) {
-        // TODO
         Map<K, V> result = new ArrayMap<K, V>();
         for (Entry<K, V> entry : this) {
             if (predicate.test(entry.getKey(), entry.getValue())) {
@@ -127,17 +124,15 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
         return result;
     }
 
-    // forEach
+    // TODO forEach
     default void forEach(BiConsumer<? super K, ? super V> action) {
-        // TODO
         for (Entry<K, V> entry : this) {
             action.accept(entry.getKey(), entry.getValue());
         }
     }
 
-    // reduce
+    // TODO reduce
     default <R> R reduce(R initial, BiFunction<R, Entry<? super K, ? super V>, R> acc) {
-        // TODO
         R result = initial;
         for (Entry<K, V> entry : this) {
             result = acc.apply(result, entry);
@@ -145,9 +140,8 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
         return result;
     }
 
-    // find
+    // TODO find
     default Optional<Entry<K, V>> find(BiPredicate<? super K, ? super V> predicate) {
-        // TODO
         for (Entry<K, V> entry : this) {
             if (predicate.test(entry.getKey(), entry.getValue())) {
                 return Optional.of(entry);
@@ -156,14 +150,19 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
         return Optional.empty();
     }
 
-    // group
+    // TODO group
     default <G, R> Map<G, List<R>> group(
             BiFunction<? super K, ? super V, G> groupingFn,
             BiFunction<? super K, ? super V, R> valueFn) {
-        // TODO
-        Map<G, R> result = new ArrayMap();
+        Map<G, List<R>> result = new ArrayMap<G, List<R>>();
+
+        for (Entry<K, V> entry : this) {
+            G key = groupingFn.apply(entry.getKey(), entry.getValue());
+            R val = valueFn.apply(entry.getKey(), entry.getValue());
 
 
-        return null;
+
+        }
+        return result;
     }
 }

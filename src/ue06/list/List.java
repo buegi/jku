@@ -1,6 +1,7 @@
 package ue06.list;
 
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
@@ -160,11 +161,18 @@ public interface List<E> extends Iterable<E> {
      * @param accumulator the binary reduction operator
      * @return an Optional value with the result; Optional.empty() for an empty list.
      */
+
+    // changed  Herbert Prähofer - see Forum
     public default Optional<E> reduce(BinaryOperator<E> accumulator) {
         if (this.isEmpty()) {
             return Optional.empty();
         } else {
-            return Optional.of(reduce(this.iterator().next(), accumulator));
+            Iterator<E> it = this.iterator();
+            E result = it.next();
+            while (it.hasNext()) {
+                result = accumulator.apply(result, it.next());
+            }
+            return Optional.of(result);
         }
     }
 
