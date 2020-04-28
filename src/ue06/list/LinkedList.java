@@ -1,7 +1,10 @@
 package ue06.list;
 
+import ue03.Item;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.StringJoiner;
 
 /**
  * Linked list implementation of interface {@link List}.
@@ -137,5 +140,12 @@ public class LinkedList<E> implements List<E> {
         Node(F elem) {
             this(elem, null);
         }
+    }
+
+    @Override
+    public String toString() {
+        StringJoiner sj = new StringJoiner(", ", "[", "]");
+        this.forEach((val) -> sj.add(val.toString()));
+        return sj.toString();
     }
 }

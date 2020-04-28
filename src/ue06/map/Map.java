@@ -108,13 +108,23 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
     // map
     default <R> Map<K, R> map(BiFunction<? super K, ? super V, ? extends R> mapper) {
         // TODO
-        return null;
+        Map<K, R> result = new ArrayMap<K, R>();
+        for (Entry<K, V> entry : this) {
+            result.put(entry.getKey(), mapper.apply(entry.getKey(), entry.getValue()));
+        }
+        return result;
     }
 
     // filter 
     default Map<K, V> filter(BiPredicate<? super K, ? super V> predicate) {
         // TODO
-        return null;
+        Map<K, V> result = new ArrayMap<K, V>();
+        for (Entry<K, V> entry : this) {
+            if (predicate.test(entry.getKey(), entry.getValue())) {
+                result.put(entry.getKey(), entry.getValue());
+            }
+        }
+        return result;
     }
 
     // forEach
@@ -128,7 +138,11 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
     // reduce
     default <R> R reduce(R initial, BiFunction<R, Entry<? super K, ? super V>, R> acc) {
         // TODO
-        return null;
+        R result = initial;
+        for (Entry<K, V> entry : this) {
+            result = acc.apply(result, entry);
+        }
+        return result;
     }
 
     // find
@@ -143,9 +157,14 @@ public interface Map<K, V> extends Iterable<Map.Entry<K, V>> {
     }
 
     // group
-//    default <G, R> Map<G, List<R>> group(
-//            BiFunction<? super K, ? super V, G> groupingFn,
-//            BiFunction<? super K, ? super V, R> valueFn)
+    default <G, R> Map<G, List<R>> group(
+            BiFunction<? super K, ? super V, G> groupingFn,
+            BiFunction<? super K, ? super V, R> valueFn) {
+        // TODO
+        Map<G, R> result = new ArrayMap();
 
-    // TODO
+
+
+        return null;
+    }
 }

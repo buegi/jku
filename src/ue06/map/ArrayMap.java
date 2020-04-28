@@ -2,6 +2,7 @@ package ue06.map;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.StringJoiner;
 
 public class ArrayMap<K, V> implements Map<K, V> {
 
@@ -75,7 +76,6 @@ public class ArrayMap<K, V> implements Map<K, V> {
                 i++;
                 return k;
             }
-
         };
     }
 
@@ -96,7 +96,6 @@ public class ArrayMap<K, V> implements Map<K, V> {
                 i++;
                 return v;
             }
-
         };
     }
 
@@ -117,7 +116,6 @@ public class ArrayMap<K, V> implements Map<K, V> {
                 i++;
                 return e;
             }
-
         };
     }
 
@@ -140,7 +138,6 @@ public class ArrayMap<K, V> implements Map<K, V> {
         return -1;
     }
 
-
     protected static class AEntry<K, V> implements Entry<K, V> {
 
         private final K key;
@@ -161,5 +158,17 @@ public class ArrayMap<K, V> implements Map<K, V> {
         public V getValue() {
             return value;
         }
+
+        @Override
+        public String toString() {
+            return this.key + ": " + this.value.toString();
+        }
+    }
+
+    @Override
+    public String toString() {
+        StringJoiner sj = new StringJoiner(", ", "[", "]");
+        this.forEach((key, value) -> sj.add(key + ": " + value));
+        return sj.toString();
     }
 }
