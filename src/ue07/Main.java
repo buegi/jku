@@ -91,17 +91,21 @@ public class Main {
         System.out.println("==========================================");
 
         // test exceptions
-
-        // ...
+        System.out.println("--------------- Exceptions ---------------");
+        try {
+            library.lendBook("Clean Code", "Susi");
+            library.lendBook("Clean Code", "Susi");
+            System.out.println("Error: Susi should not be able to lend a book doubly!");
+        } catch (Exception exc) {
+            System.out.println("OK, expected exception: " + exc.getMessage());
+        }
 
         // print Status
-        System.out.println("--------------- Exceptions ---------------");
         System.out.println("BookStatus: ");
         library.getAvailableBooksOrderedByAlphabet().forEach(l -> System.out.println(l.toString()));
         System.out.println();
         System.out.println("LenderStatus: ");
         library.getLendersOrderedByName().forEach(l -> System.out.println(l.toString()));
         System.out.println("==========================================");
-
     }
 }
