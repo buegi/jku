@@ -65,7 +65,7 @@ public class Lender implements Comparable<Lender> {
 
     @Override
     public String toString() {
-        StringJoiner sj = new StringJoiner(", ", "[", "]");
+        StringJoiner sj = new StringJoiner(", ", " [", "]");
         this.lentBooks.forEach(a -> sj.add(a.getName()));
         return this.getName() + sj.toString();
     }

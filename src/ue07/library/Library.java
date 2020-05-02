@@ -30,10 +30,10 @@ public class Library {
 
     public void lendBook(String bookName, String lenderName) throws NoSuchElementException {
         // TODO
-        if (!(books.containsKey(bookName)) || books.get(bookName).size() <= 0) {
+        int index = books.get(bookName).size() - 1;
+        if (!(books.containsKey(bookName)) || (index == -1)) {
             throw new NoSuchElementException("Book not in Library, or all books of that type lent!");
         }
-        int index = books.get(bookName).lastIndexOf(bookName);
         lenders.get(lenderName).addBook(books.get(bookName).get(index));
         books.get(bookName).remove(index);
     }
@@ -52,8 +52,10 @@ public class Library {
     }
 
     public List<Book> getAvailableBooksOrderedByAlphabet() {
-        // TODO
-        return null;
+        final List<Book> bookList = new ArrayList<>();
+        this.books.values().stream().forEach(l -> l.forEach(b -> bookList.add(b)));
+        bookList.sort(Book.getLentComparator());
+        return bookList;
     }
 
     public SortedSet<Book> getAvailableBooksOrderedByLentCount() {
@@ -62,7 +64,8 @@ public class Library {
     }
 
     public SortedSet<Lender> getLendersOrderedByName() {
-        // TODO
-        return null;
+        final TreeSet<Lender> lenderSet = new TreeSet<>();
+        this.lenders.values().stream().forEach((l -> lenderSet.add(l)));
+        return lenderSet;
     }
 }

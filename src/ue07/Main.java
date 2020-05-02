@@ -1,8 +1,10 @@
 package ue07;
 
+import ue07.library.Library;
+
 public class Main {
 
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
 
         /* TODO - Fügen Sie in die Bibliothek mindestens drei Bücher ein, darunter auch welche mit gleichem Namen, um
                   die Entwicklung der Leihvorgänge zu sehen
@@ -40,6 +42,23 @@ public class Main {
                 Lender: Susi, books: 'Clean Code'
          */
 
+        Library library = new Library();
 
+        library.addLender("Robert C. Martin");
+        library.addLender("Susi");
+        library.addLender("Strolchi");
+
+        library.addBook("Clean Code");
+        library.addBook("Clean Agile");
+        library.addBook("Clean Architecture");
+        library.addBook("Clean Architecture");
+
+        library.lendBook("Clean Code", "Susi");
+        library.lendBook("Clean Agile", "Strolchi");
+
+        System.out.println("Available Books: ");
+        library.getAvailableBooksOrderedByAlphabet().forEach(l -> System.out.println(l.toString()));
+        System.out.println("Lenders: ");
+        library.getLendersOrderedByName().forEach(l -> System.out.println(l.toString()));
     }
 }
