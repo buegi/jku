@@ -1,6 +1,8 @@
 package ue07.library;
 
+import java.util.Objects;
 import java.util.SortedSet;
+import java.util.StringJoiner;
 import java.util.TreeSet;
 
 public class Lender implements Comparable<Lender> {
@@ -16,11 +18,6 @@ public class Lender implements Comparable<Lender> {
         return this.name;
     }
 
-    /*  TODO public static Comparator<Book> getNameComparator(), liefert einen Comparator, um Buecher nach Namen
-             alphabetisch aufsteigend zu sortieren. Nutzen Sie Comparator.comparing, um einen passenden
-             Comparator zu erzeugen */
-
-
     protected void addBook(Book newBook) throws IllegalStateException {
         if (this.lentBooks.contains(newBook)) {
             throw new IllegalStateException("Book already lent!");
@@ -28,41 +25,48 @@ public class Lender implements Comparable<Lender> {
         this.lentBooks.add(newBook);
     }
 
-    protected void removeBook(String bookName) throws IllegalStateException {
-        /*  TODO protected Book remove(String bookName), entfernt ein ausgeliehenes Buch vom Kunden und liefert es
-                 zurück. Durchlaufen Sie die geliehen Buecher nur soweit wie nötig, um das Buch zu finden. Verwenden
-                 Sie dazu den Iterator des TreeSet */
-        if (lentBooks.contains(bookName)) {
-            throw new IllegalStateException("Book already lent");
+    protected Book removeBook(String bookName) throws IllegalStateException {
+        if (!(lentBooks.contains(bookName))) {
+            throw new IllegalStateException("Book not lent by lender!");
         }
-        lentBooks.remove(bookName);
+        Book returnedBook = null;
+        for (Book book : this.lentBooks) {
+            if (book.getName().equals(bookName)) {
+                this.lentBooks.remove(bookName);
+                returnedBook = book;
+                break;
+            }
+        }
+        return returnedBook;
     }
 
-        /*  TODO Implementieren Sie das Interface Comparable<Lender> sowie die Objekt-Methoden equals und hashCode
-                 Vergleichen Sie den Namen des Kunden. Benutzen Sie Objects.equals und Objects.hash in Ihren Methoden */
-
-
     @Override
-    public int compareTo(Lender o) {
-        // TODO
-        return 0;
+    public int compareTo(Lender other) {
+        return this.getName().compareTo(other.getName());
     }
 
     @Override
     public boolean equals(Object obj) {
-        // TODO
-        return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Lender lender = (Lender) obj;
+
+        return lender.getName() == this.getName();
     }
 
     @Override
     public int hashCode() {
-        // TODO
-        return 0;
+        return Objects.hash(this.name);
     }
 
     @Override
     public String toString() {
-        /* TODO public String toString(), liefert eine Beschreibung aus Namen und aktuell geliehener Bücher */
-        return null;
+        StringJoiner sj = new StringJoiner(", ", "[", "]");
+        this.lentBooks.forEach(a -> sj.add(a.getName()));
+        return this.getName() + sj.toString();
     }
 }

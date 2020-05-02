@@ -1,8 +1,9 @@
 package ue07.library;
 
 import java.util.Comparator;
+import java.util.Objects;
 
-public class Book {
+public class Book implements Comparable<Book> {
     private final String name;
     private int lentCount;
 
@@ -25,23 +26,35 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Title: " + this.name + ", wurde bisher " + this.lentCount + " mal ausgeliehen.";
+        return "Title: " + this.name + ", was lent " + this.lentCount + " times.";
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.getName(), this.getLentCount());
+    }
+
+    @Override
+    public int compareTo(Book other) {
+        return this.getName().compareTo(other.getName());
+    }
+
+    public static Comparator<Book> getNameComparator() {
+        return Comparator.comparing(Book::getName);
     }
 
     public static Comparator<Book> getLentComparator() {
-
-        /* TODO public static Comparator<Book> getLentComparator(), liefert einen Comparator, um Buecher nach
-                Leihvorgangszaehler zu sortieren.Ist der Leihvorgangszaehler gleich, soll alphabetisch aufsteigend nach
-                Namen sortiert werden.Implementieren Sie den Comparator als anonyme Klasse direkt in der Methode */
-
-        return null;
-    }
-
-
-    public static Comparator<Book> getNameComparator() {
-        /* TODO public static Comparator<Book> getNameComparator(), liefert einen Comparator, um Buecher nach Namen
-                alphabetisch aufsteigend zu sortieren. Nutzen Sie Comparator.comparing, um einen passenden
-                Comparator zu erzeugen */
-        return Comparator.comparing(Book::getName);
+        return new Comparator<Book>() {
+            @Override
+            public int compare(Book b1, Book b2) {
+                if (b1.lentCount < b2.lentCount) {
+                    return -1;
+                } else if (b1.lentCount > b2.lentCount) {
+                    return 1;
+                } else {
+                    return b1.getName().compareTo(b2.getName());
+                }
+            }
+        };
     }
 }
