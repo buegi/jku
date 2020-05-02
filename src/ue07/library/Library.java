@@ -13,7 +13,6 @@ public class Library {
     }
 
     public void addBook(String bookName) {
-        // TODO
         if (!(books.containsKey(bookName))) {
             books.put(bookName, new ArrayList<Book>());
         }
@@ -21,7 +20,6 @@ public class Library {
     }
 
     public void addLender(String lenderName) throws IllegalStateException {
-        // TODO
         if (lenders.containsKey(lenderName)) {
             throw new IllegalStateException("Lender already present!");
         }
@@ -29,7 +27,6 @@ public class Library {
     }
 
     public void lendBook(String bookName, String lenderName) throws NoSuchElementException {
-        // TODO
         int index = books.get(bookName).size() - 1;
         if (!(books.containsKey(bookName)) || (index == -1)) {
             throw new NoSuchElementException("Book not in Library, or all books of that type lent!");
@@ -39,7 +36,6 @@ public class Library {
     }
 
     public void returnBook(String bookName, String lenderName) throws NoSuchElementException {
-        // TODO
         if (!(books.containsKey(bookName))) {
             throw new NoSuchElementException("Book has never been in library!");
         }
@@ -54,13 +50,17 @@ public class Library {
     public List<Book> getAvailableBooksOrderedByAlphabet() {
         final List<Book> bookList = new ArrayList<>();
         this.books.values().stream().forEach(l -> l.forEach(b -> bookList.add(b)));
-        bookList.sort(Book.getLentComparator());
+        bookList.sort(Book.getNameComparator());
         return bookList;
     }
 
     public SortedSet<Book> getAvailableBooksOrderedByLentCount() {
-        // TODO
-        return null;
+        final List<Book> bookList = new ArrayList<>();
+        this.books.values().stream().forEach(l -> l.forEach(b -> bookList.add(b)));
+        bookList.sort(Book.getLentComparator());
+        final TreeSet<Book> bookSet = new TreeSet<>();
+        bookList.stream().forEach(b -> bookSet.add(b));
+        return bookSet;
     }
 
     public SortedSet<Lender> getLendersOrderedByName() {
