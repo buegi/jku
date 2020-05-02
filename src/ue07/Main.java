@@ -53,11 +53,41 @@ public class Main {
         library.addBook("Clean Architecture");
         library.addBook("Clean Architecture");
 
-        library.lendBook("Clean Code", "Susi");
-        library.lendBook("Clean Agile", "Strolchi");
-
+        // print Status
+        System.out.println();
         System.out.println("Available Books: ");
         library.getAvailableBooksOrderedByAlphabet().forEach(l -> System.out.println(l.toString()));
+        System.out.println();
+        System.out.println("Lenders: ");
+        library.getLendersOrderedByName().forEach(l -> System.out.println(l.toString()));
+
+        // lend books
+        library.lendBook("Clean Code", "Susi");
+        library.lendBook("Clean Agile", "Strolchi");
+        try {
+            library.lendBook("Clean Code", "Susi");
+            System.out.println("Error: Susi should not be able to lend a book doubly!");
+        } catch (Exception exc) {
+            System.out.println("OK, expected exception: " + exc.getMessage());
+        }
+
+        // print Status
+        System.out.println();
+        System.out.println("Available Books: ");
+        library.getAvailableBooksOrderedByAlphabet().forEach(l -> System.out.println(l.toString()));
+        System.out.println();
+        System.out.println("Lenders: ");
+        library.getLendersOrderedByName().forEach(l -> System.out.println(l.toString()));
+
+        // return books
+
+        // ...
+
+        // print Status
+        System.out.println();
+        System.out.println("Available Books: ");
+        library.getAvailableBooksOrderedByAlphabet().forEach(l -> System.out.println(l.toString()));
+        System.out.println();
         System.out.println("Lenders: ");
         library.getLendersOrderedByName().forEach(l -> System.out.println(l.toString()));
     }
