@@ -11,7 +11,7 @@ public class Lender implements Comparable<Lender> {
 
     public Lender(String name) {
         this.name = name;
-        this.lentBooks = new TreeSet<Book>();
+        this.lentBooks = new TreeSet();
     }
 
     public String getName() {
@@ -26,16 +26,16 @@ public class Lender implements Comparable<Lender> {
     }
 
     protected Book removeBook(String bookName) throws IllegalStateException {
-        if (!(lentBooks.contains(bookName))) {
-            throw new IllegalStateException("Book not lent by lender!");
-        }
         Book returnedBook = null;
         for (Book book : this.lentBooks) {
             if (book.getName().equals(bookName)) {
-                this.lentBooks.remove(bookName);
+                this.lentBooks.remove(book);
                 returnedBook = book;
                 break;
             }
+        }
+        if (returnedBook == null) {
+            throw new IllegalStateException("Book not lent by lender!");
         }
         return returnedBook;
     }
@@ -54,7 +54,6 @@ public class Lender implements Comparable<Lender> {
             return false;
         }
         Lender lender = (Lender) obj;
-
         return lender.getName() == this.getName();
     }
 
@@ -66,7 +65,7 @@ public class Lender implements Comparable<Lender> {
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner(", ", " [", "]");
-        this.lentBooks.forEach(a -> sj.add(a.getName()));
+        this.lentBooks.forEach(a -> sj.add(a.toString()));
         return this.getName() + sj.toString();
     }
 }

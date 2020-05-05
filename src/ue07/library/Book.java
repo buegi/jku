@@ -26,7 +26,7 @@ public class Book implements Comparable<Book> {
 
     @Override
     public String toString() {
-        return "Title: " + this.name + ", was lent " + this.lentCount + " times.";
+        return "\"" + this.name + "\", was lent " + this.lentCount + " times.";
     }
 
     @Override
@@ -44,17 +44,11 @@ public class Book implements Comparable<Book> {
     }
 
     public static Comparator<Book> getLentComparator() {
-        return new Comparator<Book>() {
-            @Override
-            public int compare(Book b1, Book b2) {
-                if (b1.lentCount < b2.lentCount) {
-                    return -1;
-                } else if (b1.lentCount > b2.lentCount) {
-                    return 1;
-                } else {
-                    return b1.getName().compareTo(b2.getName());
-                }
+        return (b1, b2) -> {
+            if (b1.lentCount == b2.lentCount) {
+                return b1.getName().compareTo(b2.getName());
             }
+            return b1.getLentCount() < b2.getLentCount() ? -1 : 1;
         };
     }
 }
