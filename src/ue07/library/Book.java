@@ -20,6 +20,10 @@ public class Book implements Comparable<Book> {
         return this.lentCount;
     }
 
+    protected void setLentCount(int newVal) {
+        this.lentCount = newVal;
+    }
+
     protected void incLendCount() {
         this.lentCount++;
     }
