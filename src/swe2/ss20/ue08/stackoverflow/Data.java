@@ -140,7 +140,6 @@ public class Data {
             System.err.println("IO exception:");
             ex.printStackTrace();
         }
-
         return new Data();
     }
 
