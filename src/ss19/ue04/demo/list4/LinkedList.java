@@ -3,7 +3,7 @@ package ss19.ue04.demo.list4;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import persons.Person;
+import ss19.ue04.demo.persons.Person;
 
 /**
  * This linked list implementation shows the use of generics and inner classes 

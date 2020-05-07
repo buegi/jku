@@ -1,8 +1,8 @@
 package ss19.ue10.demo.pizza.factoryMethod;
 
-import pizza.dishes.ItalianPizza;
-import pizza.dishes.Pizza;
-import pizza.dishes.Spaghetti;
+import ss19.ue10.demo.pizza.dishes.ItalianPizza;
+import ss19.ue10.demo.pizza.dishes.Pizza;
+import ss19.ue10.demo.pizza.dishes.Spaghetti;
 
 public class ItalianPizzaStore extends PizzaStore {
 	

@@ -1,8 +1,8 @@
 package ss19.ue10.demo.pizza.abstractFactory;
 
-import pizza.dishes.AustrianPizza;
-import pizza.dishes.Pizza;
-import pizza.dishes.Spaghetti;
+import ss19.ue10.demo.pizza.dishes.AustrianPizza;
+import ss19.ue10.demo.pizza.dishes.Pizza;
+import ss19.ue10.demo.pizza.dishes.Spaghetti;
 
 public class AustrianStyleFactory extends AbstractStyleFactory {
 	
