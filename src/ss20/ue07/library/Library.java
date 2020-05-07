@@ -53,12 +53,9 @@ public class Library {
         return bookList;
     }
 
-    // sets do not allow duplicates - therefore duplicate books removed
     public SortedSet<Book> getAvailableBooksOrderedByLentCount() {
-        final TreeSet<Book> bookSet = new TreeSet<>();
-        final List<Book> bookList = this.getAvailableBooksOrderedByAlphabet();
-        bookList.sort(Book.getLentComparator());
-        bookSet.addAll(bookList);
+        SortedSet<Book> bookSet = new TreeSet<>(Book.getLentComparator());
+        this.books.values().forEach(l -> l.forEach(b -> bookSet.add(b)));
         return bookSet;
     }
 

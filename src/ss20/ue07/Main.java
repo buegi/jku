@@ -25,26 +25,22 @@ public class Main {
         library.getLendersOrderedByName().forEach(l -> System.out.println(l.toString()));
         System.out.println("==========================================");
 
+        // lend & return books
         // lend books
         library.lendBook("Clean Code", "Susi");
         library.lendBook("Clean Agile", "Strolchi");
+        library.returnBook("Clean Agile", "Strolchi");
         library.lendBook("Clean Architecture", "Robert C. Martin");
-
-        // print Status
-        System.out.println("----------- Status after lends -----------");
-        System.out.println("LibraryStatus: ");
-        library.getAvailableBooksOrderedByAlphabet().forEach(l -> System.out.println(l.toString()));
-        System.out.println();
-        System.out.println("LenderStatus: ");
-        library.getLendersOrderedByName().forEach(l -> System.out.println(l.toString()));
-        System.out.println("==========================================");
-
-        // lend & return books
         library.returnBook("Clean Code", "Susi");
         library.lendBook("Clean Code", "Susi");
         library.lendBook("Clean Code", "Strolchi");
         library.returnBook("Clean Code", "Strolchi");
         library.returnBook("Clean Code", "Susi");
+        for (int i = 0; i < 10; i++) {
+            library.lendBook("Clean Agile", "Strolchi");
+            library.returnBook("Clean Agile", "Strolchi");
+        }
+        library.lendBook("Clean Agile", "Strolchi");
 
         // print Status
         System.out.println("---------- Status after returns ----------");
@@ -66,7 +62,13 @@ public class Main {
         }
         try {
             library.lendBook("Clean Architecture", "Robert C. Martin");
-            System.out.println("Error: Book not in librarty!");
+            System.out.println("Error: Book not in library!");
+        } catch (Exception exc) {
+            System.out.println("OK, expected exception: " + exc.getMessage());
+        }
+        try {
+            library.addLender("Robert C. Martin");
+            System.out.println("Error: Lender already registered!");
         } catch (Exception exc) {
             System.out.println("OK, expected exception: " + exc.getMessage());
         }
