@@ -166,59 +166,7 @@
       <recent name="C:\dev\intellij\git\jku\src\algodat2\ue06" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
-    <configuration name="AssignmentRecordsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue06.map.app.AssignmentRecordsMain" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ue06.map.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue05.app.Main" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ue05.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue07.Main" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ue07.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue04.app.Main" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ue04.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue07.Main" />
       <module name="jku" />
@@ -232,15 +180,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.AssignmentRecordsMain" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\stefa\AppData\Roaming\Subversion</configuration>
@@ -630,11 +569,12 @@
     </state>
     <state x="1568" y="784" key="#Project_Structure/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583828453348" />
     <state x="1265" y="566" key="#Project_Structure/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588853645425" />
-    <state x="1371" y="929" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583828562854">
+    <state x="1371" y="929" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588859142279">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1371" y="929" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583828562854" />
     <state x="1371" y="929" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581097400624" />
+    <state x="1371" y="929" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588859142279" />
     <state x="1692" y="1077" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581097319522">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
