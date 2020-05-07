@@ -99,10 +99,10 @@
       <recent name="C:\dev\intellij\git\swe2-ij\src\swe1\ws17\ue04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.AssignmentRecordsMain">
     <configuration name="AssignmentRecordsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ue06.map.app.AssignmentRecordsMain" />
-      <module name="swe2-ij" />
+      <module name="jku" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ue06.map.app.*" />
@@ -115,7 +115,7 @@
     </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ue05.app.Main" />
-      <module name="swe2-ij" />
+      <module name="jku" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ue05.app.*" />
@@ -128,7 +128,7 @@
     </configuration>
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ue07.Main" />
-      <module name="swe2-ij" />
+      <module name="jku" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ue07.*" />
@@ -141,7 +141,7 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ue04.app.Main" />
-      <module name="swe2-ij" />
+      <module name="jku" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ue04.app.*" />
@@ -167,7 +167,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.AssignmentRecordsMain" />
         <item itemvalue="Application.Main (1)" />
