@@ -467,7 +467,7 @@ public class In {
     public static void open(String fn) {
         try {
             InputStream s = new FileInputStream(fn);
-            bufferStack.add(new Character(buf));
+            bufferStack.add(buf);
             inputStack.add(in);
             in = s;
             done = true;
