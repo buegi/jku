@@ -20,100 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue02/TextCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue03/VRBVM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue03/VRBVMApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue04/LowLevelAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue04/StringReplace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue05/Array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue06/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue06/Maze.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue06/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue06/RecursiveList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue06/RecursiveMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue06/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue07/ChebyshevPolynomial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue07/ChebyshevPolynomialIterative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue07/ChebyshevPolynomialWithoutStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue07/resources/Chebyshev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue07/resources/Polynomial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue08/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue08/MagicDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue08/MonteCarloIntegration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue08/RandomPasswordGeneration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat1/ue08/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MinHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MinHeapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyLinkedListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyListPriorityQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyListPriorityQueueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyPriorityQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue02/MyTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex01/MinHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex01/MinHeapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex01/MyPriorityQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex01/TestA03ex01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex02/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex02/MyNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex02/RadixSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex02/RadixSort2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex02/RadixSortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex02/RadixSortTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue03/ex02/TestA03ex02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue04/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue04/BinaryTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue04/MyBinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue04/MyBinarySearchTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue04/TestAssignment04s.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/AVLNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/AVLTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/AVLTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/TestAssignment05.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/resources/AVLNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/resources/AVLTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/resources/AVLTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue05/resources/TestAssignment05.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/BoyerMoore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/Faust.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/KMP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/RabinKarp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/TestBoyerMooreInstitute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/TestBoyerMooreStefan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/TestKMPInstitute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/TestKMPStefan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/TestRabinKarpInstitute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/TestRabinKarpStefan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue06/UtilsStefan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex01/AbstractChainingHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex01/ChainingHashNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex01/ChainingHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex01/MyHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex01/TestChainingHashSetInstitute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex01/TestChainingHashSetStefan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex02/AbstractHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex02/MyHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex02/OpenHashNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex02/QuadraticHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex02/TestQuadraticHashSetInstitute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue07/ex02/TestQuadraticHashSetStefan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue08/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue08/MyEdge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue08/MyVertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue08/TestGraphInstitute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue08/TestGraphStefanPartOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue08/TestGraphStefanPartTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue08/Vertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue09/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue09/MyEdge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue09/MyVertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue09/Roadmap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue09/Station.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algodat2/ue09/TestAssignment09Institute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algodat2/ws19/ue06/TestKMPInstitute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algodat2/ws19/ue06/TestKMPInstitute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algodat2/ws19/ue06/TestRabinKarpInstitute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algodat2/ws19/ue06/TestRabinKarpInstitute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +89,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\stefa\AppData\Roaming\Subversion</configuration>
@@ -191,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00052" summary="ok">
-      <created>1585074326253</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1585074326254</updated>
     </task>
     <task id="LOCAL-00053" summary="ok">
       <created>1585074695547</created>
@@ -535,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588852703438</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="ok">
+      <created>1588859204046</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1588859204047</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -597,7 +511,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1588852701690">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1588859203494">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -605,12 +519,12 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588852701690" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588859203494" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1588853644375">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1718" y="1096" key="FileChooserDialogImpl/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588853644375" />
-    <state width="2263" height="429" key="GridCell.Tab.0.bottom" timestamp="1588854210565">
+    <state width="2263" height="429" key="GridCell.Tab.0.bottom" timestamp="1588859237101">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.bottom/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -618,8 +532,8 @@
     <state width="1724" height="346" key="GridCell.Tab.0.bottom/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.bottom/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.bottom/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2263" height="429" key="GridCell.Tab.0.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588854210565" />
-    <state width="2263" height="429" key="GridCell.Tab.0.center" timestamp="1588854210565">
+    <state width="2263" height="429" key="GridCell.Tab.0.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588859237101" />
+    <state width="2263" height="429" key="GridCell.Tab.0.center" timestamp="1588859237101">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.center/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -627,8 +541,8 @@
     <state width="1724" height="346" key="GridCell.Tab.0.center/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.center/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.center/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2263" height="429" key="GridCell.Tab.0.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588854210565" />
-    <state width="2263" height="429" key="GridCell.Tab.0.left" timestamp="1588854210565">
+    <state width="2263" height="429" key="GridCell.Tab.0.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588859237101" />
+    <state width="2263" height="429" key="GridCell.Tab.0.left" timestamp="1588859237100">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.left/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -636,8 +550,8 @@
     <state width="1724" height="346" key="GridCell.Tab.0.left/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.left/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.left/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439836" />
-    <state width="2263" height="429" key="GridCell.Tab.0.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588854210565" />
-    <state width="2263" height="429" key="GridCell.Tab.0.right" timestamp="1588854210565">
+    <state width="2263" height="429" key="GridCell.Tab.0.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588859237100" />
+    <state width="2263" height="429" key="GridCell.Tab.0.right" timestamp="1588859237101">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.right/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -645,7 +559,7 @@
     <state width="1724" height="346" key="GridCell.Tab.0.right/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.right/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.right/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2263" height="429" key="GridCell.Tab.0.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588854210565" />
+    <state width="2263" height="429" key="GridCell.Tab.0.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588859237101" />
     <state width="2891" height="588" key="GridCell.Tab.1.bottom" timestamp="1588694663503">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -698,10 +612,10 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1692" y="956" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588853899409" />
-    <state x="2085" y="1016" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586337326300">
+    <state x="2085" y="1016" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588859194838">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="2085" y="1016" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586337326300" />
+    <state x="2085" y="1016" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588859194838" />
     <state x="1710" y="740" width="607" height="804" key="find.popup" timestamp="1583851883167">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
