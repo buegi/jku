@@ -1,30 +1,30 @@
 package ss19.ue10.demo.pizza.factoryMethod;
 
-import pizza.dishes.Pizza;
-import pizza.dishes.Spaghetti;
+import ss19.ue10.demo.pizza.dishes.Pizza;
+import ss19.ue10.demo.pizza.dishes.Spaghetti;
 
 /**
  * Implementation of a pizza store using the design pattern "factory method"
  */
 public abstract class PizzaStore {
-	
-	public final Pizza orderPizza() {
-		Pizza pizza = createPizza();
 
-		pizza.prepare();
-		pizza.bake();
-		pizza.box();
-		return pizza;
-	}
+    public final Pizza orderPizza() {
+        Pizza pizza = createPizza();
 
-	public Spaghetti orderSpaghetti() {
-		Spaghetti spaghetti = createSpaghetti();
+        pizza.prepare();
+        pizza.bake();
+        pizza.box();
+        return pizza;
+    }
 
-		spaghetti.cook();
-		return spaghetti;
-	}
+    public Spaghetti orderSpaghetti() {
+        Spaghetti spaghetti = createSpaghetti();
 
-	public abstract Pizza createPizza();
+        spaghetti.cook();
+        return spaghetti;
+    }
 
-	public abstract Spaghetti createSpaghetti();
+    public abstract Pizza createPizza();
+
+    public abstract Spaghetti createSpaghetti();
 }

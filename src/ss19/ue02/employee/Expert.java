@@ -1,4 +1,6 @@
-package ss19.ue02;
+package ss19.ue02.employee;
+
+import ss19.ue02.exception.WorkException;
 
 public class Expert extends NormalEmployee {
 
@@ -6,7 +8,7 @@ public class Expert extends NormalEmployee {
 		super(name, salary, manager);
 	}
 
-	public void doWork(Work work) throws WorkException {
+	public void doWork(Work work) throws ss19.ue02.exception.WorkException {
 		if (work == Work.Test) {
 			throw new WorkException(super.WorkException, work);
 

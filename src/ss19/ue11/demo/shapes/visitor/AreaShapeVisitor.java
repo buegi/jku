@@ -1,9 +1,9 @@
 package ss19.ue11.demo.shapes.visitor;
 
-import shapes.Circle;
-import shapes.Group;
-import shapes.Rect;
-import shapes.Shape;
+import ss19.ue11.demo.shapes.Circle;
+import ss19.ue11.demo.shapes.Group;
+import ss19.ue11.demo.shapes.Rect;
+import ss19.ue11.demo.shapes.Shape;
 
 public class AreaShapeVisitor implements ShapeVisitor {
 	

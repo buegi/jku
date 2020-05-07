@@ -1,6 +1,6 @@
 package ss19.ue11.demo.shapes;
 
-import shapes.visitor.ShapeVisitor;
+import ss19.ue11.demo.shapes.visitor.ShapeVisitor;
 
 /**
  * Base class for the following shapes with polymorphic draw method 

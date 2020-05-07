@@ -1,4 +1,6 @@
-package ss19.ue02;
+package ss19.ue02.exception;
+
+import ss19.ue02.employee.Employee;
 
 public class SupervisorException extends Exception {
 

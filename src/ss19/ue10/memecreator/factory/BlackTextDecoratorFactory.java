@@ -2,8 +2,8 @@ package ss19.ue10.memecreator.factory;
 
 import java.awt.Color;
 
-import memecreator.decorator.TextDecorator;
-import memecreator.model.Meme;
+import ss19.ue10.memecreator.decorator.TextDecorator;
+import ss19.ue10.memecreator.model.Meme;
 
 public enum BlackTextDecoratorFactory implements TextDecoratorFactory {
 	INSTANCE;

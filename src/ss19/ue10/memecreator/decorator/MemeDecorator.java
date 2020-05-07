@@ -1,7 +1,7 @@
 package ss19.ue10.memecreator.decorator;
 
 import java.awt.image.BufferedImage;
-import memecreator.model.Meme;
+import ss19.ue10.memecreator.model.Meme;
 
 public abstract class MemeDecorator implements Meme {
 

@@ -1,8 +1,8 @@
 package ss19.ue10.memecreator.ui;
 
-import memecreator.factory.MemeFactory;
-import memecreator.model.Meme;
-import memecreator.model.MemeModel;
+import ss19.ue10.memecreator.factory.MemeFactory;
+import ss19.ue10.memecreator.model.Meme;
+import ss19.ue10.memecreator.model.MemeModel;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

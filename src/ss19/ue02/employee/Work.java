@@ -1,4 +1,4 @@
-package ss19.ue02;
+package ss19.ue02.employee;
 
 public enum Work {
 	

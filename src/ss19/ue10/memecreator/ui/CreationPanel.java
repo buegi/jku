@@ -1,9 +1,9 @@
 package ss19.ue10.memecreator.ui;
 
-import memecreator.decorator.BorderDecorator;
-import memecreator.factory.TextDecoratorFactory;
-import memecreator.factory.*;
-import memecreator.model.Meme;
+import ss19.ue10.memecreator.decorator.BorderDecorator;
+import ss19.ue10.memecreator.factory.TextDecoratorFactory;
+import ss19.ue10.memecreator.factory.*;
+import ss19.ue10.memecreator.model.Meme;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;

@@ -1,6 +1,6 @@
 package ss19.ue10.memecreator.app;
 
-import memecreator.ui.MemeCreatorFrame;
+import ss19.ue10.memecreator.ui.MemeCreatorFrame;
 
 import javax.swing.*;
 

@@ -1,4 +1,6 @@
-package ss19.ue02;
+package ss19.ue02.employee;
+
+import ss19.ue02.exception.SupervisorException;
 
 public abstract class NormalEmployee extends Employee {
 

@@ -1,4 +1,4 @@
-package ss19.ue02;
+package ss19.ue02.employee;
 
 public class Assistant extends NormalEmployee {
 
@@ -6,7 +6,7 @@ public class Assistant extends NormalEmployee {
 		super(name, salary, expert);
 	}
 
-	public void doWork(Work work) throws WorkException {
+	public void doWork(Work work) throws ss19.ue02.exception.WorkException {
 		if ((work == Work.Implement) || (work == Work.Test)) {
 			this.printDealInBestManner();
 

@@ -1,4 +1,4 @@
-package ss19.ue02;
+package ss19.ue02.employee;
 
 public abstract class Employee {
 
@@ -13,7 +13,7 @@ public abstract class Employee {
 
 	public abstract double getAnnualSalary();
 
-	public abstract void doWork(Work work) throws WorkException;
+	public abstract void doWork(Work work) throws ss19.ue02.exception.WorkException;
 
 	protected String getName() {
 		return name;

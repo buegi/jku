@@ -5,7 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import memecreator.model.Meme;
+import ss19.ue10.memecreator.model.Meme;
 
 public class BorderDecorator extends MemeDecorator {
 

@@ -1,37 +1,37 @@
 package ss19.ue10.demo.pizza.abstractFactory;
 
-import pizza.dishes.Pizza;
-import pizza.dishes.Spaghetti;
+import ss19.ue10.demo.pizza.dishes.Pizza;
+import ss19.ue10.demo.pizza.dishes.Spaghetti;
 
 /**
  * Implementation of a pizza store using the design pattern "abstract factory"
  */
 public class PizzaStore {
-	
-	private AbstractStyleFactory factory;
 
-	public PizzaStore(AbstractStyleFactory factory) {
-		this.factory = factory;
-	}
+    private AbstractStyleFactory factory;
 
-	public Pizza orderPizza() {
-		Pizza pizza = factory.createPizza();
+    public PizzaStore(AbstractStyleFactory factory) {
+        this.factory = factory;
+    }
 
-		pizza.prepare();
-		pizza.bake();
-		pizza.box();
-		return pizza;
-	}
+    public Pizza orderPizza() {
+        Pizza pizza = factory.createPizza();
 
-	public Spaghetti orderSpaghetti() {
-		Spaghetti spaghetti = factory.createSpaghetti();
+        pizza.prepare();
+        pizza.bake();
+        pizza.box();
+        return pizza;
+    }
 
-		spaghetti.cook();
-		return spaghetti;
-	}
+    public Spaghetti orderSpaghetti() {
+        Spaghetti spaghetti = factory.createSpaghetti();
 
-	public void setFactory(AbstractStyleFactory factory) {
-		this.factory = factory;
-	}
-	
+        spaghetti.cook();
+        return spaghetti;
+    }
+
+    public void setFactory(AbstractStyleFactory factory) {
+        this.factory = factory;
+    }
+
 }

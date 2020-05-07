@@ -3,8 +3,8 @@ package ss19.ue10.memecreator.factory;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import memecreator.model.Meme;
-import memecreator.model.MemeImpl;
+import ss19.ue10.memecreator.model.Meme;
+import ss19.ue10.memecreator.model.MemeImpl;
 
 public class MemeFactory {
 
