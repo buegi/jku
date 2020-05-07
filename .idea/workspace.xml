@@ -20,7 +20,399 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ss19/pointsChecker/PointsChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue01/Appointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue01/Calendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue01/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue01/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue01/app/CalendarApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/Assistant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/Expert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/NormalEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/SupervisorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/Work.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/WorkException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/app/TestEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/app/HtmlApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/demo/Atomic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/demo/Composite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/demo/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/demo/ElementApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/order/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/order/ElementApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/order/Leaf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/composite/order/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/person/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/person/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/person/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/person/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/Group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/Primitive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/app/Snowman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/ContainerElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/Globals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/Heading.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/Html.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/LineBreak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/ListItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/Paragraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/TaggedElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/html/Text.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue03/page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/app/ShoppingApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list1/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list1/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list1/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list2/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list2/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list2/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list3/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list3/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list3/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list4/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list4/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list4/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/persons/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/persons/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/persons/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/item/Drink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/item/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/item/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/list/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue04/list/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/app/CasinoApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/app/GameResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics1/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics1/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics1/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics2/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics2/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics2/ListApp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics3/G.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics3/GException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/lambdas/LambdaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/persons/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/persons/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/persons/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/list/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue05/list/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/app/AnimalApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/db/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/db/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/db/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll01/Demo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll01/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll02/Demo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll02/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll03/Demo3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll03/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll03/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll05/Demo5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll05/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll06/Demo6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll06/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll07/Demo7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll07/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll08/Demo8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll08/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll09/Demo9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll09/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll09/SeniorityComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll10/Demo10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll10/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll10/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll11/Demo11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll11/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue06/demo/coll11/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue07/app/Games.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue07/demo/stream01/StreamDemo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue07/demo/stream02/StreamDemo02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue07/demo/stream03/StreamDemo03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue07/games/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue07/games/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/demo/app/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/demo/tictactoe/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/demo/tictactoe/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/app/ConnectFourGameMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/game/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/game/BoardImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/game/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/game/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/game/Stone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/player/HumanPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue08/four/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/demo/points/model/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/demo/points/model/PointsEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/demo/points/model/PointsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/demo/points/model/PointsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/demo/points/ui/PointsApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/demo/points/ui/PointsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourGamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourInfoPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/GameImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/GameStateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/GameStateListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/Stone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/StoneEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue09/four/game/StoneListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/adapter/List2StackAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/adapter/List2StackAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/adapter/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/chainOfResponsibility/CSVParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/chainOfResponsibility/JSONParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/chainOfResponsibility/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/chainOfResponsibility/ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/chainOfResponsibility/TextParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/chainOfResponsibility/XMLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/command/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/command/CmdHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/command/Light.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/command/TurnOffCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/command/TurnOnCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/BestWishesDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/ContentLetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/DateDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/DearDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/HelloDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/Letter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/LetterDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/LetterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/decorator/YoursSincerelyDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/proxy/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/proxy/ProxyImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/proxy/ProxyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/proxy/RealImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/singleton/Singleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/singleton/SingletonAsEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/singleton/SingletonMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/visitor/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/patterns/visitor/VisitorDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/AmericanPizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/ItalianPizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/PizzaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/noPattern/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/noPattern/PizzaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/prototype/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/prototype/PizzaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/BorderDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/MemeDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/TextDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/BlackTextDecoratorFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/MemeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/TextDecoratorFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/WhiteTextDecoratorFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/model/Meme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/model/MemeEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/model/MemeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/model/MemeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/model/MemeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/CreationPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/MemeCreatorFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/MemePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/TemplatePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/resources/ggg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/resources/penguin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/resources/pepe_crying_meme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/resources/steve.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/resources/test.jpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19/ue10/resources/wednesday.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/app/TodosMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/app/TodosMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/app/todos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/app/todos.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/demo/app/PhoneBookApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/demo/app/PhoneBookApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/demo/phonebook/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/demo/phonebook/Entry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/demo/phonebook/EntryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/demo/phonebook/EntryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/demo/phonebook/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/demo/phonebook/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/demo/phonebook/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/demo/phonebook/PhoneBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/demo/phonebook/PhoneBookIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/demo/phonebook/PhoneBookIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/list/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/list/Todo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/list/TodoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/list/TodoList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/list/TodoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/list/TodoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue01/list/TodoNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue01/list/TodoNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/CallException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons5/CallException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/PersonApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/PersonApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/PersonException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons6/PersonException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/Study.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/Study.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons/test/PersonsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/test/PersonsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons1/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons1/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons2/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons2/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons2/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons2/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons3/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons3/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons3/PersonApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons3/PersonApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons3/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons3/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons3/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons3/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons4/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons4/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons4/PersonApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons4/PersonApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons4/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons4/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons4/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons4/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons5/CallException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons6/CallException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons5/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons5/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons5/PersonApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons5/PersonApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons5/PersonException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/PersonException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons5/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons5/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons5/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons5/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons6/CallException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons/CallException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons6/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons6/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons6/PersonApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons6/PersonApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons6/PersonException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons5/PersonException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons6/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons6/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons6/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons6/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/demo/persons6/Study.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/demo/persons6/Study.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/exceptions/CargoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/exceptions/CargoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/exceptions/InvalidCargoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/exceptions/InvalidCargoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/exceptions/OverloadedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/exceptions/OverloadedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/exceptions/TransportException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/exceptions/TransportException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/exceptions/UnreachableLocationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/exceptions/UnreachableLocationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/test/TransportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/test/TransportTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/AirTransporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/AirTransporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/Cargo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/CargoPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/CargoPlane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/CargoType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/CargoType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/ContainerTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/ContainerTruck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/LandTransporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/LandTransporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/TankTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/TankTruck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue02/transport/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue02/transport/Transporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/AnimalProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/AnimalProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/DiscountRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/DiscountRate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/Herb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/Herb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/Potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/Priced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/Priced.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/Atomic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/composite/Atomic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/Composite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/composite/Composite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/composite/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/composite/ElementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/composite/ElementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/order/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/ElementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/order/ElementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/Leaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/order/Leaf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/order/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/order/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/person/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/person/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/person/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/person/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/shapes/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Primitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/shapes/Primitive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/shapes/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue03/demo/shapes/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue03/demo/shapes/app/Snowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/data/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/data/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/data/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/data/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/data/data_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/data/data_processed.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes2/Drawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Primitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Primitive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Rect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes2/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes1/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/app/Snowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes2/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Drawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes2/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes2/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes2/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes2/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes3/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes2/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes2/app/Snowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes3/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes3/Drawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes3/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes3/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes3/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes3/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes3/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes1/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes3/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/app/Snowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes3/app/Snowman2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes3/app/Snowman2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/Drawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes2/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes3/app/Snowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/demo/shapes4/app/Snowman2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/demo/shapes4/app/Snowman2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/processing/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/processing/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue04/processing/Processors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue04/processing/Processors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/app/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/app/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/app/persons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/app/persons.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/genericproblems/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/genericproblems/G.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/genericproblems/GException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/genericproblems/GException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list1/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list1/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list1/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list2/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list1/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list2/ListApp1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list2/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list2/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list2/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list1/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list2/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list1/ListApp1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list3/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list3/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list3/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list3/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list3/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list3/ListApp1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list4/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list4/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list4/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list4/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/list4/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/list4/ListApp1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/persons/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/persons/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/persons/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/persons/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/demo/persons/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/demo/persons/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/map/ArrayMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/map/ArrayMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/map/ArraySortedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/map/ArraySortedMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/map/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/map/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue05/map/SortedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue05/map/SortedMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/demo/list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/demo/list/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/demo/list/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/demo/list/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/demo/list/ListHofDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/demo/list/ListHofDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/demo/list/MiscDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/demo/list/MiscDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/list/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/list/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/list/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/map/ArrayMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/map/ArrayMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/map/ArraySortedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/map/ArraySortedMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/map/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/map/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/map/SortedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/map/SortedMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/map/app/AssignmentRecordsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/map/app/AssignmentRecordsMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue06/map/app/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue06/map/app/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/Comparable/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/Comparable/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/Comparable/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/Comparable/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ComparableMutable/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ComparableMutable/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ComparableMutable/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ComparableMutable/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ComparatorSetList/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ComparatorSetList/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ComparatorSetList/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ComparatorSetList/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ComparatorSetListOk/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ComparatorSetListOk/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ComparatorSetListOk/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ListCollections/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/Equals/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/Equals/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/Equals/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/Equals/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/EqualsSym/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/EqualsSym/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/EqualsSym/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/EqualsSym/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/EqualsSym/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/EqualsSym/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/Hash/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/Hash/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/Hash/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/Hash/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/HashMap/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/HashMap/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/HashMap/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/TreeMap/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ListCollections/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ListCollections/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/ListCollections/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/ComparatorSetListOk/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/TreeMap/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/TreeMap/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/demo/TreeMap/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/demo/HashMap/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/library/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/library/Lender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/library/Lender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ue07/library/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss20/ue07/library/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,20 +454,20 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\dev\intellij\git\swe2-ij\src\ue07\demo\Equals" />
-      <recent name="C:\dev\intellij\git\swe2-ij\src\ue07\demo\Hash" />
-      <recent name="C:\dev\intellij\git\swe2-ij\src\ue07\demo\EqualsSym" />
-      <recent name="C:\dev\intellij\git\swe2-ij\src\ue07\demo\Comparable" />
-      <recent name="C:\dev\intellij\git\swe2-ij\src\ue07\demo\ComparableMutable" />
+      <recent name="C:\dev\intellij\git\swe2-ij\src\ss19\ue10\demo\pizza\abstractFactory" />
+      <recent name="C:\dev\intellij\git\swe2-ij\src\ss19\ue10\demo\pizza\dishes" />
+      <recent name="C:\dev\intellij\git\swe2-ij\src\ss19\ue10\demo\pizza\abstractMethod" />
+      <recent name="C:\dev\intellij\git\swe2-ij\src\ss19\ue10\demo\pizza\noPattern" />
+      <recent name="C:\dev\intellij\git\swe2-ij\src\ss19\ue10\demo\pizza\prototype" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (2)">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue03.App" />
+      <option name="MAIN_CLASS_NAME" value="ss20.ue03.App" />
       <module name="swe2-ij" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ue03.*" />
+          <option name="PATTERN" value="ss20.ue03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,11 +476,11 @@
       </method>
     </configuration>
     <configuration name="AssignmentRecordsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue06.map.app.AssignmentRecordsMain" />
+      <option name="MAIN_CLASS_NAME" value="ss20.ue06.map.app.AssignmentRecordsMain" />
       <module name="swe2-ij" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ue06.map.app.*" />
+          <option name="PATTERN" value="ss20.ue06.map.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +501,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue07.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss20.ue04.app.Main" />
       <module name="swe2-ij" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ue07.*" />
+          <option name="PATTERN" value="ss20.ue04.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +515,24 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ue04.app.Main" />
+      <option name="MAIN_CLASS_NAME" value="ss20.ue05.app.Main" />
       <module name="swe2-ij" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ue04.app.*" />
+          <option name="PATTERN" value="ss20.ue05.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss20.ue07.Main" />
+      <module name="swe2-ij" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss20.ue07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,13 +560,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00048" summary="ok">
-      <created>1585069524126</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1585069524126</updated>
     </task>
     <task id="LOCAL-00049" summary="ok">
       <created>1585073335379</created>
@@ -499,7 +897,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588709058568</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="ok">
+      <created>1588753366026</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1588753366027</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -560,7 +965,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1588709057927">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1588753365454">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -568,12 +973,12 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588709057927" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753365454" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1587666681369">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1718" y="1096" key="FileChooserDialogImpl/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1587666681369" />
-    <state width="2707" height="480" key="GridCell.Tab.0.bottom" timestamp="1588753360017">
+    <state width="2891" height="588" key="GridCell.Tab.0.bottom" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.bottom/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -581,8 +986,8 @@
     <state width="1724" height="346" key="GridCell.Tab.0.bottom/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.bottom/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.bottom/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2707" height="480" key="GridCell.Tab.0.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753360017" />
-    <state width="2707" height="480" key="GridCell.Tab.0.center" timestamp="1588753360017">
+    <state width="2891" height="588" key="GridCell.Tab.0.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
+    <state width="2891" height="588" key="GridCell.Tab.0.center" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.center/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -590,8 +995,8 @@
     <state width="1724" height="346" key="GridCell.Tab.0.center/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.center/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.center/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2707" height="480" key="GridCell.Tab.0.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753360017" />
-    <state width="2707" height="480" key="GridCell.Tab.0.left" timestamp="1588753360017">
+    <state width="2891" height="588" key="GridCell.Tab.0.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
+    <state width="2891" height="588" key="GridCell.Tab.0.left" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.left/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -599,8 +1004,8 @@
     <state width="1724" height="346" key="GridCell.Tab.0.left/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.left/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.left/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439836" />
-    <state width="2707" height="480" key="GridCell.Tab.0.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753360017" />
-    <state width="2707" height="480" key="GridCell.Tab.0.right" timestamp="1588753360017">
+    <state width="2891" height="588" key="GridCell.Tab.0.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
+    <state width="2891" height="588" key="GridCell.Tab.0.right" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.right/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
@@ -608,27 +1013,27 @@
     <state width="1724" height="346" key="GridCell.Tab.0.right/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098103404" />
     <state width="1348" height="620" key="GridCell.Tab.0.right/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.right/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2707" height="480" key="GridCell.Tab.0.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753360017" />
-    <state width="2891" height="588" key="GridCell.Tab.1.bottom" timestamp="1588694663503">
+    <state width="2891" height="588" key="GridCell.Tab.0.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
+    <state width="2891" height="588" key="GridCell.Tab.1.bottom" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="1348" height="620" key="GridCell.Tab.1.bottom/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
-    <state width="2891" height="588" key="GridCell.Tab.1.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588694663503" />
-    <state width="2891" height="588" key="GridCell.Tab.1.center" timestamp="1588694663503">
+    <state width="2891" height="588" key="GridCell.Tab.1.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
+    <state width="2891" height="588" key="GridCell.Tab.1.center" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="1348" height="620" key="GridCell.Tab.1.center/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
-    <state width="2891" height="588" key="GridCell.Tab.1.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588694663503" />
-    <state width="2891" height="588" key="GridCell.Tab.1.left" timestamp="1588694663503">
+    <state width="2891" height="588" key="GridCell.Tab.1.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
+    <state width="2891" height="588" key="GridCell.Tab.1.left" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="1348" height="620" key="GridCell.Tab.1.left/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
-    <state width="2891" height="588" key="GridCell.Tab.1.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588694663503" />
-    <state width="2891" height="588" key="GridCell.Tab.1.right" timestamp="1588694663503">
+    <state width="2891" height="588" key="GridCell.Tab.1.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
+    <state width="2891" height="588" key="GridCell.Tab.1.right" timestamp="1588753377320">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="1348" height="620" key="GridCell.Tab.1.right/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
-    <state width="2891" height="588" key="GridCell.Tab.1.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588694663503" />
+    <state width="2891" height="588" key="GridCell.Tab.1.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753377320" />
     <state x="1600" y="771" key="NewModule_or_Project.wizard" timestamp="1583875904591">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -648,7 +1053,7 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1806" y="736" width="570" height="524" key="StructurePopup/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586886772515" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1588709060280">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1588753367641">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825876601" />
@@ -656,7 +1061,7 @@
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588709060280" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588753367641" />
     <state x="2085" y="1016" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586337326300">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
