@@ -1,11 +1,11 @@
 package ss19.ue11.expr.visitor;
 
-import expr.Add;
-import expr.Lit;
-import expr.Minus;
-import expr.Mult;
-import expr.Recip;
-import expr.Var;
+import ss19.ue11.expr.Add;
+import ss19.ue11.expr.Lit;
+import ss19.ue11.expr.Minus;
+import ss19.ue11.expr.Mult;
+import ss19.ue11.expr.Recip;
+import ss19.ue11.expr.Var;
 
 public class EvalVisitor implements ExprVisitor<Double> {
 

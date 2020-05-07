@@ -1,6 +1,6 @@
 package ss19.ue11.expr;
 
-import expr.visitor.ExprVisitor;
+import ss19.ue11.expr.visitor.ExprVisitor;
 
 /**
  * The class for variable expressions. 

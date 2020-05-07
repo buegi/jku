@@ -1,25 +1,25 @@
 package ss19.ue11.expr.app;
 
-import static expr.Exprs.add;
-import static expr.Exprs.lit;
-import static expr.Exprs.minus;
-import static expr.Exprs.mult;
-import static expr.Exprs.recip;
-import static expr.Exprs.var;
+import static ss19.ue11.expr.Exprs.add;
+import static ss19.ue11.expr.Exprs.lit;
+import static ss19.ue11.expr.Exprs.minus;
+import static ss19.ue11.expr.Exprs.mult;
+import static ss19.ue11.expr.Exprs.recip;
+import static ss19.ue11.expr.Exprs.var;
 import static inout.In.readChar;
 import static inout.Out.print;
 import static inout.Out.println;
 
-import expr.Add;
-import expr.Expr;
-import expr.Lit;
-import expr.Minus;
-import expr.Mult;
-import expr.Recip;
-import expr.Var;
-import expr.visitor.EvalVisitor;
-import expr.visitor.InfixReprVisitor;
-import expr.visitor.SimplyVisitor;
+import ss19.ue11.expr.Add;
+import ss19.ue11.expr.Expr;
+import ss19.ue11.expr.Lit;
+import ss19.ue11.expr.Minus;
+import ss19.ue11.expr.Mult;
+import ss19.ue11.expr.Recip;
+import ss19.ue11.expr.Var;
+import ss19.ue11.expr.visitor.EvalVisitor;
+import ss19.ue11.expr.visitor.InfixReprVisitor;
+import ss19.ue11.expr.visitor.SimplyVisitor;
 import inout.In; 
 
 /**

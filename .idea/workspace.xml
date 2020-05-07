@@ -20,67 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/inout/In.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss19/ue02/inout/Out.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue01/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue01/calendar/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue01/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue01/calendar/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue01/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue01/calendar/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue01/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue01/calendar/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue01/app/CalendarApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue01/app/CalendarApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/Assistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/employee/Assistant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/Expert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/employee/Expert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/employee/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/NormalEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/employee/NormalEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/SupervisorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/exception/SupervisorException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/Work.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/employee/Work.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/WorkException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/exception/WorkException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue02/app/TestEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue02/app/TestEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue03/app/HtmlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue03/app/HtmlApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue03/demo/shapes/app/Snowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue04/app/ShoppingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue04/app/ShoppingApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue04/demo/list1/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list1/ListApp1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue04/demo/list2/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list2/ListApp1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue04/demo/list3/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list3/ListApp1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue04/demo/list4/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue04/demo/list4/ListApp1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue05/demo/generics1/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics1/ListApp1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue05/demo/generics2/ListApp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue05/demo/generics2/ListApp1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue06/app/AnimalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue06/app/AnimalApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue07/app/Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue07/app/Games.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue08/demo/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue08/demo/app/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue08/demo/tictactoe/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue08/demo/tictactoe/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue08/four/app/ConnectFourGameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue08/four/app/ConnectFourGameMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue08/four/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue08/four/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue08/four/game/Stone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue08/four/game/Stone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue08/four/player/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue08/four/player/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue08/four/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue08/four/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue09/demo/points/ui/PointsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue09/demo/points/ui/PointsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourGamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourInfoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue09/four/app/FourInfoPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/abstractFactory/AbstractStyleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/abstractFactory/AbstractStyleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/abstractFactory/PizzaStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/abstractFactory/PizzaStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/abstractFactory/PizzaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/abstractFactory/PizzaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/PizzaStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/PizzaStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/PizzaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/factoryMethod/PizzaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/noPattern/PizzaStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/noPattern/PizzaStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/noPattern/PizzaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/noPattern/PizzaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/prototype/PizzaStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/prototype/PizzaStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/prototype/PizzaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/demo/pizza/prototype/PizzaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/BorderDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/BorderDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/MemeDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/MemeDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/TextDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/decorator/TextDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/BlackTextDecoratorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/BlackTextDecoratorFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/MemeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/MemeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/TextDecoratorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/TextDecoratorFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/WhiteTextDecoratorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/factory/WhiteTextDecoratorFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/CreationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/CreationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/MemeCreatorFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/MemeCreatorFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/MemePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/MemePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/TemplatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue10/memecreator/ui/TemplatePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss19/ue11/demo/shapes/app/Snowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue11/demo/shapes/app/Snowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss19/ue11/expr/app/ExprApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss19/ue11/expr/app/ExprApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,13 +155,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00048" summary="ok">
-      <created>1585069524126</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1585069524126</updated>
     </task>
     <task id="LOCAL-00049" summary="ok">
       <created>1585073335379</created>
@@ -559,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588709058568</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="ok">
+      <created>1588840697814</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1588840697814</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +560,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1588709057927">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1588840696854">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -628,7 +568,7 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098019060" />
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588709057927" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588840696854" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1587666681369">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
@@ -708,7 +648,7 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1806" y="736" width="570" height="524" key="StructurePopup/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586886772515" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1588709060280">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1588840699132">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825876601" />
@@ -716,7 +656,7 @@
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120@0.0.3840.2120" timestamp="1581098023533" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588709060280" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588840699132" />
     <state x="2085" y="1016" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586337326300">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
