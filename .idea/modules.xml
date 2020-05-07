@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/swe2-ij.iml" filepath="$PROJECT_DIR$/swe2-ij.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jku.iml" filepath="$PROJECT_DIR$/jku.iml" />
     </modules>
   </component>
 </project>
