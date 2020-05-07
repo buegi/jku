@@ -106,12 +106,12 @@
       <module name="jku" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mms.ue01.test.*" />
+          <option name="PATTERN" value="mms.ss20.ue01.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="mms.ue01.test" />
-      <option name="MAIN_CLASS_NAME" value="mms.ue01.test.QuotedPrintableCodecTest" />
+      <option name="PACKAGE_NAME" value="mms.ss20.ue01.test" />
+      <option name="MAIN_CLASS_NAME" value="mms.ss20.ue01.test.QuotedPrintableCodecTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />

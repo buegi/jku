@@ -1,8 +1,8 @@
-package mms.ue01.test;
+package mms.ss20.ue01.test;
 
 import junit.framework.TestCase;
 
-import mms.ue01.*;
+import mms.ss20.ue01.*;
 
 import org.junit.Test;
 

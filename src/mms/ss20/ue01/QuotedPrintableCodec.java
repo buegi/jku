@@ -1,4 +1,4 @@
-package mms.ue01;
+package mms.ss20.ue01;
 
 public class QuotedPrintableCodec {
 
