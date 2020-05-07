@@ -440,7 +440,7 @@ public class In {
         bufferStack = new LinkedList<Character>();
         LS = System.getProperty("line.separator").toCharArray();
         if (LS == null || LS.length == 0) {
-            LS = new char[] { '\n' };
+            LS = new char[]{'\n'};
         }
     }
 
