@@ -145,12 +145,14 @@ public class Data {
 
     public Stream<Question> stream() {
         // TODO: generate new Stream<Question> based on the array 'items'
-        return Stream.empty();
+        return Arrays.stream(this.items);
+        // return Stream.empty();
     }
 
     public Stream<Question> sortedStream() {
         // TODO: generate Stream<Question> based on stream() and by sorting it descending based on the question score
-        return Stream.empty();
+        return Arrays.stream(this.items).sorted((q1, q2) -> q1.getScore() < q2.getScore() ? 1 : -1);
+        // return Stream.empty();
     }
 
     public Optional<Question> findHighestScoringQuestionWith(int minimumViews) {
