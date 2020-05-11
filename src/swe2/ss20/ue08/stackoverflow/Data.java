@@ -1,6 +1,5 @@
 package swe2.ss20.ue08.stackoverflow;
 
-
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -11,6 +10,7 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.zip.GZIPInputStream;
@@ -146,73 +146,73 @@ public class Data {
     public Stream<Question> stream() {
         // TODO: generate new Stream<Question> based on the array 'items'
         return Arrays.stream(this.items);
-        // return Stream.empty();
     }
 
     public Stream<Question> sortedStream() {
         // TODO: generate Stream<Question> based on stream() and by sorting it descending based on the question score
         return Arrays.stream(this.items).sorted((q1, q2) -> q1.getScore() < q2.getScore() ? 1 : -1);
-        // return Stream.empty();
     }
 
     public Optional<Question> findHighestScoringQuestionWith(int minimumViews) {
         // TODO: Return the question with the highest score that has at least minimumViews views.
-        return Optional.empty();
+        return Arrays.stream(this.items).filter(q -> q.getViewCount() >= minimumViews).max((q1, q2) -> q1.getScore() > q2.getScore() ? 1 : -1);
     }
 
     public Optional<String> getLongestTitle() {
         // TODO: return the longest title
-        return Optional.empty();
+        return Arrays.stream(this.items).map(q -> q.getTitle()).max((q1, q2) -> q1.length() > q2.length() ? 1 : -1);
     }
 
     public List<Question> findQuestions(String titlePart) {
         // TODO: return a list of all question that contain titlePart in their title
-        return new ArrayList<>();
+        return Arrays.stream(this.items).filter(q -> q.getTitle().contains(titlePart)).collect(Collectors.toList());
     }
 
     public long countQuestionsWithoutAcceptedAnswer() {
         // TODO: return the number of questions that have no accepted answer
-        return -1;
+        return Arrays.stream(this.items).filter(q -> q.getAcceptedAnswerId() == 0).count();
     }
 
     public OptionalDouble averageOwnerReputation() {
         // TODO: return the average reputation of the question owners using mapToLong() and average()
-        return OptionalDouble.empty();
+        return Arrays.stream(this.items).mapToLong(o -> o.getOwner().getReputation()).average();
     }
 
     public double averageOwnerReputation2() {
         // TODO: return the average reputation of the question owners using collect() in conjunction with Collectors.averagingLong()
-        return -1;
+        return Arrays.stream(this.items).collect(Collectors.averagingLong(o -> o.getOwner().getReputation()));
     }
 
     public long sumOfAllAnswerCounts() {
         // TODO: return the total number of answers that have been given to all questions
-        return -1;
+        return Arrays.stream(this.items).mapToLong(q -> q.getAnswerCount()).sum();
     }
 
     public Map<Integer, List<Question>> groupQuestionsByTagCount() {
         // TODO: return questions grouped by their number of tags
-        return new HashMap<>();
+        return Arrays.stream(this.items).collect(Collectors.groupingBy(q -> q.getTags().length));
     }
 
     public Map<Boolean, List<Question>> partitionByAcceptedAnswer() {
         // TODO: return all questions, partitioned by the fact if the question has an answer (true) or not (false)
-        return new HashMap<>();
+        return Arrays.stream(this.items).collect(Collectors.partitioningBy(q -> q.getAcceptedAnswerId() == 0));
     }
 
     public Optional<Owner> getOwnerWithShortestName() {
         // TODO: return the owner with the shortest name that asked a question
-        return Optional.empty();
+        return Arrays.stream(this.items).map(q -> q.getOwner()).min((o1, o2) -> o1.getDisplayName().length() > o2.getDisplayName().length() ? 1 : -1);
     }
 
     public List<String> distinctTags() {
         // TODO: return a list of all distinct tags, sorted ascending
-        return new ArrayList<>();
+        return Arrays.stream(this.items).flatMap(q -> Stream.of(q.getTags())).distinct().sorted().collect(Collectors.toList());
     }
 
     public List<String> topTags(int n) {
         // TODO: return the top n tags (i.e., those n tags that appear the most often) in conjunction with frequency (i.e., "<tag> x <frequency>")
-        return new ArrayList<>();
+        return Arrays.stream(this.items).flatMap(q -> Stream.of(q.getTags())).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream().sorted((s1, s2) -> s2.getValue().compareTo(s1.getValue())).limit(n)
+                .map(x -> x.getKey() + " x " + x.getValue()).collect(Collectors.toList());
     }
 
     @Override
