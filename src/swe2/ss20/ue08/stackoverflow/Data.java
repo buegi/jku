@@ -200,18 +200,21 @@ public class Data {
 
     public Optional<Owner> getOwnerWithShortestName() {
         // TODO: return the owner with the shortest name that asked a question
-        return Arrays.stream(this.items).map(q -> q.getOwner()).min((o1, o2) -> o1.getDisplayName().length() > o2.getDisplayName().length() ? 1 : -1);
+        return Arrays.stream(this.items)
+                .map(q -> q.getOwner()).min((o1, o2) -> o1.getDisplayName().length() > o2.getDisplayName().length() ? 1 : -1);
     }
 
     public List<String> distinctTags() {
         // TODO: return a list of all distinct tags, sorted ascending
-        return Arrays.stream(this.items).flatMap(q -> Stream.of(q.getTags())).distinct().sorted().collect(Collectors.toList());
+        return Arrays.stream(this.items)
+                .flatMap(q -> Stream.of(q.getTags())).distinct().sorted().collect(Collectors.toList());
     }
 
     public List<String> topTags(int n) {
         // TODO: return the top n tags (i.e., those n tags that appear the most often) in conjunction with frequency (i.e., "<tag> x <frequency>")
-        return Arrays.stream(this.items).flatMap(q -> Stream.of(q.getTags())).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet().stream().sorted((s1, s2) -> s2.getValue().compareTo(s1.getValue())).limit(n)
+        return Arrays.stream(this.items).flatMap(q -> Stream.of(q.getTags()))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream().sorted((l1, l2) -> l2.getValue().compareTo(l1.getValue())).limit(n)
                 .map(x -> x.getKey() + " x " + x.getValue()).collect(Collectors.toList());
     }
 
