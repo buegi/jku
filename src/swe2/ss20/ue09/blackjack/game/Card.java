@@ -14,7 +14,6 @@ public class Card {
         public String getEncoding() {
             return encoding;
         }
-
     }
 
     private final Color color;
