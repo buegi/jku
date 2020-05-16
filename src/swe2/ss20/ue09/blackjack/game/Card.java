@@ -4,7 +4,6 @@ public class Card {
 
     public enum Color {
         Clubs("\u2663"), Diamonds("\u2666"), Hearts("\u2665"), Spades("\u2660");
-
         private final String encoding;
 
         private Color(String encoding) {
@@ -26,7 +25,6 @@ public class Card {
      */
     public Card(int deckIndex) {
         color = Color.values()[deckIndex / 13];
-
         // value from 1 to 13
         index = 1 + deckIndex % 13;
     }
