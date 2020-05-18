@@ -70,6 +70,7 @@ public class Blackjack {
      * play the game
      */
     public void play() {
+        // TODO implement
         player.getCards().add(this.drawCard());
         this.player = getHumanPlayer();
         player.getCards().add(this.drawCard());
@@ -79,21 +80,17 @@ public class Blackjack {
         this.printGameState();
 
 
-        // TODO implement
-
     }
 
     /**
      * print the cards of both players and their value
      */
     public void printGameState() {
-
         Out.println("Dealer (" + dealer.getValue() + ")");
         for (Card c : dealer.getCards()) {
             Out.print(c + " ");
         }
         Out.println();
-
         Out.println("Player (" + human.getValue() + ")");
         for (Card c : human.getCards()) {
             Out.print(c + " ");
