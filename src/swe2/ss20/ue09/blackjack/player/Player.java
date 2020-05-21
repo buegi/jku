@@ -19,7 +19,7 @@ public abstract class Player {
     }
 
     public int getValue() {
-        return this.cards.stream().mapToInt(c -> {
+        int value = this.cards.stream().mapToInt(c -> {
             if (c.getIndex() == 1) {
                 return 11;
             }
@@ -28,10 +28,27 @@ public abstract class Player {
             }
             return c.getIndex();
         }).sum();
+        if (value <= 21) {
+            return value;
+        } else {
+            return this.cards.stream().mapToInt(c -> {
+                if (c.getIndex() == 1) {
+                    return 1;
+                }
+                if (c.getIndex() >= 11) {
+                    return 10;
+                }
+                return c.getIndex();
+            }).sum();
+        }
     }
 
     public boolean hasBlackJack() {
         return this.getValue() == 21;
+    }
+
+    public boolean overDrawn() {
+        return this.getValue() > 21;
     }
 
     public abstract Turn makeTurn();

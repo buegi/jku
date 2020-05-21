@@ -7,7 +7,6 @@ public class HumanPlayer extends Player {
 
     private static final int INITIAL_CHIP_COUNT = 10;
     private int nChips;
-    private Turn state;
 
     public HumanPlayer() {
         super();
@@ -22,35 +21,23 @@ public class HumanPlayer extends Player {
         this.nChips = nChips;
     }
 
-    public Turn getState() {
-        return this.state;
-    }
-
-    public void setState(Turn state) {
-        this.state = state;
-    }
-
     @Override
     public Turn makeTurn() {
         System.out.println("What do you want to do: Stay(s), Hit(h), DoubleDown(d)?");
         char playerAction = In.readChar();
-        switch (playerAction) {
-            case 's':
-                this.setState(Turn.Stay);
-                break;
-            case 'h':
-                this.setState(Turn.Hit);
-                break;
-
-            case 'd':
-                this.setState(Turn.DoubleDown);
-                break;
-
-            default:
-                System.out.println("Invalid input!");
-                break;
+        while (playerAction != 's' && playerAction != 'h' && playerAction != 'd') {
+            System.out.println("Invalid input!");
+            playerAction = In.readChar();
         }
-        System.out.println("Player turn: " + this.state);
-        return this.state;
+        if (playerAction == 's') {
+            System.out.println(Turn.Stay);
+            return Turn.Stay;
+        } else if (playerAction == 'h') {
+            System.out.println(Turn.Hit);
+            return Turn.Hit;
+        } else {
+            System.out.println(Turn.DoubleDown);
+            return Turn.DoubleDown;
+        }
     }
 }

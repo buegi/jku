@@ -10,6 +10,6 @@ public class Dealer extends Player {
 
     @Override
     public Turn makeTurn() {
-        return Turn.Stay;
+        return Turn.Hit;
     }
 }

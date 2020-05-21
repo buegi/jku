@@ -36,15 +36,15 @@ public class Blackjack {
         }
     }
 
-    private void initalizeGame() {
+    private void startFirst() {
         // two cards for player
         this.commitment = 1;
         this.human.setChips(this.human.getChips() - 1);
-        this.player = this.getDealer();
-        player.getCards().add(this.drawCard());
-        player = this.getHumanPlayer();
-        player.getCards().add(this.drawCard());
-        player.getCards().add(this.drawCard());
+        this.player = this.dealer;
+        this.player.getCards().add(this.drawCard());
+        this.otherPlayer();
+        this.player.getCards().add(this.drawCard());
+        this.player.getCards().add(this.drawCard());
     }
 
     public Player getHumanPlayer() {
@@ -69,27 +69,37 @@ public class Blackjack {
         }
 
         // player && dealer have blackjack - 1x commitment
-        if (this.human.getValue() == 21 && this.dealer.getValue() == 21) {
+        if (this.human.hasBlackJack() && this.dealer.hasBlackJack()) {
             return this.result = GameResult.Draw;
         }
 
         // only player has blackjack - 3x commitment
-        if (this.getHumanPlayer().getValue() == 21 && !(this.getDealer().getValue() == 21)) {
+        if (this.human.hasBlackJack() && !(this.getDealer().hasBlackJack())) {
             return this.result = GameResult.PlayerWins;
         }
 
+        // dealer has blackjack
+        if (this.dealer.hasBlackJack()) {
+            return this.result = GameResult.DealerWins;
+        }
+
         // dealer overdraws - 2x commitment
-        if (this.getDealer().getValue() > 21) {
+        if (this.dealer.getValue() > 21) {
             return this.result = GameResult.PlayerWins;
         }
 
         // player has higher value than dealer - 2x commitment
-        if (this.getHumanPlayer().getValue() > this.getDealer().getValue()) {
+        if (this.human.getValue() > this.dealer.getValue()) {
             return this.result = GameResult.PlayerWins;
         }
 
+        // dealer has higher value than player
+        if (this.dealer.getValue() > this.human.getValue()) {
+            return this.result = GameResult.DealerWins;
+        }
+
         // player and dealer have draw (last option) - 1x commitment
-        return GameResult.Draw;
+        return this.result = GameResult.Draw;
     }
 
     /**
@@ -106,33 +116,65 @@ public class Blackjack {
         return deck.remove(new Random().nextInt(deck.size()));
     }
 
+    private void otherPlayer() {
+        if (this.player.equals(human)) {
+            this.player = this.dealer;
+        } else {
+            this.player = this.human;
+        }
+    }
+
+    private void doubleCommitment() {
+
+    }
+
+
     /**
      * play the game
      */
     public void play() {
         // TODO implement
-        this.initalizeGame();
+        this.startFirst();
         this.printGameState();
-        while (this.result != GameResult.DealerWins || this.result != GameResult.PlayerWins) {
-            this.player.makeTurn();
+        //while (this.result == null || !(this.result.equals(GameResult.DealerWins)) || !(this.result.equals(GameResult.PlayerWins))) {
 
-            if (this.human.getState() == Turn.Hit) {
-
+        // players turn
+        while (this.player.equals(human) && this.player.getValue() < 21) {
+            Turn playerTurn = this.player.makeTurn();
+            if (player.hasBlackJack() || playerTurn.equals((Turn.Stay))) {
+                this.printGameState();
+                this.otherPlayer();
+            }
+            if (playerTurn.equals(Turn.DoubleDown) && this.player.getCards().size() == 2) {
+                this.player.getCards().add(this.drawCard());
+                this.otherPlayer();
+            }
+            if (playerTurn.equals(Turn.Hit)) {
+                this.player.getCards().add(this.drawCard());
+                while (playerTurn.equals(Turn.Hit) && this.player.getValue() < 21) {
+                    this.printGameState();
+                    playerTurn = this.player.makeTurn();
+                    this.player.getCards().add(this.drawCard());
+                    if (this.player.getValue() >= 21) {
+                        playerTurn = Turn.Stay;
+                        this.otherPlayer();
+                    }
+                }
 
             }
-
-            if (this.human.getState() == Turn.Stay) {
-
-            }
-
-            if (this.human.getState() == Turn.DoubleDown) {
-
-            }
-
-            this.result = this.evaluateCards();
         }
 
+        // dealers turn
+        if (this.player.equals(dealer)) {
+            while (player.getValue() <= 17) {
+                this.player.getCards().add(this.drawCard());
+            }
+        }
+        this.printGameState();
+        this.evaluateCards();
+        System.out.println(this.result);
     }
+    //}
 
     /**
      * print the cards of both players and their value
