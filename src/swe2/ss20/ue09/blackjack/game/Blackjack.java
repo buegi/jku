@@ -56,7 +56,7 @@ public class Blackjack {
         this.printGameState();
     }
 
-    private void reset() {
+    private void resetGame() {
         this.commitment = 0;
         this.deck.clear();
         this.human.resetCards();
@@ -164,7 +164,7 @@ public class Blackjack {
      */
     public void play() {
         while (this.human.getChips() > 0) {
-            this.reset();
+            this.resetGame();
             // players turn
             while (this.player.equals(human) && !this.player.overDrawn()) {
                 Turn playerTurn = this.player.makeTurn();
@@ -196,7 +196,7 @@ public class Blackjack {
 
             // dealers turn
             if (this.player.equals(dealer)) {
-                while (player.getValue() <= 17) {
+                while (this.player.makeTurn().equals(Turn.Hit)) {
                     this.player.getCards().add(this.drawCard());
                 }
             }
@@ -211,7 +211,6 @@ public class Blackjack {
             }
         }
     }
-    //}
 
     /**
      * print the cards of both players and their value
