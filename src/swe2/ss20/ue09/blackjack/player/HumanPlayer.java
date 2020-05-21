@@ -30,13 +30,13 @@ public class HumanPlayer extends Player {
             playerAction = In.readChar();
         }
         if (playerAction == 's') {
-            System.out.println(Turn.Stay);
+            System.out.println("Player turn: " + Turn.Stay);
             return Turn.Stay;
         } else if (playerAction == 'h') {
-            System.out.println(Turn.Hit);
+            System.out.println("Player turn: " + Turn.Hit);
             return Turn.Hit;
         } else {
-            System.out.println(Turn.DoubleDown);
+            System.out.println("Player turn: " + Turn.DoubleDown);
             return Turn.DoubleDown;
         }
     }

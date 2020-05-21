@@ -51,5 +51,9 @@ public abstract class Player {
         return this.getValue() > 21;
     }
 
+    public void resetCards() {
+        this.cards.clear();
+    }
+
     public abstract Turn makeTurn();
 }
