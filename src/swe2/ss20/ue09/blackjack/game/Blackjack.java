@@ -1,5 +1,6 @@
 package swe2.ss20.ue09.blackjack.game;
 
+import swe2.inout.In;
 import swe2.ss20.ue09.blackjack.player.Dealer;
 import swe2.ss20.ue09.blackjack.player.HumanPlayer;
 import swe2.ss20.ue09.blackjack.player.Player;
@@ -14,6 +15,7 @@ public class Blackjack {
     private Player player;
     private GameResult result;
     private ArrayList<Card> deck;
+    private int commitment;
 
     public static final int TOTAL_NUM_CARDS = 52;
 
@@ -24,7 +26,7 @@ public class Blackjack {
         this.human = new HumanPlayer();
         this.dealer = new Dealer();
         this.deck = new ArrayList<Card>(TOTAL_NUM_CARDS);
-        this.player = this.dealer;
+        this.commitment = 0;
         this.initializeDeck();
     }
 
@@ -32,6 +34,17 @@ public class Blackjack {
         for (int i = 0; i < TOTAL_NUM_CARDS; i++) {
             deck.add(new Card(i));
         }
+    }
+
+    private void initalizeGame() {
+        // two cards for player
+        this.commitment = 1;
+        this.human.setChips(this.human.getChips() - 1);
+        this.player = this.getDealer();
+        player.getCards().add(this.drawCard());
+        player = this.getHumanPlayer();
+        player.getCards().add(this.drawCard());
+        player.getCards().add(this.drawCard());
     }
 
     public Player getHumanPlayer() {
@@ -49,6 +62,33 @@ public class Blackjack {
      */
     public GameResult evaluateCards() {
         // TODO implement
+        // player has more than 21 => end round - commitment lost
+        if (this.human.getValue() > 21) {
+            this.commitment = 0;
+            return this.result = GameResult.DealerWins;
+        }
+
+        // player && dealer have blackjack - 1x commitment
+        if (this.human.getValue() == 21 && this.dealer.getValue() == 21) {
+            return this.result = GameResult.Draw;
+        }
+
+        // only player has blackjack - 3x commitment
+        if (this.getHumanPlayer().getValue() == 21 && !(this.getDealer().getValue() == 21)) {
+            return this.result = GameResult.PlayerWins;
+        }
+
+        // dealer overdraws - 2x commitment
+        if (this.getDealer().getValue() > 21) {
+            return this.result = GameResult.PlayerWins;
+        }
+
+        // player has higher value than dealer - 2x commitment
+        if (this.getHumanPlayer().getValue() > this.getDealer().getValue()) {
+            return this.result = GameResult.PlayerWins;
+        }
+
+        // player and dealer have draw (last option) - 1x commitment
         return GameResult.Draw;
     }
 
@@ -71,14 +111,26 @@ public class Blackjack {
      */
     public void play() {
         // TODO implement
-        player.getCards().add(this.drawCard());
-        this.player = getHumanPlayer();
-        player.getCards().add(this.drawCard());
-        player.getCards().add(this.drawCard());
-
-        this.result = this.evaluateCards();
+        this.initalizeGame();
         this.printGameState();
+        while (this.result != GameResult.DealerWins || this.result != GameResult.PlayerWins) {
+            this.player.makeTurn();
 
+            if (this.human.getState() == Turn.Hit) {
+
+
+            }
+
+            if (this.human.getState() == Turn.Stay) {
+
+            }
+
+            if (this.human.getState() == Turn.DoubleDown) {
+
+            }
+
+            this.result = this.evaluateCards();
+        }
 
     }
 

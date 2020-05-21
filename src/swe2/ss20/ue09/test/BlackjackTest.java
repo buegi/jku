@@ -19,7 +19,7 @@ public class BlackjackTest {
     }
 
     @Test
-    void drawAllCards() {
+    void testDrawAllCards() {
         for (int i = 0; i < 52; i++) {
             blackJack.drawCard();
         }

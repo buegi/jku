@@ -8,7 +8,6 @@ import swe2.ss20.ue09.blackjack.game.Turn;
 
 public abstract class Player {
 
-    // TODO implement and extend this class
     private ArrayList<Card> cards;
 
     public Player() {
