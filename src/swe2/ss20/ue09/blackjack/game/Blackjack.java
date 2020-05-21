@@ -86,7 +86,7 @@ public class Blackjack {
         }
 
         // only player has blackjack - 3x commitment
-        if (this.human.hasBlackJack() && !(this.getDealer().hasBlackJack())) {
+        if (this.human.hasBlackJack() && !(this.dealer.hasBlackJack())) {
             this.human.setChips(this.human.getChips() + (3 * this.commitment));
             return this.result = GameResult.PlayerWins;
         }
