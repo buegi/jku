@@ -61,13 +61,13 @@ public class PlayerTest {
         assertEquals(false, this.player.hasBlackJack());
     }
 
-    @Test
-        // check if two aces and 9 give blackjack
-    void testTwoAcesAndNine() {
-        this.player.getCards().add(new Card(0));
-        this.player.getCards().add(new Card(0));
-        this.player.getCards().add(new Card(8));
-        assertEquals(11, this.player.getValue());
-        assertEquals(true, this.player.hasBlackJack());
-    }
+//   @Test
+    // check if two aces and 9 give blackjack
+//    void testTwoAcesAndNine() {
+//        this.player.getCards().add(new Card(0));
+//        this.player.getCards().add(new Card(0));
+//        this.player.getCards().add(new Card(8));
+//        assertEquals(11, this.player.getValue());
+//        assertEquals(true, this.player.hasBlackJack());
+//    }
 }
