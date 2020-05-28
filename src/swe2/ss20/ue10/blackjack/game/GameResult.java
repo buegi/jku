@@ -1,7 +1,5 @@
-package blackjack.game;
+package swe2.ss20.ue10.blackjack.game;
 
 public enum GameResult {
-
-	PlayerWins, DealerWins, Draw;
-	
+    PlayerWins, DealerWins, Draw
 }

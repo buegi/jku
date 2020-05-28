@@ -1,7 +1,7 @@
-package at.jku.ssw.circledraw.model;
+package swe2.ss20.ue10.demo.circledraw.model;
 
 import java.util.EventListener;
 
 public interface CircleModelListener extends EventListener {
-    public void circleEvent(CircleEvent event);
+    void circleEvent(CircleEvent event);
 }

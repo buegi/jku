@@ -1,7 +1,7 @@
-package at.jku.ssw.circledraw.model;
+package swe2.ss20.ue10.demo.circledraw.model;
 
 public class Circle {
-	
+
     public final int x;
     public final int y;
     public final int radius;
@@ -18,9 +18,8 @@ public class Circle {
         return Math.sqrt(xDiff * xDiff + yDiff * yDiff) <= radius;
     }
 
-	@Override
-	public String toString() {
-		return "Circle [x=" + x + ", y=" + y + ", radius=" + radius + "]";
-	}
-     
+    @Override
+    public String toString() {
+        return "Circle [x=" + x + ", y=" + y + ", radius=" + radius + "]";
+    }
 }

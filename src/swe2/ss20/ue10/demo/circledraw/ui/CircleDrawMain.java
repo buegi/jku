@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-import at.jku.ssw.circledraw.model.Circle;
-import at.jku.ssw.circledraw.model.CircleEvent;
-import at.jku.ssw.circledraw.model.CircleModel;
+import swe2.ss20.ue10.demo.circledraw.model.Circle;
+import swe2.ss20.ue10.demo.circledraw.model.CircleEvent;
+import swe2.ss20.ue10.demo.circledraw.model.CircleModel;
 
 public class CircleDrawMain {
     private static final CircleModel model = new CircleModel();
@@ -45,9 +45,7 @@ public class CircleDrawMain {
 
         JPanel btnPnl = new JPanel();
         JButton clearBtn = new JButton("Clear");
-        clearBtn.addActionListener(a -> {
-            model.clear();
-        });
+        clearBtn.addActionListener(a -> model.clear());
         btnPnl.add(clearBtn);
 
         JMenuBar menuBar = new JMenuBar();

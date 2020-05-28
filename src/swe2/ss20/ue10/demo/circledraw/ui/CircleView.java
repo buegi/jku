@@ -9,10 +9,10 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JComponent;
 
-import at.jku.ssw.circledraw.model.Circle;
-import at.jku.ssw.circledraw.model.CircleEvent;
-import at.jku.ssw.circledraw.model.CircleModel;
-import at.jku.ssw.circledraw.model.CircleModelListener;
+import swe2.ss20.ue10.demo.circledraw.model.Circle;
+import swe2.ss20.ue10.demo.circledraw.model.CircleEvent;
+import swe2.ss20.ue10.demo.circledraw.model.CircleModel;
+import swe2.ss20.ue10.demo.circledraw.model.CircleModelListener;
 
 @SuppressWarnings("serial")
 public class CircleView extends JComponent {
@@ -57,10 +57,5 @@ public class CircleView extends JComponent {
     };
 
     private final CircleModelListener modelListener =
-            new CircleModelListener() {
-                @Override
-                public void circleEvent(CircleEvent event) {
-                    repaint();
-                }
-            };
+            event -> repaint();
 }

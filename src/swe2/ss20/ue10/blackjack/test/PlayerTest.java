@@ -7,10 +7,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-import blackjack.game.Card;
-import blackjack.game.Card.Color;
-import blackjack.game.Turn;
-import blackjack.player.Player;
+import swe2.ss20.ue10.blackjack.game.Card;
+import swe2.ss20.ue10.blackjack.game.Card.Color;
+import swe2.ss20.ue10.blackjack.game.Turn;
+import swe2.ss20.ue10.blackjack.player.Player;
 
 public class PlayerTest {
 
@@ -91,5 +91,4 @@ public class PlayerTest {
         player.resetCards(c1, c2, c3);
         assertFalse(player.hasBlackJack());
     }
-
 }

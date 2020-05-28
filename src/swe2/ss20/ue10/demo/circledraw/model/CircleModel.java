@@ -1,11 +1,11 @@
-package at.jku.ssw.circledraw.model;
+package swe2.ss20.ue10.demo.circledraw.model;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class CircleModel implements Iterable<Circle> {
-	
+
     private List<Circle> circles = new ArrayList<>();
     private List<CircleModelListener> listeners = new ArrayList<>();
 
@@ -19,20 +19,20 @@ public class CircleModel implements Iterable<Circle> {
             fireModelEvent(CircleEvent.Kind.DELETED, circle);
         }
     }
-    
+
     public void clear() {
-    	for (Circle c: getCircles()) {
-    		this.removeCircle(c);
-    	}
+        for (Circle c : getCircles()) {
+            this.removeCircle(c);
+        }
     }
 
     @Override
     public Iterator<Circle> iterator() {
         return circles.iterator();
     }
-    
+
     public Circle[] getCircles() {
-    	return circles.toArray(new Circle[circles.size()]); 
+        return circles.toArray(new Circle[0]);
     }
 
     public void addCircleModelListener(CircleModelListener listener) {
