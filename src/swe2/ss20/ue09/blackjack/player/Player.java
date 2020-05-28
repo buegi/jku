@@ -9,17 +9,17 @@ import swe2.ss20.ue09.blackjack.game.Turn;
 public abstract class Player {
 
     private ArrayList<Card> cards;
-    private int assCount;
+    private int aceCount;
     private static int BLACK_JACK = 21;
 
     public Player() {
         this.cards = new ArrayList<Card>();
-        this.assCount = 0;
+        this.aceCount = 0;
     }
 
     public void clear() {
         this.cards = new ArrayList<Card>();
-        this.assCount = 0;
+        this.aceCount = 0;
     }
 
     public List<Card> getCards() {
@@ -28,7 +28,7 @@ public abstract class Player {
 
     public void addCard(Card card) {
         if (card.getIndex() == 1) {
-            this.assCount++;
+            this.aceCount++;
         }
         this.cards.add(card);
     }
@@ -44,7 +44,7 @@ public abstract class Player {
                 value += card.getIndex();
             }
         }
-        int tempAssCount = this.assCount;
+        int tempAssCount = this.aceCount;
         while (value > BLACK_JACK && tempAssCount > 0) {
             value -= 10;
             tempAssCount--;

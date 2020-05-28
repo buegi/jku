@@ -23,10 +23,10 @@ public class PlayerTest {
     }
 
     @Test
-        // draw Cards until 17 is reached, results in value 18
+        // draw Aces until 17 is reached, results in value 18 with last ace from last hit
     void testDealerMakeTurn() {
         while (this.dealer.makeTurn().equals(Turn.Hit)) {
-            this.dealer.addCard(new Card(2));
+            this.dealer.addCard(new Card(0));
         }
         assertEquals(18, this.dealer.getValue());
     }
