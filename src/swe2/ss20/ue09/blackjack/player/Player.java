@@ -17,6 +17,11 @@ public abstract class Player {
         this.assCount = 0;
     }
 
+    public void clear() {
+        this.cards = new ArrayList<Card>();
+        this.assCount = 0;
+    }
+
     public List<Card> getCards() {
         return this.cards;
     }
@@ -53,10 +58,6 @@ public abstract class Player {
 
     public boolean overDrawn() {
         return this.getValue() > BLACK_JACK;
-    }
-
-    public void resetCards() {
-        this.cards.clear();
     }
 
     public abstract Turn makeTurn();

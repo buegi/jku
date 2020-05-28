@@ -59,8 +59,8 @@ public class Blackjack {
     private void resetGame() {
         this.commitment = 0;
         this.deck.clear();
-        this.human.resetCards();
-        this.dealer.resetCards();
+        this.human.clear();
+        this.dealer.clear();
         this.initializeDeck();
         this.initalizeGame();
     }
@@ -177,11 +177,11 @@ public class Blackjack {
                     this.otherPlayer();
                 }
                 if (playerTurn.equals(Turn.Hit)) {
-                    if (player.overDrawn()) {
+                    if (player.overDrawn() || player.hasBlackJack()) {
                         System.out.println("You already have 21 or above");
                     } else {
                         this.player.addCard(this.drawCard());
-                        while (playerTurn.equals(Turn.Hit) && !this.player.overDrawn()) {
+                        while (playerTurn.equals(Turn.Hit) && !this.player.overDrawn() && !this.player.hasBlackJack()) {
                             this.printGameState();
                             playerTurn = this.player.makeTurn();
                             this.player.addCard(this.drawCard());
@@ -206,7 +206,7 @@ public class Blackjack {
             this.evaluateCards();
             System.out.println(this.result);
 
-            if (!playAgain()) {
+            if (!this.playAgain()) {
                 break;
             }
         }
