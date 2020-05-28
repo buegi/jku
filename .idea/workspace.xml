@@ -88,7 +88,20 @@
       <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue10\blackjack\player" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameMain">
+  <component name="RunManager" selected="Application.GameMain (1)">
+    <configuration name="GameMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue10.blackjack.GameMain" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="swe2.ss20.ue10.blackjack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue09.blackjack.GameMain" />
       <module name="jku" />
@@ -112,21 +125,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="swe2.ss20.ue09.test" />
       <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue09.test.BlackjackTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="swe2.ss20.ue09.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="swe2.ss20.ue09.test" />
-      <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue09.test.PlayerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameMain (1)" />
         <item itemvalue="Application.GameMain" />
         <item itemvalue="JUnit.swe2.ss20.ue09 in jku" />
         <item itemvalue="JUnit.swe2.ss20.ue09.blackjack in jku" />
         <item itemvalue="JUnit.BlackjackTest" />
-        <item itemvalue="JUnit.PlayerTest" />
       </list>
     </recent_temporary>
   </component>
