@@ -44,10 +44,10 @@ public abstract class Player {
                 value += card.getIndex();
             }
         }
-        int tempAssCount = this.aceCount;
-        while (value > BLACK_JACK && tempAssCount > 0) {
+        int tempAceCount = this.aceCount;
+        while (value > BLACK_JACK && tempAceCount > 0) {
             value -= 10;
-            tempAssCount--;
+            tempAceCount--;
         }
         return value;
     }
