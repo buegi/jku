@@ -9,46 +9,50 @@ import swe2.ss20.ue09.blackjack.game.Turn;
 public abstract class Player {
 
     private ArrayList<Card> cards;
+    private int assCount;
+    private static int BLACK_JACK = 21;
 
     public Player() {
         this.cards = new ArrayList<Card>();
+        this.assCount = 0;
     }
 
     public List<Card> getCards() {
         return this.cards;
     }
 
-    public int getValue() {
-        int value = this.cards.stream().mapToInt(c -> {
-            if (c.getIndex() == 1) {
-                return 11;
-            }
-            if (c.getIndex() >= 11) {
-                return 10;
-            }
-            return c.getIndex();
-        }).sum();
-        if (value <= 21) {
-            return value;
-        } else {
-            return this.cards.stream().mapToInt(c -> {
-                if (c.getIndex() == 1) {
-                    return 1;
-                }
-                if (c.getIndex() >= 11) {
-                    return 10;
-                }
-                return c.getIndex();
-            }).sum();
+    public void addCard(Card card) {
+        if (card.getIndex() == 1) {
+            this.assCount++;
         }
+        this.cards.add(card);
+    }
+
+    public int getValue() {
+        int value = 0;
+        for (Card card : this.cards) {
+            if (card.getIndex() == 1) {
+                value += 11;
+            } else if (card.getIndex() >= 11) {
+                value += 10;
+            } else {
+                value += card.getIndex();
+            }
+        }
+        int tempAssCount = this.assCount;
+        while (value > BLACK_JACK && tempAssCount > 0) {
+            value -= 10;
+            tempAssCount--;
+        }
+        return value;
     }
 
     public boolean hasBlackJack() {
-        return this.getValue() == 21;
+        return this.getValue() == BLACK_JACK;
     }
 
     public boolean overDrawn() {
-        return this.getValue() > 21;
+        return this.getValue() > BLACK_JACK;
     }
 
     public void resetCards() {

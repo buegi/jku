@@ -49,10 +49,10 @@ public class Blackjack {
         this.human.setChips(this.human.getChips() - 1);
         this.commitment = 1;
         this.player = this.dealer;
-        this.player.getCards().add(this.drawCard());
+        this.player.addCard(this.drawCard());
         this.otherPlayer();
-        this.player.getCards().add(this.drawCard());
-        this.player.getCards().add(this.drawCard());
+        this.player.addCard(this.drawCard());
+        this.player.addCard(this.drawCard());
         this.printGameState();
     }
 
@@ -172,7 +172,7 @@ public class Blackjack {
                     this.otherPlayer();
                 }
                 if (playerTurn.equals(Turn.DoubleDown) && this.player.getCards().size() == 2) {
-                    this.player.getCards().add(this.drawCard());
+                    this.player.addCard(this.drawCard());
                     this.doubleCommitment();
                     this.otherPlayer();
                 }
@@ -180,11 +180,11 @@ public class Blackjack {
                     if (player.overDrawn()) {
                         System.out.println("You already have 21 or above");
                     } else {
-                        this.player.getCards().add(this.drawCard());
+                        this.player.addCard(this.drawCard());
                         while (playerTurn.equals(Turn.Hit) && !this.player.overDrawn()) {
                             this.printGameState();
                             playerTurn = this.player.makeTurn();
-                            this.player.getCards().add(this.drawCard());
+                            this.player.addCard(this.drawCard());
                             if (this.player.getValue() >= 21) {
                                 playerTurn = Turn.Stay;
                                 this.otherPlayer();
@@ -197,7 +197,7 @@ public class Blackjack {
             // dealers turn
             if (this.player.equals(dealer)) {
                 while (this.player.makeTurn().equals(Turn.Hit)) {
-                    this.player.getCards().add(this.drawCard());
+                    this.player.addCard(this.drawCard());
                 }
             }
 
