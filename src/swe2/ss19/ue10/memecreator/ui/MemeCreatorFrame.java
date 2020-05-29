@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 @SuppressWarnings("serial")
 public class MemeCreatorFrame extends JFrame {
 
-	private static final String RESOURCES = "resources";
+	private static final String RESOURCES = "src/swe2/ss19/ue10/resources";
 
 	public MemeCreatorFrame() {
 		setTitle("Meme Creator :noice:");

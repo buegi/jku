@@ -19,22 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="ok">
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/model/GameEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/model/GameListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/ui/BlackJackUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/Blackjack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/Blackjack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/GameResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/GameResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/OutOfCardsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/OutOfCardsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/game/Turn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss19/ue10/memecreator/ui/MemeCreatorFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss19/ue10/memecreator/ui/MemeCreatorFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/GameMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/player/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/player/Dealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/player/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/player/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/test/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/test/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/CircleEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/CircleEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/CircleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/CircleModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/CircleModelListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/model/CircleModelListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/ui/CircleDrawMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/ui/CircleDrawMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/test/BlackjackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/test/BlackjackTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/ui/CircleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/circledraw/ui/CircleView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +83,32 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.GameMain (1)">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="swe2.ss19.ue10.memecreator.app.App" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="swe2.ss19.ue10.memecreator.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircleDrawMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue10.demo.circledraw.ui.CircleDrawMain" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="swe2.ss20.ue10.demo.circledraw.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue10.blackjack.GameMain" />
       <module name="jku" />
@@ -115,21 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BlackjackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="swe2.ss20.ue09.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="swe2.ss20.ue09.test" />
-      <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue09.test.BlackjackTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="swe2.ss20.ue09 in jku" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jku" />
       <extension name="coverage">
@@ -144,27 +149,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="swe2.ss20.ue09.blackjack in jku" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="swe2.ss20.ue09.blackjack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="swe2.ss20.ue09.blackjack" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameMain (1)" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.CircleDrawMain" />
         <item itemvalue="Application.GameMain" />
         <item itemvalue="JUnit.swe2.ss20.ue09 in jku" />
-        <item itemvalue="JUnit.swe2.ss20.ue09.blackjack in jku" />
-        <item itemvalue="JUnit.BlackjackTest" />
       </list>
     </recent_temporary>
   </component>
@@ -178,20 +169,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00080" summary="ok">
-      <created>1588061083800</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1588061083801</updated>
-    </task>
-    <task id="LOCAL-00081" summary="ok">
-      <created>1588071879472</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1588071879473</updated>
     </task>
     <task id="LOCAL-00082" summary="ok">
       <created>1588079942487</created>
@@ -522,7 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590697171236</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="ok">
+      <created>1590698427628</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1590698427628</updated>
+    </task>
+    <task id="LOCAL-00130" summary="ok">
+      <created>1590698535477</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1590698535477</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -565,13 +556,14 @@
     </state>
     <state x="979" y="286" width="2293" height="1372" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1590630702793" />
     <state x="979" y="286" width="2293" height="1372" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590091288325" />
-    <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser" timestamp="1588444340892">
+    <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser" timestamp="1590772168744">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="557" key="#com.intellij.ide.util.MemberChooser/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585826862462" />
     <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583814789145" />
     <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585067229312" />
     <state x="1598" y="557" key="#com.intellij.ide.util.MemberChooser/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585686231294" />
+    <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1590772168744" />
     <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588444340892" />
     <state x="1772" y="1045" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583827462425">
       <screen x="0" y="0" width="3840" height="2120" />
@@ -583,7 +575,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1590698322423">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1590698534999">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -591,47 +583,47 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1047" y="537" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588862054674" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1590698322423" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1590698534999" />
     <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093184300" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1588883962346">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1718" y="1096" key="FileChooserDialogImpl/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588883962346" />
-    <state width="2433" height="431" key="GridCell.Tab.0.bottom" timestamp="1590634233558">
+    <state width="2826" height="308" key="GridCell.Tab.0.bottom" timestamp="1590774395645">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.bottom/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.bottom/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.bottom/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.bottom/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2433" height="431" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1590634233558" />
+    <state width="2826" height="308" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1590774395645" />
     <state width="2433" height="557" key="GridCell.Tab.0.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
-    <state width="2433" height="431" key="GridCell.Tab.0.center" timestamp="1590634233558">
+    <state width="2826" height="308" key="GridCell.Tab.0.center" timestamp="1590774395645">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.center/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.center/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.center/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.center/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2433" height="431" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1590634233558" />
+    <state width="2826" height="308" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1590774395645" />
     <state width="2433" height="557" key="GridCell.Tab.0.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
-    <state width="2433" height="431" key="GridCell.Tab.0.left" timestamp="1590634233558">
+    <state width="2826" height="308" key="GridCell.Tab.0.left" timestamp="1590774395645">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.left/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.left/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.left/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.left/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439836" />
-    <state width="2433" height="431" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1590634233558" />
+    <state width="2826" height="308" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1590774395645" />
     <state width="2433" height="557" key="GridCell.Tab.0.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
-    <state width="2433" height="431" key="GridCell.Tab.0.right" timestamp="1590634233558">
+    <state width="2826" height="308" key="GridCell.Tab.0.right" timestamp="1590774395645">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.right/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.right/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.right/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.right/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="2433" height="431" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1590634233558" />
+    <state width="2826" height="308" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1590774395645" />
     <state width="2433" height="557" key="GridCell.Tab.0.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
     <state width="2433" height="557" key="GridCell.Tab.1.bottom" timestamp="1590633091139">
       <screen x="0" y="0" width="3840" height="2120" />
@@ -680,14 +672,14 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1806" y="736" width="570" height="524" key="StructurePopup/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586886772515" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1590697172560">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1590698537232">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825876601" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855243894" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1590697172560" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1590698537232" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093185931" />
     <state x="1692" y="956" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588853899409">
       <screen x="0" y="0" width="3840" height="2120" />

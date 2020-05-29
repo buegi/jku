@@ -10,7 +10,6 @@ import java.awt.event.MouseListener;
 import javax.swing.JComponent;
 
 import swe2.ss20.ue10.demo.circledraw.model.Circle;
-import swe2.ss20.ue10.demo.circledraw.model.CircleEvent;
 import swe2.ss20.ue10.demo.circledraw.model.CircleModel;
 import swe2.ss20.ue10.demo.circledraw.model.CircleModelListener;
 
@@ -42,7 +41,6 @@ public class CircleView extends JComponent {
     private final MouseListener mouseListener = new MouseAdapter() {
         @Override
         public void mouseReleased(MouseEvent e) {
-
             if (e.isControlDown()) {
                 Circle[] cs = model.getCircles();
                 for (Circle circle : cs) {

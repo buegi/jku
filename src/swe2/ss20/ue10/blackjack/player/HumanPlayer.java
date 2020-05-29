@@ -1,7 +1,6 @@
 package swe2.ss20.ue10.blackjack.player;
 
 import swe2.ss20.ue10.blackjack.game.Turn;
-import swe2.ss20.ue10.blackjack.player.Player;
 import swe2.inout.In;
 import swe2.inout.Out;
 
