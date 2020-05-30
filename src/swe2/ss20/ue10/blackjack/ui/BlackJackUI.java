@@ -38,6 +38,7 @@ public class BlackJackUI extends JComponent {
         this.mainFrame.setLocationRelativeTo(null);
         this.mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.mainFrame.setResizable(false);
+        this.mainFrame.getContentPane().setLayout(null);
     }
 
     private void initMainFrameMenu() {
@@ -54,27 +55,30 @@ public class BlackJackUI extends JComponent {
 
     private void initDealerPane() {
         JPanel dealerPane = new JPanel();
-        dealerPane.setSize(800, 200);
+        dealerPane.setSize(800, 300);
+        dealerPane.setLocation(0, 0);
         Border blackLine = BorderFactory.createLineBorder(Color.black);
         dealerPane.setBorder(blackLine);
         JLabel dealerLabel = new JLabel("DealerPane ( points )");
         dealerPane.add(dealerLabel);
-        this.mainFrame.add(dealerPane, BorderLayout.WEST);
+        this.mainFrame.add(dealerPane);
     }
 
     private void initPlayerPane() {
         JPanel playerPane = new JPanel();
-        playerPane.setSize(800, 200);
+        playerPane.setSize(800, 300);
+        playerPane.setLocation(0, 300);
         Border blackLine = BorderFactory.createLineBorder(Color.black);
         playerPane.setBorder(blackLine);
         JLabel playerLabel = new JLabel("PlayerPane ( points )");
         playerPane.add(playerLabel);
-        this.mainFrame.add(playerPane, BorderLayout.EAST);
+        this.mainFrame.add(playerPane);
     }
 
     private void initButtonPane() {
         JPanel buttonPane = new JPanel();
-        buttonPane.setSize(800, 200);
+        buttonPane.setSize(800, 100);
+        buttonPane.setLocation(0, 600);
         Border blackLine = BorderFactory.createLineBorder(Color.black);
         buttonPane.setBorder(blackLine);
         JButton buttonHit = new JButton("Hit");
@@ -83,16 +87,17 @@ public class BlackJackUI extends JComponent {
         buttonPane.add(buttonHit);
         buttonPane.add(buttonDoubleDown);
         buttonPane.add(buttonStay);
-        this.mainFrame.add(buttonPane, BorderLayout.NORTH);
+        this.mainFrame.add(buttonPane);
     }
 
     private void initMessagePane() {
         JPanel messagePane = new JPanel();
-        messagePane.setSize(800, 200);
+        messagePane.setSize(800, 100);
+        messagePane.setLocation(0, 700);
         Border blackLine = BorderFactory.createLineBorder(Color.black);
         messagePane.setBorder(blackLine);
         JLabel messageLabel = new JLabel("This is a message, that something's going on!");
         messagePane.add(messageLabel);
-        this.mainFrame.add(messagePane, BorderLayout.SOUTH);
+        this.mainFrame.add(messagePane);
     }
 }
