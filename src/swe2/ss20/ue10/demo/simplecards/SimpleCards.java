@@ -1,4 +1,4 @@
-package swe2.ss20.ue10.demo.circledraw.simplecards;
+package swe2.ss20.ue10.demo.simplecards;
 
 // card demo from stackoverflow
 
