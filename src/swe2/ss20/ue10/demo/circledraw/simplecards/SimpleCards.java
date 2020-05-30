@@ -47,7 +47,7 @@ public class SimpleCards {
                 }
             }
 
-            JFrame frame = new JFrame("Testing");
+            JFrame frame = new JFrame("SimpleCards");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.add(new GamePane(players));
             frame.pack();
