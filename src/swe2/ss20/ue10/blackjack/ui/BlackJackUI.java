@@ -1,15 +1,20 @@
 package swe2.ss20.ue10.blackjack.ui;
 
 import swe2.ss20.ue10.blackjack.game.Blackjack;
+import swe2.ss20.ue10.blackjack.game.Card;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class BlackJackUI extends JComponent {
 
     private final Blackjack blackjack;
     private JFrame mainFrame;
+    private Map<Card, Rectangle> playerCards;
+    private Map<Card, Rectangle> dealerCards;
 
     public BlackJackUI() {
         this.blackjack = new Blackjack();
@@ -99,5 +104,21 @@ public class BlackJackUI extends JComponent {
         JLabel messageLabel = new JLabel("This is a message, that something's going on!");
         messagePane.add(messageLabel);
         this.mainFrame.add(messagePane);
+    }
+
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g.create();
+
+    }
+
+    private void paintCard(Graphics2D g2d, Card card, Rectangle bounds) {
+        g2d.translate(bounds.x + 5, bounds.y + 5);
+        g2d.setClip(0, 0, bounds.width - 5, bounds.height - 5);
+
+        String text = card.toString();
+        FontMetrics fm = g2d.getFontMetrics();
+
+        g2d.drawString(text, 0, fm.getAscent());
     }
 }
