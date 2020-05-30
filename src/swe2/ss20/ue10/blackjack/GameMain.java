@@ -3,6 +3,8 @@ package swe2.ss20.ue10.blackjack;
 import swe2.ss20.ue10.blackjack.game.Blackjack;
 import swe2.ss20.ue10.blackjack.ui.BlackJackUI;
 
+import javax.swing.*;
+
 public class GameMain {
     public static void main(String[] args) {
         Blackjack game = new Blackjack();
