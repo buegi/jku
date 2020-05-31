@@ -6,15 +6,12 @@ import swe2.ss20.ue10.blackjack.game.Card;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.util.Map;
 import java.awt.Graphics;
 
 public class BlackJackUI extends JComponent {
 
     private final Blackjack blackjack;
     private JFrame blackJackFrame;
-    private Map<Card, Rectangle> playerCards;
-    private Map<Card, Rectangle> dealerCards;
 
     public BlackJackUI() {
         this.blackjack = new Blackjack();
@@ -32,30 +29,10 @@ public class BlackJackUI extends JComponent {
         this.initButtonPane();
         this.initMessagePane();
         this.initGameInformation();
-
+        this.initDealerCards();
+        this.initPlayerCards();
         blackJackFrame.setVisible(true);
     }
-
-    private void initGameInformation() {
-        JLabel dealerInfo = new JLabel("Dealer" + "(" + this.blackjack.getDealer().getValue() + ")");
-        dealerInfo.setBounds(50, 000, 100, 50);
-        dealerInfo.setFont(dealerInfo.getFont().deriveFont(16.0f));
-        dealerInfo.setVisible(true);
-        JLabel playerInfo = new JLabel("Player" + "(" + this.blackjack.getHumanPlayer().getValue() + ")");
-        playerInfo.setBounds(50, 200, 100, 50);
-        playerInfo.setFont(playerInfo.getFont().deriveFont(16.0f));
-        playerInfo.setVisible(true);
-        JLabel chipInfo = new JLabel("Chips" + "(" + this.blackjack.getHumanPlayer() + ")");
-        chipInfo.setFont(chipInfo.getFont().deriveFont(16.0f));
-        chipInfo.setBounds(50, 400, 100, 50);
-        chipInfo.setVisible(true);
-
-        this.blackJackFrame.add(dealerInfo);
-        this.blackJackFrame.add(playerInfo);
-        this.blackJackFrame.add(chipInfo);
-        repaint();
-    }
-
 
     private void initBlackJackFrame() {
         this.blackJackFrame = new JFrame();
@@ -65,7 +42,7 @@ public class BlackJackUI extends JComponent {
         this.blackJackFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.blackJackFrame.setResizable(false);
         this.blackJackFrame.getContentPane().setLayout(null);
-        repaint();
+        this.repaint();
     }
 
     private void initBlackJackFrameMenu() {
@@ -78,15 +55,78 @@ public class BlackJackUI extends JComponent {
         JMenuItem menuItemExit = new JMenuItem("Exit");
         menuItemExit.addActionListener(ae -> this.blackJackFrame.dispose());
         menuFile.add(menuItemExit);
-        repaint();
+        this.repaint();
+    }
+
+    private void initGameInformation() {
+        JLabel dealerInfo = new JLabel("Dealer" + "(" + this.blackjack.getDealer().getValue() + ")");
+        dealerInfo.setBounds(100, 000, 500, 50);
+        dealerInfo.setFont(dealerInfo.getFont().deriveFont(20.0f));
+        JLabel playerInfo = new JLabel("Player" + "(" + this.blackjack.getHumanPlayer().getValue() + ")");
+        playerInfo.setBounds(100, 300, 500, 50);
+        playerInfo.setFont(playerInfo.getFont().deriveFont(20.0f));
+        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayer() + ")");
+        chipInfo.setFont(chipInfo.getFont().deriveFont(20.0f));
+        chipInfo.setBounds(100, 600, 500, 50);
+        this.blackJackFrame.add(dealerInfo);
+        this.blackJackFrame.add(playerInfo);
+        this.blackJackFrame.add(chipInfo);
+    }
+
+    private void initDealerCards() {
+        JPanel dealerCardPane = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                for (Card card : blackjack.getDealer().getCards()) {
+                    JLabel label = new JLabel(card.toString());
+                    label.setFont(label.getFont().deriveFont(20.0f));
+                    label.setLocation(100, 0);
+                    this.add(label);
+                    int offset = 0;
+                    g.setColor(Color.WHITE);
+                    g.fillRect(offset += 100, 0, 175, 250);
+                    g.setColor(Color.BLACK);
+                    g.drawRect(offset, 0, 175, 250);
+                }
+            }
+        };
+        dealerCardPane.setSize(800, 300);
+        dealerCardPane.setLocation(0, 50);
+        this.blackJackFrame.add(dealerCardPane);
+        dealerCardPane.setVisible(true);
+    }
+
+    private void initPlayerCards() {
+        JPanel playerCardPane = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                for (Card card : blackjack.getHumanPlayer().getCards()) {
+                    JLabel label = new JLabel(card.toString());
+                    label.setFont(label.getFont().deriveFont(20.0f));
+                    label.setLocation(100, 0);
+                    this.add(label);
+                    int offset = 0;
+                    g.setColor(Color.WHITE);
+                    g.fillRect(offset += 100, 0, 175, 250);
+                    g.setColor(Color.BLACK);
+                    g.drawRect(offset, 0, 175, 250);
+                }
+            }
+        };
+
+        playerCardPane.setSize(800, 300);
+        playerCardPane.setLocation(0, 350);
+        playerCardPane.setVisible(true);
+        this.blackJackFrame.add(playerCardPane);
+        this.repaint();
     }
 
     private void initButtonPane() {
         JPanel buttonPane = new JPanel();
         buttonPane.setSize(800, 50);
         buttonPane.setLocation(0, 650);
-        Border blackLine = BorderFactory.createLineBorder(Color.black);
-        buttonPane.setBorder(blackLine);
         JButton buttonHit = new JButton("Hit");
         JButton buttonDoubleDown = new JButton("Double down");
         JButton buttonStay = new JButton("Stay");
@@ -94,6 +134,7 @@ public class BlackJackUI extends JComponent {
         buttonPane.add(buttonDoubleDown);
         buttonPane.add(buttonStay);
         this.blackJackFrame.add(buttonPane);
+        this.repaint();
     }
 
     private void initMessagePane() {
@@ -105,10 +146,11 @@ public class BlackJackUI extends JComponent {
         JLabel messageLabel = new JLabel("This is a message, that something's going on!");
         messagePane.add(messageLabel);
         this.blackJackFrame.add(messagePane);
+        this.repaint();
     }
 
-//    @Override
-//    protected void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//    }
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+    }
 }
