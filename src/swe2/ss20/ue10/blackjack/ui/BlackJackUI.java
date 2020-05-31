@@ -32,6 +32,7 @@ public class BlackJackUI extends JComponent {
         this.initDealerCards();
         this.initPlayerCards();
         blackJackFrame.setVisible(true);
+        repaint();
     }
 
     private void initBlackJackFrame() {
@@ -65,7 +66,7 @@ public class BlackJackUI extends JComponent {
         JLabel playerInfo = new JLabel("Player" + "(" + this.blackjack.getHumanPlayer().getValue() + ")");
         playerInfo.setBounds(100, 300, 500, 50);
         playerInfo.setFont(playerInfo.getFont().deriveFont(20.0f));
-        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayer() + ")");
+        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")");
         chipInfo.setFont(chipInfo.getFont().deriveFont(20.0f));
         chipInfo.setBounds(100, 600, 500, 50);
         this.blackJackFrame.add(dealerInfo);

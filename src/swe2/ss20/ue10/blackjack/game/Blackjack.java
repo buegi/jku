@@ -38,6 +38,10 @@ public class Blackjack {
         return human;
     }
 
+    public int getHumanPlayerChips() {
+        return human.getChips();
+    }
+
     public Player getDealer() {
         return dealer;
     }
