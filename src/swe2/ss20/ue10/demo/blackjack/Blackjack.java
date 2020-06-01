@@ -5,15 +5,15 @@ import swe2.ss20.ue10.demo.blackjack.exceptions.*;
 import java.util.*;
 
 public class Blackjack {
-    Hand dealer;    //to hold the dealer's cards
-    Hand player;    //to hold the player's cards
-    Deck newdeck;   //a set of cards
+    Hand dealer;
+    Hand player;
+    Deck newdeck;
 
     public Blackjack(Hand dlr, Hand plr) {
         dealer = dlr;
         player = plr;
         newdeck = new Deck();
-    }//Blackjack constructor
+    }
 
     /***********************************************************
      deal method - deals the intitial cards to each player
@@ -24,7 +24,7 @@ public class Blackjack {
         player.newCard(newdeck);
         player.newCard(newdeck);
 
-    }//end deal method
+    }
 
     /***********************************************************
      hit method - adds the next random card from the deck to
@@ -32,7 +32,7 @@ public class Blackjack {
      ***********************************************************/
     public Card hit(Hand whohit) {
         return whohit.newCard(newdeck);
-    }//end hit method
+    }
 
     /***********************************************************
      handValue method - returns the value of the given player's
@@ -40,7 +40,7 @@ public class Blackjack {
      ***********************************************************/
     public int handValue(Hand whohand) {
         return whohand.getHandValue();
-    }// end handValue method
+    }
 
     /***********************************************************
      discard method - discards a given card from the given
@@ -61,7 +61,7 @@ public class Blackjack {
         if (!found)
             throw new ElementNotFoundException("BlackJack");
 
-    }//end discard
+    }
 
     /***********************************************************
      blackj method - tests to see if the player's hand has
@@ -75,7 +75,7 @@ public class Blackjack {
 
         return result;
 
-    }//end blackj
+    }
 
     /***********************************************************
      bust method - tests a given player's hand to see if they
@@ -89,7 +89,7 @@ public class Blackjack {
 
         return result;
 
-    }//end bust
+    }
 
     /***********************************************************
      dealerPlays method - adds cards to the dealer's hand
@@ -104,7 +104,7 @@ public class Blackjack {
 
         return result;
 
-    }//end dealerPlays
+    }
 
 
     /***********************************************************
@@ -123,7 +123,5 @@ public class Blackjack {
 
         return result;
 
-    }//end winner
-
-
-}//end Blackjack
+    }
+}

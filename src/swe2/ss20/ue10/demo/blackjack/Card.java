@@ -2,7 +2,6 @@ package swe2.ss20.ue10.demo.blackjack;
 
 import javax.swing.*;
 
-
 public class Card {
 
     protected String face;
@@ -76,5 +75,4 @@ public class Card {
     public String toString() {
         return "Face: " + face + " Suit" + suit + " Value: " + value;
     }
-
-}//end Card
+}

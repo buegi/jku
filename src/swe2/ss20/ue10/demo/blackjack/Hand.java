@@ -88,7 +88,7 @@ public class Hand {
     }
 
     /**********************************************************
-     Returns a string representation of this hand. 
+     Returns a string representation of this hand.
      **********************************************************/
     public String toString() {
         StringBuilder result = new StringBuilder();
@@ -103,4 +103,4 @@ public class Hand {
         }
         return result.toString();
     }
-}//end Hand
+}
