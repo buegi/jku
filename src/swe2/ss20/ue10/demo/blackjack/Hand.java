@@ -1,17 +1,7 @@
-//************************************************************
-//
-//  Hand.Java             Authors:  Lewis, Chase, Coleman
-//  
-//  Provides an implementation of a hand of cards using a 
-//  set to represent the cards
-//
-//************************************************************
 package swe2.ss20.ue10.demo.blackjack;
 
 import swe2.ss20.ue10.demo.blackjack.exceptions.*;
-
 import swe2.ss20.ue10.demo.blackjack.jss2.*;
-import swe2.ss20.ue10.demo.blackjack.exceptions.*;
 
 import java.util.*;
 
@@ -23,7 +13,7 @@ public class Hand {
      Constructs a hand of Cards.
      **********************************************************/
     public Hand() {
-        inHand = new ArraySet<Card>(12);
+        inHand = new ArraySet<>(12);
         handvalue = 0;
         count = 0;
     }
@@ -46,7 +36,7 @@ public class Hand {
      **********************************************************/
     private boolean aceInHand() {
         boolean result = false;
-        Card cardchk = null;
+        Card cardchk;
         Iterator<Card> scan = inHand.iterator();
 
         while (scan.hasNext() && !result) {
@@ -101,17 +91,16 @@ public class Hand {
      Returns a string representation of this hand. 
      **********************************************************/
     public String toString() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
-        Card cardstr = null;
+        Card cardstr;
         int i = 0;
         Iterator<Card> scan = inHand.iterator();
         while (scan.hasNext()) {
             cardstr = scan.next();
-            result += "card" + i + ": " + cardstr.getvalue() + "\n";
+            result.append("card").append(i).append(": ").append(cardstr.getvalue()).append("\n");
             i++;
         }
-
-        return result;
+        return result.toString();
     }
 }//end Hand

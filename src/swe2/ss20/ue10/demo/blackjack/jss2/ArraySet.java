@@ -1,10 +1,3 @@
-
-//********************************************************************
-//  ArraySet.java       Author: Lewis, Chase, Coleman 
-//
-//  Represents an array implementation of a set.
-//********************************************************************
-
 package swe2.ss20.ue10.demo.blackjack.jss2;
 
 import swe2.ss20.ue10.demo.blackjack.exceptions.*;

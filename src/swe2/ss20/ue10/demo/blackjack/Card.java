@@ -1,15 +1,5 @@
-//************************************************************
-//
-//  Card.java             Authors:  Lewis, Chase, Coleman
-//
-//  Provides an implementation of a class to represent a
-//  playing card
-//
-//************************************************************
-
 package swe2.ss20.ue10.demo.blackjack;
 
-import java.util.Random;
 import javax.swing.*;
 
 

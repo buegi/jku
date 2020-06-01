@@ -19,8 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Blackjack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Blackjack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/BlackjackDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/BlackjackDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/BlackjackGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/BlackjackGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/exceptions/ElementNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/exceptions/ElementNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/exceptions/EmptySetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/exceptions/EmptySetException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/jss2/ArrayIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/jss2/ArrayIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/jss2/ArraySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/jss2/ArraySet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/jss2/SetADT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/demo/blackjack/jss2/SetADT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,13 +173,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00098" summary="ok">
-      <created>1588848318877</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1588848318877</updated>
     </task>
     <task id="LOCAL-00099" summary="ok">
       <created>1588852006095</created>
@@ -506,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591022121153</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="ok">
+      <created>1591022227326</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1591022227326</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -572,7 +583,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1591022120505">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1591022481793">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -580,7 +591,7 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1047" y="537" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588862054674" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1591022120505" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1591022481793" />
     <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093184300" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1588883962346">
       <screen x="0" y="0" width="3840" height="2120" />
@@ -670,14 +681,14 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1806" y="736" width="570" height="524" key="StructurePopup/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586886772515" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1591022122478">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1591022230454">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825876601" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855243894" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1591022122478" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1591022230454" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093185931" />
     <state x="1692" y="956" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588853899409">
       <screen x="0" y="0" width="3840" height="2120" />

@@ -1,14 +1,3 @@
-//************************************************************
-//
-//  BlackJack.Java		Authors: Lewis, Chase, and Coleman
-//
-//  The BlackJack class provides an implementation of a single
-//  deck blackjack game.  It makes use of the Hand class to 
-//  represent a player's hand and the Deck class to represent
-//  the deck of cards for the game.
-//
-//*************************************************************
-
 package swe2.ss20.ue10.demo.blackjack;
 
 import swe2.ss20.ue10.demo.blackjack.exceptions.*;
@@ -42,10 +31,7 @@ public class Blackjack {
      the given player's hand
      ***********************************************************/
     public Card hit(Hand whohit) {
-        Card result = whohit.newCard(newdeck);
-
-        return result;
-
+        return whohit.newCard(newdeck);
     }//end hit method
 
     /***********************************************************
@@ -53,10 +39,7 @@ public class Blackjack {
      hand
      ***********************************************************/
     public int handValue(Hand whohand) {
-        int result = whohand.getHandValue();
-
-        return result;
-
+        return whohand.getHandValue();
     }// end handValue method
 
     /***********************************************************
@@ -65,7 +48,7 @@ public class Blackjack {
      in the hand
      ************************************************************/
     public void discard(Hand whodis, Card discrd) throws ElementNotFoundException {
-        Card card = null;
+        Card card;
         boolean found = false;
         Iterator<Card> scan = whodis.iterator();
         while (scan.hasNext() && !found) {
@@ -128,7 +111,7 @@ public class Blackjack {
      winner method - determines the winner of the game
      ***********************************************************/
     public String winner() {
-        String result = "";
+        String result;
         if ((player.getHandValue() < dealer.getHandValue()) &&
                 dealer.getHandValue() <= 21)
             result = "Lose";
