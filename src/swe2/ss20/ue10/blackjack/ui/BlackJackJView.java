@@ -6,6 +6,9 @@ import swe2.ss20.ue10.blackjack.game.Card;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class BlackJackJView extends JComponent {
 
@@ -123,8 +126,29 @@ public class BlackJackJView extends JComponent {
         buttonPane.setSize(800, 50);
         buttonPane.setLocation(0, 650);
         JButton buttonHit = new JButton("Hit");
+        buttonHit.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+            }
+        });
         JButton buttonDoubleDown = new JButton("Double down");
+        buttonDoubleDown.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+            }
+        });
         JButton buttonStay = new JButton("Stay");
+        buttonStay.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+            }
+        });
         buttonPane.add(buttonHit);
         buttonPane.add(buttonDoubleDown);
         buttonPane.add(buttonStay);
