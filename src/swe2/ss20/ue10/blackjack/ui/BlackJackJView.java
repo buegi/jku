@@ -65,20 +65,20 @@ public class BlackJackJView extends JComponent {
     }
 
     private void initGameInformation() {
-        JLabel dealerInfo = new JLabel("Dealer" + "(" + blackjack.getDealer().getValue() + ")");
+        JLabel dealerInfo = new JLabel("Dealer" + " (" + blackjack.getDealer().getValue() + ")");
         dealerInfo.setFont(dealerInfo.getFont().deriveFont(20.0f));
         dealerInfo.setBounds(75, 0, 500, 50);
         blackjack.addGameListener(event -> dealerInfo.setText("Dealer " + "(" + blackjack.getDealer().getValue() + ")"));
 
-        JLabel playerInfo = new JLabel("Player" + "(" + blackjack.getHumanPlayer().getValue() + ")");
+        JLabel playerInfo = new JLabel("Player" + " (" + blackjack.getHumanPlayer().getValue() + ")");
         playerInfo.setFont(playerInfo.getFont().deriveFont(20.0f));
         playerInfo.setBounds(75, 300, 500, 50);
         blackjack.addGameListener(event -> playerInfo.setText("Player " + "(" + blackjack.getHumanPlayer().getValue() + ")"));
 
-        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")");
+        JLabel chipInfo = new JLabel("Chips " + " (" + this.blackjack.getHumanPlayerChips() + ")");
         chipInfo.setFont(chipInfo.getFont().deriveFont(20.0f));
         chipInfo.setBounds(75, 600, 500, 50);
-        blackjack.addGameListener(event -> chipInfo.setText("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")"));
+        blackjack.addGameListener(event -> chipInfo.setText("Chips " + " (" + this.blackjack.getHumanPlayerChips() + ")"));
         this.blackJackFrame.add(dealerInfo);
         this.blackJackFrame.add(playerInfo);
         this.blackJackFrame.add(chipInfo);
@@ -89,12 +89,7 @@ public class BlackJackJView extends JComponent {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                blackjack.addGameListener(new GameListener() {
-                    @Override
-                    public void gameEvent(GameEvent event) {
-                        repaint();
-                    }
-                });
+                blackjack.addGameListener(event -> repaint());
                 int offset = 0;
                 for (Card card : blackjack.getDealer().getCards()) {
                     offset += 75;
@@ -121,12 +116,7 @@ public class BlackJackJView extends JComponent {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                blackjack.addGameListener(new GameListener() {
-                    @Override
-                    public void gameEvent(GameEvent event) {
-                        repaint();
-                    }
-                });
+                blackjack.addGameListener(event -> repaint());
                 int offset = 0;
                 for (Card card : blackjack.getHumanPlayer().getCards()) {
                     offset += 75;
