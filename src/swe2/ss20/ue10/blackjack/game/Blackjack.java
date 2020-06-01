@@ -1,8 +1,11 @@
 package swe2.ss20.ue10.blackjack.game;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.List;
 
+import swe2.ss20.ue10.blackjack.model.GameListener;
 import swe2.ss20.ue10.blackjack.player.Dealer;
 import swe2.ss20.ue10.blackjack.player.HumanPlayer;
 import swe2.ss20.ue10.blackjack.player.Player;
@@ -15,6 +18,8 @@ public class Blackjack {
 
     private HumanPlayer human = new HumanPlayer(10);
     private Dealer dealer = new Dealer();
+
+    private List<GameListener> listeners = new ArrayList<>();
 
     /**
      * keeps track of cards that are still in the deck (false) or that have been
@@ -202,5 +207,13 @@ public class Blackjack {
         }
 
         return answer == 'y';
+    }
+
+    private void addGameListener(GameListener gameListener) {
+        listeners.add(gameListener);
+    }
+
+    private void removeGameListener(GameListener gameListener) {
+        listeners.remove(gameListener);
     }
 }

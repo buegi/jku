@@ -59,7 +59,7 @@ public class BlackJackJView extends JComponent {
 
     private void initGameInformation() {
         JLabel dealerInfo = new JLabel("Dealer" + "(" + this.blackjack.getDealer().getValue() + ")");
-        dealerInfo.setBounds(75, 000, 500, 50);
+        dealerInfo.setBounds(75, 0, 500, 50);
         dealerInfo.setFont(dealerInfo.getFont().deriveFont(20.0f));
         JLabel playerInfo = new JLabel("Player" + "(" + this.blackjack.getHumanPlayer().getValue() + ")");
         playerInfo.setBounds(75, 300, 500, 50);
@@ -130,6 +130,7 @@ public class BlackJackJView extends JComponent {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                System.out.println("Button Hit, " + e.toString());
 
             }
         });
@@ -138,6 +139,7 @@ public class BlackJackJView extends JComponent {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                System.out.println("Button DoubleDown, " + e.toString());
 
             }
         });
@@ -146,6 +148,7 @@ public class BlackJackJView extends JComponent {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                System.out.println("Button Stay, " + e.toString());
 
             }
         });
