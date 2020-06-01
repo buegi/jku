@@ -120,6 +120,8 @@ public class Blackjack {
 
     public void setUp() {
         resetCards();
+        this.gameResult = null;
+        this.message = null;
         dealer.resetCards(drawCard());
         human.resetCards(drawCard(), drawCard());
         printGameState();
@@ -128,6 +130,8 @@ public class Blackjack {
 
     public void startOverWithFullReset() {
         resetCards();
+        this.gameResult = null;
+        this.message = null;
         human.resetChips();
         dealer.resetCards(drawCard());
         human.resetCards(drawCard(), drawCard());
@@ -242,21 +246,45 @@ public class Blackjack {
 
 
     public void buttonHitPressed() {
-        System.out.println("LogInfo: Button Hit pressed");
-        if (human.getValue() <= 21) {
+        if (human.getValue() <= 21 && this.gameResult == null) {
             human.addCard(drawCard());
-            printGameState();
-            fireGameChangedEvent();
         }
+        if (getHumanPlayer().getValue() >= 21 && gameResult == null) {
+            while (dealer.makeTurn() != Turn.Stay) {
+                dealer.addCard(drawCard());
+            }
+            gameResult = evaluateCards();
+            message = gameResult.toString() + " - Click anywhere in Window to start new round!";
+        }
+        fireGameChangedEvent();
     }
 
     public void buttonDoubleDownPressed() {
-        System.out.println("LogInfo: Button DoubleDown pressed");
+        if (human.getCards().size() == 2 && this.gameResult == null) {
+            human.addCard(drawCard());
+            if (human.getValue() <= 21) {
+                while (dealer.makeTurn() != Turn.Stay) {
+                    dealer.addCard(drawCard());
+                }
+            } else {
+                message = "Player value above 21.";
+            }
+            gameResult = evaluateCards();
+            message = gameResult.toString() + " - Click anywhere in Window to start new round!";
+        } else {
+            message = "DoubleDown only possible after start of round! Please make another turn!";
+        }
         fireGameChangedEvent();
     }
 
     public void buttonStayPressed() {
-        System.out.println("LogInfo: Button Stay pressed");
+        if (human.getValue() <= 21 && gameResult == null) {
+            while (dealer.makeTurn() != Turn.Stay) {
+                dealer.addCard(drawCard());
+            }
+            gameResult = evaluateCards();
+            message = gameResult.toString() + " - Click anywhere in Window to start new round!";
+        }
         fireGameChangedEvent();
     }
 
