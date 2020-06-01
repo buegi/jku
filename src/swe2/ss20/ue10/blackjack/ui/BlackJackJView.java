@@ -6,21 +6,16 @@ import swe2.ss20.ue10.blackjack.game.Card;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.Graphics;
 
-public class BlackJackUI extends JComponent {
+public class BlackJackJView extends JComponent {
 
     private final Blackjack blackjack;
     private JFrame blackJackFrame;
 
-    public BlackJackUI() {
-        this.blackjack = new Blackjack();
-        this.init();
-    }
-
-    public BlackJackUI(Blackjack blackjack) {
-        this.blackjack = blackjack;
-        this.init();
+    public BlackJackJView(Blackjack blackJack) {
+        super();
+        this.blackjack = blackJack;
+        init();
     }
 
     private void init() {
@@ -32,7 +27,6 @@ public class BlackJackUI extends JComponent {
         this.initDealerCards();
         this.initPlayerCards();
         blackJackFrame.setVisible(true);
-        repaint();
     }
 
     private void initBlackJackFrame() {
@@ -66,7 +60,7 @@ public class BlackJackUI extends JComponent {
         JLabel playerInfo = new JLabel("Player" + "(" + this.blackjack.getHumanPlayer().getValue() + ")");
         playerInfo.setBounds(100, 300, 500, 50);
         playerInfo.setFont(playerInfo.getFont().deriveFont(20.0f));
-        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")");
+        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayer() + ")");
         chipInfo.setFont(chipInfo.getFont().deriveFont(20.0f));
         chipInfo.setBounds(100, 600, 500, 50);
         this.blackJackFrame.add(dealerInfo);
@@ -96,6 +90,7 @@ public class BlackJackUI extends JComponent {
         dealerCardPane.setLocation(0, 50);
         this.blackJackFrame.add(dealerCardPane);
         dealerCardPane.setVisible(true);
+        this.repaint();
     }
 
     private void initPlayerCards() {
