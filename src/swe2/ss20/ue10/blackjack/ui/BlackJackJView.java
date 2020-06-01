@@ -3,6 +3,8 @@ package swe2.ss20.ue10.blackjack.ui;
 import swe2.ss20.ue10.blackjack.game.Blackjack;
 import swe2.ss20.ue10.blackjack.game.Card;
 import swe2.ss20.ue10.blackjack.game.Turn;
+import swe2.ss20.ue10.blackjack.model.GameEvent;
+import swe2.ss20.ue10.blackjack.model.GameListener;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -22,7 +24,7 @@ public class BlackJackJView extends JComponent {
     }
 
     private void init() {
-        blackjack.setUp();
+        blackjack.playUI();
         this.initBlackJackFrame();
         this.initBlackJackFrameMenu();
         this.initButtonPane();
@@ -41,13 +43,16 @@ public class BlackJackJView extends JComponent {
         this.blackJackFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.blackJackFrame.setResizable(false);
         this.blackJackFrame.getContentPane().setLayout(null);
+
         this.blackJackFrame.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 blackjack.keepPlayingUI();
+                blackjack.addGameListener(gl -> repaint());
             }
         });
+
         this.repaint();
     }
 
@@ -78,6 +83,7 @@ public class BlackJackJView extends JComponent {
         this.blackJackFrame.add(dealerInfo);
         this.blackJackFrame.add(playerInfo);
         this.blackJackFrame.add(chipInfo);
+        this.repaint();
     }
 
     private void initDealerCards() {
@@ -101,7 +107,6 @@ public class BlackJackJView extends JComponent {
         dealerCardPane.setLocation(0, 50);
         this.blackJackFrame.add(dealerCardPane);
         dealerCardPane.setVisible(true);
-        this.repaint();
     }
 
     private void initPlayerCards() {
@@ -126,7 +131,6 @@ public class BlackJackJView extends JComponent {
         playerCardPane.setLocation(0, 350);
         playerCardPane.setVisible(true);
         this.blackJackFrame.add(playerCardPane);
-        this.repaint();
     }
 
     private void initButtonPane() {
@@ -143,7 +147,6 @@ public class BlackJackJView extends JComponent {
         buttonPane.add(buttonDoubleDown);
         buttonPane.add(buttonStay);
         this.blackJackFrame.add(buttonPane);
-        this.repaint();
     }
 
     private void initMessagePane() {
@@ -155,7 +158,6 @@ public class BlackJackJView extends JComponent {
         JLabel messageLabel = new JLabel("This is a message, that something's going on!");
         messagePane.add(messageLabel);
         this.blackJackFrame.add(messagePane);
-        this.repaint();
     }
 
     @Override

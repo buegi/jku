@@ -112,6 +112,7 @@ public class Blackjack {
         dealer.resetCards(drawCard());
         human.resetCards(drawCard(), drawCard());
         printGameState();
+        fireGameChangedEvent();
     }
 
     public void startOverWithFullReset() {
@@ -120,6 +121,7 @@ public class Blackjack {
         dealer.resetCards(drawCard());
         human.resetCards(drawCard(), drawCard());
         printGameState();
+        fireGameChangedEvent();
         System.out.println("Start over with full reset");
     }
 
@@ -224,63 +226,16 @@ public class Blackjack {
      */
 
     public void playUI() {
-
-        do {
-
-            // human turn
-            boolean doubleDown = false;
-            Turn t = human.makeTurn();
-            if (t == Turn.DoubleDown) {
-                // player has to stay after double down
-                Out.println("Player turn: " + t + "\n");
-                human.addCard(drawCard());
-                printGameState();
-                doubleDown = true;
-            } else {
-                while (t != Turn.Stay) {
-                    Out.println("Player turn: " + t + "\n");
-                    human.addCard(drawCard());
-                    printGameState();
-                    t = human.makeTurn();
-                }
-            }
-
-            // dealer turn
-            if (human.getValue() <= 21) {
-                while (dealer.makeTurn() != Turn.Stay) {
-                    dealer.addCard(drawCard());
-                    printGameState();
-                }
-            } else {
-                Out.println("Player value above 21.");
-            }
-
-            // print winner
-            GameResult result = evaluateCards();
-            if (result == GameResult.PlayerWins) {
-                Out.println("Player wins!");
-                human.updateChips((human.hasBlackJack() || doubleDown) ? 2 : 1);
-            } else if (result == GameResult.DealerWins) {
-                Out.println("Dealer wins!");
-                human.updateChips(doubleDown ? -2 : -1);
-            } else {
-                Out.println("Draw!");
-            }
-
-            // update chips
-            if (human.getChips() > 0) {
-                Out.print("You have " + human.getChips() + " chips. ");
-            } else {
-                Out.println("You have no chips left.");
-            }
-
-        } while (human.getChips() > 0);
-
+        setUp();
     }
 
 
     public void buttonHitPressed() {
         System.out.println("LogInfo: Button Hit pressed");
+        if (human.getValue() <= 21) {
+            human.addCard(drawCard());
+            fireGameChangedEvent();
+        }
     }
 
     public void buttonDoubleDownPressed() {
@@ -300,17 +255,18 @@ public class Blackjack {
         }
     }
 
-    private void addGameListener(GameListener gameListener) {
+    public void addGameListener(GameListener gameListener) {
         listeners.add(gameListener);
     }
 
-    private void removeGameListener(GameListener gameListener) {
+    public void removeGameListener(GameListener gameListener) {
         listeners.remove(gameListener);
     }
 
-    private void fireGameChangedEvent(GameEvent e) {
+    private void fireGameChangedEvent() {
+        GameEvent ge = new GameEvent(this);
         for (GameListener listener : listeners) {
-            listener.gameEvent(e);
+            listener.gameEvent(ge);
         }
     }
 }
