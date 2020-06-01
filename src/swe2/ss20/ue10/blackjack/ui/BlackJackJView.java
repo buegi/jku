@@ -56,14 +56,14 @@ public class BlackJackJView extends JComponent {
 
     private void initGameInformation() {
         JLabel dealerInfo = new JLabel("Dealer" + "(" + this.blackjack.getDealer().getValue() + ")");
-        dealerInfo.setBounds(100, 000, 500, 50);
+        dealerInfo.setBounds(75, 000, 500, 50);
         dealerInfo.setFont(dealerInfo.getFont().deriveFont(20.0f));
         JLabel playerInfo = new JLabel("Player" + "(" + this.blackjack.getHumanPlayer().getValue() + ")");
-        playerInfo.setBounds(100, 300, 500, 50);
+        playerInfo.setBounds(75, 300, 500, 50);
         playerInfo.setFont(playerInfo.getFont().deriveFont(20.0f));
         JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")");
         chipInfo.setFont(chipInfo.getFont().deriveFont(20.0f));
-        chipInfo.setBounds(100, 600, 500, 50);
+        chipInfo.setBounds(75, 600, 500, 50);
         this.blackJackFrame.add(dealerInfo);
         this.blackJackFrame.add(playerInfo);
         this.blackJackFrame.add(chipInfo);
@@ -74,14 +74,15 @@ public class BlackJackJView extends JComponent {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
+                int offset = 0;
                 for (Card card : blackjack.getDealer().getCards()) {
-                    int offset = 0;
+                    offset += 75;
                     g.setColor(Color.WHITE);
-                    g.fillRect(offset += 100, 0, 175, 250);
+                    g.fillRect(offset, 0, 175, 250);
                     g.setColor(Color.BLACK);
                     g.drawRect(offset, 0, 175, 250);
                     g.setFont(getFont().deriveFont(20.0f));
-                    g.drawString(card.toString(), 105, 25);
+                    g.drawString(card.toString(), offset + 5, 25);
                 }
             }
         };
@@ -97,14 +98,15 @@ public class BlackJackJView extends JComponent {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
+                int offset = 0;
                 for (Card card : blackjack.getHumanPlayer().getCards()) {
-                    int offset = 0;
+                    offset += 75;
                     g.setColor(Color.WHITE);
-                    g.fillRect(offset += 100, 0, 175, 250);
+                    g.fillRect(offset, 0, 175, 250);
                     g.setColor(Color.BLACK);
                     g.drawRect(offset, 0, 175, 250);
                     g.setFont(getFont().deriveFont(20.0f));
-                    g.drawString(card.toString(), 105, 25);
+                    g.drawString(card.toString(), offset + 5, 25);
                 }
             }
         };
