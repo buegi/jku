@@ -113,6 +113,15 @@ public class Blackjack {
         printGameState();
     }
 
+    public void startOverWithFullReset() {
+        resetCards();
+        human.updateChips(10);
+        dealer.resetCards(drawCard());
+        human.resetCards(drawCard(), drawCard());
+        printGameState();
+        System.out.println("Start over with full reset");
+    }
+
 
     /**
      * play the game
@@ -205,9 +214,14 @@ public class Blackjack {
             // accept upper and lower case
             answer = Character.toLowerCase(In.readChar());
         }
-
         return answer == 'y';
     }
+
+    public Turn playerTurn(Turn turn) {
+        System.out.println(turn);
+        return turn;
+    }
+
 
     private void addGameListener(GameListener gameListener) {
         listeners.add(gameListener);

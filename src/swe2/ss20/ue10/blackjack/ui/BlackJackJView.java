@@ -2,13 +2,13 @@ package swe2.ss20.ue10.blackjack.ui;
 
 import swe2.ss20.ue10.blackjack.game.Blackjack;
 import swe2.ss20.ue10.blackjack.game.Card;
+import swe2.ss20.ue10.blackjack.game.Turn;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class BlackJackJView extends JComponent {
 
@@ -50,6 +50,7 @@ public class BlackJackJView extends JComponent {
         JMenu menuFile = new JMenu("File");
         menuBar.add(menuFile);
         JMenuItem menuItemReset = new JMenuItem("Reset");
+        menuItemReset.addActionListener(action -> blackjack.startOverWithFullReset());
         menuFile.add(menuItemReset);
         JMenuItem menuItemExit = new JMenuItem("Exit");
         menuItemExit.addActionListener(ae -> this.blackJackFrame.dispose());
@@ -126,32 +127,11 @@ public class BlackJackJView extends JComponent {
         buttonPane.setSize(800, 50);
         buttonPane.setLocation(0, 650);
         JButton buttonHit = new JButton("Hit");
-        buttonHit.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                System.out.println("Button Hit, " + e.toString());
-
-            }
-        });
+        buttonHit.addActionListener(action -> blackjack.playerTurn(Turn.Hit));
         JButton buttonDoubleDown = new JButton("Double down");
-        buttonDoubleDown.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                System.out.println("Button DoubleDown, " + e.toString());
-
-            }
-        });
+        buttonDoubleDown.addActionListener(action -> blackjack.playerTurn(Turn.DoubleDown));
         JButton buttonStay = new JButton("Stay");
-        buttonStay.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                System.out.println("Button Stay, " + e.toString());
-
-            }
-        });
+        buttonStay.addActionListener(action -> blackjack.playerTurn(Turn.Stay));
         buttonPane.add(buttonHit);
         buttonPane.add(buttonDoubleDown);
         buttonPane.add(buttonStay);
