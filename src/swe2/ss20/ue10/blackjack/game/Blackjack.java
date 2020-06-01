@@ -124,7 +124,6 @@ public class Blackjack {
         this.message = null;
         dealer.resetCards(drawCard());
         human.resetCards(drawCard(), drawCard());
-        printGameState();
         fireGameChangedEvent();
     }
 
@@ -135,7 +134,6 @@ public class Blackjack {
         human.resetChips();
         dealer.resetCards(drawCard());
         human.resetCards(drawCard(), drawCard());
-        printGameState();
         fireGameChangedEvent();
         System.out.println("Start over with full reset");
     }
@@ -254,6 +252,11 @@ public class Blackjack {
                 dealer.addCard(drawCard());
             }
             gameResult = evaluateCards();
+            if (gameResult == GameResult.PlayerWins) {
+                human.updateChips((human.hasBlackJack()) ? 2 : 1);
+            } else if (gameResult == GameResult.DealerWins) {
+                human.updateChips(-1);
+            }
             message = gameResult.toString() + " - Click anywhere in Window to start new round!";
         }
         fireGameChangedEvent();
@@ -270,9 +273,14 @@ public class Blackjack {
                 message = "Player value above 21.";
             }
             gameResult = evaluateCards();
+            if (gameResult == GameResult.PlayerWins) {
+                human.updateChips(2);
+            } else if (gameResult == GameResult.DealerWins) {
+                human.updateChips(-2);
+            }
             message = gameResult.toString() + " - Click anywhere in Window to start new round!";
         } else {
-            message = "DoubleDown only possible after start of round! Please make another turn!";
+            message = "DoubleDown only possible at start of round! Please make another turn!";
         }
         fireGameChangedEvent();
     }
@@ -283,19 +291,25 @@ public class Blackjack {
                 dealer.addCard(drawCard());
             }
             gameResult = evaluateCards();
+            if (gameResult == GameResult.PlayerWins) {
+                human.updateChips((human.hasBlackJack()) ? 2 : 1);
+            } else if (gameResult == GameResult.DealerWins) {
+                human.updateChips(-1);
+            }
             message = gameResult.toString() + " - Click anywhere in Window to start new round!";
         }
         fireGameChangedEvent();
     }
 
     public void nextRound() {
-        if (human.getChips() > 0) {
+        if (human.getChips() > 0 && gameResult != null) {
             this.gameResult = null;
             this.setUp();
             this.message = "New Round started";
         } else {
-            this.message = "You have no more chips available! Please use File/Reset to fully start over!";
+            this.message = "You are in an active round or you have no more chips left! Please use File/Reset to fully start over!";
         }
+        fireGameChangedEvent();
     }
 
     public void addGameListener(GameListener gameListener) {
