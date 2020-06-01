@@ -55,5 +55,7 @@ public class CircleView extends JComponent {
     };
 
     private final CircleModelListener modelListener =
-            event -> repaint();
+            event -> {
+                repaint();
+            };
 }

@@ -12,6 +12,5 @@ public class GameMain {
 
     private static void initialize() {
         JComponent blackJackFrame = new BlackJackJView(new Blackjack());
-        blackJackFrame.setVisible(true);
     }
 }

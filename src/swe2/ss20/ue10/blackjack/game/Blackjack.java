@@ -83,6 +83,7 @@ public class Blackjack {
     public void resetCards() {
         Arrays.fill(cardAvailable, true);
         cardsLeft = TOTAL_NUM_CARDS;
+        fireGameChangedEvent();
     }
 
     /**
@@ -104,6 +105,7 @@ public class Blackjack {
         cardAvailable[indexCard] = false;
 
         cardsLeft--;
+        fireGameChangedEvent();
         return new Card(indexCard);
     }
 
@@ -234,16 +236,19 @@ public class Blackjack {
         System.out.println("LogInfo: Button Hit pressed");
         if (human.getValue() <= 21) {
             human.addCard(drawCard());
+            printGameState();
             fireGameChangedEvent();
         }
     }
 
     public void buttonDoubleDownPressed() {
         System.out.println("LogInfo: Button DoubleDown pressed");
+        fireGameChangedEvent();
     }
 
     public void buttonStayPressed() {
         System.out.println("LogInfo: Button Stay pressed");
+        fireGameChangedEvent();
     }
 
     public String keepPlayingUI() {
