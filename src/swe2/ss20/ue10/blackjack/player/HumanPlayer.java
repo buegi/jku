@@ -53,6 +53,10 @@ public class HumanPlayer extends Player {
         }
     }
 
+    public void resetChips() {
+        this.numChips = 10;
+    }
+
     public void updateChips(int update) {
         this.numChips += update;
     }

@@ -2,7 +2,6 @@ package swe2.ss20.ue10.blackjack.ui;
 
 import swe2.ss20.ue10.blackjack.game.Blackjack;
 import swe2.ss20.ue10.blackjack.game.Card;
-import swe2.ss20.ue10.blackjack.game.Turn;
 import swe2.ss20.ue10.blackjack.model.GameEvent;
 import swe2.ss20.ue10.blackjack.model.GameListener;
 
@@ -43,16 +42,13 @@ public class BlackJackJView extends JComponent {
         this.blackJackFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.blackJackFrame.setResizable(false);
         this.blackJackFrame.getContentPane().setLayout(null);
-
         this.blackJackFrame.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                blackjack.keepPlayingUI();
+                blackjack.nextRound();
             }
         });
-
-        this.repaint();
     }
 
     private void initBlackJackFrameMenu() {
@@ -66,21 +62,23 @@ public class BlackJackJView extends JComponent {
         JMenuItem menuItemExit = new JMenuItem("Exit");
         menuItemExit.addActionListener(ae -> this.blackJackFrame.dispose());
         menuFile.add(menuItemExit);
-        this.repaint();
     }
 
     private void initGameInformation() {
         JLabel dealerInfo = new JLabel("Dealer" + "(" + blackjack.getDealer().getValue() + ")");
         dealerInfo.setFont(dealerInfo.getFont().deriveFont(20.0f));
         dealerInfo.setBounds(75, 0, 500, 50);
+        blackjack.addGameListener(event -> dealerInfo.setText("Dealer " + "(" + blackjack.getDealer().getValue() + ")"));
 
         JLabel playerInfo = new JLabel("Player" + "(" + blackjack.getHumanPlayer().getValue() + ")");
         playerInfo.setFont(playerInfo.getFont().deriveFont(20.0f));
         playerInfo.setBounds(75, 300, 500, 50);
+        blackjack.addGameListener(event -> playerInfo.setText("Player " + "(" + blackjack.getHumanPlayer().getValue() + ")"));
 
         JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")");
         chipInfo.setFont(chipInfo.getFont().deriveFont(20.0f));
         chipInfo.setBounds(75, 600, 500, 50);
+        blackjack.addGameListener(event -> chipInfo.setText("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")"));
         this.blackJackFrame.add(dealerInfo);
         this.blackJackFrame.add(playerInfo);
         this.blackJackFrame.add(chipInfo);
@@ -101,22 +99,21 @@ public class BlackJackJView extends JComponent {
                 for (Card card : blackjack.getDealer().getCards()) {
                     offset += 75;
                     g.setColor(Color.WHITE);
-                    g.fillRect(offset, 0, 175, 250);
+                    g.fillRect(offset, 0, 150, 225);
                     if (card.toString().contains("\u2666") || card.toString().contains("\u2665")) {
                         g.setColor(Color.RED);
                     } else {
                         g.setColor(Color.BLACK);
                     }
-                    g.drawRect(offset, 0, 175, 250);
+                    g.drawRect(offset, 0, 150, 225);
                     g.setFont(getFont().deriveFont(20.0f));
                     g.drawString(card.toString(), offset + 5, 25);
                 }
             }
         };
-        dealerCardPane.setSize(800, 300);
+        dealerCardPane.setSize(800, 250);
         dealerCardPane.setLocation(0, 50);
         this.blackJackFrame.add(dealerCardPane);
-        dealerCardPane.setVisible(true);
     }
 
     private void initPlayerCards() {
@@ -134,22 +131,20 @@ public class BlackJackJView extends JComponent {
                 for (Card card : blackjack.getHumanPlayer().getCards()) {
                     offset += 75;
                     g.setColor(Color.WHITE);
-                    g.fillRect(offset, 0, 175, 250);
+                    g.fillRect(offset, 0, 150, 225);
                     if (card.toString().contains("\u2666") || card.toString().contains("\u2665")) {
                         g.setColor(Color.RED);
                     } else {
                         g.setColor(Color.BLACK);
                     }
-                    g.drawRect(offset, 0, 175, 250);
+                    g.drawRect(offset, 0, 150, 225);
                     g.setFont(getFont().deriveFont(20.0f));
                     g.drawString(card.toString(), offset + 5, 25);
                 }
             }
         };
-        playerCardPane.setSize(800, 300);
+        playerCardPane.setSize(800, 250);
         playerCardPane.setLocation(0, 350);
-        playerCardPane.setVisible(true);
-
         this.blackJackFrame.add(playerCardPane);
     }
 
@@ -178,7 +173,8 @@ public class BlackJackJView extends JComponent {
         messagePane.setLocation(0, 700);
         Border blackLine = BorderFactory.createLineBorder(Color.black);
         messagePane.setBorder(blackLine);
-        JLabel messageLabel = new JLabel("This is a message, that something's going on!");
+        JLabel messageLabel = new JLabel(blackjack.getMessage());
+        blackjack.addGameListener(event -> messageLabel.setText(blackjack.getMessage()));
         messagePane.add(messageLabel);
         this.blackJackFrame.add(messagePane);
     }
@@ -186,11 +182,5 @@ public class BlackJackJView extends JComponent {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        blackjack.addGameListener(new GameListener() {
-            @Override
-            public void gameEvent(GameEvent event) {
-                repaint();
-            }
-        });
     }
 }

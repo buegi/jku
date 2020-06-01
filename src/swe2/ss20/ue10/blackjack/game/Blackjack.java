@@ -19,6 +19,8 @@ public class Blackjack {
 
     private HumanPlayer human = new HumanPlayer(10);
     private Dealer dealer = new Dealer();
+    private String message;
+    private GameResult gameResult;
 
     private List<GameListener> listeners = new ArrayList<>();
 
@@ -50,6 +52,14 @@ public class Blackjack {
 
     public Player getDealer() {
         return dealer;
+    }
+
+    public String getMessage() {
+        return message == null ? "Have fun playing BlackJack!" : this.message;
+    }
+
+    public GameResult getGameResult() {
+        return this.gameResult;
     }
 
     /**
@@ -105,7 +115,6 @@ public class Blackjack {
         cardAvailable[indexCard] = false;
 
         cardsLeft--;
-        fireGameChangedEvent();
         return new Card(indexCard);
     }
 
@@ -119,7 +128,7 @@ public class Blackjack {
 
     public void startOverWithFullReset() {
         resetCards();
-        human.updateChips(10);
+        human.resetChips();
         dealer.resetCards(drawCard());
         human.resetCards(drawCard(), drawCard());
         printGameState();
@@ -251,12 +260,13 @@ public class Blackjack {
         fireGameChangedEvent();
     }
 
-    public String keepPlayingUI() {
+    public void nextRound() {
         if (human.getChips() > 0) {
+            this.gameResult = null;
             this.setUp();
-            return "New Round started";
+            this.message = "New Round started";
         } else {
-            return "You have no more chips available!";
+            this.message = "You have no more chips available! Please use File/Reset to fully start over!";
         }
     }
 
