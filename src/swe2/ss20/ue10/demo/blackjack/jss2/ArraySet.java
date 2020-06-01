@@ -1,5 +1,4 @@
 package swe2.ss20.ue10.demo.blackjack.jss2;
-
 import swe2.ss20.ue10.demo.blackjack.exceptions.*;
 
 import java.util.*;
