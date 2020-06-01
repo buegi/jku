@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.List;
 
+import swe2.ss20.ue10.blackjack.model.GameEvent;
 import swe2.ss20.ue10.blackjack.model.GameListener;
 import swe2.ss20.ue10.blackjack.player.Dealer;
 import swe2.ss20.ue10.blackjack.player.HumanPlayer;
@@ -124,7 +125,7 @@ public class Blackjack {
 
 
     /**
-     * play the game
+     * play the game on command line
      */
     public void play() {
 
@@ -217,11 +218,87 @@ public class Blackjack {
         return answer == 'y';
     }
 
-    public Turn playerTurn(Turn turn) {
-        System.out.println(turn);
-        return turn;
+
+    /**
+     * play the game with UI
+     */
+
+    public void playUI() {
+
+        do {
+
+            // human turn
+            boolean doubleDown = false;
+            Turn t = human.makeTurn();
+            if (t == Turn.DoubleDown) {
+                // player has to stay after double down
+                Out.println("Player turn: " + t + "\n");
+                human.addCard(drawCard());
+                printGameState();
+                doubleDown = true;
+            } else {
+                while (t != Turn.Stay) {
+                    Out.println("Player turn: " + t + "\n");
+                    human.addCard(drawCard());
+                    printGameState();
+                    t = human.makeTurn();
+                }
+            }
+
+            // dealer turn
+            if (human.getValue() <= 21) {
+                while (dealer.makeTurn() != Turn.Stay) {
+                    dealer.addCard(drawCard());
+                    printGameState();
+                }
+            } else {
+                Out.println("Player value above 21.");
+            }
+
+            // print winner
+            GameResult result = evaluateCards();
+            if (result == GameResult.PlayerWins) {
+                Out.println("Player wins!");
+                human.updateChips((human.hasBlackJack() || doubleDown) ? 2 : 1);
+            } else if (result == GameResult.DealerWins) {
+                Out.println("Dealer wins!");
+                human.updateChips(doubleDown ? -2 : -1);
+            } else {
+                Out.println("Draw!");
+            }
+
+            // update chips
+            if (human.getChips() > 0) {
+                Out.print("You have " + human.getChips() + " chips. ");
+            } else {
+                Out.println("You have no chips left.");
+            }
+
+        } while (human.getChips() > 0);
+
     }
 
+
+    public void buttonHitPressed() {
+        System.out.println("LogInfo: Button Hit pressed");
+    }
+
+    public void buttonDoubleDownPressed() {
+        System.out.println("LogInfo: Button DoubleDown pressed");
+    }
+
+    public void buttonStayPressed() {
+        System.out.println("LogInfo: Button Stay pressed");
+    }
+
+    public String keepPlayingUI() {
+        if (human.getChips() > 0) {
+            this.setUp();
+            return "New Round started";
+        } else {
+            return "You have no more chips available!";
+        }
+    }
 
     private void addGameListener(GameListener gameListener) {
         listeners.add(gameListener);
@@ -229,5 +306,11 @@ public class Blackjack {
 
     private void removeGameListener(GameListener gameListener) {
         listeners.remove(gameListener);
+    }
+
+    private void fireGameChangedEvent(GameEvent e) {
+        for (GameListener listener : listeners) {
+            listener.gameEvent(e);
+        }
     }
 }

@@ -22,6 +22,7 @@ public class BlackJackJView extends JComponent {
     }
 
     private void init() {
+        blackjack.setUp();
         this.initBlackJackFrame();
         this.initBlackJackFrameMenu();
         this.initButtonPane();
@@ -29,7 +30,6 @@ public class BlackJackJView extends JComponent {
         this.initGameInformation();
         this.initDealerCards();
         this.initPlayerCards();
-        blackjack.setUp();
         blackJackFrame.setVisible(true);
     }
 
@@ -41,6 +41,13 @@ public class BlackJackJView extends JComponent {
         this.blackJackFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.blackJackFrame.setResizable(false);
         this.blackJackFrame.getContentPane().setLayout(null);
+        this.blackJackFrame.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                blackjack.keepPlayingUI();
+            }
+        });
         this.repaint();
     }
 
@@ -127,11 +134,11 @@ public class BlackJackJView extends JComponent {
         buttonPane.setSize(800, 50);
         buttonPane.setLocation(0, 650);
         JButton buttonHit = new JButton("Hit");
-        buttonHit.addActionListener(action -> blackjack.playerTurn(Turn.Hit));
+        buttonHit.addActionListener(action -> blackjack.buttonHitPressed());
         JButton buttonDoubleDown = new JButton("Double down");
-        buttonDoubleDown.addActionListener(action -> blackjack.playerTurn(Turn.DoubleDown));
+        buttonDoubleDown.addActionListener(action -> blackjack.buttonDoubleDownPressed());
         JButton buttonStay = new JButton("Stay");
-        buttonStay.addActionListener(action -> blackjack.playerTurn(Turn.Stay));
+        buttonStay.addActionListener(action -> blackjack.buttonStayPressed());
         buttonPane.add(buttonHit);
         buttonPane.add(buttonDoubleDown);
         buttonPane.add(buttonStay);
