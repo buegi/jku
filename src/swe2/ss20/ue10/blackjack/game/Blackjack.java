@@ -101,6 +101,14 @@ public class Blackjack {
         return new Card(indexCard);
     }
 
+    public void setUp() {
+        resetCards();
+        dealer.resetCards(drawCard());
+        human.resetCards(drawCard(), drawCard());
+        printGameState();
+    }
+
+
     /**
      * play the game
      */
@@ -108,10 +116,7 @@ public class Blackjack {
 
         do {
             // set up
-            resetCards();
-            dealer.resetCards(drawCard());
-            human.resetCards(drawCard(), drawCard());
-            printGameState();
+            setUp();
 
             // human turn
             boolean doubleDown = false;

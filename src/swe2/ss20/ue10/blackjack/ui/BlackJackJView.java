@@ -26,6 +26,7 @@ public class BlackJackJView extends JComponent {
         this.initGameInformation();
         this.initDealerCards();
         this.initPlayerCards();
+        blackjack.setUp();
         blackJackFrame.setVisible(true);
     }
 
@@ -60,7 +61,7 @@ public class BlackJackJView extends JComponent {
         JLabel playerInfo = new JLabel("Player" + "(" + this.blackjack.getHumanPlayer().getValue() + ")");
         playerInfo.setBounds(100, 300, 500, 50);
         playerInfo.setFont(playerInfo.getFont().deriveFont(20.0f));
-        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayer() + ")");
+        JLabel chipInfo = new JLabel("Chips " + "(" + this.blackjack.getHumanPlayerChips() + ")");
         chipInfo.setFont(chipInfo.getFont().deriveFont(20.0f));
         chipInfo.setBounds(100, 600, 500, 50);
         this.blackJackFrame.add(dealerInfo);
@@ -74,15 +75,13 @@ public class BlackJackJView extends JComponent {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 for (Card card : blackjack.getDealer().getCards()) {
-                    JLabel label = new JLabel(card.toString());
-                    label.setFont(label.getFont().deriveFont(20.0f));
-                    label.setLocation(100, 0);
-                    this.add(label);
                     int offset = 0;
                     g.setColor(Color.WHITE);
                     g.fillRect(offset += 100, 0, 175, 250);
                     g.setColor(Color.BLACK);
                     g.drawRect(offset, 0, 175, 250);
+                    g.setFont(getFont().deriveFont(20.0f));
+                    g.drawString(card.toString(), 105, 25);
                 }
             }
         };
@@ -99,15 +98,13 @@ public class BlackJackJView extends JComponent {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 for (Card card : blackjack.getHumanPlayer().getCards()) {
-                    JLabel label = new JLabel(card.toString());
-                    label.setFont(label.getFont().deriveFont(20.0f));
-                    label.setLocation(100, 0);
-                    this.add(label);
                     int offset = 0;
                     g.setColor(Color.WHITE);
                     g.fillRect(offset += 100, 0, 175, 250);
                     g.setColor(Color.BLACK);
                     g.drawRect(offset, 0, 175, 250);
+                    g.setFont(getFont().deriveFont(20.0f));
+                    g.drawString(card.toString(), 105, 25);
                 }
             }
         };
