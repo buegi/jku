@@ -19,8 +19,73 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue10/blackjack/ui/BlackJackView.java" afterDir="false" />
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="ue11">
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/CircleEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/CircleModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/CircleModelListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/ui/CircleDrawMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/ui/CircleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/adapter/List2StackAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/adapter/List2StackAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/adapter/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/CSVParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/JSONParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/TextParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/XMLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/CmdHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/Light.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/TurnOffCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/TurnOnCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/BestWishesDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/ContentLetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/DateDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/DearDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/HelloDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/Letter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/LetterDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/LetterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/YoursSincerelyDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/ProxyImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/ProxyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/RealImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/singleton/Singleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/singleton/SingletonAsEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/singleton/SingletonMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/visitor/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/visitor/VisitorDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/AbstractStyleFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/AmericanStyleFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/AustrianStyleFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/ItalianStyleFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/PizzaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/AmericanPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/AustrianPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/ItalianPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/Pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/Spaghetti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/AmericanPizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/ItalianPizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/PizzaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/nopattern/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/nopattern/PizzaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/prototype/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/prototype/PizzaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/model/GraphicChangedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/model/GraphicChangedListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/model/GraphicModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/objects/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/objects/GraphicObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/objects/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/view/GraphicFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +135,11 @@
       <recent name="swe2.ss20.ue10.demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue10\demo\blackjack\resources" />
-      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue10\demo\blackjack\exceptions" />
-      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue10\demo\blackjack\jss2" />
-      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue10\demo\blackjack" />
-      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue10\blackjack\test" />
+      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue11\demo\patterns\adapter" />
+      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue11\demo\patterns\chainofresponsibility" />
+      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue11\demo\patterns\command" />
+      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue11\demo\patterns\decorator" />
+      <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue11\demo\patterns\proxy" />
     </key>
   </component>
   <component name="RunManager" selected="Application.GameMain (1)">
@@ -164,13 +229,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00109" summary="ok">
-      <created>1588893734324</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1588893734324</updated>
     </task>
     <task id="LOCAL-00110" summary="ok">
       <created>1588893830641</created>
@@ -508,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591048989997</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="ok">
+      <created>1591198793505</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1591198793506</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -525,7 +590,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="ue11" />
+    <option name="LAST_COMMIT_MESSAGE" value="ue11" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1606" y="801" width="816" height="774" key="#Intentions" timestamp="1583817852405">
@@ -574,7 +640,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1591048989319">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1591339053258">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -582,7 +648,7 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1047" y="537" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588862054674" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1591048989319" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1591339053258" />
     <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093184300" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1588883962346">
       <screen x="0" y="0" width="3840" height="2120" />
@@ -672,14 +738,14 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1806" y="736" width="570" height="524" key="StructurePopup/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586886772515" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1591048991101">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1591198795487">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825876601" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855243894" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1591048991101" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1591198795487" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093185931" />
     <state x="1692" y="956" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588853899409">
       <screen x="0" y="0" width="3840" height="2120" />
