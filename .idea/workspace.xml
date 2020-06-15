@@ -20,72 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="ue11">
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/CircleEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/CircleModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/model/CircleModelListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/ui/CircleDrawMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/circledraw/ui/CircleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/adapter/List2StackAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/adapter/List2StackAdapterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/adapter/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/CSVParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/JSONParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/ParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/TextParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/chainofresponsibility/XMLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/CmdHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/Light.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/TurnOffCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/command/TurnOnCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/BestWishesDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/ContentLetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/DateDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/DearDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/HelloDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/Letter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/LetterDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/LetterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/decorator/YoursSincerelyDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/ProxyImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/ProxyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/proxy/RealImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/singleton/Singleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/singleton/SingletonAsEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/singleton/SingletonMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/visitor/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/patterns/visitor/VisitorDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/AbstractStyleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/AmericanStyleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/AustrianStyleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/ItalianStyleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/PizzaStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/abstractfactory/PizzaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/AmericanPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/AustrianPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/ItalianPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/Pizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/dishes/Spaghetti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/AmericanPizzaStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/ItalianPizzaStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/PizzaStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/factorymethod/PizzaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/nopattern/PizzaStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/nopattern/PizzaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/prototype/PizzaStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/demo/pizza/prototype/PizzaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/model/GraphicChangedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/model/GraphicChangedListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/model/GraphicModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/objects/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/objects/GraphicObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/objects/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/view/GraphicFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swe2/ss20/ue11/graphiceditor/objects/Star.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +77,7 @@
       <recent name="C:\dev\intellij\git\jku\src\swe2\ss20\ue11\demo\patterns\proxy" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameMain (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BlackjackDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue10.demo.blackjack.BlackjackDemo" />
       <module name="jku" />
@@ -182,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleCards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue10.demo.simplecards.SimpleCards" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="swe2.ss20.ue11.graphiceditor.Main" />
       <module name="jku" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="swe2.ss20.ue10.demo.simplecards.*" />
+          <option name="PATTERN" value="swe2.ss20.ue11.graphiceditor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.GameMain (1)" />
         <item itemvalue="Application.CircleDrawMain" />
         <item itemvalue="JUnit.swe2.ss20.ue10 in jku" />
         <item itemvalue="Application.BlackjackDemo" />
-        <item itemvalue="Application.SimpleCards" />
       </list>
     </recent_temporary>
   </component>
@@ -229,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00110" summary="ok">
-      <created>1588893830641</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1588893830641</updated>
     </task>
     <task id="LOCAL-00111" summary="ok">
       <created>1589240952809</created>
@@ -573,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591198793506</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="ue11">
+      <created>1591339676843</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1591339676843</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -617,14 +552,14 @@
     </state>
     <state x="979" y="286" width="2293" height="1372" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1590630702793" />
     <state x="979" y="286" width="2293" height="1372" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590091288325" />
-    <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser" timestamp="1591036109999">
+    <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser" timestamp="1592216916558">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1598" y="557" key="#com.intellij.ide.util.MemberChooser/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585826862462" />
     <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583814789145" />
     <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585067229312" />
     <state x="1598" y="557" key="#com.intellij.ide.util.MemberChooser/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585686231294" />
-    <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1591036109999" />
+    <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1592216916558" />
     <state x="1784" y="843" key="#com.intellij.ide.util.MemberChooser/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588444340892" />
     <state x="1772" y="1045" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583827462425">
       <screen x="0" y="0" width="3840" height="2120" />
@@ -640,7 +575,7 @@
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583854657286" />
     <state x="1562" y="587" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585680796270" />
     <state x="1744" y="889" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586726030004" />
-    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1591339053258">
+    <state x="1571" y="868" key="CommitChangelistDialog2" timestamp="1592217903573">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1407" y="573" key="CommitChangelistDialog2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825938227" />
@@ -648,47 +583,47 @@
     <state x="1571" y="868" key="CommitChangelistDialog2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409754353" />
     <state x="1047" y="537" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588862054674" />
     <state x="1407" y="573" key="CommitChangelistDialog2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692436054" />
-    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1591339053258" />
+    <state x="1571" y="868" key="CommitChangelistDialog2/0.0.3840.2120@0.0.3840.2120" timestamp="1592217903573" />
     <state x="1571" y="868" key="CommitChangelistDialog2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093184300" />
     <state x="1718" y="1096" key="FileChooserDialogImpl" timestamp="1588883962346">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1718" y="1096" key="FileChooserDialogImpl/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1588883962346" />
-    <state width="1588" height="594" key="GridCell.Tab.0.bottom" timestamp="1591049069976">
+    <state width="1147" height="289" key="GridCell.Tab.0.bottom" timestamp="1592216891590">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.bottom/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.bottom/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.bottom/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.bottom/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="1588" height="594" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1591049069976" />
+    <state width="1147" height="289" key="GridCell.Tab.0.bottom/0.0.3840.2120@0.0.3840.2120" timestamp="1592216891590" />
     <state width="2433" height="557" key="GridCell.Tab.0.bottom/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
-    <state width="1588" height="594" key="GridCell.Tab.0.center" timestamp="1591049069976">
+    <state width="1147" height="289" key="GridCell.Tab.0.center" timestamp="1592216891590">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.center/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.center/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.center/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.center/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="1588" height="594" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1591049069976" />
+    <state width="1147" height="289" key="GridCell.Tab.0.center/0.0.3840.2120@0.0.3840.2120" timestamp="1592216891590" />
     <state width="2433" height="557" key="GridCell.Tab.0.center/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
-    <state width="1588" height="594" key="GridCell.Tab.0.left" timestamp="1591049069976">
+    <state width="1147" height="289" key="GridCell.Tab.0.left" timestamp="1592216891590">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.left/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.left/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.left/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.left/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439836" />
-    <state width="1588" height="594" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1591049069976" />
+    <state width="1147" height="289" key="GridCell.Tab.0.left/0.0.3840.2120@0.0.3840.2120" timestamp="1592216891590" />
     <state width="2433" height="557" key="GridCell.Tab.0.left/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
-    <state width="1588" height="594" key="GridCell.Tab.0.right" timestamp="1591049069976">
+    <state width="1147" height="289" key="GridCell.Tab.0.right" timestamp="1592216891590">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state width="868" height="254" key="GridCell.Tab.0.right/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585827336919" />
     <state width="1109" height="500" key="GridCell.Tab.0.right/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583867878999" />
     <state width="1348" height="620" key="GridCell.Tab.0.right/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585074731944" />
     <state width="1199" height="254" key="GridCell.Tab.0.right/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692439837" />
-    <state width="1588" height="594" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1591049069976" />
+    <state width="1147" height="289" key="GridCell.Tab.0.right/0.0.3840.2120@0.0.3840.2120" timestamp="1592216891590" />
     <state width="2433" height="557" key="GridCell.Tab.0.right/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093287856" />
     <state width="1588" height="594" key="GridCell.Tab.1.bottom" timestamp="1591049069976">
       <screen x="0" y="0" width="3840" height="2120" />
@@ -729,7 +664,6 @@
     <state x="1418" y="916" key="SettingsEditor" timestamp="1591004382828">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1418" y="916" key="SettingsEditor/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583432924041" />
     <state x="1418" y="916" key="SettingsEditor/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585005002315" />
     <state x="945" y="549" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1588862161898" />
     <state x="1418" y="916" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1591004382828" />
@@ -738,14 +672,14 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1806" y="736" width="570" height="524" key="StructurePopup/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1586886772515" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1591198795487">
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2" timestamp="1591339679373">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/-3440.0.3440.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1585825876601" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.714.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1583855243894" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/-3440.716.3440.1400/0.0.3840.2120/3840.716.3440.1400@0.0.3840.2120" timestamp="1585409756076" />
     <state x="1352" y="665" key="Vcs.Push.Dialog.v2/0.0.3440.1400/-3440.0.3440.1400@0.0.3440.1400" timestamp="1585692109691" />
-    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1591198795487" />
+    <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/0.0.3840.2120@0.0.3840.2120" timestamp="1591339679373" />
     <state x="1509" y="1007" key="Vcs.Push.Dialog.v2/3840.716.3440.1400/0.0.3840.2120/-3440.716.3440.1400@0.0.3840.2120" timestamp="1590093185931" />
     <state x="1692" y="956" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588853899409">
       <screen x="0" y="0" width="3840" height="2120" />
