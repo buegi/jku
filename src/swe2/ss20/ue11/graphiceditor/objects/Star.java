@@ -12,7 +12,7 @@ public class Star extends GraphicObject {
         super(x, y);
         xCoordinates = new int[coordinates.length / 2];
         yCoordinates = new int[coordinates.length / 2];
-        this.nPoints = (coordinates.length / 2);
+        this.nPoints = coordinates.length / 2;
         fillVarArgsToArray(coordinates);
     }
 
