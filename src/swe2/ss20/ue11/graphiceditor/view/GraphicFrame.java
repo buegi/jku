@@ -1,5 +1,6 @@
 package swe2.ss20.ue11.graphiceditor.view;
 
+import swe2.ss20.ue11.graphiceditor.decorator.NumberDecorator;
 import swe2.ss20.ue11.graphiceditor.model.GraphicModel;
 import swe2.ss20.ue11.graphiceditor.objects.Circle;
 import swe2.ss20.ue11.graphiceditor.objects.GraphicObject;
@@ -123,7 +124,7 @@ public class GraphicFrame extends JFrame {
                         graphicObject = new Circle(x, y, 20);
                     } else if (numShape == 3) {
                         // TODO correct star constructor
-                        graphicObject = new Star(x, y, 5, 60);
+                        graphicObject = new Star(x, y, 5, 30);
                     }
 
 
@@ -132,7 +133,11 @@ public class GraphicFrame extends JFrame {
                     }
 
                     // TODO Task 3: Create decorated object
-
+                    graphicObject = new NumberDecorator(graphicObject, 1 + model.getGraphicObjects().size());
+                    graphicObject.setX(x);
+                    graphicObject.setY(y);
+                    graphicObject.setColor(getRandomColor());
+                    model.add(graphicObject);
 
                     graphicObject.setColor(getRandomColor());
                     model.add(graphicObject);
