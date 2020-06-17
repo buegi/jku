@@ -1,22 +1,32 @@
 package swe2.ss20.ue11.graphiceditor.view;
 
+import swe2.ss20.ue11.graphiceditor.model.GraphicModel;
+import swe2.ss20.ue11.graphiceditor.objects.Circle;
+import swe2.ss20.ue11.graphiceditor.objects.GraphicObject;
+import swe2.ss20.ue11.graphiceditor.objects.Rectangle;
+import swe2.ss20.ue11.graphiceditor.objects.Star;
+import swe2.ss20.ue11.graphiceditor.visitor.BackwardVisitor;
+import swe2.ss20.ue11.graphiceditor.visitor.ForwardVisitor;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
-import swe2.ss20.ue11.graphiceditor.model.GraphicModel;
-import swe2.ss20.ue11.graphiceditor.objects.GraphicObject;
 
 /**
  * Frame class for the graphical objects.
@@ -49,6 +59,24 @@ public class GraphicFrame extends JFrame {
         // TODO Task 2: Create buttons that are based on a prototype graphic object.
         //              Implement ActionListener to set selected prototype object.
 
+        JToggleButton rectBtn = new JToggleButton("Rectangle");
+        JToggleButton circleBtn = new JToggleButton("Circle");
+        JToggleButton starBtn = new JToggleButton("Star");
+
+        ButtonGroup btnGroup = new ButtonGroup();
+
+        toolBar.add(rectBtn);
+        toolBar.add(circleBtn);
+        toolBar.add(starBtn);
+
+        btnGroup.add(rectBtn);
+        btnGroup.add(circleBtn);
+        btnGroup.add(starBtn);
+
+        rectBtn.addActionListener(view);
+        circleBtn.addActionListener(view);
+        starBtn.addActionListener(view);
+
     }
 
     /**
@@ -65,7 +93,9 @@ public class GraphicFrame extends JFrame {
      * The view class for drawing the graphical objects.
      */
     @SuppressWarnings("serial")
-    private class GraphicView extends JComponent {
+    private class GraphicView extends JComponent implements ActionListener {
+
+        private int numShape;
 
         /**
          * Constructor for the graphical view.
@@ -86,7 +116,16 @@ public class GraphicFrame extends JFrame {
                     int y = e.getY();
                     GraphicObject graphicObject = null;
 
-                    // TODO Task 2: Clone prototype to create a new graphicObject
+                    // Task 2: Clone prototype to create a new graphicObject
+                    if (numShape == 1) {
+                        graphicObject = new Rectangle(x, y, 60, 40);
+                    } else if (numShape == 2) {
+                        graphicObject = new Circle(x, y, 20);
+                    } else if (numShape == 3) {
+                        // TODO correct star constructor
+                        graphicObject = new Star(x, y, 5, 60);
+                    }
+
 
                     if (graphicObject == null) {
                         return;
@@ -106,18 +145,31 @@ public class GraphicFrame extends JFrame {
                     if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 
                         // TODO Task 4: Apply forwardVisitor to model
+                        final ForwardVisitor fv = new ForwardVisitor();
+                        for (GraphicObject go : model.getGraphicObjects()) {
+                            go.accept(fv);
+                        }
+                        repaint();
+
 
                     } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 
                         // TODO Task 4: Apply backwardVisitor to model
-
+                        final BackwardVisitor bv = new BackwardVisitor();
+                        for (GraphicObject go : model.getGraphicObjects()) {
+                            go.accept(bv);
+                        }
+                        repaint();
                     }
                 }
 
-
+                ;
             });
 
-            model.addGraphicChangedListener(ce -> repaint());
+            model.addGraphicChangedListener(ce -> {
+                repaint();
+            });
+
         }
 
         /**
@@ -135,6 +187,19 @@ public class GraphicFrame extends JFrame {
             for (GraphicObject o : model.getGraphicObjects()) {
                 g.setColor(o.getColor());
                 o.paint(g);
+            }
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JToggleButton actualBtn = (JToggleButton) e.getSource();
+
+            if (actualBtn.getText() == "Rectangle") {
+                this.numShape = 1;
+            } else if (actualBtn.getText() == "Circle") {
+                this.numShape = 2;
+            } else if (actualBtn.getText() == "Star") {
+                this.numShape = 3;
             }
         }
     }

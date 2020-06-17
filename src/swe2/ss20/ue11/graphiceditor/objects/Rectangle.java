@@ -1,5 +1,7 @@
 package swe2.ss20.ue11.graphiceditor.objects;
 
+import swe2.ss20.ue11.graphiceditor.visitor.GraphicObjectVisitor;
+
 import java.awt.Graphics;
 
 public class Rectangle extends GraphicObject {
@@ -78,6 +80,14 @@ public class Rectangle extends GraphicObject {
     }
 
     // TODO Task 2: copy method
+    @Override
+    public GraphicObject copy() {
+        return super.copy();
+    }
+
 
     // TODO Task 4: accept method
+    public void accept(GraphicObjectVisitor gov) {
+        gov.visit(this);
+    }
 }

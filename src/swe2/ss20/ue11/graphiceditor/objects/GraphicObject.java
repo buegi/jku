@@ -1,5 +1,7 @@
 package swe2.ss20.ue11.graphiceditor.objects;
 
+import swe2.ss20.ue11.graphiceditor.visitor.GraphicObjectVisitor;
+
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -102,6 +104,14 @@ public abstract class GraphicObject {
     public abstract int getHeight();
 
     // TODO Task 2: copy method
+    public GraphicObject copy() {
+        try {
+            return (GraphicObject) super.clone();
+        } catch (final CloneNotSupportedException e) {
+            throw new InternalError();
+        }
+    }
 
     // TODO Task 4: accept method
+    public abstract void accept(GraphicObjectVisitor gov);
 }
