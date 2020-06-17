@@ -11,14 +11,13 @@ public class BackwardVisitor implements GraphicObjectVisitor {
     private static final Random rand = new Random();
 
     @Override
-    public void visit(Rectangle rect) {
-        rect.setWidth(rect.getWidth() - rand.nextInt(5));
-        rect.setHeight(rect.getHeight() - rand.nextInt(5));
+    public void visit(Rectangle rectangle) {
+        rectangle.setY(rectangle.getY() - 4);
     }
 
     @Override
-    public void visit(Circle circ) {
-        circ.setColor(circ.getColor().brighter());
+    public void visit(Circle circle) {
+        circle.setX(circle.getX() + 4);
     }
 
     @Override

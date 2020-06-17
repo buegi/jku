@@ -13,13 +13,12 @@ public class ForwardVisitor implements GraphicObjectVisitor {
 
     @Override
     public void visit(Rectangle rectangle) {
-        rectangle.setWidth(rectangle.getWidth() + rand.nextInt(5));
-        rectangle.setHeight(rectangle.getHeight() + rand.nextInt(5));
+        rectangle.setY(rectangle.getY() + 4);
     }
 
     @Override
     public void visit(Circle circle) {
-        circle.setColor(circle.getColor().darker());
+        circle.setX(circle.getX() - 4);
     }
 
     @Override
