@@ -12,20 +12,18 @@ public class ForwardVisitor implements GraphicObjectVisitor {
     private static final Random rand = new Random();
 
     @Override
-    public void visit(Rectangle rect) {
-        rect.setWidth(rect.getWidth() + rand.nextInt(5));
-        rect.setHeight(rect.getHeight() + rand.nextInt(5));
-
+    public void visit(Rectangle rectangle) {
+        rectangle.setWidth(rectangle.getWidth() + rand.nextInt(5));
+        rectangle.setHeight(rectangle.getHeight() + rand.nextInt(5));
     }
 
     @Override
-    public void visit(Circle circ) {
-        circ.setColor(circ.getColor().darker());
+    public void visit(Circle circle) {
+        circle.setColor(circle.getColor().darker());
     }
 
     @Override
     public void visit(Star star) {
         star.setY(star.getY() + rand.nextInt(19));
-
     }
 }

@@ -24,6 +24,5 @@ public class BackwardVisitor implements GraphicObjectVisitor {
     @Override
     public void visit(Star star) {
         star.setY(star.getY() - rand.nextInt(19));
-
     }
 }

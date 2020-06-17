@@ -26,5 +26,4 @@ public class NumberDecorator extends AbstractDecorator {
     public void accept(GraphicObjectVisitor gov) {
         go.accept(gov);
     }
-
 }

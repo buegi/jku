@@ -6,9 +6,9 @@ import swe2.ss20.ue11.graphiceditor.objects.Star;
 
 public interface GraphicObjectVisitor {
 
-    void visit(Rectangle rect);
+    void visit(Rectangle rectangle);
 
-    void visit(Circle circ);
+    void visit(Circle circle);
 
     void visit(Star star);
 }
