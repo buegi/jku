@@ -136,8 +136,6 @@ public class GraphicFrame extends JFrame {
                     graphicObject = new NumberDecorator(graphicObject, 1 + model.getGraphicObjects().size());
                     graphicObject.setX(x);
                     graphicObject.setY(y);
-                    graphicObject.setColor(getRandomColor());
-                    model.add(graphicObject);
 
                     graphicObject.setColor(getRandomColor());
                     model.add(graphicObject);
