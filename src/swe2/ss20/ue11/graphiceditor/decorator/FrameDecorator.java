@@ -1,7 +1,7 @@
 package swe2.ss20.ue11.graphiceditor.decorator;
 
 import swe2.ss20.ue11.graphiceditor.objects.GraphicObject;
-import swe2.ss20.ue11.graphiceditor.objects.Rectangle;
+import swe2.ss20.ue11.graphiceditor.visitor.GraphicObjectVisitor;
 import swe2.ss20.ue11.graphiceditor.visitor.GraphicObjectVisitor;
 
 import java.awt.*;

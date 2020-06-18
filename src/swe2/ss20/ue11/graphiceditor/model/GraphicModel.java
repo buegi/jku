@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import swe2.ss20.ue11.graphiceditor.objects.GraphicObject;
+import swe2.ss20.ue11.graphiceditor.visitor.GraphicObjectVisitor;
 
 /**
  * Model class for graphical editor application.
@@ -63,4 +64,9 @@ public final class GraphicModel {
     }
 
     // TODO Task 4: accept method calling accept of graphic objects
+    public void accept(GraphicObjectVisitor gov) {
+        for (GraphicObject go : list) {
+            go.accept(gov);
+        }
+    }
 }
