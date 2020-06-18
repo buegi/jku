@@ -78,7 +78,6 @@ public class GraphicFrame extends JFrame {
         rectBtn.addActionListener(view);
         circleBtn.addActionListener(view);
         starBtn.addActionListener(view);
-
     }
 
     /**

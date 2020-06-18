@@ -19,5 +19,6 @@ public class BackwardVisitor implements GraphicObjectVisitor {
     @Override
     public void visit(Star star) {
         star.setColor(star.getColor().brighter());
+        star.setX(star.getX() - 4);
     }
 }
