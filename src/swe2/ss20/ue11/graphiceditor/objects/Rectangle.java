@@ -85,7 +85,6 @@ public class Rectangle extends GraphicObject {
         return super.copy();
     }
 
-
     // TODO Task 4: accept method
     public void accept(GraphicObjectVisitor gov) {
         gov.visit(this);
