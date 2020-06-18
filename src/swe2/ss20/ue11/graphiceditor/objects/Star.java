@@ -11,12 +11,12 @@ public class Star extends GraphicObject {
     private Polygon pol;
     private final int radius;
 
-    public Star(final int x, final int y, final int edges, final int radius) {
+    public Star(final int x, final int y) {
         super(x, y);
-        this.edges = edges;
         this.pol = new Polygon();
         createPolygon();
-        this.radius = radius;
+        this.edges = 5;
+        this.radius = 15;
     }
 
     @Override

@@ -117,21 +117,19 @@ public class GraphicFrame extends JFrame {
                     int y = e.getY();
                     GraphicObject graphicObject = null;
 
-                    // Task 2: Clone prototype to create a new graphicObject
+                    // TODO Task 2: Clone prototype to create a new graphicObject
                     if (numShape == 1) {
                         graphicObject = new Rectangle(x, y, 60, 40);
                     } else if (numShape == 2) {
                         graphicObject = new Circle(x, y, 20);
                     } else if (numShape == 3) {
-                        // TODO correct star constructor
-                        graphicObject = new Star(x, y, 5, 30);
+                        graphicObject = new Star(x, y);
                     }
 
 
                     if (graphicObject == null) {
                         return;
                     }
-
                     // TODO Task 3: Create decorated object
                     graphicObject = new NumberDecorator(graphicObject, 1 + model.getGraphicObjects().size());
                     graphicObject.setX(x);
@@ -146,7 +144,6 @@ public class GraphicFrame extends JFrame {
 
                 public void keyPressed(java.awt.event.KeyEvent e) {
                     if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-
                         // TODO Task 4: Apply forwardVisitor to model
                         final ForwardVisitor fv = new ForwardVisitor();
                         for (GraphicObject go : model.getGraphicObjects()) {
@@ -154,9 +151,7 @@ public class GraphicFrame extends JFrame {
                         }
                         repaint();
 
-
                     } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-
                         // TODO Task 4: Apply backwardVisitor to model
                         final BackwardVisitor bv = new BackwardVisitor();
                         for (GraphicObject go : model.getGraphicObjects()) {
@@ -165,14 +160,10 @@ public class GraphicFrame extends JFrame {
                         repaint();
                     }
                 }
-
-                ;
             });
-
             model.addGraphicChangedListener(ce -> {
                 repaint();
             });
-
         }
 
         /**

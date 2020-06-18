@@ -19,7 +19,7 @@ public class NumberDecorator extends AbstractDecorator {
     public void paint(Graphics g) {
         go.paint(g);
         g.setColor(new Color(g.getColor().getRGB() ^ 0x00FFFFFF));
-        g.drawString(String.valueOf(number), go.getX(), go.getY());
+        g.drawString(Integer.toString(number), go.getX(), go.getY());
     }
 
     @Override
