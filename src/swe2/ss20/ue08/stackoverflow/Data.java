@@ -150,17 +150,23 @@ public class Data {
 
     public Stream<Question> sortedStream() {
         // TODO: generate Stream<Question> based on stream() and by sorting it descending based on the question score
-        return Arrays.stream(this.items).sorted((q1, q2) -> q1.getScore() < q2.getScore() ? 1 : -1);
+        // return Arrays.stream(this.items).sorted((q1, q2) -> q1.getScore() < q2.getScore() ? 1 : -1);
+        // return Arrays.stream(this.items).sorted((q1, q2) -> Long.compare(q1.getScore(), q2.getScore()));
+        return Arrays.stream(this.items).sorted(Comparator.comparingLong(Question::getScore));
     }
 
     public Optional<Question> findHighestScoringQuestionWith(int minimumViews) {
         // TODO: Return the question with the highest score that has at least minimumViews views.
-        return Arrays.stream(this.items).filter(q -> q.getViewCount() >= minimumViews).max((q1, q2) -> q1.getScore() > q2.getScore() ? 1 : -1);
+        // return Arrays.stream(this.items).filter(q -> q.getViewCount() >= minimumViews).max((q1, q2) -> q1.getScore() > q2.getScore() ? 1 : -1);
+        return Arrays.stream(this.items).filter(q -> q.getViewCount() >= minimumViews).max(Comparator.comparingLong(Question::getScore));
     }
 
     public Optional<String> getLongestTitle() {
         // TODO: return the longest title
-        return Arrays.stream(this.items).map(q -> q.getTitle()).max((q1, q2) -> q1.length() > q2.length() ? 1 : -1);
+        // return Arrays.stream(this.items).map(q -> q.getTitle()).max((s1, s2) -> s1.length() > s2.length() ? 1 : -1);
+        // return Arrays.stream(this.items).map(q -> q.getTitle()).max((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+        // return Arrays.stream(this.items).map(q -> q.getTitle()).max(Comparator.comparing(String::length));
+        return Arrays.stream(this.items).map(q -> q.getTitle()).max(Comparator.comparingInt(String::length));
     }
 
     public List<Question> findQuestions(String titlePart) {
