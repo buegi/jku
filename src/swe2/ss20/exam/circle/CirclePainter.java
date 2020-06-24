@@ -17,6 +17,8 @@ public class CirclePainter extends JComponent {
                 repaint();
             }
         };
+        // or return this::repaint;
+        // or return () -> repaint();
     }
 
     public CirclePainter(CircleModel circleModel) {
