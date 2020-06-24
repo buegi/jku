@@ -20,7 +20,15 @@ public class LightPanel extends JPanel {
             }
         });
         /* Horchen auf Ereignisse beim Model um Neuzeichnen anzustossen */
-        model.addLightListener(e -> repaint());
+
+        // model.addLightListener(e -> repaint());
+
+        model.addLightListener(new LightListener() {
+            @Override
+            public void lightChanged(LightEvent e) {
+                repaint();
+            }
+        });
     }
 
     @Override
