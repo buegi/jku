@@ -206,8 +206,10 @@ public class Data {
 
     public Optional<Owner> getOwnerWithShortestName() {
         // TODO: return the owner with the shortest name that asked a question
+//        return Arrays.stream(this.items)
+//                .map(q -> q.getOwner()).min((o1, o2) -> o1.getDisplayName().length() > o2.getDisplayName().length() ? 1 : -1);
         return Arrays.stream(this.items)
-                .map(q -> q.getOwner()).min((o1, o2) -> o1.getDisplayName().length() > o2.getDisplayName().length() ? 1 : -1);
+                .map(Question::getOwner).min(Comparator.comparingInt(o -> o.getDisplayName().length()));
     }
 
     public List<String> distinctTags() {
