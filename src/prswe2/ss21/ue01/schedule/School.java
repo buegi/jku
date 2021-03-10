@@ -1,15 +1,12 @@
 package prswe2.ss21.ue01.schedule;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.SortedMap;
-import java.util.SortedSet;
-import java.util.TreeMap;
-import java.util.TreeSet;
-import java.util.stream.Collectors; 
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class School {
+
+	private Set<Teacher> teachers;
+	private Set<SchoolClass> schoolClasses;
 
 	public School() {
 	}

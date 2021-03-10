@@ -19,6 +19,10 @@ import java.util.stream.Collectors;
 
 public class SchoolClass implements Comparable<SchoolClass> {
 
+	private Set<Subject> subjects;
+	private Set<Teacher> teachers;
+
+
 	public SchoolClass(int n, String name) {
 		// TODO Auto-generated constructor stub
 	}
