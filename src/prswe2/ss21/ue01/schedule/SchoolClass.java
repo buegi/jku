@@ -21,6 +21,18 @@ public class SchoolClass implements Comparable<SchoolClass> {
         this.name = name;
     }
 
+    public int getNumber() {
+        return this.number;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public Map<Subject, Teacher> getSubjects() {
+        return this.subjects;
+    }
+
     @Override
     public int compareTo(SchoolClass o) {
         if (this.number == o.number) {
@@ -49,9 +61,6 @@ public class SchoolClass implements Comparable<SchoolClass> {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
-        sb.append("ClassNumber: " + number + ", Name: " + name + ", Teachers/Subjects: ");
-        subjects.forEach((s, t) -> sb.append(s.toString() + "/" + t.getName() + ", "));
-        return sb.toString();
+        return ("ClassNumber: " + number + ", Name: " + name);
     }
 }

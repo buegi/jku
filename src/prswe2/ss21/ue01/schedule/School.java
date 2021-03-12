@@ -9,6 +9,18 @@ public class School {
     private final Set<SchoolClass> schoolClasses = new TreeSet<SchoolClass>();
     private final List<Lesson> lessons = new LinkedList<Lesson>();
 
+    public Set<Teacher> getTeachers() {
+        return teachers;
+    }
+
+    public Set<SchoolClass> getSchoolClasses() {
+        return schoolClasses;
+    }
+
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
     public School() {
     }
 
@@ -23,5 +35,19 @@ public class School {
     public void defineLesson(SchoolClass clss, Unit unit, Subject subj) {
         this.lessons.add(new Lesson(clss, unit, subj));
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        School school = (School) o;
+        return Objects.equals(teachers, school.teachers) && Objects.equals(schoolClasses, school.schoolClasses) && Objects.equals(lessons, school.lessons);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(teachers, schoolClasses, lessons);
+    }
+
 
 }
