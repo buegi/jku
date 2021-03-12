@@ -33,5 +33,4 @@ public enum Unit {
 		return hour;
 	}
 
-	
 }
