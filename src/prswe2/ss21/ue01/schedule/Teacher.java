@@ -17,6 +17,10 @@ public class Teacher implements Comparable<Teacher> {
         return this.name;
     }
 
+    public Set<Subject> getSubjects() {
+        return subjects;
+    }
+
     @Override
     public int compareTo(Teacher other) {
         return this.name.compareToIgnoreCase(other.name);

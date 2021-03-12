@@ -10,6 +10,8 @@ import prswe2.ss21.ue01.schedule.School;
 import prswe2.ss21.ue01.schedule.SchoolClass;
 import prswe2.ss21.ue01.schedule.Teacher;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class SchoolApp {
@@ -121,37 +123,44 @@ public class SchoolApp {
         sch.defineLesson(b1, Fri5, German);
 
         // print result of queries
-        // Tests
-        System.out.println(sch.toString());
+        System.out.println("----- Test to String -----");
+        System.out.println(sch.toString()); // TODO
         System.out.println(maier.toString());
         System.out.println(a1.toString());
 
         System.out.println("----- Lessons for one Class (1a) on one Day (Mon) -----");
-        sch.getLessons().stream()
+        List<Lesson> mon1a = sch.getLessons().stream()
                 .filter(s -> s.getSchoolClass().getName() == "1a" && s.getUnit().getDay().toString() == "Mon")
-                .forEach(sc -> System.out.println(sc.toString()));
-
-        System.out.println("----- Lessons for one Teacher on one Day  -----");
-        sch.getSchoolClasses().stream().
-                filter(sc -> sc.getSubjects().containsValue(maier))
                 .collect(Collectors.toList());
-        // TODO
+        mon1a.forEach(sc -> System.out.println(sc.toString()));
+        System.out.println("Count: " + mon1a.size());
+
+        System.out.println("----- Lessons for one Teacher (reisner) on one Day (Mon)  -----");
+        List<SchoolClass> reisnerClasses = sch.getSchoolClasses().stream().
+                filter(sc -> sc.getSubjects().containsValue(reisner)).collect(Collectors.toList());
+
+        List<Lesson> reisnerLessons = sch.getLessons().stream()
+                .filter(s -> s.getUnit().getDay().toString() == "Mon" &&
+                        reisner.getSubjects().contains(s.getSubject()) &&
+                        reisnerClasses.contains(s.getSchoolClass()))
+                .collect(Collectors.toList());
+        reisnerLessons.forEach(l -> System.out.println(l.toString()));
+        System.out.println("Count: " + reisnerLessons.size());
 
         System.out.println("----- Lessons for one Teacher for one SchoolClass  -----");
-
+        // TODO
 
         System.out.println("----- Lessons for one Teacher for one Subject -----");
-
+        // TODO
 
         System.out.println("----- Lessons for one SchoolClass for one Subject -----");
-
+        // TODO
 
         System.out.println("----- Lessons for School sorted by SchoolClass, Unit -----");
-
+        // TODO
 
         System.out.println("----- Lessons for Teacher sorted by Teacher, Unit -----");
-
-
+        // TODO
 
 
     }
