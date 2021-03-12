@@ -7,34 +7,51 @@ import static prswe2.ss21.ue01.schedule.Subject.Math;
 import static prswe2.ss21.ue01.schedule.Subject.Physics;
 import static prswe2.ss21.ue01.schedule.Subject.*;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SchoolClass implements Comparable<SchoolClass> {
 
-	private Set<Subject> subjects;
-	private Set<Teacher> teachers;
+    private final int number;
+    private final String name;
+    private final Map<Subject, Teacher> subjects = new TreeMap<Subject, Teacher>();
 
+    public SchoolClass(int n, String name) {
+        this.number = n;
+        this.name = name;
+    }
 
-	public SchoolClass(int n, String name) {
-		// TODO Auto-generated constructor stub
-	}
+    @Override
+    public int compareTo(SchoolClass o) {
+        if (this.number == o.number) {
+            return this.name.compareTo(o.name);
+        } else {
+            return Integer.compare(this.number, o.number);
+        }
+    }
 
-	@Override
-	public int compareTo(SchoolClass o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    public void defineSubject(Subject subject, Teacher teacher) {
+        this.subjects.put(subject, teacher);
+    }
 
-	public void defineSubject(Subject subject, Teacher teacher) {
-		// TODO Auto-generated method stub
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SchoolClass that = (SchoolClass) o;
+        return number == that.number && Objects.equals(name, that.name) && Objects.equals(subjects, that.subjects);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(number, name, subjects);
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("ClassNumber: " + number + ", Name: " + name + ", Teachers/Subjects: ");
+        subjects.forEach((s, t) -> sb.append(s.toString() + "/" + t.getName() + ", "));
+        return sb.toString();
+    }
 }

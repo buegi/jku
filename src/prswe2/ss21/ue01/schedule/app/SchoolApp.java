@@ -118,7 +118,11 @@ public class SchoolApp {
 		sch.defineLesson(b1, Fri4, English); 
 		sch.defineLesson(b1, Fri5, German); 
 		
-		// print result of queries 
+		// print result of queries
+		// Tests
+		System.out.println(sch.toString());
+		System.out.println(maier.toString());
+		System.out.println(a1.toString());
 		
 	}
 	
