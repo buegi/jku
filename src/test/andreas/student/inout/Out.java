@@ -1,4 +1,4 @@
-package tests.other.student.inout;
+package test.andreas.student.inout;
 
 import java.io.FileOutputStream;
 import java.io.PrintStream;

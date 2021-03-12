@@ -1,4 +1,4 @@
-package tests.other.student.inout;
+package test.andreas.student.inout;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package tests.other.student.stdts;
+package test.andreas.student.stdts;
 
 public class Student {
     private String firstName;

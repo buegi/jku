@@ -1,4 +1,4 @@
-package tests.shiftright;
+package test.andreas.shiftright;
 
 public class ShiftRight {
 

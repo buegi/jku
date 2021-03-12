@@ -1,7 +1,7 @@
-package tests.other.student.stdts.main;
+package test.andreas.student.stdts.main;
 
-import tests.other.student.stdts.Student;
-import tests.other.student.stdts.StudentList;
+import test.andreas.student.stdts.Student;
+import test.andreas.student.stdts.StudentList;
 
 public class Test {
 
