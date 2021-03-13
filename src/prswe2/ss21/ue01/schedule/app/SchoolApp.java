@@ -130,7 +130,7 @@ public class SchoolApp {
         System.out.println("TotalCount: " + mon1a.size());
 
         System.out.println("----- Lessons for one Teacher (reisner) on one Day (Mon)  -----");
-        List<Lesson> reisnerMondayLessons = new ArrayList<Lesson>();
+        List<Lesson> reisnerMondayLessons = new LinkedList<Lesson>();
         sch.getSchedule().forEach((sc, ll) -> ll.stream()
                 .filter(l -> l.getTeacher().equals(reisner) && l.getUnit().getDay().equals(Day.Mon)).forEach(
                         le -> reisnerMondayLessons.add(le)));
@@ -145,7 +145,7 @@ public class SchoolApp {
         System.out.println("TotalCount: " + huberA1Lessons.size());
 
         System.out.println("----- Lessons for one Teacher (maier) for one Subject (Math) -----");
-        List<Lesson> maierMathLessons = new ArrayList<>();
+        List<Lesson> maierMathLessons = new LinkedList<>();
         sch.getSchedule().forEach((sc, ll) -> ll.stream()
                 .filter(l -> l.getTeacher().equals(maier) && l.getSubject().equals(Math))
                 .forEach(le -> maierMathLessons.add(le)));
@@ -160,7 +160,7 @@ public class SchoolApp {
         System.out.println("TotalCount: " + b1EnglishLessons.size());
 
         System.out.println("----- Lessons for School sorted by SchoolClass, Unit -----");
-        List<Lesson> sortedLessonsBySchoolClassAndUnit = new ArrayList<Lesson>();
+        List<Lesson> sortedLessonsBySchoolClassAndUnit = new LinkedList<Lesson>();
         sch.getSchedule().forEach((sc, ll) -> ll.stream()
                 .sorted(Comparator.comparing(Lesson::getSchoolClass).thenComparing(Lesson::getUnit))
                 .forEach(l -> sortedLessonsBySchoolClassAndUnit.add(l)));
@@ -168,7 +168,7 @@ public class SchoolApp {
         System.out.println("TotalCount: " + sortedLessonsBySchoolClassAndUnit.size());
 
         System.out.println("----- Lessons for Teachers sorted by Teacher, Unit -----");
-        List<Lesson> teacherLessonsSortedByTeacherThenUnit = new ArrayList<Lesson>();
+        List<Lesson> teacherLessonsSortedByTeacherThenUnit = new LinkedList<Lesson>();
         sch.getSchedule().forEach((sc, ll) -> teacherLessonsSortedByTeacherThenUnit.addAll(ll));
         Collections.sort(teacherLessonsSortedByTeacherThenUnit, new Comparator<Lesson>() {
             @Override

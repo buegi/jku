@@ -33,12 +33,13 @@ public class School {
     }
 
     public void defineLesson(SchoolClass clss, Unit unit, Subject subj) {
+        Lesson newLesson = new Lesson(clss, unit, subj, clss.getSubjects().get(subj));
         if (this.schedule.containsKey(clss)) {
-            this.schedule.get(clss).add(new Lesson(clss, unit, subj, clss.getSubjects().get(subj)));
-        } else {
-         this.schedule.put(clss, new ArrayList<Lesson>());
-            this.schedule.get(clss).add(new Lesson(clss, unit, subj, clss.getSubjects().get(subj)));
+            this.schedule.get(clss).add(newLesson);
+            return;
         }
+        this.schedule.put(clss, new LinkedList<Lesson>());
+        this.schedule.get(clss).add(newLesson);
     }
 
     @Override

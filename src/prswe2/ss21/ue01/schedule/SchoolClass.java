@@ -53,6 +53,6 @@ public class SchoolClass implements Comparable<SchoolClass> {
 
     @Override
     public String toString() {
-        return ("ClassNumber: " + lvl + ", Name: " + name);
+        return ("{ClassNumber: " + lvl + ", Name: " + name+"}");
     }
 }
