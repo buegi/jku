@@ -32,5 +32,4 @@ public enum Unit {
 	public int getHour() {
 		return hour;
 	}
-
 }

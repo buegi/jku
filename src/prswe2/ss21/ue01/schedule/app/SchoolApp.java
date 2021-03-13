@@ -137,58 +137,51 @@ public class SchoolApp {
         reisnerMondayLessons.forEach(l -> System.out.println(l.toString()));
         System.out.println("TotalCount: " + reisnerMondayLessons.size());
 
-//        System.out.println("----- Lessons for one Teacher (huber) for one SchoolClass (a1) -----");
-//        List<Lesson> a1Lessons = sch.getLessons().stream()
-//                .filter(l -> l.getSchoolClass().equals(a1))
-//                .collect(Collectors.toList());
-//        List<Lesson> huberA1Lessons = a1Lessons.stream()
-//                .filter(l -> huber.getSubjects().contains(l.getSubject())).collect(Collectors.toList());
-//        huberA1Lessons.stream().forEach(l -> System.out.println(l.toString()));
-//        System.out.println("TotalCount: " + huberA1Lessons.size());
-//
-//        System.out.println("----- Lessons for one Teacher (maier) for one Subject (Math) -----");
-//        List<SchoolClass> maierClasses = sch.getSchoolClasses().stream().
-//                filter(sc -> sc.getSubjects().containsValue(maier)).collect(Collectors.toList());
-//
-//        List<Lesson> maierSubjectLessons = sch.getLessons().stream()
-//                .filter(sc -> maierClasses.contains(sc.getSchoolClass()) && sc.getSubject().equals(Math))
-//                .collect(Collectors.toList());
-//
-//        maierSubjectLessons.stream().forEach(l -> System.out.println(l.toString()));
-//        System.out.println("TotalCount: " + maierSubjectLessons.size());
-//
-//        System.out.println("----- Lessons for one SchoolClass for one Subject -----");
-//        List<Lesson> b1EnglishLessons = sch.getLessons().stream()
-//                .filter(l -> l.getSchoolClass().equals(b1) && l.getSubject().equals(English))
-//                .collect(Collectors.toList());
-//        b1EnglishLessons.stream().forEach(l -> System.out.println(l.toString()));
-//        System.out.println("TotalCount: " + b1EnglishLessons.size());
-//
-//        System.out.println("----- Lessons for School sorted by SchoolClass, Unit -----");
-//        List<Lesson> sortedLessonsBySchoolClassAndUnit = sch.getLessons().stream()
-//                .sorted(Comparator.comparing(Lesson::getSchoolClass).thenComparing(Lesson::getUnit))
-//                .collect(Collectors.toList());
-//        sortedLessonsBySchoolClassAndUnit.forEach(l -> System.out.println(l.toString()));
-//        System.out.println("TotalCount: " + sortedLessonsBySchoolClassAndUnit.size());
-//
-//        System.out.println("----- Lessons for Teachers sorted by Teacher, Unit -----");
-//        // treeset already sorted
-//
-//        // school teachers
-//        // schoolclass Subject, teacher
-//        // lesson subject, unit
-//
-//        SortedMap<Teacher, List<Lesson>> teacherLessons = new TreeMap<Teacher, List<Lesson>>();
-//
-//        sch.getTeachers().forEach(t -> teacherLessons.put(t, sch.getLessons().stream()
-//                .filter(l -> {
-//                    sch.getSchoolClasses().stream()
-//                            .filter(sc -> sc.getSubjects().containsValue(t)) &&
-//                            t.getSubjects().contains(l.getSubject()
-//
-//                }).collect(Collectors.toList())));
+        System.out.println("----- Lessons for one Teacher (huber) for one SchoolClass (a1) -----");
+        List<Lesson> huberA1Lessons = sch.getSchedule().get(a1).stream()
+                .filter(l -> l.getTeacher().equals(huber)).collect(Collectors.toList());
 
+        huberA1Lessons.stream().forEach(l -> System.out.println(l.toString()));
+        System.out.println("TotalCount: " + huberA1Lessons.size());
 
+        System.out.println("----- Lessons for one Teacher (maier) for one Subject (Math) -----");
+        List<Lesson> maierMathLessons = new ArrayList<>();
+        sch.getSchedule().forEach((sc, ll) -> ll.stream()
+                .filter(l -> l.getTeacher().equals(maier) && l.getSubject().equals(Math))
+                .forEach(le -> maierMathLessons.add(le)));
+        maierMathLessons.stream().forEach(l -> System.out.println(l.toString()));
+        System.out.println("TotalCount: " + maierMathLessons.size());
+
+        System.out.println("----- Lessons for one SchoolClass (b1) for one Subject (English) -----");
+        List<Lesson> b1EnglishLessons =
+                sch.getSchedule().get(b1).stream().filter(l -> l.getSubject().equals(English))
+                        .collect(Collectors.toList());
+        b1EnglishLessons.stream().forEach(l -> System.out.println(l.toString()));
+        System.out.println("TotalCount: " + b1EnglishLessons.size());
+
+        System.out.println("----- Lessons for School sorted by SchoolClass, Unit -----");
+        List<Lesson> sortedLessonsBySchoolClassAndUnit = new ArrayList<Lesson>();
+        sch.getSchedule().forEach((sc, ll) -> ll.stream()
+                .sorted(Comparator.comparing(Lesson::getSchoolClass).thenComparing(Lesson::getUnit))
+                .forEach(l -> sortedLessonsBySchoolClassAndUnit.add(l)));
+        sortedLessonsBySchoolClassAndUnit.forEach(l -> System.out.println(l.toString()));
+        System.out.println("TotalCount: " + sortedLessonsBySchoolClassAndUnit.size());
+
+        System.out.println("----- Lessons for Teachers sorted by Teacher, Unit -----");
+        List<Lesson> teacherLessonsSortedByTeacherThenUnit = new ArrayList<Lesson>();
+        sch.getSchedule().forEach((sc, ll) -> teacherLessonsSortedByTeacherThenUnit.addAll(ll));
+        Collections.sort(teacherLessonsSortedByTeacherThenUnit, new Comparator<Lesson>() {
+            @Override
+            public int compare(Lesson o1, Lesson o2) {
+                if (o1.getTeacher().compareTo(o2.getTeacher()) == 0) {
+                    return o1.getUnit().compareTo(o2.getUnit());
+                }
+                return o1.getTeacher().compareTo(o2.getTeacher());
+            }
+        });
+
+        teacherLessonsSortedByTeacherThenUnit.forEach(l -> System.out.println(l.toString()));
+        System.out.println("TotalCount: " + teacherLessonsSortedByTeacherThenUnit.size());
 
     }
 }

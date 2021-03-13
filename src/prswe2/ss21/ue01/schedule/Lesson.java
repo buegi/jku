@@ -72,6 +72,6 @@ public class Lesson implements Comparable<Lesson> {
 
     @Override
     public String toString() {
-        return ("SchoolClass: " + schoolClass + " Unit: " + unit + " Subject: " + subject);
+        return ("{SchoolClass: " + schoolClass + " Unit: " + unit + " Subject: " + subject + " Teacher: " + teacher + "}");
     }
 }

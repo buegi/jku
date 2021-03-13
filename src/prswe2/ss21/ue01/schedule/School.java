@@ -53,6 +53,4 @@ public class School {
     public int hashCode() {
         return Objects.hash(teachers, schoolClasses, schedule);
     }
-
-
 }
