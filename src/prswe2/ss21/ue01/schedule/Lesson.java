@@ -62,12 +62,12 @@ public class Lesson implements Comparable<Lesson> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Lesson lesson = (Lesson) o;
-        return Objects.equals(schoolClass, lesson.schoolClass) && unit == lesson.unit && subject == lesson.subject;
+        return Objects.equals(schoolClass, lesson.schoolClass) && unit == lesson.unit && subject == lesson.subject && Objects.equals(teacher, lesson.teacher);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(schoolClass, unit, subject);
+        return Objects.hash(schoolClass, unit, subject, teacher);
     }
 
     @Override

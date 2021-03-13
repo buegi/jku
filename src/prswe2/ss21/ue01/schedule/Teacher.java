@@ -44,6 +44,7 @@ public class Teacher implements Comparable<Teacher> {
         StringBuffer sb = new StringBuffer();
         sb.append("{Name: " + name + ", Subjects: ");
         subjects.stream().forEach(s -> sb.append(s + ", "));
+        sb.delete(sb.length() - 2, sb.length());
         sb.append("}");
         return sb.toString();
     }
