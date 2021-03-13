@@ -7,7 +7,7 @@ public class School {
 
     private final Set<Teacher> teachers = new TreeSet<Teacher>();
     private final Set<SchoolClass> schoolClasses = new TreeSet<SchoolClass>();
-    private final List<Lesson> lessons = new LinkedList<Lesson>();
+    private final Map<SchoolClass, List<Lesson>> schedule = new TreeMap<SchoolClass, List<Lesson>>();
 
     public Set<Teacher> getTeachers() {
         return teachers;
@@ -17,8 +17,8 @@ public class School {
         return schoolClasses;
     }
 
-    public List<Lesson> getLessons() {
-        return lessons;
+    public Map<SchoolClass, List<Lesson>> getSchedule() {
+        return this.schedule;
     }
 
     public School() {
@@ -33,7 +33,12 @@ public class School {
     }
 
     public void defineLesson(SchoolClass clss, Unit unit, Subject subj) {
-        this.lessons.add(new Lesson(clss, unit, subj));
+        if (this.schedule.containsKey(clss)) {
+            this.schedule.get(clss).add(new Lesson(clss, unit, subj, clss.getSubjects().get(subj)));
+        } else {
+         this.schedule.put(clss, new ArrayList<Lesson>());
+            this.schedule.get(clss).add(new Lesson(clss, unit, subj, clss.getSubjects().get(subj)));
+        }
     }
 
     @Override
@@ -41,12 +46,12 @@ public class School {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         School school = (School) o;
-        return Objects.equals(teachers, school.teachers) && Objects.equals(schoolClasses, school.schoolClasses) && Objects.equals(lessons, school.lessons);
+        return Objects.equals(teachers, school.teachers) && Objects.equals(schoolClasses, school.schoolClasses) && Objects.equals(schedule, school.schedule);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(teachers, schoolClasses, lessons);
+        return Objects.hash(teachers, schoolClasses, schedule);
     }
 
 

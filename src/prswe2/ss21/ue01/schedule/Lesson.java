@@ -8,11 +8,13 @@ public class Lesson implements Comparable<Lesson> {
     private SchoolClass schoolClass;
     private Unit unit;
     private Subject subject;
+    private Teacher teacher;
 
-    public Lesson(SchoolClass schoolClass, Unit unit, Subject subject) {
+    public Lesson(SchoolClass schoolClass, Unit unit, Subject subject, Teacher teacher) {
         this.schoolClass = schoolClass;
         this.unit = unit;
         this.subject = subject;
+        this.teacher = teacher;
     }
 
     public SchoolClass getSchoolClass() {
@@ -31,6 +33,10 @@ public class Lesson implements Comparable<Lesson> {
         this.unit = unit;
     }
 
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
     public Subject getSubject() {
         return subject;
     }
@@ -41,10 +47,14 @@ public class Lesson implements Comparable<Lesson> {
 
     @Override
     public int compareTo(Lesson o) {
-
-
-        // TODO Auto-generated method stub
-        return 0;
+        if (this.schoolClass.equals(o.schoolClass)) {
+            if (this.unit == o.unit) {
+                return this.subject.compareTo(o.subject);
+            } else {
+                return this.unit.compareTo(o.unit);
+            }
+        }
+        return this.schoolClass.compareTo(o.schoolClass);
     }
 
     @Override
