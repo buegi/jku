@@ -6,7 +6,7 @@ public class SchoolClass implements Comparable<SchoolClass> {
 
     private final int lvl;
     private final String name;
-    private final Map<Subject, Teacher> subjects = new TreeMap<Subject, Teacher>();
+    private final Map<Subject, Teacher> subjects = new HashMap<Subject, Teacher>();
 
     public SchoolClass(int n, String name) {
         this.lvl = n;

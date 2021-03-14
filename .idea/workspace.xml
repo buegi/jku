@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/Lesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/School.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/SchoolClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/SchoolClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/app/SchoolApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue01/schedule/app/SchoolApp.java" afterDir="false" />
     </list>
@@ -124,13 +122,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00147" summary="ok">
-      <created>1591022227326</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1591022227326</updated>
     </task>
     <task id="LOCAL-00148" summary="ok">
       <created>1591022842855</created>
@@ -468,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615679086730</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="pr.swe2.ue01">
+      <created>1615679864321</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1615679864321</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

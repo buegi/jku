@@ -170,14 +170,11 @@ public class SchoolApp {
         System.out.println("----- Lessons for Teachers sorted by Teacher, Unit -----");
         List<Lesson> teacherLessonsSortedByTeacherThenUnit = new LinkedList<Lesson>();
         sch.getSchedule().forEach((sc, ll) -> teacherLessonsSortedByTeacherThenUnit.addAll(ll));
-        Collections.sort(teacherLessonsSortedByTeacherThenUnit, new Comparator<Lesson>() {
-            @Override
-            public int compare(Lesson o1, Lesson o2) {
-                if (o1.getTeacher().compareTo(o2.getTeacher()) == 0) {
-                    return o1.getUnit().compareTo(o2.getUnit());
-                }
-                return o1.getTeacher().compareTo(o2.getTeacher());
+        Collections.sort(teacherLessonsSortedByTeacherThenUnit, (o1, o2) -> {
+            if (o1.getTeacher().compareTo(o2.getTeacher()) == 0) {
+                return o1.getUnit().compareTo(o2.getUnit());
             }
+            return o1.getTeacher().compareTo(o2.getTeacher());
         });
 
         teacherLessonsSortedByTeacherThenUnit.forEach(l -> System.out.println(l.toString()));
