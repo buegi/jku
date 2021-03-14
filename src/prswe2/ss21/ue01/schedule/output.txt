@@ -1,0 +1,149 @@
+C:\dev\java\openjdk-15.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ\lib\idea_rt.jar=53294:C:\Program Files\JetBrains\IntelliJ\bin" -Dfile.encoding=UTF-8 -classpath "C:\dev\intellij\git\jku\out\production\jku;C:\Users\stefa\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\stefa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.2\junit-jupiter-api-5.4.2.jar;C:\Users\stefa\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\stefa\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\stefa\.m2\repository\org\junit\platform\junit-platform-commons\1.4.2\junit-platform-commons-1.4.2.jar;C:\Users\stefa\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\stefa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.2\junit-jupiter-engine-5.4.2.jar;C:\Users\stefa\.m2\repository\org\junit\platform\junit-platform-engine\1.4.2\junit-platform-engine-1.4.2.jar;C:\Program Files\JetBrains\IntelliJ\lib\junit-4.12.jar;C:\dev\intellij\git\jku\src\swe2\ss20\ue08\lib\gson-2.8.6.jar" prswe2.ss21.ue01.schedule.app.SchoolApp
+----- Test to String -----
+{Name: Maier, Subjects: Physics, Math}
+{SchoolLevel: 1, Name: 1a}
+----- Set of Lessons for one Class (1a) on one Day (Mon) -----
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon6, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon5, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon2, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon4, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+#Items 6
+----- Set of Lessons for one Teacher (Reisner) on one Day (Mon)  -----
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+#Items 3
+----- Set of Lessons for one Teacher (Huber) for one SchoolClass (1a) -----
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri2, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen5, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen6, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue1, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue2, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon4, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu5, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+#Items 7
+----- Set of Lessons for one Teacher (Maier) for one Subject (Math) -----
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon2, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue2, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+#Items 8
+----- Set of Lessons for one SchoolClass (1b) for one Subject (English) -----
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+#Items 5
+----- Set of Lessons for School sorted by SchoolClass, Unit -----
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon2, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon4, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon5, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon6, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue1, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue2, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue3, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue4, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue5, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen1, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen5, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen6, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu2, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu3, Subject: Geo, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu5, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri2, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri4, Subject: Geo, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon1, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon5, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon6, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue2, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue4, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue5, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue6, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen1, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen2, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen3, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen4, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen5, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu2, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu4, Subject: Geo, Teacher: {Name: Fischer, Subjects: English, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri2, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri3, Subject: Geo, Teacher: {Name: Fischer, Subjects: English, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri5, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+#Items 50
+----- Set of Lessons for Teachers sorted by Teacher, Unit -----
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue4, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue5, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen4, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen5, Subject: Sports, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu3, Subject: Geo, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri4, Subject: Geo, Teacher: {Name: Auer, Subjects: Sports, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon1, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon5, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon6, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue3, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue5, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue6, Subject: Art, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen1, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen3, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu2, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri2, Subject: History, Teacher: {Name: Ebner, Subjects: History, Art}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu4, Subject: Geo, Teacher: {Name: Fischer, Subjects: English, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri3, Subject: Geo, Teacher: {Name: Fischer, Subjects: English, Geo}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon4, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon5, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon6, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue1, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Tue2, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue4, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen5, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen6, Subject: Bio, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu5, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri2, Subject: German, Teacher: {Name: Huber, Subjects: Bio, German}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon2, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue2, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri1, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri3, Subject: Math, Teacher: {Name: Maier, Subjects: Physics, Math}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Mon1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Mon4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Tue3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen1, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Wen2, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen3, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Wen4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Thu2, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Thu4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1a}, Unit: Fri1, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri4, Subject: English, Teacher: {Name: Reisner, Subjects: German, English}}
+{SchoolClass: {SchoolLevel: 1, Name: 1b}, Unit: Fri5, Subject: German, Teacher: {Name: Reisner, Subjects: German, English}}
+#Items 50
+
+Process finished with exit code 0
