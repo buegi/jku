@@ -26,7 +26,7 @@ public class Teacher implements Comparable<Teacher> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Teacher teacher = (Teacher) o;
-        return Objects.equals(this.name, teacher.name) && Objects.equals(this.subjects, teacher.subjects);
+        return Objects.equals(name, teacher.name) && Objects.equals(subjects, teacher.subjects);
     }
 
     @Override

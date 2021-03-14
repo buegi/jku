@@ -40,7 +40,8 @@ public class SchoolClass implements Comparable<SchoolClass> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SchoolClass that = (SchoolClass) o;
-        return this.schoolLevel == that.schoolLevel && Objects.equals(this.name, that.name)
+        return this.schoolLevel == that.schoolLevel
+                && Objects.equals(this.name, that.name)
                 && Objects.equals(this.subjects, that.subjects);
     }
 
