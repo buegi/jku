@@ -122,62 +122,78 @@ public class SchoolApp {
         System.out.println(maier.toString());
         System.out.println(a1.toString());
 
+
         System.out.println("----- Lessons for one Class (1a) on one Day (Mon) -----");
-        Set<Lesson> mon1a = sch.getSchedule().get(a1).stream()
-                .filter(l -> l.getUnit().getDay().equals(Day.Mon)).collect(Collectors.toSet());
-        mon1a.forEach(sc -> System.out.println(sc.toString()));
-        System.out.println("TotalCount: " + mon1a.size());
+        Set<Lesson> lessons1AMonday = new TreeSet<>();
+        lessons1AMonday = sch.getSchedule().get(a1).stream()
+                .filter(l -> l.getUnit().getDay().equals(Day.Mon))
+                .collect(Collectors.toSet());
+        // output lessons and sum of lessons
+        lessons1AMonday.forEach(sc -> System.out.println(sc.toString()));
+        System.out.println("#Items " + lessons1AMonday.size());
+
 
         System.out.println("----- Lessons for one Teacher (reisner) on one Day (Mon)  -----");
-        Set<Lesson> reisnerMondayLessons = new TreeSet<>();
+        Set<Lesson> lessonsReisnerMonday = new TreeSet<>();
         sch.getSchedule().forEach((sc, ll) -> ll.stream()
-                .filter(l -> l.getTeacher().equals(reisner) && l.getUnit().getDay().equals(Day.Mon)).forEach(
-                        le -> reisnerMondayLessons.add(le)));
-        reisnerMondayLessons.forEach(l -> System.out.println(l.toString()));
-        System.out.println("TotalCount: " + reisnerMondayLessons.size());
+                .filter(l -> l.getTeacher().equals(reisner) && l.getUnit().getDay().equals(Day.Mon))
+                .forEach(lessonsReisnerMonday::add));
+        // output lessons and sum of lessons
+        lessonsReisnerMonday.forEach(l -> System.out.println(l.toString()));
+        System.out.println("#Items " + lessonsReisnerMonday.size());
+
 
         System.out.println("----- Lessons for one Teacher (huber) for one SchoolClass (a1) -----");
-        Set<Lesson> huberA1Lessons = sch.getSchedule().get(a1).stream()
-                .filter(l -> l.getTeacher().equals(huber)).collect(Collectors.toSet());
+        Set<Lesson> lessonsHuberA1 = new TreeSet<>();
+        lessonsHuberA1 = sch.getSchedule().get(a1).stream()
+                .filter(l -> l.getTeacher().equals(huber))
+                .collect(Collectors.toSet());
+        // output lessons and sum of lessons
+        lessonsHuberA1.forEach(l -> System.out.println(l.toString()));
+        System.out.println("#Items " + lessonsHuberA1.size());
 
-        huberA1Lessons.stream().forEach(l -> System.out.println(l.toString()));
-        System.out.println("TotalCount: " + huberA1Lessons.size());
 
         System.out.println("----- Lessons for one Teacher (maier) for one Subject (Math) -----");
-        Set<Lesson> maierMathLessons = new TreeSet<Lesson>();
+        Set<Lesson> lessonsMaierMath = new TreeSet<Lesson>();
         sch.getSchedule().forEach((sc, ll) -> ll.stream()
                 .filter(l -> l.getTeacher().equals(maier) && l.getSubject().equals(Math))
-                .forEach(le -> maierMathLessons.add(le)));
-        maierMathLessons.stream().forEach(l -> System.out.println(l.toString()));
-        System.out.println("TotalCount: " + maierMathLessons.size());
+                .forEach(lessonsMaierMath::add));
+        // output lessons and sum of lessons
+        lessonsMaierMath.forEach(l -> System.out.println(l.toString()));
+        System.out.println("#Items " + lessonsMaierMath.size());
+
 
         System.out.println("----- Lessons for one SchoolClass (b1) for one Subject (English) -----");
-        Set<Lesson> b1EnglishLessons =
-                sch.getSchedule().get(b1).stream().filter(l -> l.getSubject().equals(English))
-                        .collect(Collectors.toSet());
-        b1EnglishLessons.stream().forEach(l -> System.out.println(l.toString()));
-        System.out.println("TotalCount: " + b1EnglishLessons.size());
+        Set<Lesson> lessonsB1English = new TreeSet<>();
+        lessonsB1English = sch.getSchedule().get(b1).stream()
+                .filter(l -> l.getSubject().equals(English))
+                .collect(Collectors.toSet());
+        // output lessons and sum of lessons
+        lessonsB1English.forEach(l -> System.out.println(l.toString()));
+        System.out.println("#Items " + lessonsB1English.size());
+
 
         System.out.println("----- Lessons for School sorted by SchoolClass, Unit -----");
-        Set<Lesson> sortedLessonsBySchoolClassAndUnit = new TreeSet<Lesson>((o1, o2) -> {
-            if (o1.getSchoolClass().compareTo(o2.getSchoolClass()) == 0) {
-                return o1.getUnit().compareTo(o2.getUnit());
-            }
-            return o1.getSchoolClass().compareTo(o2.getSchoolClass());
-        });
-        sch.getSchedule().forEach((sc, ll) -> sortedLessonsBySchoolClassAndUnit.addAll(ll));
-        sortedLessonsBySchoolClassAndUnit.forEach(l -> System.out.println(l.toString()));
-        System.out.println("TotalCount: " + sortedLessonsBySchoolClassAndUnit.size());
+        // define comparator for sorting
+        Set<Lesson> allLessonsSortedBySchoolClassThenUnit =
+                new TreeSet<Lesson>((o1, o2) -> o1.getSchoolClass().compareTo(o2.getSchoolClass()) == 0 ?
+                        o1.getUnit().compareTo(o2.getUnit()) : o1.getSchoolClass().compareTo(o2.getSchoolClass()));
+        // add lessons (automatically sorted by comparator)
+        sch.getSchedule().forEach((sc, ll) -> allLessonsSortedBySchoolClassThenUnit.addAll(ll));
+        // output lessons and sum of lessons
+        allLessonsSortedBySchoolClassThenUnit.forEach(l -> System.out.println(l.toString()));
+        System.out.println("#Items " + allLessonsSortedBySchoolClassThenUnit.size());
+
 
         System.out.println("----- Lessons for Teachers sorted by Teacher, Unit -----");
-        Set<Lesson> teacherLessonsSortedByTeacherThenUnit = new TreeSet<Lesson>((o1, o2) -> {
-            if (o1.getTeacher().compareTo(o2.getTeacher()) == 0) {
-                return o1.getUnit().compareTo(o2.getUnit());
-            }
-            return o1.getTeacher().compareTo(o2.getTeacher());
-        });
-        sch.getSchedule().forEach((sc, ll) -> teacherLessonsSortedByTeacherThenUnit.addAll(ll));
-        teacherLessonsSortedByTeacherThenUnit.forEach(l -> System.out.println(l.toString()));
-        System.out.println("TotalCount: " + teacherLessonsSortedByTeacherThenUnit.size());
+        // define comparator for sorting
+        Set<Lesson> allLessonsSortedByTeacherThenUnit =
+                new TreeSet<Lesson>((o1, o2) -> o1.getTeacher().compareTo(o2.getTeacher()) == 0 ?
+                        o1.getUnit().compareTo(o2.getUnit()) : o1.getTeacher().compareTo(o2.getTeacher()));
+        // add lessons (automatically sorted by comparator)
+        sch.getSchedule().forEach((sc, ll) -> allLessonsSortedByTeacherThenUnit.addAll(ll));
+        // output lessons and sum of lessons
+        allLessonsSortedByTeacherThenUnit.forEach(l -> System.out.println(l.toString()));
+        System.out.println("#Items " + allLessonsSortedByTeacherThenUnit.size());
     }
 }
