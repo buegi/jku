@@ -5,10 +5,10 @@ import java.util.Objects;
 
 public class Lesson implements Comparable<Lesson> {
 
-    private SchoolClass schoolClass;
-    private Unit unit;
-    private Subject subject;
-    private Teacher teacher;
+    private final SchoolClass schoolClass;
+    private final Unit unit;
+    private final Subject subject;
+    private final Teacher teacher;
 
     public Lesson(SchoolClass schoolClass, Unit unit, Subject subject, Teacher teacher) {
         this.schoolClass = schoolClass;
@@ -18,31 +18,19 @@ public class Lesson implements Comparable<Lesson> {
     }
 
     public SchoolClass getSchoolClass() {
-        return schoolClass;
-    }
-
-    public void setSchoolClass(SchoolClass schoolClass) {
-        this.schoolClass = schoolClass;
+        return this.schoolClass;
     }
 
     public Unit getUnit() {
-        return unit;
-    }
-
-    public void setUnit(Unit unit) {
-        this.unit = unit;
+        return this.unit;
     }
 
     public Teacher getTeacher() {
-        return teacher;
+        return this.teacher;
     }
 
     public Subject getSubject() {
-        return subject;
-    }
-
-    public void setSubject(Subject subject) {
-        this.subject = subject;
+        return this.subject;
     }
 
     @Override
@@ -62,16 +50,19 @@ public class Lesson implements Comparable<Lesson> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Lesson lesson = (Lesson) o;
-        return Objects.equals(schoolClass, lesson.schoolClass) && unit == lesson.unit && subject == lesson.subject && Objects.equals(teacher, lesson.teacher);
+        return Objects.equals(this.schoolClass, lesson.schoolClass)
+                && this.unit == lesson.unit && this.subject == lesson.subject
+                && Objects.equals(this.teacher, lesson.teacher);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(schoolClass, unit, subject, teacher);
+        return Objects.hash(this.schoolClass, this.unit, this.subject, this.teacher);
     }
 
     @Override
     public String toString() {
-        return ("{SchoolClass: " + schoolClass + ", Unit: " + unit + ", Subject: " + subject + ", Teacher: " + teacher + "}");
+        return ("{SchoolClass: " + this.schoolClass + ", Unit: "
+                + this.unit + ", Subject: " + this.subject + ", Teacher: " + this.teacher + "}");
     }
 }

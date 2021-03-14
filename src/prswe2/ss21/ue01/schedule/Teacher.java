@@ -17,10 +17,6 @@ public class Teacher implements Comparable<Teacher> {
         return this.name;
     }
 
-    public Set<Subject> getSubjects() {
-        return subjects;
-    }
-
     @Override
     public int compareTo(Teacher other) {
         return this.name.compareToIgnoreCase(other.name);
@@ -31,19 +27,19 @@ public class Teacher implements Comparable<Teacher> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Teacher teacher = (Teacher) o;
-        return Objects.equals(name, teacher.name) && Objects.equals(subjects, teacher.subjects);
+        return Objects.equals(this.name, teacher.name) && Objects.equals(this.subjects, teacher.subjects);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, subjects);
+        return Objects.hash(this.name, this.subjects);
     }
 
     @Override
     public String toString() {
         StringBuffer sb = new StringBuffer();
-        sb.append("{Name: " + name + ", Subjects: ");
-        subjects.stream().forEach(s -> sb.append(s + ", "));
+        sb.append("{Name: " + this.name + ", Subjects: ");
+        this.subjects.stream().forEach(s -> sb.append(s + ", "));
         sb.delete(sb.length() - 2, sb.length());
         sb.append("}");
         return sb.toString();

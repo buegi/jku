@@ -43,16 +43,16 @@ public class SchoolClass implements Comparable<SchoolClass> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SchoolClass that = (SchoolClass) o;
-        return lvl == that.lvl && Objects.equals(name, that.name) && Objects.equals(subjects, that.subjects);
+        return this.lvl == that.lvl && Objects.equals(this.name, that.name) && Objects.equals(this.subjects, that.subjects);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(lvl, name, subjects);
+        return Objects.hash(this.lvl, this.name, this.subjects);
     }
 
     @Override
     public String toString() {
-        return ("{ClassNumber: " + lvl + ", Name: " + name+"}");
+        return ("{ClassNumber: " + this.lvl + ", Name: " + this.name+"}");
     }
 }

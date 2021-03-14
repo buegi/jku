@@ -123,13 +123,13 @@ public class SchoolApp {
         System.out.println(a1.toString());
 
         System.out.println("----- Lessons for one Class (1a) on one Day (Mon) -----");
-        List<Lesson> mon1a = sch.getSchedule().get(a1).stream()
-                .filter(l -> l.getUnit().getDay().equals(Day.Mon)).collect(Collectors.toList());
+        Set<Lesson> mon1a = sch.getSchedule().get(a1).stream()
+                .filter(l -> l.getUnit().getDay().equals(Day.Mon)).collect(Collectors.toSet());
         mon1a.forEach(sc -> System.out.println(sc.toString()));
         System.out.println("TotalCount: " + mon1a.size());
 
         System.out.println("----- Lessons for one Teacher (reisner) on one Day (Mon)  -----");
-        List<Lesson> reisnerMondayLessons = new LinkedList<Lesson>();
+        Set<Lesson> reisnerMondayLessons = new TreeSet<>();
         sch.getSchedule().forEach((sc, ll) -> ll.stream()
                 .filter(l -> l.getTeacher().equals(reisner) && l.getUnit().getDay().equals(Day.Mon)).forEach(
                         le -> reisnerMondayLessons.add(le)));
@@ -137,14 +137,14 @@ public class SchoolApp {
         System.out.println("TotalCount: " + reisnerMondayLessons.size());
 
         System.out.println("----- Lessons for one Teacher (huber) for one SchoolClass (a1) -----");
-        List<Lesson> huberA1Lessons = sch.getSchedule().get(a1).stream()
-                .filter(l -> l.getTeacher().equals(huber)).collect(Collectors.toList());
+        Set<Lesson> huberA1Lessons = sch.getSchedule().get(a1).stream()
+                .filter(l -> l.getTeacher().equals(huber)).collect(Collectors.toSet());
 
         huberA1Lessons.stream().forEach(l -> System.out.println(l.toString()));
         System.out.println("TotalCount: " + huberA1Lessons.size());
 
         System.out.println("----- Lessons for one Teacher (maier) for one Subject (Math) -----");
-        List<Lesson> maierMathLessons = new LinkedList<>();
+        Set<Lesson> maierMathLessons = new TreeSet<Lesson>();
         sch.getSchedule().forEach((sc, ll) -> ll.stream()
                 .filter(l -> l.getTeacher().equals(maier) && l.getSubject().equals(Math))
                 .forEach(le -> maierMathLessons.add(le)));
@@ -152,9 +152,9 @@ public class SchoolApp {
         System.out.println("TotalCount: " + maierMathLessons.size());
 
         System.out.println("----- Lessons for one SchoolClass (b1) for one Subject (English) -----");
-        List<Lesson> b1EnglishLessons =
+        Set<Lesson> b1EnglishLessons =
                 sch.getSchedule().get(b1).stream().filter(l -> l.getSubject().equals(English))
-                        .collect(Collectors.toList());
+                        .collect(Collectors.toSet());
         b1EnglishLessons.stream().forEach(l -> System.out.println(l.toString()));
         System.out.println("TotalCount: " + b1EnglishLessons.size());
 

@@ -26,10 +26,10 @@ public enum Unit {
 	}
 
 	public Day getDay() {
-		return day;
+		return this.day;
 	}
 
 	public int getHour() {
-		return hour;
+		return this.hour;
 	}
 }

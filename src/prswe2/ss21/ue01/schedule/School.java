@@ -9,19 +9,19 @@ public class School {
     private final Set<SchoolClass> schoolClasses = new TreeSet<SchoolClass>();
     private final Map<SchoolClass, List<Lesson>> schedule = new TreeMap<SchoolClass, List<Lesson>>();
 
+    public School() {
+    }
+
     public Set<Teacher> getTeachers() {
-        return teachers;
+        return this.teachers;
     }
 
     public Set<SchoolClass> getSchoolClasses() {
-        return schoolClasses;
+        return this.schoolClasses;
     }
 
     public Map<SchoolClass, List<Lesson>> getSchedule() {
         return this.schedule;
-    }
-
-    public School() {
     }
 
     public void defineClasses(SchoolClass... cls) {
@@ -47,11 +47,13 @@ public class School {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         School school = (School) o;
-        return Objects.equals(teachers, school.teachers) && Objects.equals(schoolClasses, school.schoolClasses) && Objects.equals(schedule, school.schedule);
+        return Objects.equals(this.teachers, school.teachers)
+                && Objects.equals(this.schoolClasses, school.schoolClasses)
+                && Objects.equals(this.schedule, school.schedule);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(teachers, schoolClasses, schedule);
+        return Objects.hash(this.teachers, this.schoolClasses, this.schedule);
     }
 }
