@@ -119,7 +119,6 @@ public class SchoolApp {
 
         // print result of queries
         System.out.println("----- Test to String -----");
-        System.out.println(sch.toString()); // TODO
         System.out.println(maier.toString());
         System.out.println(a1.toString());
 
@@ -160,25 +159,25 @@ public class SchoolApp {
         System.out.println("TotalCount: " + b1EnglishLessons.size());
 
         System.out.println("----- Lessons for School sorted by SchoolClass, Unit -----");
-        List<Lesson> sortedLessonsBySchoolClassAndUnit = new LinkedList<Lesson>();
-        sch.getSchedule().forEach((sc, ll) -> ll.stream()
-                .sorted(Comparator.comparing(Lesson::getSchoolClass).thenComparing(Lesson::getUnit))
-                .forEach(l -> sortedLessonsBySchoolClassAndUnit.add(l)));
+        Set<Lesson> sortedLessonsBySchoolClassAndUnit = new TreeSet<Lesson>((o1, o2) -> {
+            if (o1.getSchoolClass().compareTo(o2.getSchoolClass()) == 0) {
+                return o1.getUnit().compareTo(o2.getUnit());
+            }
+            return o1.getSchoolClass().compareTo(o2.getSchoolClass());
+        });
+        sch.getSchedule().forEach((sc, ll) -> sortedLessonsBySchoolClassAndUnit.addAll(ll));
         sortedLessonsBySchoolClassAndUnit.forEach(l -> System.out.println(l.toString()));
         System.out.println("TotalCount: " + sortedLessonsBySchoolClassAndUnit.size());
 
         System.out.println("----- Lessons for Teachers sorted by Teacher, Unit -----");
-        List<Lesson> teacherLessonsSortedByTeacherThenUnit = new LinkedList<Lesson>();
-        sch.getSchedule().forEach((sc, ll) -> teacherLessonsSortedByTeacherThenUnit.addAll(ll));
-        Collections.sort(teacherLessonsSortedByTeacherThenUnit, (o1, o2) -> {
+        Set<Lesson> teacherLessonsSortedByTeacherThenUnit = new TreeSet<Lesson>((o1, o2) -> {
             if (o1.getTeacher().compareTo(o2.getTeacher()) == 0) {
                 return o1.getUnit().compareTo(o2.getUnit());
             }
             return o1.getTeacher().compareTo(o2.getTeacher());
         });
-
+        sch.getSchedule().forEach((sc, ll) -> teacherLessonsSortedByTeacherThenUnit.addAll(ll));
         teacherLessonsSortedByTeacherThenUnit.forEach(l -> System.out.println(l.toString()));
         System.out.println("TotalCount: " + teacherLessonsSortedByTeacherThenUnit.size());
-
     }
 }
