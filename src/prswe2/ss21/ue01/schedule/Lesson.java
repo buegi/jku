@@ -36,7 +36,8 @@ public class Lesson implements Comparable<Lesson> {
     public int compareTo(Lesson o) {
         if (this.schoolClass.equals(o.schoolClass)) {
             if (this.unit == o.unit) {
-                return this.subject.compareTo(o.subject);
+                return this.subject == o.subject ? this.teacher.compareTo(o.teacher)
+                        : this.subject.compareTo(o.subject);
             } else {
                 return this.unit.compareTo(o.unit);
             }
