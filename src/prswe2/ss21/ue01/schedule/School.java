@@ -1,13 +1,12 @@
 package prswe2.ss21.ue01.schedule;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class School {
 
-    private final Set<Teacher> teachers = new TreeSet<Teacher>();
-    private final Set<SchoolClass> schoolClasses = new TreeSet<SchoolClass>();
-    private final Map<SchoolClass, List<Lesson>> schedule = new TreeMap<SchoolClass, List<Lesson>>();
+    private final Set<Teacher> teachers = new HashSet<Teacher>();
+    private final Set<SchoolClass> schoolClasses = new HashSet<SchoolClass>();
+    private final Map<SchoolClass, List<Lesson>> schedule = new HashMap<SchoolClass, List<Lesson>>();
 
     public School() {
     }
@@ -33,13 +32,10 @@ public class School {
     }
 
     public void defineLesson(SchoolClass clss, Unit unit, Subject subj) {
-        Lesson newLesson = new Lesson(clss, unit, subj, clss.getSubjects().get(subj));
-        if (this.schedule.containsKey(clss)) {
-            this.schedule.get(clss).add(newLesson);
-            return;
+        if (!this.schedule.containsKey(clss)) {
+            this.schedule.put(clss, new LinkedList<Lesson>());
         }
-        this.schedule.put(clss, new LinkedList<Lesson>());
-        this.schedule.get(clss).add(newLesson);
+        this.schedule.get(clss).add(new Lesson(clss, unit, subj, clss.getSubjects().get(subj)));
     }
 
     @Override

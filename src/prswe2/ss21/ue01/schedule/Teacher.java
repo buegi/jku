@@ -1,7 +1,6 @@
 package prswe2.ss21.ue01.schedule;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Teacher implements Comparable<Teacher> {
 

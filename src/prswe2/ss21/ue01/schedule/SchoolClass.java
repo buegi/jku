@@ -27,11 +27,7 @@ public class SchoolClass implements Comparable<SchoolClass> {
 
     @Override
     public int compareTo(SchoolClass o) {
-        if (this.lvl == o.lvl) {
-            return this.name.compareTo(o.name);
-        } else {
-            return Integer.compare(this.lvl, o.lvl);
-        }
+        return this.lvl == o.lvl ? this.name.compareTo(o.name) : Integer.compare(this.lvl, o.lvl);
     }
 
     public void defineSubject(Subject subject, Teacher teacher) {
@@ -43,7 +39,8 @@ public class SchoolClass implements Comparable<SchoolClass> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SchoolClass that = (SchoolClass) o;
-        return this.lvl == that.lvl && Objects.equals(this.name, that.name) && Objects.equals(this.subjects, that.subjects);
+        return this.lvl == that.lvl && Objects.equals(this.name, that.name)
+                && Objects.equals(this.subjects, that.subjects);
     }
 
     @Override
@@ -53,6 +50,6 @@ public class SchoolClass implements Comparable<SchoolClass> {
 
     @Override
     public String toString() {
-        return ("{ClassNumber: " + this.lvl + ", Name: " + this.name+"}");
+        return ("{ClassNumber: " + this.lvl + ", Name: " + this.name + "}");
     }
 }

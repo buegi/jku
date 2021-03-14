@@ -1,6 +1,5 @@
 package prswe2.ss21.ue01.schedule;
 
-import java.util.Comparator;
 import java.util.Objects;
 
 public class Lesson implements Comparable<Lesson> {
