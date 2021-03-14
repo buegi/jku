@@ -4,9 +4,9 @@ import java.util.*;
 
 public class School {
 
-    private final Set<Teacher> teachers = new HashSet<Teacher>();
-    private final Set<SchoolClass> schoolClasses = new HashSet<SchoolClass>();
-    private final Map<SchoolClass, List<Lesson>> schedule = new HashMap<SchoolClass, List<Lesson>>();
+    private final Set<Teacher> teachers = new HashSet<>();
+    private final Set<SchoolClass> schoolClasses = new HashSet<>();
+    private final Map<SchoolClass, List<Lesson>> schedule = new HashMap<>();
 
     public School() {
     }
@@ -24,16 +24,16 @@ public class School {
     }
 
     public void defineClasses(SchoolClass... cls) {
-        Arrays.stream(cls).forEach(s -> this.schoolClasses.add(s));
+        this.schoolClasses.addAll(Arrays.asList(cls));
     }
 
     public void defineTeachers(Teacher... ts) {
-        Arrays.stream(ts).forEach(t -> this.teachers.add(t));
+        this.teachers.addAll(Arrays.asList(ts));
     }
 
     public void defineLesson(SchoolClass clss, Unit unit, Subject subj) {
         if (!this.schedule.containsKey(clss)) {
-            this.schedule.put(clss, new LinkedList<Lesson>());
+            this.schedule.put(clss, new LinkedList<>());
         }
         this.schedule.get(clss).add(new Lesson(clss, unit, subj, clss.getSubjects().get(subj)));
     }

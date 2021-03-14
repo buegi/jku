@@ -5,11 +5,11 @@ import java.util.*;
 public class Teacher implements Comparable<Teacher> {
 
     private final String name;
-    private final Set<Subject> subjects = new HashSet<Subject>();
+    private final Set<Subject> subjects = new HashSet<>();
 
     public Teacher(String name, Subject... subjects) {
         this.name = name;
-        Arrays.stream(subjects).forEach(this.subjects::add);
+        this.subjects.addAll(Arrays.asList(subjects));
     }
 
     public String getName() {
