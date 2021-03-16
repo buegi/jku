@@ -19,23 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/annotation/Parse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/annotation/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/annotation/PersonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/box/Box.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/demo/Demo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/demo/Demo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/demo/Demo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/person/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/demo/person/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/calculator/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/calculator/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/JayUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/TestClassException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/TestFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/main/Runner.java" afterDir="false" />
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jku.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jku.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +59,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="13" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/swe2/ss20/ue08/lib/gson-2.8.6.jar!/" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -135,13 +121,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00160" summary="ue11">
-      <created>1592218144102</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1592218144103</updated>
     </task>
     <task id="LOCAL-00161" summary="ue11">
       <created>1592218229877</created>
@@ -479,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615735942144</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="pr.swe2.ue02">
+      <created>1615850678590</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1615850678590</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,7 +487,8 @@
     <MESSAGE value="ok" />
     <MESSAGE value="pr.swe2" />
     <MESSAGE value="pr.swe2.ue01" />
-    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue01" />
+    <MESSAGE value="pr.swe2.ue02" />
+    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue02" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
