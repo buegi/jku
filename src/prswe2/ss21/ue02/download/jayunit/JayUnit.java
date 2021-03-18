@@ -32,7 +32,7 @@ public class JayUnit {
                 .filter(m -> m.isAnnotationPresent(MyTest.class)).forEach(l -> {
             try {
                 System.out.println(l);
-                l.invoke(testClass.getConstructor().newInstance(), l, 0, 5);
+                l.invoke(testClass.getConstructor().newInstance());
             } catch (Exception e) {
                 System.out.println("Exception:" + e.toString());
             }

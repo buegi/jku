@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue02">
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/BeforeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/ExpectException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/MyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/calculator/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/calculator/CalculatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/JayUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue02/download/jayunit/JayUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,13 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00162" summary="ue11">
-      <created>1592435719941</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1592435719942</updated>
     </task>
     <task id="LOCAL-00163" summary="ue11">
       <created>1592435877558</created>
@@ -493,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615914697887</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary="pr.swe2.ue02">
+      <created>1616096048290</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1616096048290</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
