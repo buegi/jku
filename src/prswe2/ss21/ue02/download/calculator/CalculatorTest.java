@@ -14,8 +14,10 @@ public class CalculatorTest {
 
     // TODO divide by 0, expect ArithmeticException
     @MyTest
+    @ExpectException
     public void testDivideZero() {
-        sut.divide(5 / 0);
+        // sut.divide(5 / 0);
+        sut.printState();
     }
 
     // TODO add -1, check if state == -1 afterwards
