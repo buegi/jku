@@ -6,23 +6,34 @@ public class CalculatorTest {
 
     private Calculator sut;    // system under test
 
+    // TODO init sut
+    @BeforeTest
     public void init() {
-        // TODO init sut
+        this.sut = new Calculator();
     }
 
+    // TODO divide by 0, expect ArithmeticException
+    @MyTest
     public void testDivideZero() {
-        // TODO divide by 0, expect ArithmeticException
+        sut.divide(5 / 0);
     }
 
+    // TODO add -1, check if state == -1 afterwards
+    @MyTest
     public void testNegativeAdd() {
-        // TODO add -1, check if state == -1 afterwards
+        // Assert(sut.add(-5), sut.getClass().state == -1);
     }
 
+    // TODO test if rem == 0 after reset
+    @MyTest
     public void testResetRem() {
-        // TODO test if rem == 0 after reset
-    }
 
+        //
+    }
+    // TODO empty test, should be ignored by JayUnit
+    @MyTest
     public void dummyTest() {
-        // TODO empty test, should be ignored by JayUnit
+
+
     }
 }
