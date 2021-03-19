@@ -19,24 +19,37 @@ public class JayUnit {
 
         Object o = testClass.getDeclaredConstructor().newInstance();
 
-
         List<Method> beforeTestMethods = new LinkedList<Method>();
         Arrays.stream(testClass.getDeclaredMethods())
                 .filter(m -> m.isAnnotationPresent(BeforeTest.class)).forEach(l -> beforeTestMethods.add(l));
 
         List<Method> myTestMethods = new LinkedList<Method>();
         Arrays.stream(testClass.getDeclaredMethods())
-                .filter(m -> m.isAnnotationPresent(MyTest.class))
+                .filter(m -> m.isAnnotationPresent(MyTest.class) && !m.isAnnotationPresent(ExpectException.class))
                 .forEach(l -> myTestMethods.add(l));
+
+        List<Method> expectExceptionMethods = new LinkedList<Method>();
+        Arrays.stream(testClass.getDeclaredMethods())
+                .filter(m -> m.isAnnotationPresent(ExpectException.class) && m.isAnnotationPresent(MyTest.class))
+                .forEach(l -> myTestMethods.add(l));
+
+        System.out.println("BeforeTestMethods:");
+        beforeTestMethods.forEach(m -> System.out.println(m.getName()));
+        System.out.println("MyTestMethods:");
+        myTestMethods.forEach(m -> System.out.println(m.getName()));
+        System.out.println("ExpectExceptionMethods:");
+        expectExceptionMethods.forEach(m -> System.out.println(m.getName()));
+
+
 
 
         if (beforeTestMethods.size() <= 0 || beforeTestMethods.size() > 1) {
             throw new TestClassException(testClass.toString());
         }
-        System.out.println(beforeTestMethods.get(0).getName());
-        beforeTestMethods.get(0).invoke(o);
-        System.out.println(myTestMethods.get(1).getName());
-        myTestMethods.get(3).invoke(o);
+        //System.out.println(beforeTestMethods.get(0).getName());
+        //beforeTestMethods.get(0).invoke(o);
+        //System.out.println(myTestMethods.get(1).getName());
+        //myTestMethods.get(3).invoke(o);
 
 //         myTestMethods.forEach(m -> {
 //            beforeTestMethods.forEach(b -> {
