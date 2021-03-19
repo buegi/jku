@@ -16,21 +16,25 @@ public class CalculatorTest {
     @MyTest
     @ExpectException
     public void testDivideZero() {
-        sut.divide(5 / 0);
-        sut.printState();
+        try {
+            sut.divide(5 / 0);
+        } catch(ArithmeticException ae) {
+            System.out.println(ae.toString());
+        }
+
     }
 
     // TODO add -1, check if state == -1 afterwards
     @MyTest
     public void testNegativeAdd() {
-        // Assert(sut.add(-5), sut.getClass().state == -1);
-        sut.add(-5);
+        sut.add(-1);
+        sut.printState();
     }
 
     // TODO test if rem == 0 after reset
     @MyTest
     public void testResetRem() {
-
+        sut.printRem();
         //
     }
 

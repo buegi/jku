@@ -25,7 +25,7 @@ public class JayUnit {
         /* falls mehrere @BeforeTest Methoden vorhanden sind, soll eine TestClassException
            geworfen werden */
         if (beforeTestMethods.size() <= 0 || beforeTestMethods.size() > 1) {
-            throw new TestClassException(testClass.toString());
+            throw new TestClassException("Too less or too many BeforeTestMethods");
         }
 
         List<Method> myTestMethods = new LinkedList<>();
@@ -40,12 +40,12 @@ public class JayUnit {
                 .filter(m -> m.isAnnotationPresent(ExpectException.class))
                 .forEach(l -> expectExceptionMethods.add(l));
 
-        System.out.println("BeforeTestMethods:");
-        beforeTestMethods.forEach(m -> System.out.println("   " + m.getName()));
-        System.out.println("MyTestMethods:");
-        myTestMethods.forEach(m -> System.out.println("   " + m.getName()));
-        System.out.println("ExpectExceptionMethods:");
-        expectExceptionMethods.forEach(m -> System.out.println("   " + m.getName()));
+//        System.out.println("BeforeTestMethods:");
+//        beforeTestMethods.forEach(m -> System.out.println("   " + m.getName()));
+//        System.out.println("MyTestMethods:");
+//        myTestMethods.forEach(m -> System.out.println("   " + m.getName()));
+//        System.out.println("ExpectExceptionMethods:");
+//        expectExceptionMethods.forEach(m -> System.out.println("   " + m.getName()));
 
         myTestMethods.forEach(m -> {
             beforeTestMethods.forEach(b -> {
@@ -81,11 +81,11 @@ public class JayUnit {
             });
             try {
                 System.out.println(m.toString());
-                m.invoke(o);
+                    m.invoke(o);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
-                e.printStackTrace();
+                System.out.println(e.getCause().toString());
             }
         });
 
