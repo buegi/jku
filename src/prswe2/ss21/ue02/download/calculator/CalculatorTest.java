@@ -18,7 +18,7 @@ public class CalculatorTest {
     public void testDivideZero() {
         try {
             sut.divide(5 / 0);
-        } catch(ArithmeticException ae) {
+        } catch (ArithmeticException ae) {
             System.out.println(ae.toString());
         }
 
@@ -41,7 +41,6 @@ public class CalculatorTest {
     // TODO empty test, should be ignored by JayUnit
     @MyTest(ignore = true)
     public void dummyTest() {
-
 
     }
 }
