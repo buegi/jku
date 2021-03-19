@@ -16,7 +16,7 @@ public class CalculatorTest {
     @MyTest
     @ExpectException
     public void testDivideZero() {
-        // sut.divide(5 / 0);
+        sut.divide(5 / 0);
         sut.printState();
     }
 
@@ -24,6 +24,7 @@ public class CalculatorTest {
     @MyTest
     public void testNegativeAdd() {
         // Assert(sut.add(-5), sut.getClass().state == -1);
+        sut.add(-5);
     }
 
     // TODO test if rem == 0 after reset
@@ -32,8 +33,9 @@ public class CalculatorTest {
 
         //
     }
+
     // TODO empty test, should be ignored by JayUnit
-    @MyTest
+    @MyTest(ignore = false)
     public void dummyTest() {
 
 

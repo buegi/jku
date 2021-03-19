@@ -3,6 +3,7 @@ package prswe2.ss21.ue02.download.jayunit;
 import prswe2.ss21.ue02.download.calculator.Calculator;
 import prswe2.ss21.ue02.download.calculator.CalculatorTest;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -11,35 +12,48 @@ import java.util.stream.Collectors;
 
 public class JayUnit {
 
-    public static void runTests(Class<?> testClass) {
+    public static void runTests(Class<?> testClass) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         // TODO
 		/* falls mehrere @BeforeTest Methoden vorhanden sind, soll eine TestClassException
            geworfen werden */
 
-        List<Method> beforeTest = getBeforeTestMethods(testClass);
+        Object o = testClass.getDeclaredConstructor().newInstance();
 
-        if (beforeTest.size() <= 0 || beforeTest.size() > 1) {
+
+        List<Method> beforeTestMethods = new LinkedList<Method>();
+        Arrays.stream(testClass.getDeclaredMethods())
+                .filter(m -> m.isAnnotationPresent(BeforeTest.class)).forEach(l -> beforeTestMethods.add(l));
+
+        List<Method> myTestMethods = new LinkedList<Method>();
+        Arrays.stream(testClass.getDeclaredMethods())
+                .filter(m -> m.isAnnotationPresent(MyTest.class))
+                .forEach(l -> myTestMethods.add(l));
+
+
+        if (beforeTestMethods.size() <= 0 || beforeTestMethods.size() > 1) {
             throw new TestClassException(testClass.toString());
         }
+        System.out.println(beforeTestMethods.get(0).getName());
+        beforeTestMethods.get(0).invoke(o);
+        System.out.println(myTestMethods.get(1).getName());
+        myTestMethods.get(3).invoke(o);
 
-        List<Method> myTest = getMyTestMethods(testClass);
-        myTest.forEach(m -> {
-
-            beforeTest.forEach(b -> {
-                try {
-                    System.out.println(b);
-                    b.invoke(testClass.getConstructor().newInstance());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-            try {
-                System.out.println(m);
-                m.invoke(testClass.getConstructor().newInstance());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+//         myTestMethods.forEach(m -> {
+//            beforeTestMethods.forEach(b -> {
+//                try {
+//                    System.out.println(b);
+//                    b.invoke(o);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            });
+//            try {
+//                System.out.println(m);
+//                m.invoke(testClass.getConstructor().newInstance());
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        });
 
 		/* führt alle mit @MyTest annotierten Methoden aus (die nicht mit ignore gekennzeichnet sind).
            Tests, die eine TestFailedException werfen, schlagen fehl. Tests, die „durchlaufen“ sind
@@ -57,26 +71,5 @@ public class JayUnit {
            Fehlermeldung in eine TestClassException geschachtelt und weitergeworfen werden */
 
 
-    }
-
-    private static List<Method> getBeforeTestMethods(Class<?> testClass) {
-        List<Method> beforeTestMethods = new LinkedList<Method>();
-        Arrays.stream(testClass.getDeclaredMethods())
-                .filter(m -> m.isAnnotationPresent(BeforeTest.class)).forEach(l -> beforeTestMethods.add(l));
-//        print for debugging
-//        System.out.println(beforeTestMethods.size());
-//        beforeTestMethods.forEach(m -> System.out.println(m.toString()));
-        return beforeTestMethods;
-    }
-
-    private static List<Method> getMyTestMethods(Class<?> testClass) {
-        List<Method> myTestMethods = new LinkedList<Method>();
-        Arrays.stream(testClass.getDeclaredMethods())
-                .filter(m -> m.isAnnotationPresent(MyTest.class) && !m.isAnnotationPresent(ExpectException.class))
-                .forEach(l -> myTestMethods.add(l));
-//        print for debugging
-//        System.out.println(myTestMethods.size());
-//        myTestMethods.forEach(m -> System.out.println(m.toString()));
-        return myTestMethods;
     }
 }
