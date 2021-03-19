@@ -35,7 +35,7 @@ public class CalculatorTest {
     }
 
     // TODO empty test, should be ignored by JayUnit
-    @MyTest(ignore = false)
+    @MyTest(ignore = true)
     public void dummyTest() {
 
 
