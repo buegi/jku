@@ -50,7 +50,7 @@ public class JayUnit {
         myTestMethods.forEach(m -> {
             beforeTestMethods.forEach(b -> {
                 try {
-                    System.out.println(b.toString());
+                    System.out.println(b.getName());
                     b.invoke(o);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -59,19 +59,21 @@ public class JayUnit {
                 }
             });
             try {
-                System.out.println(m.toString());
+                System.out.println(m.getName());
                 m.invoke(o);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
-                e.printStackTrace();
+                if (e.getCause().)
+                // testfailedexception ? failed : ok;
+                 e.printStackTrace();
             }
         });
 
         expectExceptionMethods.forEach(m -> {
             beforeTestMethods.forEach(b -> {
                 try {
-                    System.out.println(b.toString());
+                    System.out.println(b.getName());
                     b.invoke(o);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -80,12 +82,15 @@ public class JayUnit {
                 }
             });
             try {
-                System.out.println(m.toString());
+                System.out.println();
+                System.out.print(m.getName());
                     m.invoke(o);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
-                System.out.println(e.getCause().toString());
+                if (m.getAnnotation(ExpectException.class).expected().isInstance(e.getCause())) {
+                    System.out.print(" OK");
+                }
             }
         });
 

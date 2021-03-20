@@ -2,6 +2,8 @@ package prswe2.ss21.ue02.download.calculator;
 
 import prswe2.ss21.ue02.download.jayunit.*;
 
+import java.lang.reflect.Field;
+
 public class CalculatorTest {
 
     private Calculator sut;    // system under test
@@ -14,28 +16,28 @@ public class CalculatorTest {
 
     // TODO divide by 0, expect ArithmeticException
     @MyTest
-    @ExpectException
+    @ExpectException(expected = ArithmeticException.class)
     public void testDivideZero() {
-        try {
             sut.divide(5 / 0);
-        } catch (ArithmeticException ae) {
-            System.out.println(ae.toString());
-        }
-
-    }
+     }
 
     // TODO add -1, check if state == -1 afterwards
     @MyTest
-    public void testNegativeAdd() {
+    public void testNegativeAdd() throws NoSuchFieldException, IllegalAccessException, TestFailedException {
         sut.add(-1);
-        sut.printState();
+        Field state = sut.getClass().getDeclaredField("state");
+        state.setAccessible(true);
+        // "Assert"
+        if (state.getInt(sut) !=  -2) {
+            throw new TestFailedException();
+        }
     }
 
     // TODO test if rem == 0 after reset
     @MyTest
-    public void testResetRem() {
-        sut.printRem();
-        //
+    public void testResetRem() throws NoSuchFieldException {
+        Field rem = sut.getClass().getDeclaredField("rem");
+
     }
 
     // TODO empty test, should be ignored by JayUnit
