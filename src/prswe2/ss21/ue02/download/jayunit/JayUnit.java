@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 public class JayUnit {
 
     public static void runTests(Class<?> testClass) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        // TODO
         Object o = testClass.getDeclaredConstructor().newInstance();
 
         List<Method> beforeTestMethods = new LinkedList<>();
