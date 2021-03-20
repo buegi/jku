@@ -1,16 +1,10 @@
 package prswe2.ss21.ue02.download.jayunit;
 
-import org.junit.Before;
-import prswe2.ss21.ue02.download.calculator.Calculator;
-import prswe2.ss21.ue02.download.calculator.CalculatorTest;
-
-import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class JayUnit {
 

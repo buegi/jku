@@ -27,7 +27,6 @@ public class CalculatorTest {
         sut.add(-1);
         Field state = sut.getClass().getDeclaredField("state");
         state.setAccessible(true);
-        // "Assert"
         if (state.getInt(sut) != -1) {
             throw new TestFailedException();
         }
@@ -39,7 +38,6 @@ public class CalculatorTest {
         Field rem = sut.getClass().getDeclaredField("rem");
         rem.setAccessible(true);
         rem.setInt(sut, -1);
-
         if (rem.getInt(sut) != 0) {
             throw new TestFailedException();
         }
