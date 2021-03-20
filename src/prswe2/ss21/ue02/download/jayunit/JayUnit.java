@@ -50,7 +50,6 @@ public class JayUnit {
         myTestMethods.forEach(m -> {
             beforeTestMethods.forEach(b -> {
                 try {
-                    System.out.println(b.getName());
                     b.invoke(o);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -58,22 +57,27 @@ public class JayUnit {
                     e.printStackTrace();
                 }
             });
+            boolean thrown = false;
             try {
-                System.out.println(m.getName());
+                System.out.print(m.getName());
                 m.invoke(o);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
-                if (e.getCause().)
-                // testfailedexception ? failed : ok;
-                 e.printStackTrace();
+                if (e.getCause() instanceof TestFailedException) {
+                    System.out.println("  Failed");
+                    thrown = true;
+                }
+              }
+            if (!thrown) {
+                System.out.println("  OK");
+                thrown = true;
             }
         });
 
         expectExceptionMethods.forEach(m -> {
             beforeTestMethods.forEach(b -> {
                 try {
-                    System.out.println(b.getName());
                     b.invoke(o);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -82,8 +86,7 @@ public class JayUnit {
                 }
             });
             try {
-                System.out.println();
-                System.out.print(m.getName());
+                  System.out.print(m.getName());
                     m.invoke(o);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
@@ -92,6 +95,7 @@ public class JayUnit {
                     System.out.print(" OK");
                 }
             }
+            System.out.println();
         });
 
 
