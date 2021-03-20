@@ -73,11 +73,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\download" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\person" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\demo" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\box" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\annotation" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\calculator" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="swe2.ss20.ue10.demo" />
@@ -142,13 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00175" summary="ue11">
-      <created>1592770636732</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1592770636732</updated>
     </task>
     <task id="LOCAL-00176" summary="ue11">
       <created>1592996004425</created>
@@ -486,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616277456354</updated>
     </task>
-    <option name="localTasksCounter" value="224" />
+    <task id="LOCAL-00224" summary="pr.swe2.ue02">
+      <created>1616277985461</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1616277985461</updated>
+    </task>
+    <option name="localTasksCounter" value="225" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
