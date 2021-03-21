@@ -3,6 +3,11 @@ package prswe2.ss21.ue02.download.calculator;
 import prswe2.ss21.ue02.download.jayunit.*;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CalculatorTest {
 
@@ -34,10 +39,13 @@ public class CalculatorTest {
 
     // TODO test if rem == 0 after reset
     @MyTest
-    public void testResetRem() throws NoSuchFieldException, IllegalAccessException, TestFailedException {
+    public void testResetRem() throws NoSuchFieldException, IllegalAccessException, TestFailedException, NoSuchMethodException, InvocationTargetException {
         Field rem = sut.getClass().getDeclaredField("rem");
         rem.setAccessible(true);
         rem.setInt(sut, -1);
+        Method rm = sut.getClass().getDeclaredMethod("resetRem");
+        rm.setAccessible(true);
+        rm.invoke(sut);
         if (rem.getInt(sut) != 0) {
             throw new TestFailedException();
         }
