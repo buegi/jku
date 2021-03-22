@@ -19,7 +19,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue02" />
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue02">
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/application/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/application/view/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/application/view/application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/fxml/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/fxml/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/fxml/application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/fxml/mainUI.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/GradeTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Results.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/uiStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jku.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jku.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,25 +86,67 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="13" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../javafx/javafx-jmods-16" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\download" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\person" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\demo" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\box" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue02\demo\annotation" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\tabledemo\fxml" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\tabledemo\model" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\tabledemo" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\application\view" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\application\model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="swe2.ss20.ue10.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Runner">
+  <component name="RunManager" selected="Application.Main (tableDemo)">
+    <configuration name="Main (application)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.application.view.Main" />
+      <module name="jku" />
+      <option name="VM_PARAMETERS" value="--module-path \dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue03.demo.application.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (tableDemo)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.tableDemo.fxml.Main" />
+      <module name="jku" />
+      <option name="VM_PARAMETERS" value="--module-path \dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue03.demo.tableDemo.fxml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.tableDemo.fxml.Main" />
+      <module name="jku" />
+      <option name="VM_PARAMETERS" value="--module-path C:\dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue03.demo.tableDemo.fxml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue02.download.main.Runner" />
       <module name="jku" />
@@ -121,10 +184,14 @@
     <list>
       <item itemvalue="Application.Runner" />
       <item itemvalue="Application.SchoolApp" />
+      <item itemvalue="Application.Main (tableDemo)" />
+      <item itemvalue="Application.Main (application)" />
       <item itemvalue="JUnit.All in jku" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (tableDemo)" />
+        <item itemvalue="Application.Main (application)" />
         <item itemvalue="Application.Runner" />
         <item itemvalue="Application.SchoolApp" />
         <item itemvalue="JUnit.All in jku" />
@@ -142,13 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00178" summary="exam">
-      <created>1593003140819</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1593003140819</updated>
     </task>
     <task id="LOCAL-00179" summary="exam">
       <created>1593026328818</created>
@@ -486,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616353286139</updated>
     </task>
-    <option name="localTasksCounter" value="227" />
+    <task id="LOCAL-00227" summary="pr.swe2.ue02">
+      <created>1616353319580</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1616353319580</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
