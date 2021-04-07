@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jku.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jku.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +67,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ignore.preview.features.used" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="13" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../javafx/javafx-jmods-16" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/junit4.jar" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -85,7 +87,7 @@
       <recent name="swe2.ss20.ue10.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (tableDemo)">
+  <component name="RunManager" selected="Application.Main (prswe2.ss21.ue03.demo.tableDemo)">
     <configuration name="Main (application)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.application.view.Main" />
       <module name="jku" />
@@ -100,7 +102,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (tableDemo)" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Main (prswe2.ss21.ue03.demo.application.view)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.application.view.Main" />
+      <module name="jku" />
+      <option name="VM_PARAMETERS" value="--module-path \dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue03.demo.tableDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (prswe2.ss21.ue03.demo.tableDemo)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.tableDemo.Main" />
+      <module name="jku" />
+      <option name="VM_PARAMETERS" value="--module-path \dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue03.demo.tableDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (prswe2.ss21.ue03.demo.tableDemo.fxml)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.tableDemo.fxml.Main" />
       <module name="jku" />
       <option name="VM_PARAMETERS" value="--module-path \dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
@@ -114,39 +144,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.tableDemo.fxml.Main" />
+    <configuration name="Main (prswe2.ss21.ue03.gradetable)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.gradetable.Main" />
       <module name="jku" />
-      <option name="VM_PARAMETERS" value="--module-path C:\dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path \dev\javafx\javafx-sdk-16\lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue03.demo.tableDemo.fxml.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue02.download.main.Runner" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue02.download.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SchoolApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue01.schedule.app.SchoolApp" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue01.schedule.app.*" />
+          <option name="PATTERN" value="prswe2.ss21.ue03.gradetable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,20 +167,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Runner" />
-      <item itemvalue="Application.SchoolApp" />
-      <item itemvalue="Application.Main (tableDemo)" />
       <item itemvalue="Application.Main (application)" />
+      <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo)" />
+      <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo.fxml)" />
+      <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.application.view)" />
+      <item itemvalue="Application.Main (prswe2.ss21.ue03.gradetable)" />
       <item itemvalue="JUnit.All in jku" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (tableDemo)" />
+        <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo)" />
+        <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.application.view)" />
+        <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo.fxml)" />
+        <item itemvalue="Application.Main (prswe2.ss21.ue03.gradetable)" />
         <item itemvalue="Application.Main (application)" />
-        <item itemvalue="Application.Runner" />
-        <item itemvalue="Application.SchoolApp" />
-        <item itemvalue="JUnit.All in jku" />
       </list>
     </recent_temporary>
   </component>
