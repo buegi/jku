@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue02">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jku.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jku.iml" afterDir="false" />
-    </list>
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue03" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +84,7 @@
       <recent name="swe2.ss20.ue10.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (prswe2.ss21.ue03.demo.tableDemo)">
+  <component name="RunManager" selected="Application.Main (prswe2.ss21.ue03.gradetable)">
     <configuration name="Main (application)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue03.demo.application.view.Main" />
       <module name="jku" />
@@ -176,10 +173,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (prswe2.ss21.ue03.gradetable)" />
         <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo)" />
         <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.application.view)" />
         <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo.fxml)" />
-        <item itemvalue="Application.Main (prswe2.ss21.ue03.gradetable)" />
         <item itemvalue="Application.Main (application)" />
       </list>
     </recent_temporary>
