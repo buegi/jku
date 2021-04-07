@@ -7,15 +7,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import prswe2.ss21.ue03.gradetable.controller.Controller;
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		final FXMLLoader loader = new FXMLLoader(getClass().getResource("gradeTableUI.fxml"));
+		final FXMLLoader loader = new FXMLLoader(getClass().getResource("controller/gradeTableUI.fxml"));
 		final Parent root = loader.load();
-		// voruebergehend auskommentiert
-		// Controller controller = loader.getController();
-		// controller.setPrimaryStage(primaryStage);
+		Controller controller = loader.getController();
+		controller.setPrimaryStage(primaryStage);
 
 		primaryStage.setTitle("Grade Table");
 		primaryStage.setScene(new Scene(root));
