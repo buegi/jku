@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue03">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/fxml/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/demo/tableDemo/fxml/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/controller/gradeTableUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/controller/gradeTableUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/GradeTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/GradeTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Results.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00180" summary="exam">
-      <created>1593027490324</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1593027490324</updated>
     </task>
     <task id="LOCAL-00181" summary="exam">
       <created>1593029007275</created>
@@ -543,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617808910819</updated>
     </task>
-    <option name="localTasksCounter" value="229" />
+    <task id="LOCAL-00229" summary="pr.swe2.ue03">
+      <created>1617898747300</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1617898747300</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
