@@ -18,21 +18,12 @@
 <VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
       fx:controller="prswe2.ss21.ue03.gradetable.controller.Controller">
     <children>
-        <TableView fx:id="studentsView">
+        <TableView fx:id="resultsView">
             <columns>
                 <TableColumn fx:id="idColumn" prefWidth="100" text="ID"/>
                 <TableColumn fx:id="nameColumn" prefWidth="200" text="Name"/>
                 <TableColumn fx:id="firstNameColumn" prefWidth="200" text="First"/>
                 <TableColumn fx:id="snColumn" prefWidth="40" text="SN"/>
-                <TableColumn fx:id="a1Column" prefWidth="30" text="A1"/>
-                <TableColumn fx:id="a2Column" prefWidth="30" text="A2"/>
-                <TableColumn fx:id="a3Column" prefWidth="30" text="A3"/>
-                <TableColumn fx:id="a4Column" prefWidth="30" text="A4"/>
-                <TableColumn fx:id="a5Column" prefWidth="30" text="A5"/>
-                <TableColumn fx:id="a6Column" prefWidth="30" text="A6"/>
-                <TableColumn fx:id="a7Column" prefWidth="30" text="A7"/>
-                <TableColumn fx:id="a8Column" prefWidth="30" text="A8"/>
-                <TableColumn fx:id="a9Column" prefWidth="30" text="A9"/>
                 <TableColumn fx:id="sumColumn" prefWidth="100" text="Sum"/>
                 <TableColumn fx:id="gradeColumn" prefWidth="150" text="Grade"/>
             </columns>

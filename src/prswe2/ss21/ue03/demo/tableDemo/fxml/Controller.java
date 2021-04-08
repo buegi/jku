@@ -16,72 +16,70 @@ import prswe2.ss21.ue03.demo.tableDemo.model.Person;
 
 public class Controller {
 
-	private final Model model;
+    private final Model model;
 
-	public Controller() {
-		model = new Model();
-	}
+    public Controller() {
+        model = new Model();
+    }
 
-	@FXML
-	private TableView<Person> personsView;
-	
-	@FXML
-	private TableColumn<Person, String> nameColumn;
-	
-	@FXML
-	private TableColumn<Person, String> roleColumn;
-	
-	@FXML
-	private TableColumn<Person, Integer> ageColumn;
-	
-	@FXML
-	private TextField nameField;
-	@FXML
-	private ComboBox<String> roleCombo;
-	@FXML
-	private Button addBtn;
-	@FXML
-	private Button removeBtn;
+    @FXML
+    private TableView<Person> personsView;
 
-	@FXML
-	private void initialize() {
-		personsView.itemsProperty().setValue(model.persons);
-		personsView.setEditable(true);
-		personsView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    @FXML
+    private TableColumn<Person, String> nameColumn;
 
-		nameColumn.setCellValueFactory((TableColumn.CellDataFeatures<Person, String> param) -> {
-			Person person = param.getValue();
-			return person != null ? person.nameProperty() : new ReadOnlyStringWrapper("");
-		});
-		roleColumn.setCellValueFactory(new PropertyValueFactory<>("role"));
-		ageColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
-		
-		ageColumn.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<Integer>() {
-			// does not catch any invalid input, i.e. negative age. see setOnEditCommit for this
-			@Override
-			public String toString(Integer object) {
-				return object != null ? object.toString() : "";
-			}
+    @FXML
+    private TableColumn<Person, String> roleColumn;
 
-			@Override
-			public Integer fromString(String string) {
-				try{
-					return Integer.parseInt(string);
-				} catch(NumberFormatException e) {
-					return null;
-				}
-			}
-		}));
+    @FXML
+    private TableColumn<Person, Integer> ageColumn;
 
-		addBtn.setOnAction(e -> {
-			model.persons.add(new Person(nameField.getText(), roleCombo.getSelectionModel().getSelectedItem(), 0));
-		});
+    @FXML
+    private TextField nameField;
+    @FXML
+    private ComboBox<String> roleCombo;
+    @FXML
+    private Button addBtn;
+    @FXML
+    private Button removeBtn;
 
-		removeBtn.setOnAction(e -> {
-			if (personsView.getSelectionModel().getSelectedIndex() >= 0)
-				model.persons.remove(personsView.getSelectionModel().getSelectedIndex());
-		});
+    @FXML
+    private void initialize() {
+        personsView.itemsProperty().setValue(model.persons);
+        personsView.setEditable(true);
+        personsView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
-	}
+        nameColumn.setCellValueFactory((TableColumn.CellDataFeatures<Person, String> param) -> {
+            Person person = param.getValue();
+            return person != null ? person.nameProperty() : new ReadOnlyStringWrapper("");
+        });
+        roleColumn.setCellValueFactory(new PropertyValueFactory<>("role"));
+        ageColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
 
+        ageColumn.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<Integer>() {
+            // does not catch any invalid input, i.e. negative age. see setOnEditCommit for this
+            @Override
+            public String toString(Integer object) {
+                return object != null ? object.toString() : "";
+            }
+
+            @Override
+            public Integer fromString(String string) {
+                try {
+                    return Integer.parseInt(string);
+                } catch (NumberFormatException e) {
+                    return null;
+                }
+            }
+        }));
+
+        addBtn.setOnAction(e -> {
+            model.persons.add(new Person(nameField.getText(), roleCombo.getSelectionModel().getSelectedItem(), 0));
+        });
+
+        removeBtn.setOnAction(e -> {
+            if (personsView.getSelectionModel().getSelectedIndex() >= 0)
+                model.persons.remove(personsView.getSelectionModel().getSelectedIndex());
+        });
+    }
 }
