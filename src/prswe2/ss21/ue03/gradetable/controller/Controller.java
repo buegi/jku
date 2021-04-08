@@ -1,6 +1,7 @@
 package prswe2.ss21.ue03.gradetable.controller;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -55,15 +56,15 @@ public class Controller {
     @FXML
     private TableColumn<Results, String> gradeColumn;
 
-    @FXML
+
     private TextField popUpAddStudentButtonId = new TextField();
-    @FXML
+
     private TextField popUpAddStudentButtonName = new TextField();
-    @FXML
+
     private TextField popUpAddStudentButtonFirst = new TextField();
-    @FXML
+
     private ComboBox<Integer> popUpAddStudentButtonSnComboBox = new ComboBox<>();
-    @FXML
+
     private Button popUpAddStudentButton = new Button("Add");
 
     @FXML
@@ -83,18 +84,9 @@ public class Controller {
             assignmentColumns[i] = new TableColumn<>("A" + (i + 1));
             final int a = i;
             assignmentColumns[i].setCellValueFactory(as -> new SimpleStringProperty(Integer.toString(as.getValue().getAssignment(a))));
-            assignmentColumns[i].setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<>() {
-                @Override
-                public String toString(String s) {
-                    return s != null ? s : "";
-                }
-
-                @Override
-                public String fromString(String s) {
-                    return s != null ? s : "";
-                }
-            }));
+            assignmentColumns[i].setCellFactory(TextFieldTableCell.forTableColumn());
         }
+
         resultsView.getColumns().addAll(assignmentColumns);
 
         // grade values
@@ -102,45 +94,39 @@ public class Controller {
         gradeColumn.setCellValueFactory(r -> new SimpleStringProperty(r.getValue().getGrade()));
 
         addBtn.setOnAction(e -> {
-            System.out.println("add");
-            addStudentWindow();
+            Stage popupAddStudentStage = new Stage();
+            VBox vbox1 = new VBox(10);
+            VBox vbox2 = new VBox(20);
+            HBox hbox = new HBox(100);
+
+            vbox1.getChildren().addAll(new Text("Student ID:"), new Text("Student Name:"),
+                    new Text("Student First Name:"), new Text("Student Study Number"));
+            vbox2.getChildren().addAll(popUpAddStudentButtonId, popUpAddStudentButtonName, popUpAddStudentButtonFirst,
+                    popUpAddStudentButtonSnComboBox, popUpAddStudentButton);
+            hbox.getChildren().addAll(vbox1, vbox2);
+            popUpAddStudentButtonSnComboBox.getItems().addAll(521, 921, 822);
+            popUpAddStudentButtonSnComboBox.getSelectionModel().selectFirst();
+            StackPane root = new StackPane();
+            root.getChildren().add(hbox);
+            popupAddStudentStage.setTitle("Add Student");
+            popupAddStudentStage.setScene(new Scene(root, 300, 200));
+            popupAddStudentStage.initModality(Modality.APPLICATION_MODAL);
+            popupAddStudentStage.show();
+
+            popUpAddStudentButton.setOnAction(ev -> {
+                model.results.add(new Results(new Student(popUpAddStudentButtonId.getText(), popUpAddStudentButtonFirst.getText(),
+                        popUpAddStudentButtonName.getText(), popUpAddStudentButtonSnComboBox.getValue())));
+                popupAddStudentStage.close();
+            });
         });
 
         removeBtn.setOnAction(e -> {
-            System.out.println("remove");
             if (resultsView.getSelectionModel().getSelectedIndex() >= 0)
                 model.results.remove(resultsView.getSelectionModel().getSelectedIndex());
             // check if model only contains non deleted items
+            System.out.println("Items remaining after remove:");
             model.results.forEach(r -> System.out.println(r.getStudent().nameProperty()));
         });
-
-        popUpAddStudentButton.setOnAction(e -> {
-            model.results.add(new Results(new Student(popUpAddStudentButtonId.getText(), popUpAddStudentButtonFirst.getText(),
-                    popUpAddStudentButtonName.getText(), popUpAddStudentButtonSnComboBox.getValue())));
-        });
-    }
-
-    private void addStudentWindow() {
-        VBox vbox1 = new VBox(1);
-        VBox vbox2 = new VBox(1);
-        HBox hbox = new HBox(1);
-        vbox1.getChildren().addAll(new Text("Student ID:"), new Text("Student Name:"),
-                new Text("Student First Name:"), new Text("Student Study Number"));
-        vbox2.getChildren().addAll(popUpAddStudentButtonId, popUpAddStudentButtonName, popUpAddStudentButtonFirst,
-                popUpAddStudentButtonSnComboBox, popUpAddStudentButton);
-        hbox.getChildren().addAll(vbox1, vbox2);
-        popUpAddStudentButtonSnComboBox.getItems().addAll(521, 921, 822);
-        popUpAddStudentButtonSnComboBox.getSelectionModel().selectFirst();
-        StackPane root = new StackPane();
-        root.getChildren().add(hbox);
-        /* new window with content */
-        Stage popupStage = new Stage();
-        popupStage.setTitle("Add Student");
-        popupStage.setScene(new Scene(root, 300, 200));
-        /* prevent access to main window while open */
-        popupStage.initModality(Modality.APPLICATION_MODAL);
-        /* show popup window */
-        popupStage.show();
     }
 
     public void setPrimaryStage(Stage primaryStage) {
