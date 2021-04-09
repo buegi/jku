@@ -1,8 +1,13 @@
 package prswe2.ss21.ue03.gradetable.controller;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldTableCell;
@@ -13,10 +18,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
+import javafx.util.converter.IntegerStringConverter;
 import prswe2.ss21.ue03.gradetable.model.GradeTableModel;
 import prswe2.ss21.ue03.gradetable.model.Results;
 import prswe2.ss21.ue03.gradetable.model.Student;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Controller {
@@ -43,7 +50,7 @@ public class Controller {
     @FXML
     private TableColumn<Results, String> snColumn;
 
-    private TableColumn<Results, String>[] assignmentColumns = new TableColumn[Results.NR_ASSIGNMENTS];
+    private TableColumn<Results, Integer>[] assignmentColumns = new TableColumn[Results.NR_ASSIGNMENTS];
 
     @FXML
     private Button addBtn;
@@ -51,11 +58,10 @@ public class Controller {
     private Button removeBtn;
 
     @FXML
-    private TableColumn<Results, String> sumColumn;
+    private TableColumn<Results, Integer> sumColumn;
 
     @FXML
     private TableColumn<Results, String> gradeColumn;
-
 
     private TextField popUpAddStudentButtonId = new TextField();
 
@@ -83,21 +89,50 @@ public class Controller {
         for (int i = 0; i < assignmentColumns.length; i++) {
             assignmentColumns[i] = new TableColumn<>("A" + (i + 1));
             final int a = i;
-            assignmentColumns[i].setCellValueFactory(as -> new SimpleStringProperty(Integer.toString(as.getValue().getAssignment(a))));
-            assignmentColumns[i].setCellFactory(TextFieldTableCell.forTableColumn());
+            assignmentColumns[i].setCellValueFactory(as -> as.getValue().getAssignment(a).asObject());
+            System.out.println();
+
+            assignmentColumns[i].setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<>() {
+                @Override
+                public String toString(Integer integer) {
+                    return integer != null ? integer.toString() : "";
+                }
+
+                @Override
+                public Integer fromString(String s) {
+                    try {
+                        resultsView.refresh();
+                        return Integer.parseInt(s);
+                    } catch (NumberFormatException e) {
+                        return null;
+                    }
+                }
+            }));
         }
 
         resultsView.getColumns().addAll(assignmentColumns);
 
         // grade values
-        sumColumn.setCellValueFactory(r -> new SimpleStringProperty(Integer.toString(r.getValue().getGradePoints())));
-        gradeColumn.setCellValueFactory(r -> new SimpleStringProperty(r.getValue().getGrade()));
+        sumColumn.setCellValueFactory(r -> r.getValue().getGradePoints().asObject());
+        gradeColumn.setCellValueFactory(r -> r.getValue().getGrade());
 
         addBtn.setOnAction(e -> {
+//            Stage addStudentUI = new Stage();
+//            addStudentUI.initOwner(primaryStage);
+//            final FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/addStudentUI.fxml"));
+//            addStudentUI.setTitle("Add Student");
+//            final Parent root;
+//            try {
+//                root = loader.load();
+//                addStudentUI.setScene(new Scene(root));
+//            } catch (IOException ioException) {
+//                ioException.printStackTrace();
+//            }
+//            addStudentUI.show();
             Stage popupAddStudentStage = new Stage();
             VBox vbox1 = new VBox(10);
-            VBox vbox2 = new VBox(20);
-            HBox hbox = new HBox(100);
+            VBox vbox2 = new VBox(10);
+            HBox hbox = new HBox(10);
 
             vbox1.getChildren().addAll(new Text("Student ID:"), new Text("Student Name:"),
                     new Text("Student First Name:"), new Text("Student Study Number"));

@@ -13,7 +13,6 @@ public class Student {
     private final IntegerProperty sn;
 
     public Student(String id, String firstName, String name, int sn) {
-        super();
         this.id = new SimpleStringProperty(id);
         this.firstName = new SimpleStringProperty(firstName);
         this.name = new SimpleStringProperty(name);
@@ -34,5 +33,11 @@ public class Student {
 
     public IntegerProperty snProperty() {
         return sn;
+    }
+
+    @Override
+    public String toString() {
+        return "Mat: " + this.idProperty().get() + ", Name: " + this.nameProperty().get()
+                + ", First: " + this.firstNameProperty().get() + ", sn: " + this.snProperty().get();
     }
 }

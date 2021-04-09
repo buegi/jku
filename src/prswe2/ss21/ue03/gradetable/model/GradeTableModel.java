@@ -7,7 +7,7 @@ public class GradeTableModel {
     public ObservableList<Results> results = FXCollections.observableArrayList();
 
     public GradeTableModel() {
-        // remove to not insert test data
+        // remove following line to not insert test data
         results.addAll(TestData.createData());
     }
 }

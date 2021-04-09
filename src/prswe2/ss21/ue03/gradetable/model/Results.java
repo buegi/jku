@@ -1,5 +1,10 @@
 package prswe2.ss21.ue03.gradetable.model;
 
+import javafx.beans.property.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableIntegerArray;
+import javafx.collections.ObservableList;
+
 public class Results {
 
     public static final int NR_ASSIGNMENTS = 9;
@@ -10,12 +15,12 @@ public class Results {
     public static final int UNDEFINED = -1;
 
     private final Student student;
-    private final int[] assignments = new int[NR_ASSIGNMENTS];
+    private final ObservableList<IntegerProperty> assignments = FXCollections.observableArrayList();
 
     public Results(Student student) {
         this.student = student;
         for (int i = 0; i < NR_ASSIGNMENTS; i++) {
-            assignments[i] = Results.UNDEFINED;
+            assignments.add(i, new SimpleIntegerProperty(Results.UNDEFINED));
         }
     }
 
@@ -23,56 +28,66 @@ public class Results {
         if (idx >= NR_ASSIGNMENTS || idx < 0 || ps > MAX_POINTS || ps < MIN_POINTS) {
             return;
         }
-        this.assignments[idx] = ps;
+        this.assignments.set(idx, new SimpleIntegerProperty(ps));
     }
 
     public Student getStudent() {
         return this.student;
     }
 
-    public int[] getAssignments() {
+    public ObservableList<IntegerProperty> getAssignments() {
         return this.assignments;
     }
 
-    public int getAssignment(int index) {
-        return this.assignments[index];
+    public IntegerProperty getAssignment(int index) {
+        return this.assignments.get(index);
     }
 
-    public int getGradePoints() {
+    public IntegerProperty getGradePoints() {
         int sum = 0;
-        for (int i = 0; i < assignments.length; i++) {
-            if (!(assignments[i] == Results.UNDEFINED)) {
-                sum += assignments[i];
+        for (int i = 0; i < NR_ASSIGNMENTS; i++) {
+            if (!(assignments.get(i).get() == Results.UNDEFINED)) {
+                sum += assignments.get(i).get();
             }
         }
-        return sum;
+        return new SimpleIntegerProperty(sum);
     }
 
-    public String getGrade() {
+    public StringProperty getGrade() {
         int resultsValid = 0;
-        for (int i = 0; i < assignments.length; i++) {
-            if (assignments[i] == Results.UNDEFINED) {
-                return "-";
+        for (int i = 0; i < NR_ASSIGNMENTS; i++) {
+            if (assignments.get(i).get() == Results.UNDEFINED) {
+                return new SimpleStringProperty("-");
             }
-            if (assignments[i] >= POINTS_VALID) {
+            if (assignments.get(i).get() >= POINTS_VALID) {
                 resultsValid++;
             }
         }
         if (resultsValid < NR_VALID) {
-            return "Nicht genügend";
+            return new SimpleStringProperty("Nicht genügend");
         }
         int maxPoints = NR_ASSIGNMENTS * MAX_POINTS;
-        int studentResult = this.getGradePoints();
-        if (studentResult >= (maxPoints * 0.875)) {
-            return "Sehr gut";
-        } else if (studentResult >= (maxPoints * 0.750)) {
-            return "Gut";
-        } else if (studentResult >= (maxPoints * 0.625)) {
-            return "Befriedigend";
-        } else if (studentResult >= (maxPoints * 0.500)) {
-            return "Gut";
+        IntegerProperty studentResult = this.getGradePoints();
+        if (studentResult.get() >= (maxPoints * 0.875)) {
+            return new SimpleStringProperty("Sehr gut");
+        } else if (studentResult.get() >= (maxPoints * 0.750)) {
+            return new SimpleStringProperty("Gut");
+        } else if (studentResult.get() >= (maxPoints * 0.625)) {
+            return new SimpleStringProperty("Befriedigend");
+        } else if (studentResult.get() >= (maxPoints * 0.500)) {
+            return new SimpleStringProperty("Genügend");
         } else {
-            return "Sehr gut";
+            return new SimpleStringProperty("Nicht genügend");
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append(this.student.toString());
+        sb.append(" Assignments: [");
+        this.assignments.forEach(a -> sb.append(a.get()).append(" "));
+        sb.append("]");
+        return sb.toString();
     }
 }

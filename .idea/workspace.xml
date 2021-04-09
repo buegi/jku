@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue03">
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/view/addStudentUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/GradeTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/GradeTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Results.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/view/gradeTableUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/view/gradeTableUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,19 +74,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ignore.preview.features.used" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="13" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/junit4.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/prswe2/ss21/ue03/gradetable/view" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\gradetable\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\gradetable\view" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\gradetable" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\tabledemo\fxml" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\tabledemo\model" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\tabledemo" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\application\view" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\demo\application\model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="swe2.ss20.ue10.demo" />
@@ -194,13 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00183" summary="exam">
-      <created>1593040818849</created>
-      <option name="number" value="00183" />
-      <option name="presentableId" value="LOCAL-00183" />
-      <option name="project" value="LOCAL" />
-      <updated>1593040818849</updated>
     </task>
     <task id="LOCAL-00184" summary="exam">
       <created>1593627501680</created>
@@ -538,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617909703704</updated>
     </task>
-    <option name="localTasksCounter" value="232" />
+    <task id="LOCAL-00232" summary="pr.swe2.ue03">
+      <created>1617960228306</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1617960228306</updated>
+    </task>
+    <option name="localTasksCounter" value="233" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
