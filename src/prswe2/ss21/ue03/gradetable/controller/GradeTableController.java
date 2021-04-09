@@ -1,6 +1,5 @@
 package prswe2.ss21.ue03.gradetable.controller;
 
-import javafx.beans.property.ReadOnlyIntegerWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -17,12 +16,12 @@ import prswe2.ss21.ue03.gradetable.model.GradeTableModel;
 import prswe2.ss21.ue03.gradetable.model.Results;
 import prswe2.ss21.ue03.gradetable.model.Student;
 
-public class Controller {
+public class GradeTableController {
 
     private final GradeTableModel model;
     private Stage primaryStage;
 
-    public Controller() {
+    public GradeTableController() {
         model = new GradeTableModel();
     }
 

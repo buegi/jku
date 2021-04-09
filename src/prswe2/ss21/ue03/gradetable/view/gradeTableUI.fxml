@@ -5,7 +5,7 @@
 
 <?import java.net.URL?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
-      fx:controller="prswe2.ss21.ue03.gradetable.controller.Controller">
+      fx:controller="prswe2.ss21.ue03.gradetable.controller.GradeTableController">
     <stylesheets>
         <!--        @ indicates uiStyle in same folder as fxml file-->
         <URL value="@uiStyle.css"/>

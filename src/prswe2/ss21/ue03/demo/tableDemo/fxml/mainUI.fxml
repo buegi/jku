@@ -15,7 +15,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import java.lang.String?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="prswe2.ss21.ue03.demo.tableDemo.fxml.Controller">
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:gradeTableController="prswe2.ss21.ue03.demo.tableDemo.fxml.Controller">
    <children>
    	<HBox spacing="5.0">
       <children>
