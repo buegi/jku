@@ -12,7 +12,7 @@ import prswe2.ss21.ue03.gradetable.controller.Controller;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		final FXMLLoader loader = new FXMLLoader(getClass().getResource("controller/gradeTableUI.fxml"));
+		final FXMLLoader loader = new FXMLLoader(getClass().getResource("view/gradeTableUI.fxml"));
 		final Parent root = loader.load();
 		Controller controller = loader.getController();
 		controller.setPrimaryStage(primaryStage);
