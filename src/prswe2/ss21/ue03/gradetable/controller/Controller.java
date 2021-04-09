@@ -1,13 +1,8 @@
 package prswe2.ss21.ue03.gradetable.controller;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.ReadOnlyIntegerWrapper;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldTableCell;
@@ -18,13 +13,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
-import javafx.util.converter.IntegerStringConverter;
 import prswe2.ss21.ue03.gradetable.model.GradeTableModel;
 import prswe2.ss21.ue03.gradetable.model.Results;
 import prswe2.ss21.ue03.gradetable.model.Student;
-
-import java.io.IOException;
-import java.util.Arrays;
 
 public class Controller {
 
@@ -33,6 +24,10 @@ public class Controller {
 
     public Controller() {
         model = new GradeTableModel();
+    }
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
     }
 
     @FXML
@@ -49,8 +44,6 @@ public class Controller {
 
     @FXML
     private TableColumn<Results, String> snColumn;
-
-    private TableColumn<Results, Integer>[] assignmentColumns = new TableColumn[Results.NR_ASSIGNMENTS];
 
     @FXML
     private Button addBtn;
@@ -85,14 +78,25 @@ public class Controller {
         firstNameColumn.setCellValueFactory(r -> r.getValue().getStudent().firstNameProperty());
         snColumn.setCellValueFactory(r -> new SimpleStringProperty(Integer.toString(r.getValue().getStudent().snProperty().get())));
 
-        // assignment values
-        for (int i = 0; i < assignmentColumns.length; i++) {
-            assignmentColumns[i] = new TableColumn<>("A" + (i + 1));
+        for (int i = 0; i < Results.NR_ASSIGNMENTS; i++) {
             final int a = i;
-            assignmentColumns[i].setCellValueFactory(as -> as.getValue().getAssignment(a).asObject());
-            System.out.println();
+            TableColumn<Results, Integer> col = new TableColumn<>("A" + (i + 1));
+            resultsView.getColumns().add(a + 4, col);
+            col.setPrefWidth(40);
+            col.setCellValueFactory((TableColumn.CellDataFeatures<Results, Integer> p) -> {
+                Results r = p.getValue();
+                if (r != null) {
+                    int pts = r.getAssignment(a).getValue();
+                    if (Results.MIN_POINTS <= pts && pts <= Results.MAX_POINTS) {
+                        return r.getAssignment(a).asObject();
+                    }
+                }
+                r.getAssignment(a).set(Results.UNDEFINED);
 
-            assignmentColumns[i].setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<>() {
+                return r.getAssignment(a).asObject();
+            });
+
+            col.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<>() {
                 @Override
                 public String toString(Integer integer) {
                     return integer != null ? integer.toString() : "";
@@ -110,7 +114,6 @@ public class Controller {
             }));
         }
 
-        resultsView.getColumns().addAll(assignmentColumns);
 
         // grade values
         sumColumn.setCellValueFactory(r -> r.getValue().getGradePoints().asObject());
@@ -149,8 +152,11 @@ public class Controller {
             popupAddStudentStage.show();
 
             popUpAddStudentButton.setOnAction(ev -> {
-                model.results.add(new Results(new Student(popUpAddStudentButtonId.getText(), popUpAddStudentButtonFirst.getText(),
-                        popUpAddStudentButtonName.getText(), popUpAddStudentButtonSnComboBox.getValue())));
+                Results result = new Results(new Student(popUpAddStudentButtonId.getText(), popUpAddStudentButtonFirst.getText(),
+                        popUpAddStudentButtonName.getText(), popUpAddStudentButtonSnComboBox.getValue()));
+                // check newly added result/student
+                System.out.println(result);
+                model.results.add(result);
                 popupAddStudentStage.close();
             });
         });
@@ -162,9 +168,5 @@ public class Controller {
             System.out.println("Items remaining after remove:");
             model.results.forEach(r -> System.out.println(r.getStudent().nameProperty()));
         });
-    }
-
-    public void setPrimaryStage(Stage primaryStage) {
-        this.primaryStage = primaryStage;
     }
 }
