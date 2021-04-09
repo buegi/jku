@@ -92,7 +92,6 @@ public class Controller {
                     }
                 }
                 r.getAssignment(a).set(Results.UNDEFINED);
-
                 return r.getAssignment(a).asObject();
             });
 
