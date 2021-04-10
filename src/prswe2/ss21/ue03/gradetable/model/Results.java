@@ -2,7 +2,6 @@ package prswe2.ss21.ue03.gradetable.model;
 
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableIntegerArray;
 import javafx.collections.ObservableList;
 
 public class Results {
