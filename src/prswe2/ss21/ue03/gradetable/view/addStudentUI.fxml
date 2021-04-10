@@ -2,32 +2,23 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import java.net.URL?>
-<?import javafx.scene.text.Text?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
-      fx:controller="prswe2.ss21.ue03.gradetable.controller.GradeTableController">
+      fx:controller="prswe2.ss21.ue03.gradetable.controller.AddStudentController">
     <stylesheets>
         <!--        @ indicates uiStyle in same folder as fxml file-->
         <URL value="@uiStyle.css"/>
     </stylesheets>
-    <HBox spacing="5.0">
-        <Label fx:id="idLabel"></Label>
-        <TextField fx:id="idTextField"></TextField>
-    </HBox>
-    <HBox spacing="5.0">
-        <Label fx:id="nameLabel"></Label>
-        <TextField fx:id="nameTextField"></TextField>
-    </HBox>
-    <HBox spacing="5.0">
-        <Label fx:id="firstLabel"></Label>
-        <TextField fx:id="firstTextField"></TextField>
-    </HBox>
-    <HBox spacing="5.0">
-        <Label fx:id="snLabel"></Label>
-        <ComboBox fx:id="snComboBox"></ComboBox>
-    </HBox>
-    <HBox spacing="5.0">
-        <Button fx:id="addButton">Add</Button>
-    </HBox>
+    <Pane prefHeight="250.0" prefWidth="350.0">
+        <Label fx:id="idLabel" layoutX="10.0" layoutY="17.0" text="Student ID:"/>
+        <Label fx:id="nameLabel" layoutX="10.0" layoutY="63.0" text="Student Name:"/>
+        <Label fx:id="firstLabel" layoutX="10.0" layoutY="111.0" text="Student First Name:"/>
+        <Label fx:id="snLabel" layoutX="10.0" layoutY="158.0" text="Student Study Number:"/>
+        <TextField fx:id="idTextField" layoutX="180.0" layoutY="11.0"/>
+        <TextField fx:id="nameTextField" layoutX="180.0" layoutY="57.0"/>
+        <TextField fx:id="firstTextField" layoutX="180.0" layoutY="105.0"/>
+        <ComboBox fx:id="snComboBox" layoutX="180.0" layoutY="152.0"/>
+        <Button fx:id="addButton" layoutX="180" layoutY="215.0" text="Add">Add</Button>
+        <Label fx:id="errorLabel" layoutX="10.0" layoutY="215.0" text="Empty Fields"/>
+    </Pane>
 </VBox>
