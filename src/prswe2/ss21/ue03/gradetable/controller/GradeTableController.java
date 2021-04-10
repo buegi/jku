@@ -40,7 +40,7 @@ public class GradeTableController {
     private TableColumn<Results, String> firstNameColumn;
 
     @FXML
-    private TableColumn<Results, String> snColumn;
+    private TableColumn<Results, Integer> snColumn;
 
     @FXML
     private Button addBtn;
@@ -62,7 +62,7 @@ public class GradeTableController {
         idColumn.setCellValueFactory(r -> r.getValue().getStudent().idProperty());
         nameColumn.setCellValueFactory(r -> r.getValue().getStudent().nameProperty());
         firstNameColumn.setCellValueFactory(r -> r.getValue().getStudent().firstNameProperty());
-        snColumn.setCellValueFactory(r -> new SimpleStringProperty(Integer.toString(r.getValue().getStudent().snProperty().get())));
+        snColumn.setCellValueFactory(r -> r.getValue().getStudent().snProperty().asObject());
 
         for (int i = 0; i < Results.NR_ASSIGNMENTS; i++) {
             final int a = i;
