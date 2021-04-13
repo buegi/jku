@@ -59,11 +59,8 @@ public class AddStudentController {
 
             } else {
                 errorLabel.setVisible(false);
-                Results result = new Results(new Student(idTextField.getText(), nameTextField.getText(),
-                        firstTextField.getText(), snComboBox.getValue()));
-                System.out.println(result);
-                model.results.add(result);
-
+                model.addResults(new Results(new Student(idTextField.getText(), nameTextField.getText(),
+                        firstTextField.getText(), snComboBox.getValue())));
                 Stage stage = (Stage) addButton.getScene().getWindow();
                 stage.close();
             }

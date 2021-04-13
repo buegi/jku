@@ -55,7 +55,7 @@ public class GradeTableController {
 
     @FXML
     private void initialize() {
-        resultsView.itemsProperty().setValue(model.results);
+        resultsView.itemsProperty().setValue(model.getResults());
         resultsView.setEditable(true);
         resultsView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
@@ -121,7 +121,7 @@ public class GradeTableController {
 
         removeBtn.setOnAction(e -> {
             if (resultsView.getSelectionModel().getSelectedIndex() >= 0)
-                model.results.remove(resultsView.getSelectionModel().getSelectedIndex());
+                model.removeResults(resultsView.getSelectionModel().getSelectedIndex());
         });
     }
 }
