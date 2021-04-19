@@ -22,58 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05">
-      <change afterPath="$PROJECT_DIR$/demoDB/seg0/c930.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoDB/seg0/c941.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoDB/seg0/d910.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoDB/seg0/d921.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c101.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c111.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c121.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c130.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c141.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c171.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c251.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c251.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c400.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c400.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c41.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c411.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c411.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c421.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c421.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c910.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/c921.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/cb1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/demoDB/seg0/cf0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/d8f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoDB/seg0/d901.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/log/log3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/log/log3.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c251.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c251.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c490.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c4a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c4a1.dat" afterDir="false" />
-    </list>
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +76,7 @@
     <property name="ignore.preview.features.used" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="13" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit4.jar" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Debugger" />
@@ -158,13 +107,6 @@
       <item itemvalue="Application.Main (prswe2.ue04.gradetable)" />
       <item itemvalue="Application.DemoDBManager (prswe2.ue04)" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main (prswe2.ue04.gradetable)" />
-        <item itemvalue="Application.Main (prswe2.ue03)" />
-        <item itemvalue="Application.DemoDBManager (prswe2.ue04)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -177,13 +119,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00207" summary="pr.swe2.ue01">
-      <created>1615735566770</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
-      <option name="project" value="LOCAL" />
-      <updated>1615735566770</updated>
     </task>
     <task id="LOCAL-00208" summary="pr.swe2.ue01">
       <created>1615735942144</created>
@@ -521,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618851867260</updated>
     </task>
-    <option name="localTasksCounter" value="256" />
+    <task id="LOCAL-00256" summary="pr.swe2.ue05">
+      <created>1618852531982</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1618852531982</updated>
+    </task>
+    <option name="localTasksCounter" value="257" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
