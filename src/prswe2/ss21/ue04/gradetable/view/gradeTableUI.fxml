@@ -10,22 +10,22 @@
         <!--        @ indicates uiStyle in same folder as fxml file-->
         <URL value="@uiStyle.css"/>
     </stylesheets>
-        <TableView fx:id="resultsView">
-            <columns>
-                <TableColumn fx:id="idColumn" prefWidth="100" text="ID"/>
-                <TableColumn fx:id="nameColumn" prefWidth="200" text="Name"/>
-                <TableColumn fx:id="firstNameColumn" prefWidth="200" text="First"/>
-                <TableColumn fx:id="snColumn" prefWidth="40" text="SN"/>
-                <TableColumn fx:id="sumColumn" prefWidth="100" text="Sum"/>
-                <TableColumn fx:id="gradeColumn" prefWidth="150" text="Grade"/>
-            </columns>
-        </TableView>
-        <HBox spacing="5.0">
-                <Button fx:id="addBtn">
-                    Add Student
-                </Button>
-                <Button fx:id="removeBtn">
-                    Remove Student
-                </Button>
-        </HBox>
+    <TableView fx:id="resultsView">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="100" text="ID"/>
+            <TableColumn fx:id="nameColumn" prefWidth="200" text="Name"/>
+            <TableColumn fx:id="firstNameColumn" prefWidth="200" text="First"/>
+            <TableColumn fx:id="snColumn" prefWidth="40" text="SN"/>
+            <TableColumn fx:id="sumColumn" prefWidth="100" text="Sum"/>
+            <TableColumn fx:id="gradeColumn" prefWidth="150" text="Grade"/>
+        </columns>
+    </TableView>
+    <HBox spacing="5.0">
+        <Button fx:id="addBtn">
+            Add Student
+        </Button>
+        <Button fx:id="removeBtn">
+            Remove Student
+        </Button>
+    </HBox>
 </VBox>

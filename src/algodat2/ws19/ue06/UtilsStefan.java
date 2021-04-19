@@ -19,7 +19,7 @@ class UtilsStefan {
 		String temp;
 		try {
 			// TODO replace for Java 8
-			temp = Files.readString(Paths.get("AlgoDat2/exercise06/Faust.txt"));
+			temp = Files.readString(Paths.get("src/algodat2.ws/ue06/Faust.txt"));
 		} catch (final IOException e) {
 			e.printStackTrace();
 			temp = "Dann halt nicht.";

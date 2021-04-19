@@ -1,12 +1,12 @@
 package prswe2.ss21.ue04.gradetable.controller;
 
+import prswe2.ss21.ue04.gradetable.model.GradeTableModel;
+import prswe2.ss21.ue04.gradetable.model.Results;
+import prswe2.ss21.ue04.gradetable.model.Student;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import prswe2.ss21.ue04.gradetable.model.GradeTableModel;
-import prswe2.ss21.ue04.gradetable.model.Results;
-import prswe2.ss21.ue04.gradetable.model.Student;
 
 public class AddStudentController {
 
@@ -49,18 +49,19 @@ public class AddStudentController {
         errorLabel.setVisible(false);
         errorLabel.setTextFill(Color.RED);
 
-
         addButton.setOnAction(e -> {
-            if (idTextField.getText() == null || idTextField.getText().trim().isEmpty()
+            if (idTextField.getText() ==null || idTextField.getText().trim().isEmpty()
                     || nameTextField.getText() == null || nameTextField.getText().trim().isEmpty()
                     || firstTextField.getText() == null || firstTextField.getText().trim().isEmpty()
                     || snComboBox.getSelectionModel().isEmpty()) {
+
                 errorLabel.setVisible(true);
 
             } else {
                 errorLabel.setVisible(false);
                 model.addResults(new Results(new Student(idTextField.getText(), nameTextField.getText(),
                         firstTextField.getText(), snComboBox.getValue())));
+
                 Stage stage = (Stage) addButton.getScene().getWindow();
                 stage.close();
             }

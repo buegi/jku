@@ -1,8 +1,5 @@
 package prswe2.ss21.ue04.gradetable.model;
 
-import prswe2.ss21.ue04.gradetable.model.Results;
-import prswe2.ss21.ue04.gradetable.model.Student;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +7,7 @@ public class TestData {
 
 	public static List<Results> createData() {
 		List<Results> data = new ArrayList<>();
-		
+
 		Results r1 = new Results(new Student("k01245678", "Mia", "Musterstudentin", 521));
 		r1.setPoints(0, 24);
 		r1.setPoints(1, 24);
@@ -22,7 +19,7 @@ public class TestData {
 		r1.setPoints(7, 24);
 		r1.setPoints(8, 23);
 		data.add(r1);
-		
+
 		Results r2 = new Results(new Student("k01778901", "Max", "Mustermann", 521));
 		r2.setPoints(0, 23);
 		r2.setPoints(1, 19);
@@ -34,7 +31,7 @@ public class TestData {
 		r2.setPoints(7, 18);
 		r2.setPoints(8, 20);
 		data.add(r2);
-		
+
 		Results r3 = new Results(new Student("k01612345", "Fred", "Faul", 521));
 		r3.setPoints(0, 4);
 		r3.setPoints(1, 12);
@@ -46,7 +43,7 @@ public class TestData {
 		r3.setPoints(7, 14);
 		r3.setPoints(8, 11);
 		data.add(r3);
-		
+
 		Results r4 = new Results(new Student("k01612345", "Ulrike", "Unfertig", 521));
 		r4.setPoints(0, 18);
 		r4.setPoints(1, -1);
@@ -58,7 +55,7 @@ public class TestData {
 		r4.setPoints(7, -1);
 		r4.setPoints(8, -1);
 		data.add(r4);
-		
+
 		return data;
 	}
 }
