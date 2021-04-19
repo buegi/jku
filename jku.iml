@@ -84,7 +84,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="javafx-sdk-16" level="project" />
-    <orderEntry type="library" name="junit-3.8.1" level="project" />
     <orderEntry type="library" name="db-derby-10.15.2.0" level="project" />
     <orderEntry type="library" name="junit4" level="project" />
   </component>
