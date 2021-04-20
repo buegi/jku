@@ -23,27 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Main__prswe2_ss21_ue03_demo_application_view_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Main__prswe2_ss21_ue03_demo_tableDemo_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Main__prswe2_ss21_ue03_demo_tableDemo_fxml_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Main__prswe2_ss21_ue03_gradetable_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Main__ue03_demo_application_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Apr-21_9_22_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Apr-21_9_22_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_20_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_20_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_34_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_34_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_40_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_40_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.run/DemoDBManager (prswe2.ue04).run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/DemoDBManager (prswe2.ue04).run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/log/log3.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c251.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c251.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradetabledb/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/gradetabledb/seg0/c490.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,10 +118,10 @@
       <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo)" />
       <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo.fxml)" />
       <item itemvalue="Application.Main (prswe2.ss21.ue03.gradetable)" />
+      <item itemvalue="JUnit.All in jku" />
       <item itemvalue="Application.Main (prswe2.ue03)" />
       <item itemvalue="Application.DemoDBManager (prswe2.ue04)" />
       <item itemvalue="Application.Main (prswe2.ue04.gradetable)" />
-      <item itemvalue="JUnit.All in jku" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -155,13 +135,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00210" summary="pr.swe2.ue02">
-      <created>1615914697883</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1615914697887</updated>
     </task>
     <task id="LOCAL-00211" summary="pr.swe2.ue02">
       <created>1616096048290</created>
@@ -499,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618853643587</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="pr.swe2.ue05">
+      <created>1618854810076</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1618854810077</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
