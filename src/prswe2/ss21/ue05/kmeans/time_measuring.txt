@@ -1,0 +1,12 @@
+Time Measurement for Class KMeanPar for different values of N and K:
+The higher the values, the more benefit we get from multithreading
+
+Elapsed Time for 10 runs after 5 warmup runs (warmup excluded) with N=1000, K= 7 in ms: 39.098899
+
+Elapsed Time for 10 runs after 5 warmup runs (warmup excluded) with N=1000000, K= 7 in ms: 1387.9308
+
+Elapsed Time for 10 runs after 5 warmup runs (warmup excluded) with N=1000000, K= 20 in ms: 4803.759299
+
+Elapsed Time for 10 runs after 5 warmup runs (warmup excluded) with N=1000000, K= 50 in ms: 13479.312195
+
+Elapsed Time for 10 runs after 5 warmup runs (warmup excluded) with N=10000000, K= 7 in ms: 20000.505602

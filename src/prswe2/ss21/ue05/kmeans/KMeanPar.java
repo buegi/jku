@@ -17,7 +17,7 @@ public class KMeanPar {
     /**
      * Number of data points
      */
-    private static final int N = 1000000;
+    private static final int N = 1000;
 
     /**
      * Number of clusters
@@ -69,7 +69,7 @@ public class KMeanPar {
                 sum += (end - start);
             }
         }
-        System.out.println("Elapsed Time for 10 runs after 5 warmup runs (excluded in time measurement) in ms: " + sum / Math.pow(10, 6));
+        System.out.println("Elapsed Time for 10 runs after 5 warmup runs (warmup excluded) with N=" + N + ", K= " + K + " in ms: " + sum / Math.pow(10, 6));
     }
 
     /**
@@ -117,7 +117,7 @@ public class KMeanPar {
             // disable output for time measurement
             // output();
         }
-        Out.println("Completed");
+        //Out.println("Completed");
     }
 
     /**
