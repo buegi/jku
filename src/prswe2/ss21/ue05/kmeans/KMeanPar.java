@@ -1,6 +1,7 @@
 package prswe2.ss21.ue05.kmeans;
 
 import java.awt.Color;
+import java.sql.Time;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.*;
@@ -18,7 +19,7 @@ public class KMeanPar {
     /**
      * Number of data points
      */
-    private static final int N = 1000;
+    private static final int N = 10000000;
 
     /**
      * Number of clusters
@@ -60,7 +61,15 @@ public class KMeanPar {
      */
     public static void main(String[] args) {
         KMeanPar kMeansAlgo = new KMeanPar(createRandomData(N), K);
-        kMeansAlgo.cluster();
+        int runs = 10;
+        Long sum = 0l;
+        for(int i = 0; i < runs; i++) {
+            Long start = System.nanoTime();
+            kMeansAlgo.cluster();
+            Long end = System.nanoTime();
+            sum += (end - start);
+        }
+        System.out.println("Elapsed Time in ms: " + sum * Math.pow(10, 6));
     }
 
     /**
@@ -99,14 +108,16 @@ public class KMeanPar {
     public void cluster() {
         doInitialClustering();
         computeCentroids();
-        output();
+        // disable output for time measurement
+        // output();
         boolean stable = false;
         while (!stable) {
             stable = doNewClustering();
             computeCentroids();
-            output();
+            // disable output for time measurement
+            // output();
         }
-        Out.print("Completed");
+        Out.println("Completed");
     }
 
     /**
