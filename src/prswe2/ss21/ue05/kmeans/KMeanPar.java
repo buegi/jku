@@ -1,8 +1,6 @@
 package prswe2.ss21.ue05.kmeans;
 
 import java.awt.Color;
-import java.sql.Time;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.*;
 
@@ -19,7 +17,7 @@ public class KMeanPar {
     /**
      * Number of data points
      */
-    private static final int N = 1000;
+    private static final int N = 10000000;
 
     /**
      * Number of clusters
@@ -71,7 +69,7 @@ public class KMeanPar {
                 sum += (end - start);
             }
         }
-        System.out.println("Elapsed Time in ms: " + sum * Math.pow(10, 6));
+        System.out.println("Elapsed Time for 10 runs after 5 warmup runs (excluded in time measurement) in ms: " + sum * Math.pow(10, 6));
     }
 
     /**
@@ -111,13 +109,13 @@ public class KMeanPar {
         doInitialClustering();
         computeCentroids();
         // disable output for time measurement
-        output();
+        // output();
         boolean stable = false;
         while (!stable) {
             stable = doNewClustering();
             computeCentroids();
             // disable output for time measurement
-            output();
+            // output();
         }
         Out.println("Completed");
     }
@@ -226,7 +224,7 @@ public class KMeanPar {
         @Override
         protected int[][] compute() {
             if (to - from < THRESHOLD) {
-                return computePartial();
+                return computePartial(from, to);
             } else {
                 int middle = (from + to) / 2;
                 RecursiveSumTask sumTaskOne = new RecursiveSumTask(from, middle + 1);
@@ -237,14 +235,14 @@ public class KMeanPar {
             }
         }
 
-        private int[][] computePartial() {
-            int[][] sums = new int[3][k];
+        private int[][] computePartial(int from, int to) {
+            int[][] partSums = new int[3][k];
             for (int i = from; i < to; i++) {
-                sums[0][data[i].cluster] += data[i].x;
-                sums[1][data[i].cluster] += data[i].y;
-                sums[2][data[i].cluster]++;
+                partSums[0][data[i].cluster] += data[i].x;
+                partSums[1][data[i].cluster] += data[i].y;
+                partSums[2][data[i].cluster]++;
             }
-            return sums;
+            return partSums;
         }
 
         private static int[][] merge(int[][] one, int[][] two) {
