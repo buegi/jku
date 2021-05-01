@@ -19,7 +19,7 @@ public class KMeanPar {
     /**
      * Number of data points
      */
-    private static final int N = 10000000;
+    private static final int N = 1000;
 
     /**
      * Number of clusters
@@ -111,13 +111,13 @@ public class KMeanPar {
         doInitialClustering();
         computeCentroids();
         // disable output for time measurement
-        // output();
+        output();
         boolean stable = false;
         while (!stable) {
             stable = doNewClustering();
             computeCentroids();
             // disable output for time measurement
-            // output();
+            output();
         }
         Out.println("Completed");
     }
@@ -213,7 +213,7 @@ public class KMeanPar {
 
     private class RecursiveSumTask extends RecursiveTask<int[][]> {
 
-        private static final int THRESHOLD = 8;
+        private static final int THRESHOLD = 2;
         private int sums[][];
         private static int from;
         private static int to;
@@ -232,28 +232,31 @@ public class KMeanPar {
 
         @Override
         protected int[][] compute() {
-            int[][] newSums = new int[sums[0].length][sums[1].length];
-//            if (data.length < THRESHOLD) {
-                newSums = computePartialSums(sums, from, to);
-//            } else {
-//                int middle = data.length / 2;
-//                RecursiveSumTask sumTaskOne = new RecursiveSumTask(sums, 0, middle);
-//                RecursiveSumTask sumTaskTwo = new RecursiveSumTask(sums, middle, data.length);
-//
-//                sumTaskOne.fork();
-//                sumTaskTwo.fork();
-//
-//                System.arraycopy(sumTaskOne.join(), 0, newSums, 0, middle);
-//                System.arraycopy(sumTaskTwo.join(), middle, newSums, middle, data.length);
-//            }
-            return newSums;
+             if ((to - from) < THRESHOLD) {
+                return computePartialSums(sums, from, to);
+            } else {
+                int middle = data.length / 2;
+                RecursiveSumTask sumTaskOne = new RecursiveSumTask(sums, from, middle + 1);
+                RecursiveSumTask sumTaskTwo = new RecursiveSumTask(sums, middle + 1, to);
+
+                sumTaskOne.fork();
+                sumTaskTwo.fork();
+                return append(sumTaskOne.join(), sumTaskTwo.join());
+            }
+        }
+
+        public static int[][] append(int[][] one, int[][] two) {
+            int[][] result = new int[one.length + two.length][];
+            System.arraycopy(one, 0, result, 0, one.length);
+            System.arraycopy(two, 0, result, one.length, two.length);
+            return result;
         }
 
         protected int[][] computePartialSums(int[][] partSums, int from, int to) {
             for (int i = from; i < to; i++) {
-                sums[0][data[i].cluster] += data[i].x;
-                sums[1][data[i].cluster] += data[i].y;
-                sums[2][data[i].cluster]++;
+                partSums[0][data[i].cluster] += data[i].x;
+                partSums[1][data[i].cluster] += data[i].y;
+                partSums[2][data[i].cluster]++;
             }
             return partSums;
         }
