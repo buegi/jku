@@ -17,7 +17,7 @@ public class KMeanPar {
     /**
      * Number of data points
      */
-    private static final int N = 10000000;
+    private static final int N = 1000000;
 
     /**
      * Number of clusters
@@ -69,7 +69,7 @@ public class KMeanPar {
                 sum += (end - start);
             }
         }
-        System.out.println("Elapsed Time for 10 runs after 5 warmup runs (excluded in time measurement) in ms: " + sum * Math.pow(10, 6));
+        System.out.println("Elapsed Time for 10 runs after 5 warmup runs (excluded in time measurement) in ms: " + sum / Math.pow(10, 6));
     }
 
     /**
@@ -135,7 +135,7 @@ public class KMeanPar {
     statischen Variablen bereit. Wählen Sie einen geeigneten Executor.
  */
     // Runtime.getRuntime().availableProcessors() * 2 gives (Cores + HyperThreading) * 2, in my case with 6 Cores+HT, this yields 24
-    private static final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
+    private static final ExecutorService executorService = Executors.newWorkStealingPool(Runtime.getRuntime().availableProcessors() * 2);
 
     /* TODO
     Implementieren Sie eine innere Task-Klasse ClusterTask, welche Callable<Boolean> implementiert
