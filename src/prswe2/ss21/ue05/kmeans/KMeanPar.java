@@ -61,13 +61,15 @@ public class KMeanPar {
      */
     public static void main(String[] args) {
         KMeanPar kMeansAlgo = new KMeanPar(createRandomData(N), K);
-        int runs = 10;
+        int runs = 15;
         Long sum = 0l;
         for(int i = 0; i < runs; i++) {
             Long start = System.nanoTime();
             kMeansAlgo.cluster();
             Long end = System.nanoTime();
-            sum += (end - start);
+            if (i >= 5) { // 5 runs for warmup then add up 10 runs
+                sum += (end - start);
+            }
         }
         System.out.println("Elapsed Time in ms: " + sum * Math.pow(10, 6));
     }
