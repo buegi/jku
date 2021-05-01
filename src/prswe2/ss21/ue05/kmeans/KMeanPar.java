@@ -63,7 +63,7 @@ public class KMeanPar {
         KMeanPar kMeansAlgo = new KMeanPar(createRandomData(N), K);
         int runs = 15;
         Long sum = 0l;
-        for(int i = 0; i < runs; i++) {
+        for (int i = 0; i < runs; i++) {
             Long start = System.nanoTime();
             kMeansAlgo.cluster();
             Long end = System.nanoTime();
@@ -211,58 +211,51 @@ public class KMeanPar {
     (Ergebnis ist also Summen für x-, y-Koordinaten und Anzahl wie oben). RecursiveSumTask arbeitet
     wieder mit zwei Indizes from und to, die den zu behandelnden Datenbereich bestimmen. */
 
-    private class RecursiveSumTask extends RecursiveTask<int[][]> {
+    public class RecursiveSumTask extends RecursiveTask<int[][]> {
 
-        private static final int THRESHOLD = 2;
-        private int sums[][];
-        private static int from;
-        private static int to;
+        private final int from;
+        private final int to;
+        private static final int THRESHOLD = 10;
 
-        public RecursiveSumTask(int[][] sums, int from, int to) {
-            this.sums = sums;
+        public RecursiveSumTask(int from, int to) {
+            super();
             this.from = from;
             this.to = to;
         }
 
-        /* TODO
-        In der Methode compute soll nun nach dem Prinzip Divide-Conquer die Summenbildung entweder
-        sequentiell oder ab einem bestimmten Threshold durch Abspalten von zwei Subtasks und anschließenden
-        Zusammenführen der Teilergebnisse berechnet werden. Definieren Sie eine Konstante für den Threshhold
-        und überlegen Sie sich einen sinnvollen Wert. */
-
         @Override
         protected int[][] compute() {
-             if ((to - from) < THRESHOLD) {
-                return computePartialSums(sums, from, to);
+            if (to - from < THRESHOLD) {
+                return computePartial();
             } else {
-                int middle = data.length / 2;
-                RecursiveSumTask sumTaskOne = new RecursiveSumTask(sums, from, middle + 1);
-                RecursiveSumTask sumTaskTwo = new RecursiveSumTask(sums, middle + 1, to);
-
+                int middle = (from + to) / 2;
+                RecursiveSumTask sumTaskOne = new RecursiveSumTask(from, middle + 1);
+                RecursiveSumTask sumTaskTwo = new RecursiveSumTask(middle + 1, to);
                 sumTaskOne.fork();
                 sumTaskTwo.fork();
-                return append(sumTaskOne.join(), sumTaskTwo.join());
+                return merge(sumTaskOne.join(), sumTaskTwo.join());
             }
         }
 
-        public static int[][] append(int[][] one, int[][] two) {
-            int[][] result = new int[one.length + two.length][];
-            System.arraycopy(one, 0, result, 0, one.length);
-            System.arraycopy(two, 0, result, one.length, two.length);
-            return result;
-        }
-
-        protected int[][] computePartialSums(int[][] partSums, int from, int to) {
+        private int[][] computePartial() {
+            int[][] sums = new int[3][k];
             for (int i = from; i < to; i++) {
-                partSums[0][data[i].cluster] += data[i].x;
-                partSums[1][data[i].cluster] += data[i].y;
-                partSums[2][data[i].cluster]++;
+                sums[0][data[i].cluster] += data[i].x;
+                sums[1][data[i].cluster] += data[i].y;
+                sums[2][data[i].cluster]++;
             }
-            return partSums;
+            return sums;
         }
 
+        private static int[][] merge(int[][] one, int[][] two) {
+            for (int i = 0; i < one.length; i++) {
+                for (int j = 0; j < one[i].length; j++) {
+                    one[i][j] += two[i][j];
+                }
+            }
+            return one;
+        }
     }
-
 
     /**
      * Computes the cluster centroids for the current clustering.
@@ -279,13 +272,13 @@ public class KMeanPar {
 
 
         // TODO: parallelize with fork-join recursive tasks ------------
-//        for (int i = 0; i < data.length; i++) {
-//            sums[0][data[i].cluster] += data[i].x;
-//            sums[1][data[i].cluster] += data[i].y;
-//            sums[2][data[i].cluster]++;
-//        }
+        // for (int i = 0; i < data.length; i++) {
+        // sums[0][data[i].cluster] += data[i].x;
+        // sums[1][data[i].cluster] += data[i].y;
+        // sums[2][data[i].cluster]++;
+        // }
 
-        RecursiveSumTask rst = new RecursiveSumTask(sums, 0, data.length);
+        RecursiveSumTask rst = new RecursiveSumTask(0, data.length);
         sums = ForkJoinPool.commonPool().invoke(rst);
 
         // -------------------------------------------------------------
