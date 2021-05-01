@@ -23,39 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05">
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/ParallelMaxMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/ParallelMax_AtomicLong.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/ParallelMax_Locals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/ParallelMax_Lock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/ParallelMax_NotSynchronized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/ParallelMax_Synchronized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/RecursiveMaxTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/demo/max/SequentialMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Apr-21_9_22_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Apr-21_9_22_AM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_20_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_20_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_30_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_30_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/c10.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/c230.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/c241.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/c251.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/c490.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/c4a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/db.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/log.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/log3.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/log4.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/logmirror.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_31_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_34_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_34_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_40_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_40_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_43_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-Apr-21_7_43_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/kmeans/KMeanPar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,11 +91,11 @@
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\gradetable\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue05\demo\max" />
       <recent name="C:\dev\intellij\git\jku\lib" />
       <recent name="C:\dev\intellij\git\jku" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue04\gradetable" />
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue04\demo\person" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue04\demo" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="swe2.ss20.ue10.demo" />
@@ -136,7 +104,20 @@
       <recent name="prswe2.ss21.ue03.gradetable.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParallelMaxMain">
+  <component name="RunManager" selected="Application.KMeanPar">
+    <configuration name="KMeanPar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanPar" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue05.kmeans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KMeanSeq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanSeq" />
       <module name="jku" />
@@ -177,17 +158,19 @@
       <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo)" />
       <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo.fxml)" />
       <item itemvalue="Application.Main (prswe2.ss21.ue03.gradetable)" />
-      <item itemvalue="JUnit.All in jku" />
       <item itemvalue="Application.Main (prswe2.ue03)" />
       <item itemvalue="Application.DemoDBManager (prswe2.ue04)" />
       <item itemvalue="Application.Main (prswe2.ue04.gradetable)" />
       <item itemvalue="Application.KMeanSeq" />
       <item itemvalue="Application.ParallelMaxMain" />
+      <item itemvalue="JUnit.All in jku" />
+      <item itemvalue="Application.KMeanPar" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ParallelMaxMain" />
+        <item itemvalue="Application.KMeanPar" />
         <item itemvalue="Application.KMeanSeq" />
+        <item itemvalue="Application.ParallelMaxMain" />
       </list>
     </recent_temporary>
   </component>
@@ -202,13 +185,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00212" summary="pr.swe2.ue02">
-      <created>1616096411341</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1616096411341</updated>
     </task>
     <task id="LOCAL-00213" summary="pr.swe2.ue02">
       <created>1616100209423</created>
@@ -546,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618885893576</updated>
     </task>
-    <option name="localTasksCounter" value="261" />
+    <task id="LOCAL-00261" summary="pr.swe2.ue05">
+      <created>1619710889458</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1619710889458</updated>
+    </task>
+    <option name="localTasksCounter" value="262" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
