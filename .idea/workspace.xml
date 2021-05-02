@@ -24,7 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue05/kmeans/KMeanPar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue05/kmeans/KMeanPar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
       <recent name="prswe2.ss21.ue03.gradetable.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KMeanPar">
+  <component name="RunManager" selected="Application.KMeanSeq">
     <configuration name="KMeanPar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanPar" />
       <module name="jku" />
@@ -168,8 +167,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KMeanPar" />
         <item itemvalue="Application.KMeanSeq" />
+        <item itemvalue="Application.KMeanPar" />
         <item itemvalue="Application.ParallelMaxMain" />
       </list>
     </recent_temporary>
@@ -185,13 +184,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00223" summary="pr.swe2.ue02">
-      <created>1616277456354</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1616277456354</updated>
     </task>
     <task id="LOCAL-00224" summary="pr.swe2.ue02">
       <created>1616277985461</created>
@@ -529,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619913912040</updated>
     </task>
-    <option name="localTasksCounter" value="272" />
+    <task id="LOCAL-00272" summary="pr.swe2.ue05">
+      <created>1619991013053</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1619991013054</updated>
+    </task>
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
