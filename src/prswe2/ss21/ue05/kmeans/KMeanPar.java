@@ -17,12 +17,12 @@ public class KMeanPar {
     /**
      * Number of data points
      */
-    private static final int N = 1000;
+    private static final int N = 1000000;
 
     /**
      * Number of clusters
      */
-    private static final int K = 7;
+    private static final int K = 10;
 
     /**
      * Max values of x and y coordinates of data points
@@ -36,6 +36,14 @@ public class KMeanPar {
 
     private static final int N_EXPERIMENTS = 20;
 
+    // Runtime.getRuntime().availableProcessors() * 2 gives (Cores + HyperThreading) * 2, in my case with 6 Cores+HT, this yields 24
+    private static final int N_THREADS = Runtime.getRuntime().availableProcessors() * 2;
+
+    // set true for output, false for time measurement
+    private static final boolean OUTPUT = false;
+
+    // set true to enable user interaction
+    private static final boolean USER_INTERACTION = false;
 
     /**
      * Creates random data points.
@@ -108,16 +116,20 @@ public class KMeanPar {
     public void cluster() {
         doInitialClustering();
         computeCentroids();
-        // disable output for time measurement
-        // output();
+        if (OUTPUT) {
+            output();
+        }
         boolean stable = false;
         while (!stable) {
             stable = doNewClustering();
             computeCentroids();
-            // disable output for time measurement
-            // output();
+            if (OUTPUT) {
+                output();
+            }
         }
-        //Out.println("Completed");
+        if (OUTPUT) {
+            Out.println("Completed");
+        }
     }
 
     /**
@@ -130,19 +142,8 @@ public class KMeanPar {
         }
     }
 
-    /* TODO
-    Erzeugen Sie einen eigenen ExecutorService für die parallele Verarbeitung und stellen Sie diesen in einer
-    statischen Variablen bereit. Wählen Sie einen geeigneten Executor.
- */
-    // Runtime.getRuntime().availableProcessors() * 2 gives (Cores + HyperThreading) * 2, in my case with 6 Cores+HT, this yields 24
-    private static final ExecutorService executorService = Executors.newWorkStealingPool(Runtime.getRuntime().availableProcessors() * 2);
+    private static final ExecutorService executorService = Executors.newWorkStealingPool(N_THREADS);
 
-    /* TODO
-    Implementieren Sie eine innere Task-Klasse ClusterTask, welche Callable<Boolean> implementiert
-    und zwei Felder from und to definiert. Die Methode call soll das Clustering im Bereich from bis to
-    (exklusiv) ausführen. Der Boolesche Rückgabewert gibt an, ob sich im Clustering eine Änderung ergeben
-    hat oder die Cluster für die Datenpunkte im Bereich stabil sind.
-    */
     private class ClusterTask implements Callable<Boolean> {
         private int from;
         private int to;
@@ -155,7 +156,6 @@ public class KMeanPar {
         @Override
         public Boolean call() throws Exception {
             boolean stable = true;
-            // TODO: parallelize using thread pool ---------------------
             for (int i = from; i < to; i++) {
                 int closestCluster = getClosestCluster(data[i]);
                 if (stable && data[i].cluster != closestCluster) {
@@ -173,25 +173,13 @@ public class KMeanPar {
      * @return true, if there was no change in the clustering, false otherwise.
      */
     private boolean doNewClustering() {
-        /* TODO
-        Legen Sie P ClusterTask-Objekte an, wobei P die gewünschte Parallelität ist (als Wert für P ist das
-        Doppelte ihrer Prozessorkerne sinnvoll). Jeder ClusterTask soll einen etwa gleich großen Teil der
-        Datenobjekte behandeln.
-         */
-        int nClusterTasks = Runtime.getRuntime().availableProcessors() * 2;
-        int arrayChunkSize = (data.length + nClusterTasks - 1) / nClusterTasks;
-        ClusterTask[] clusterTasks = new ClusterTask[nClusterTasks];
-        Future<Boolean>[] results = new Future[nClusterTasks];
-        for (int i = 0; i < nClusterTasks; i++) {
-            //System.out.println(data.length + ", from: " + i * arrayChunkSize + ", to " + (i + 1) * arrayChunkSize);
+        int arrayChunkSize = (data.length + N_THREADS - 1) / N_THREADS;
+        ClusterTask[] clusterTasks = new ClusterTask[N_THREADS];
+        Future<Boolean>[] results = new Future[N_THREADS];
+        for (int i = 0; i < N_THREADS; i++) {
             clusterTasks[i] = new ClusterTask(i * arrayChunkSize, (i + 1) * arrayChunkSize > data.length ? data.length : (i + 1) * arrayChunkSize);
             results[i] = executorService.submit(clusterTasks[i]);
         }
-
-        /* TODO
-        In der Methode doNewClustering sollen die ClusterTasks dem Executor zur Ausführung übergeben
-        werden. Warten Sie auf die Beendigung der asynchronen Ausführung der Tasks. Das Ergebnis der
-        Methode ist dann die Und-Verknüpfung der Ergebnisse der einzelnen Tasks (stable) */
         for (Future<Boolean> f : results) {
             try {
                 if (!f.get()) {
@@ -204,16 +192,12 @@ public class KMeanPar {
         return true;
     }
 
-    /* TODO
-    Implementieren Sie eine innere Klasse RecursiveSumTask, die von RecursiveTask<int[][]> ableitet
-    (Ergebnis ist also Summen für x-, y-Koordinaten und Anzahl wie oben). RecursiveSumTask arbeitet
-    wieder mit zwei Indizes from und to, die den zu behandelnden Datenbereich bestimmen. */
-
     public class RecursiveSumTask extends RecursiveTask<int[][]> {
 
         private final int from;
         private final int to;
-        private static final int THRESHOLD = 10;
+        // since threads/tasks also have a cost, do not split under 1000 values, works faster sequentially
+        private static final int THRESHOLD = 1000;
 
         public RecursiveSumTask(int from, int to) {
             super();
@@ -260,26 +244,10 @@ public class KMeanPar {
      * Result is are new points in the array {@link centroids}.
      */
     private void computeCentroids() {
-        /* TODO
-        Starten Sie die parallele Summenbildung in der Methode computeCentroids.*/
-
-        // sums[0][j] sum of x-coordiantes of points in cluster j
-        // sums[1][j] sum of y-coordiantes of points in cluster j
-        // sums[2][j] number of points in cluster j
         int[][] sums = new int[3][k];
-
-
-        // TODO: parallelize with fork-join recursive tasks ------------
-        // for (int i = 0; i < data.length; i++) {
-        // sums[0][data[i].cluster] += data[i].x;
-        // sums[1][data[i].cluster] += data[i].y;
-        // sums[2][data[i].cluster]++;
-        // }
-
         RecursiveSumTask rst = new RecursiveSumTask(0, data.length);
         sums = ForkJoinPool.commonPool().invoke(rst);
 
-        // -------------------------------------------------------------
         for (int j = 0; j < centroids.length; j++) {
             if (sums[2][j] != 0) {
                 centroids[j] = new Point(sums[0][j] / sums[2][j],
@@ -379,9 +347,10 @@ public class KMeanPar {
      * Alternatively, a user input may be used to stop computation.
      */
     private void delay() {
-        // Uncomment for controlling steps by users
-//		Out.print("next step: ");
-//		In.readLine(); // request any input from user to continue
+        if (USER_INTERACTION) {
+            Out.print("next step: ");
+            In.readLine(); // request any input from user to continue
+        }
         try {
             Thread.sleep(DELAY);
         } catch (InterruptedException e) {
