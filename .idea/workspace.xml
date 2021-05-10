@@ -23,6 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05">
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/FileSafe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/client/DemoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/client/DemoClientMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/inout/In.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/inout/Out.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/DemoServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/DemoServerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/async/DemoServerAsync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/async/DemoServerMainAsync.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,11 +100,11 @@
       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\gradetable\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue05\kmeans" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue05\demo\max" />
-      <recent name="C:\dev\intellij\git\jku\lib" />
-      <recent name="C:\dev\intellij\git\jku" />
-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue04\gradetable" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\demo\client" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\demo" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\demo\server\async" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\demo\server" />
+      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\demo\inout" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="swe2.ss20.ue10.demo" />
@@ -103,7 +113,7 @@
       <recent name="prswe2.ss21.ue03.gradetable.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KMeanSeq">
+  <component name="RunManager" selected="Application.KMeanPar">
     <configuration name="KMeanPar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanPar" />
       <module name="jku" />
@@ -167,8 +177,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KMeanSeq" />
         <item itemvalue="Application.KMeanPar" />
+        <item itemvalue="Application.KMeanSeq" />
         <item itemvalue="Application.ParallelMaxMain" />
       </list>
     </recent_temporary>
@@ -184,13 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00225" summary="pr.swe2.ue02">
-      <created>1616278879960</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1616278879961</updated>
     </task>
     <task id="LOCAL-00226" summary="pr.swe2.ue02">
       <created>1616353286139</created>
@@ -528,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619991518863</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="pr.swe2.ue05">
+      <created>1619992661162</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1619992661163</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
