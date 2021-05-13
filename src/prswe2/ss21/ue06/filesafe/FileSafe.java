@@ -90,6 +90,7 @@ public class FileSafe {
     }
 
     public void stop() {
+        this.runFileSafe = false;
         this.saveExecutor.shutdownNow();
         this.watchThread.interrupt();
     }
