@@ -1,20 +1,22 @@
 package prswe2.ss21.ue06.filesafe;
 
 import java.nio.file.Path;
+import java.nio.file.WatchEvent;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class FileChanges {
 
-    private final Set<Path> changedFiles;
+    private final ConcurrentHashMap<Path, WatchEvent> changedFiles;
 
     public FileChanges() {
-        this.changedFiles = Collections.synchronizedSet(new HashSet<>());
+        this.changedFiles = new ConcurrentHashMap<>();
     }
 
-    protected void addSaveFile(Path saveFile) {
-        System.out.println("Add Saved File: " + saveFile);
+    protected void addSaveFile(Path saveFile, WatchEvent watchEvent) {
+        System.out.println("Add Saved File: " + saveFile + "WatchEvent: " + watchEvent);
         System.out.println(this);
-        this.changedFiles.add(saveFile);
+        this.changedFiles.put(saveFile, watchEvent);
     }
 
     protected void removeSaveFile(Path saveFile) {
@@ -23,14 +25,14 @@ public class FileChanges {
         this.changedFiles.remove(saveFile);
     }
 
-    protected Set<Path> getChangedFiles() {
+    protected Map<Path, WatchEvent> getChangedFiles() {
         System.out.println("Get Changed Files: ");
         System.out.println(this);
         return this.changedFiles;
     }
 
     protected boolean contains(Path path) {
-        return this.changedFiles.contains(path);
+        return this.changedFiles.containsKey(path);
     }
 
 
@@ -38,7 +40,7 @@ public class FileChanges {
     public String toString() {
         StringBuffer sb = new StringBuffer();
         sb.append("{Path: ");
-        this.changedFiles.forEach(p -> sb.append(p).append(", "));
+        this.changedFiles.forEach((p, e) -> sb.append(p).append(", ").append(e.toString()).append(", "));
         sb.delete(sb.length() - 2, sb.length());
         sb.append("}");
         return sb.toString();

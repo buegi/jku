@@ -5,14 +5,13 @@ import java.nio.file.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 
 public class FileSafe {
 
-    private static final int INITIAL_DELAY = 5;
+    private static final int INITIAL_DELAY = 2;
     private static final int SAVE_INTERVAL = 5;                            // saving frequency
     private static final String FILES_GLOB = "glob:**.{java, html, txt}";   // file types to save
 
@@ -45,21 +44,29 @@ public class FileSafe {
         @Override
         public void run() {
             try {
-                fileChanges.getChangedFiles().forEach(f -> {
-                    try {
-                        Files.copy(f, dst.resolve(f.getFileName()), StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                fileChanges.getChangedFiles().forEach((p, e) -> {
+
+                    if (e.kind() == ENTRY_CREATE || e.kind() == ENTRY_MODIFY) {
+                        try {
+                            Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
+                        } catch (IOException ioe) {
+                            ioe.printStackTrace();
+                        }
+                        fileChanges.removeSaveFile(p);
+                        System.out.println("saved");
+                    } else if (e.kind() == ENTRY_DELETE) {
+                        try {
+                            Files.delete(dst);
+                        } catch (IOException ioe) {
+                            ioe.printStackTrace();
+                        }
                     }
-                    fileChanges.removeSaveFile(f);
-                    System.out.println("saved");
                 });
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
-
 
     private void init() {
         this.stopWatcherThread = false;
@@ -102,7 +109,7 @@ public class FileSafe {
                         Path absPath = dirPath.resolve(relPath);
                         if ((pevt.kind() == ENTRY_CREATE || pevt.kind() == ENTRY_MODIFY || pevt.kind() == ENTRY_DELETE)
                                 && this.pathMatcher.matches(absPath) && !this.fileChanges.contains(absPath)) {
-                            this.fileChanges.addSaveFile(absPath);
+                            this.fileChanges.addSaveFile(absPath, evt);
                         }
                     }
                 } catch (InterruptedException e) {
