@@ -56,7 +56,9 @@ public class FileSafe {
                         System.out.println("saved");
                     } else if (e.kind() == ENTRY_DELETE) {
                         try {
-                            Files.delete(dst);
+                            Files.delete(dst.resolve(p.getFileName()));
+                            fileChanges.removeSaveFile(p);
+                            System.out.println("deleted");
                         } catch (IOException ioe) {
                             ioe.printStackTrace();
                         }

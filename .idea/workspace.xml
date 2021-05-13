@@ -24,7 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue06">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileChanges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileChanges.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileSafe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,13 +200,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00233" summary="pr.swe2.ue03">
-      <created>1617990086955</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1617990086955</updated>
     </task>
     <task id="LOCAL-00234" summary="pr.swe2.ue03">
       <created>1617995368453</created>
@@ -545,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620940643071</updated>
     </task>
-    <option name="localTasksCounter" value="282" />
+    <task id="LOCAL-00282" summary="pr.swe2.ue06">
+      <created>1620943274737</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1620943274737</updated>
+    </task>
+    <option name="localTasksCounter" value="283" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
