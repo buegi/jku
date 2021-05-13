@@ -24,7 +24,7 @@ public class FileSafe {
 
     private WatchService watchService;
     private Thread watchThread;
-    private boolean stopWatcherThread;
+    private boolean runFileSafe = true;
 
     private SaveRunnable saveRunnable;
     private ScheduledExecutorService saveExecutor;
@@ -72,7 +72,6 @@ public class FileSafe {
     }
 
     private void init() {
-        this.stopWatcherThread = false;
         try {
             this.watchService = FileSystems.getDefault().newWatchService();
         } catch (IOException e) {
@@ -86,16 +85,20 @@ public class FileSafe {
         this.startSaver();
     }
 
-    protected void stop() {
-        this.stopWatcher();
-        this.stopSaver();
+    protected void startSaver() {
+        this.saveExecutor.scheduleAtFixedRate(this.saveRunnable, INITIAL_DELAY, SAVE_INTERVAL, TimeUnit.SECONDS);
+    }
+
+    public void stop() {
+        this.saveExecutor.shutdownNow();
+        this.watchThread.interrupt();
     }
 
     private void startWatcher() {
         watchThread = new Thread(() -> {
             WatchKey key = null;
             int counter = 0;
-            while (!stopWatcherThread) {
+            while (runFileSafe) {
                 System.out.println(counter);
                 try {
                     try {
@@ -126,18 +129,5 @@ public class FileSafe {
             }
         });
         watchThread.start();
-    }
-
-    protected void stopWatcher() {
-        this.stopWatcherThread = true;
-    }
-
-
-    protected void startSaver() {
-        this.saveExecutor.scheduleAtFixedRate(this.saveRunnable, INITIAL_DELAY, SAVE_INTERVAL, TimeUnit.SECONDS);
-    }
-
-    protected void stopSaver() {
-        this.saveExecutor.shutdownNow();
     }
 }
