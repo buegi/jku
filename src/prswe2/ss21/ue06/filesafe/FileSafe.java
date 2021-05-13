@@ -44,15 +44,19 @@ public class FileSafe {
     private class SaveRunnable implements Runnable {
         @Override
         public void run() {
-            fileChanges.getChangedFiles().forEach(f -> {
-                try {
-                    Files.copy(f, dst.resolve(f.getFileName()), StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
+            try {
+                fileChanges.getChangedFiles().forEach(f -> {
+                    try {
+                        Files.copy(f, dst.resolve(f.getFileName()), StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     fileChanges.removeSaveFile(f);
                     System.out.println("saved");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            });
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

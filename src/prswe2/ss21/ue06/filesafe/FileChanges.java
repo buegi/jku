@@ -1,15 +1,14 @@
 package prswe2.ss21.ue06.filesafe;
 
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class FileChanges {
 
-    private final List<Path> changedFiles;
+    private final Set<Path> changedFiles;
 
     public FileChanges() {
-        this.changedFiles = new ArrayList<>();
+        this.changedFiles = Collections.synchronizedSet(new HashSet<>());
     }
 
     protected void addSaveFile(Path saveFile) {
@@ -24,7 +23,7 @@ public class FileChanges {
         this.changedFiles.remove(saveFile);
     }
 
-    protected List<Path> getChangedFiles() {
+    protected Set<Path> getChangedFiles() {
         System.out.println("Get Changed Files: ");
         System.out.println(this);
         return this.changedFiles;
