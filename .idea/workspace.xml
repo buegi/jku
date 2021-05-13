@@ -22,18 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05">
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/FileSafe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/client/DemoClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/client/DemoClientMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/inout/In.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/inout/Out.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/DemoServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/DemoServerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/async/DemoServerAsync.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/async/DemoServerMainAsync.java" afterDir="false" />
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue06">
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileChanges.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileSafe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileSafeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/src/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/src/Test2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue06/FileSafe.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +109,20 @@
       <recent name="prswe2.ss21.ue03.gradetable.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KMeanPar">
+  <component name="RunManager" selected="Application.FileSafeMain">
+    <configuration name="FileSafeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue06.filesafe.FileSafeMain" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue06.filesafe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KMeanPar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanPar" />
       <module name="jku" />
@@ -174,9 +183,11 @@
       <item itemvalue="Application.ParallelMaxMain" />
       <item itemvalue="Application.KMeanPar" />
       <item itemvalue="JUnit.All in jku" />
+      <item itemvalue="Application.FileSafeMain" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FileSafeMain" />
         <item itemvalue="Application.KMeanPar" />
         <item itemvalue="Application.KMeanSeq" />
         <item itemvalue="Application.ParallelMaxMain" />
@@ -194,13 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00226" summary="pr.swe2.ue02">
-      <created>1616353286139</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1616353286139</updated>
     </task>
     <task id="LOCAL-00227" summary="pr.swe2.ue02">
       <created>1616353319580</created>
@@ -538,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619992661163</updated>
     </task>
-    <option name="localTasksCounter" value="275" />
+    <task id="LOCAL-00275" summary="pr.swe2.ue06">
+      <created>1620660613660</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1620660613660</updated>
+    </task>
+    <option name="localTasksCounter" value="276" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -565,7 +576,8 @@
     <MESSAGE value="pr.swe2.ue03" />
     <MESSAGE value="pr.swe2.ue04" />
     <MESSAGE value="pr.swe2.ue05" />
-    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue05" />
+    <MESSAGE value="pr.swe2.ue06" />
+    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue06" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
