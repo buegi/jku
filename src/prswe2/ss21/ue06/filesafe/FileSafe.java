@@ -48,7 +48,8 @@ public class FileSafe {
 
                     if (e.kind() == ENTRY_CREATE || e.kind() == ENTRY_MODIFY) {
                         try {
-                            Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
+                            Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES,
+                                    StandardCopyOption.REPLACE_EXISTING);
                         } catch (IOException ioe) {
                             ioe.printStackTrace();
                         }
