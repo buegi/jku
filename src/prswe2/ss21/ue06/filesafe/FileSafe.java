@@ -13,7 +13,7 @@ import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 public class FileSafe {
 
     private static final int INITIAL_DELAY = 5;
-    private static final int SAVE_INTERVAL = 20;                            // saving frequency
+    private static final int SAVE_INTERVAL = 5;                            // saving frequency
     private static final String FILES_GLOB = "glob:**.{java, html, txt}";   // file types to save
 
     private final Path src;                                                 // path that should be saved
