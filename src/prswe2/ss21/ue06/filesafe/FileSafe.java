@@ -33,7 +33,7 @@ public class FileSafe {
         this.src = src;
         this.dst = dst;
         this.fileChanges = new FileChanges();
-        this.pathMatcher = FileSystems.getDefault().getPathMatcher(this.FILES_GLOB);
+        this.pathMatcher = FileSystems.getDefault().getPathMatcher(FILES_GLOB);
         this.saveExecutor = Executors.newScheduledThreadPool(1);
         this.init();
         this.start();
