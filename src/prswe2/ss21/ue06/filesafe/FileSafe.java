@@ -124,6 +124,6 @@ public class FileSafe {
     }
 
     protected void stopSaver() {
-        // TODO
+        this.saveExecutor.shutdownNow();
     }
 }
