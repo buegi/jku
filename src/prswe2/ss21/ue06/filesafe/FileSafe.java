@@ -12,7 +12,8 @@ import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 
 public class FileSafe {
 
-    private static final int SAVE_INTERVAL = 10;                            // saving frequency
+    private static final int INITIAL_DELAY = 5;
+    private static final int SAVE_INTERVAL = 20;                            // saving frequency
     private static final String FILES_GLOB = "glob:**.{java, html, txt}";   // file types to save
 
     private final Path src;                                                 // path that should be saved
@@ -45,8 +46,9 @@ public class FileSafe {
         public void run() {
             fileChanges.getChangedFiles().forEach(f -> {
                 try {
-                    Files.copy(f, Paths.get(String.valueOf(dst)), StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
+                    Files.copy(f, dst.resolve(f.getFileName()), StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
                     fileChanges.removeSaveFile(f);
+                    System.out.println("saved");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -118,7 +120,7 @@ public class FileSafe {
 
 
     protected void startSaver() {
-        this.saveExecutor.schedule(this.saveRunnable, SAVE_INTERVAL, TimeUnit.SECONDS);
+        this.saveExecutor.scheduleAtFixedRate(this.saveRunnable, INITIAL_DELAY, SAVE_INTERVAL, TimeUnit.SECONDS);
     }
 
     protected void stopSaver() {

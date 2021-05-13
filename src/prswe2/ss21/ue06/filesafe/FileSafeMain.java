@@ -9,8 +9,8 @@ public class FileSafeMain {
 
     public static void main(String[] args) {
 
-        Path src = Paths.get("C://dev//intellij//git//jku//src//prswe2//ss21//ue06//src");
-        Path dst = Paths.get("C://dev//intellij//git//jku//src//prswe2//ss21//ue06//dst");
+        Path src = Paths.get("C://dev//test//src");
+        Path dst = Paths.get("C://dev//test//dst");
 
         FileSafe filesafe = new FileSafe(src, dst);
 
