@@ -25,6 +25,11 @@ public class FileChanges {
         return this.changedFiles;
     }
 
+    protected boolean contains(Path path) {
+        return this.changedFiles.contains(path);
+    }
+
+
     @Override
     public String toString() {
         StringBuffer sb = new StringBuffer();
