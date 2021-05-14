@@ -45,7 +45,6 @@ public class FileSafe {
         public void run() {
             try {
                 fileChanges.getChangedFiles().forEach((p, e) -> {
-
                     if (e.kind() == ENTRY_CREATE || e.kind() == ENTRY_MODIFY) {
                         try {
                             Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES,
@@ -54,12 +53,12 @@ public class FileSafe {
                             ioe.printStackTrace();
                         }
                         fileChanges.removeSaveFile(p);
-                        System.out.println("saved");
+                        System.out.println("File: " + p.getFileName() + " saved!");
                     } else if (e.kind() == ENTRY_DELETE) {
                         try {
                             Files.delete(dst.resolve(p.getFileName()));
                             fileChanges.removeSaveFile(p);
-                            System.out.println("deleted");
+                            System.out.println("File: " + p.getFileName() + " deleted!");
                         } catch (IOException ioe) {
                             ioe.printStackTrace();
                         }
@@ -93,40 +92,39 @@ public class FileSafe {
         this.runFileSafe = false;
         this.saveExecutor.shutdownNow();
         this.watchThread.interrupt();
+        System.out.println("Program stopped/terminated!");
+        System.exit(0);
     }
 
     private void startWatcher() {
         watchThread = new Thread(() -> {
             WatchKey key = null;
-            int counter = 0;
+            // TODO walk over fileSystem dst and check if files from src aren't available
+
+            try {
+                WatchKey k = this.src.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             while (runFileSafe) {
-                System.out.println(counter);
                 try {
-                    try {
-                        WatchKey k = this.src.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
-                    } catch (IOException e) {
-                        System.out.println("registerWatcherPath");
-                        e.printStackTrace();
-                    }
                     key = watchService.take();
                     for (WatchEvent<?> evt : key.pollEvents()) {
-                        WatchEvent<Path> pevt = (WatchEvent<Path>) evt;
-                        Path relPath = pevt.context();
+                        WatchEvent<Path> pvt = (WatchEvent<Path>) evt;
+                        Path relPath = pvt.context();
                         Path dirPath = (Path) key.watchable();
                         Path absPath = dirPath.resolve(relPath);
-                        if ((pevt.kind() == ENTRY_CREATE || pevt.kind() == ENTRY_MODIFY || pevt.kind() == ENTRY_DELETE)
+                        if ((pvt.kind() == ENTRY_CREATE || pvt.kind() == ENTRY_MODIFY || pvt.kind() == ENTRY_DELETE)
                                 && this.pathMatcher.matches(absPath) && !this.fileChanges.contains(absPath)) {
                             this.fileChanges.addSaveFile(absPath, evt);
                         }
                     }
                 } catch (InterruptedException e) {
-                    System.out.println("startWatcher");
                     e.printStackTrace();
                 } finally {
                     if (key != null) key.reset();
                 }
                 System.out.println(fileChanges);
-                counter++;
             }
         });
         watchThread.start();
