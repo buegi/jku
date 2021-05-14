@@ -13,7 +13,7 @@ public class FileSafe {
 
     private static final int INITIAL_DELAY = 2;
     private static final int SAVE_INTERVAL = 5;                             // saving frequency
-    private static final String FILES_GLOB = "glob:**.{java,html,txt}";     // file types to save
+    private static final String FILES_GLOB = "glob:**.{java,xml,txt}";     // file types to save
 
     private final Path src;                                                 // path that should be saved
     private final Path dst;
