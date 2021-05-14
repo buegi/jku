@@ -22,9 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue06">
+    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileChanges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileChanges.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue06/filesafe/FileSafe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,13 +200,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00239" summary="pr.swe2.ue03">
-      <created>1618082897774</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1618082897775</updated>
     </task>
     <task id="LOCAL-00240" summary="pr.swe2.ue03">
       <created>1618084341354</created>
@@ -545,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620944448979</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)">
+      <created>1620983294943</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1620983294943</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -573,7 +572,8 @@
     <MESSAGE value="pr.swe2.ue04" />
     <MESSAGE value="pr.swe2.ue05" />
     <MESSAGE value="pr.swe2.ue06" />
-    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue06" />
+    <MESSAGE value="pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

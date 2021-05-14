@@ -99,7 +99,8 @@ public class FileSafe {
     private void startWatcher() {
         watchThread = new Thread(() -> {
             WatchKey key = null;
-            // TODO walk over fileSystem dst and check if files from src aren't available
+            // TODO initially copy all files to synchronize all changes while program was not running
+
 
             try {
                 WatchKey k = this.src.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
