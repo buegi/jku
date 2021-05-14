@@ -1,6 +1,6 @@
 package prswe2.ss21.ue06.filesafe;
 
-import swe2.inout.In;
+import prswe2.ss21.ue06.inout.In;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

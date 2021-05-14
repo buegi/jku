@@ -99,7 +99,7 @@ public class FileSafe {
     private void startWatcher() {
         watchThread = new Thread(() -> {
             WatchKey key = null;
-            // Initial sync to sync all changes while program was not running
+            // Initial sync to sync all changes that were made while program was not running
             try {
                 Files.walk(src).forEach(f -> {
                     if (this.pathMatcher.matches(f)) {
