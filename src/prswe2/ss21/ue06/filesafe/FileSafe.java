@@ -99,8 +99,32 @@ public class FileSafe {
     private void startWatcher() {
         watchThread = new Thread(() -> {
             WatchKey key = null;
-            // TODO initially copy all files to synchronize all changes while program was not running
+            // TODO initial sync
+            try {
+                Files.walk(src).forEach(f -> {
+                    if (this.pathMatcher.matches(f)) {
+                        this.fileChanges.addSaveFile(f, new WatchEvent() {
+                            @Override
+                            public Kind kind() {
+                                return ENTRY_CREATE;
+                            }
 
+                            @Override
+                            public int count() {
+                                return 1;
+                            }
+
+                            @Override
+                            public Object context() {
+                                return f;
+                            }
+                        });
+                        System.out.println(f);
+                    }
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             try {
                 WatchKey k = this.src.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);

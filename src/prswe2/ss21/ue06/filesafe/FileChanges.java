@@ -38,7 +38,7 @@ public class FileChanges {
     public String toString() {
         StringBuffer sb = new StringBuffer();
         sb.append("Changed Paths: {");
-        this.changedFiles.forEach((p, e) -> sb.append(p).append(", ").append(e.toString()).append(", "));
+        this.changedFiles.forEach((p, e) -> sb.append(p).append(", "));
         if (this.changedFiles.size() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
