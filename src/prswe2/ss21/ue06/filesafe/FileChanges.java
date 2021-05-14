@@ -14,7 +14,7 @@ public class FileChanges {
     }
 
     protected void addSaveFile(Path saveFile, WatchEvent watchEvent) {
-        System.out.println("Add Changed File to Queue: " + saveFile + "WatchEvent: " + watchEvent.toString());
+        System.out.println("Add Changed File to Queue: " + saveFile + " WatchEvent: " + watchEvent.kind());
         System.out.println("Actual FileChange Queue: " + this);
         this.changedFiles.put(saveFile, watchEvent);
     }
