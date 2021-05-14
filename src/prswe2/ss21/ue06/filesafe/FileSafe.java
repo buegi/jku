@@ -12,7 +12,7 @@ import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 public class FileSafe {
 
     private static final int INITIAL_DELAY = 2;
-    private static final int SAVE_INTERVAL = 5;                            // saving frequency
+    private static final int SAVE_INTERVAL = 5;                             // saving frequency
     private static final String FILES_GLOB = "glob:**.{java, html, txt}";   // file types to save
 
     private final Path src;                                                 // path that should be saved
@@ -99,7 +99,7 @@ public class FileSafe {
     private void startWatcher() {
         watchThread = new Thread(() -> {
             WatchKey key = null;
-            // TODO initial sync
+            // Initial sync to sync all changes while program was not running
             try {
                 Files.walk(src).forEach(f -> {
                     if (this.pathMatcher.matches(f)) {
