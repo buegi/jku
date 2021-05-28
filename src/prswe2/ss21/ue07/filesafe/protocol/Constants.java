@@ -3,6 +3,8 @@ package prswe2.ss21.ue07.filesafe.protocol;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Constants {
 
@@ -11,6 +13,9 @@ public class Constants {
 
     // select server type here: true for synchronous/blocking server, false for asynchronous/non-blocking
     public static final boolean SYNC_SERVER = true;
+
+    public static final Path CLIENT_SOURCE = Paths.get("C://dev//test//client");
+    public static final Path SERVER_ROOT = Paths.get("C://dev//test//server");
 
     public static final String HELO_FROM = "HELO FROM ";
     public static final String LOGIN = "LOGIN ";

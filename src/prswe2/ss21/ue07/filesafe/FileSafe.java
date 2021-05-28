@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import prswe2.ss21.ue07.filesafe.protocol.Constants;
+import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 
@@ -16,7 +16,6 @@ public class FileSafe {
     private static final int SAVE_INTERVAL = 10;                            // saving frequency
     private static final String FILES_GLOB = "glob:**.{java,xml,txt}";      // file types to save
 
-    private final Path src;                                                 // path that should be saved
     private final String loginName;                                         // loginName, also folder name that is used on server
 
     private final FileChanges fileChanges;                                  // contains Info for Files to save
@@ -30,8 +29,7 @@ public class FileSafe {
     private SaveRunnable saveRunnable;
     private ScheduledExecutorService saveExecutor;
 
-    public FileSafe(Path src, String loginName) {
-        this.src = src;
+    public FileSafe(String loginName) {
         this.loginName = loginName;
         this.fileChanges = new FileChanges();
         this.pathMatcher = FileSystems.getDefault().getPathMatcher(FILES_GLOB);
@@ -119,7 +117,7 @@ public class FileSafe {
             WatchKey key = null;
             // Initial sync to sync all changes that were made while program was not running
             try {
-                Files.walk(src).forEach(f -> {
+                Files.walk(CLIENT_SOURCE).forEach(f -> {
                     if (this.pathMatcher.matches(f)) {
                         // UE06 Tutor Feedback: don't use WatchEvent raw -0,5 CORRECTED
                         this.fileChanges.addSaveFile(f, ENTRY_CREATE);
@@ -132,7 +130,7 @@ public class FileSafe {
 
             try {
                 // UE06 Tutor Feedback: k is assigned but never accessed -1 CORRECTED
-                this.src.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+                CLIENT_SOURCE.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
             } catch (IOException e) {
                 e.printStackTrace();
             }

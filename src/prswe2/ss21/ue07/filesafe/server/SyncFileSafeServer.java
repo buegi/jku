@@ -1,4 +1,4 @@
-package prswe2.ss21.ue07.demo.server;
+package prswe2.ss21.ue07.filesafe.server;
 
 import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
 
@@ -10,32 +10,38 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
-public class DemoServer {
+public class SyncFileSafeServer extends FileSafeServer {
 
-    private volatile boolean terminate = false;
-    private final ServerSocket server;
+    private ServerSocket server;
 
-    DemoServer() throws IOException {
-        server = new ServerSocket(PORT);
+    public SyncFileSafeServer() {
+        try {
+            server = new ServerSocket(PORT);
+        } catch (IOException e) {
+            System.out.println("Couldn't initialize server port!");
+        }
     }
 
-    void start() throws IOException {
+    @Override
+    public void start() throws IOException {
         while (!terminate) {
             try {
                 System.out.println("Server waiting to accept client");
                 Socket clientSocket = server.accept();
                 System.out.println("Server accepted client");
-                new Thread(new ClientHandler(clientSocket)).start();
+                new Thread(new SyncFileSafeServer.ClientHandler(clientSocket)).start();
             } catch (SocketException se) {
                 System.out.println("Server closed with " + se.toString());
             }
         }
     }
 
+    @Override
     public void terminate() throws IOException {
         terminate = true;
         server.close();
     }
+
 
     private class ClientHandler implements Runnable {
 

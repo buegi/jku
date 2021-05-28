@@ -1,34 +1,36 @@
 package prswe2.ss21.ue07.filesafe;
 
-import prswe2.ss21.ue07.filesafe.protocol.Constants;
-import prswe2.ss21.ue07.filesafe.server.AsyncServer;
-import prswe2.ss21.ue07.filesafe.server.Server;
-import prswe2.ss21.ue07.filesafe.server.SyncServer;
+import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
+
+import prswe2.ss21.ue07.filesafe.server.AsyncFileSafeServer;
+import prswe2.ss21.ue07.filesafe.server.FileSafeServer;
+import prswe2.ss21.ue07.filesafe.server.SyncFileSafeServer;
 import prswe2.ss21.ue07.inout.In;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.IOException;
 
 public class FileSafeMain {
 
     public static void main(String[] args) {
 
-        Path src = Paths.get("C://dev//test//client");
-        Path dst = Paths.get("C://dev//test//server");
         String loginName = "Stefan";
 
         // just for ease of use the preferred server type is started on same machine
         // this can be removed and ServerMain can be started manually on another machine
-        Server server;
-        if (Constants.SYNC_SERVER) {
-            server = new SyncServer(dst);
+        FileSafeServer fileSafeServer;
+        if (SYNC_SERVER) {
+            fileSafeServer = new SyncFileSafeServer();
         } else {
-            server = new AsyncServer(dst);
+            fileSafeServer = new AsyncFileSafeServer();
         }
-        server.start();
+        try {
+            fileSafeServer.start();
+        } catch (IOException e) {
+            System.out.println("Server couldn't be started!");
+        }
 
         // start file safe client
-        FileSafe filesafe = new FileSafe(src, loginName);
+        FileSafe filesafe = new FileSafe(loginName);
 
         for (; ; ) {
             // UE06 Tutor Feedback: inform user how to stop -0,5 CORRECTED
@@ -37,7 +39,12 @@ public class FileSafeMain {
             if (c == 'x') {
                 filesafe.stop();
                 // can also be removed, if server is running on another machine
-                server.terminate();
+                try {
+                    fileSafeServer.terminate();
+                } catch (IOException e) {
+                    System.out.println("Server couldn't be stopped!");
+                }
+
             }
         }
     }

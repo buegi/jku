@@ -23,21 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue07">
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/AsyncFileSafeServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/SyncFileSafeServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/AsyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/AsyncClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/AsyncClientMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/SyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/SyncClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/SyncClientMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/old/FileChanges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileChanges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/old/FileSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/old/FileSafeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/DemoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/demo/server/DemoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/AsyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/FileSafeAsyncClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/FileSafeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/SyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/FileSafeSyncClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/protocol/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/protocol/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/AsyncServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/AsyncServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/AsyncServerMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/SyncServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/SyncServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/SyncServerMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/AsyncServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/FileSafeServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/SyncServer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00254" summary="pr.swe2.ue05">
-      <created>1618851666265</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1618851666265</updated>
     </task>
     <task id="LOCAL-00255" summary="pr.swe2.ue05">
       <created>1618851867260</created>
@@ -543,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622230957543</updated>
     </task>
-    <option name="localTasksCounter" value="303" />
+    <task id="LOCAL-00303" summary="pr.swe2.ue07">
+      <created>1622237004978</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1622237004978</updated>
+    </task>
+    <option name="localTasksCounter" value="304" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
