@@ -21,7 +21,7 @@ public abstract class FileSafeServer {
             try {
                 this.start();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
+                System.out.println("Server couldn't be started!");
                 e.printStackTrace();
             }
         }).start();

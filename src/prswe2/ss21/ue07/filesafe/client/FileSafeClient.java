@@ -44,7 +44,7 @@ public class FileSafeClient {
         }).start();
     }
 
-    private void communicate() {
+    public void communicate() {
         try (Socket socket = new Socket(SERVER, PORT);
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              PrintWriter out = new PrintWriter(socket.getOutputStream())) {
@@ -59,6 +59,15 @@ public class FileSafeClient {
                 System.out.println(OK_LOGIN + "expected but received " + reply);
                 return;
             }
+
+            // TODO send event
+            send(out, E_CREATE);
+            reply = receive(in);
+            if (!reply.startsWith(E_CREATE) || !reply.startsWith(E_CHANGED) || !reply.startsWith(E_DELETE)) {
+                System.out.println(E_CREATE + " expected but received " + reply);
+                return;
+            }
+
             send(out, DONE);
             reply = receive(in);
             if (!reply.startsWith(BYE)) {

@@ -40,7 +40,6 @@ public class FileSafeMain {
                 } catch (IOException e) {
                     System.out.println("Server couldn't be stopped!");
                 }
-
             }
         }
     }

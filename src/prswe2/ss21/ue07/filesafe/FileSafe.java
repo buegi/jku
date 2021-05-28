@@ -1,5 +1,7 @@
 package prswe2.ss21.ue07.filesafe;
 
+import prswe2.ss21.ue07.filesafe.client.FileSafeClient;
+
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.concurrent.Executors;
@@ -45,7 +47,16 @@ public class FileSafe {
                 fileChanges.getChangedFiles().forEach((p, e) -> {
                     if (e == ENTRY_CREATE || e == ENTRY_MODIFY) {
 
-                        // TODO use SyncClient if SyncServer or else use AsyncClient if AsyncServer
+                        // TODO use FileSafeClient to do file operations
+
+                        System.out.println(e);
+
+                        try {
+                            FileSafeClient client = new FileSafeClient(loginName);
+                            client.communicate();
+                        } catch (IOException ioException) {
+                            ioException.printStackTrace();
+                        }
 
 
 //                        try {
@@ -62,7 +73,9 @@ public class FileSafe {
                         fileChanges.removeSaveFile(p);
                     } else if (e == ENTRY_DELETE) {
 
-                        // TODO use SyncClient if SyncServer or else use AsyncClient if AsyncServer
+                        // TODO use FileSafeClient to do file operations
+
+                        System.out.println(e);
 
 //                        try {
 //                            // UE06 Tutor Feedback: deleteIfExists -0,5 CORRECTED
