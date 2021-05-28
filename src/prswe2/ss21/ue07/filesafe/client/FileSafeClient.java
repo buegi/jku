@@ -61,12 +61,12 @@ public class FileSafeClient {
             }
 
             // TODO send event
-            send(out, E_CREATE);
-            reply = receive(in);
-            if (!reply.startsWith(E_CREATE) || !reply.startsWith(E_CHANGED) || !reply.startsWith(E_DELETE)) {
-                System.out.println(E_CREATE + " expected but received " + reply);
-                return;
-            }
+//            send(out, E_CREATE);
+//            reply = receive(in);
+//            if (!reply.startsWith(E_CREATE) || !reply.startsWith(E_CHANGED) || !reply.startsWith(E_DELETE)) {
+//                System.out.println(E_CREATE + " expected but received " + reply);
+//                return;
+//            }
 
             send(out, DONE);
             reply = receive(in);

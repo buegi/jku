@@ -68,12 +68,12 @@ public class SyncFileSafeServer extends FileSafeServer {
                 send(out, OK_LOGIN + clientName);
 
                 // TODO receive event
-                msg = receive(in);
-                if (!msg.startsWith(E_CREATE) || !msg.startsWith(E_CHANGED) || !msg.startsWith(E_DELETE)) {
-                    System.out.println(E_CREATE + " expected but received " + msg);
-                    return;
-                }
-                send(out, msg);
+//                msg = receive(in);
+//                if (!msg.startsWith(E_CREATE) || !msg.startsWith(E_CHANGED) || !msg.startsWith(E_DELETE)) {
+//                    System.out.println(E_CREATE + " expected but received " + msg);
+//                    return;
+//                }
+//                send(out, msg);
 
                 msg = receive(in);
                 if (!msg.startsWith(DONE)) {
