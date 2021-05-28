@@ -11,11 +11,12 @@ import static java.nio.file.StandardWatchEventKinds.*;
 public class FileSafe {
 
     private static final int INITIAL_DELAY = 2;
-    private static final int SAVE_INTERVAL = 10;                             // saving frequency
-    private static final String FILES_GLOB = "glob:**.{java,xml,txt}";     // file types to save
+    private static final int SAVE_INTERVAL = 10;                            // saving frequency
+    private static final String FILES_GLOB = "glob:**.{java,xml,txt}";      // file types to save
 
     private final Path src;                                                 // path that should be saved
-    private final Path dst;
+    private final Path dst;                                                 // path that should be saved
+    private final boolean syncServer;                                       // defines if synchronous or asynchronous ServerType
 
     private final FileChanges fileChanges;                                  // contains Info for Files to save
 
@@ -28,9 +29,10 @@ public class FileSafe {
     private SaveRunnable saveRunnable;
     private ScheduledExecutorService saveExecutor;
 
-    public FileSafe(Path src, Path dst) {
+    public FileSafe(Path src, Path dst, boolean syncServer) {
         this.src = src;
         this.dst = dst;
+        this.syncServer = syncServer;
         this.fileChanges = new FileChanges();
         this.pathMatcher = FileSystems.getDefault().getPathMatcher(FILES_GLOB);
         this.saveExecutor = Executors.newScheduledThreadPool(1);

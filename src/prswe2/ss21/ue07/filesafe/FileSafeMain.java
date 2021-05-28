@@ -12,8 +12,10 @@ public class FileSafeMain {
         Path src = Paths.get("C://dev//test//client");
         Path dst = Paths.get("C://dev//test//server");
         String loginName = "Stefan";
+        // select server type here: true for synchronous/blocking server, false for asynchronous/non-blocking
+        boolean syncServer = true;
 
-        FileSafe filesafe = new FileSafe(src, dst);
+        FileSafe filesafe = new FileSafe(src, dst, syncServer);
 
         for (; ; ) {
             // UE06 Tutor Feedback: inform user how to stop -0,5 CORRECTED

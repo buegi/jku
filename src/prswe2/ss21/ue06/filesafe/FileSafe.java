@@ -7,16 +7,15 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import static java.nio.file.StandardWatchEventKinds.*;
-import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 
 public class FileSafe {
 
     private static final int INITIAL_DELAY = 2;
-    private static final int SAVE_INTERVAL = 5;                             // saving frequency
-    private static final String FILES_GLOB = "glob:**.{java,xml,txt}";     // file types to save
+    private static final int SAVE_INTERVAL = 10;                            // saving frequency
+    private static final String FILES_GLOB = "glob:**.{java,xml,txt}";      // file types to save
 
     private final Path src;                                                 // path that should be saved
-    private final Path dst;
+    private final Path dst;                                                 // path that should be saved
 
     private final FileChanges fileChanges;                                  // contains Info for Files to save
 
@@ -26,7 +25,7 @@ public class FileSafe {
     private Thread watchThread;
     private boolean runFileSafe = true;
 
-    private SaveRunnable saveRunnable;
+    private FileSafe.SaveRunnable saveRunnable;
     private ScheduledExecutorService saveExecutor;
 
     public FileSafe(Path src, Path dst) {
@@ -45,20 +44,30 @@ public class FileSafe {
         public void run() {
             try {
                 fileChanges.getChangedFiles().forEach((p, e) -> {
-                    if (e.kind() == ENTRY_CREATE || e.kind() == ENTRY_MODIFY) {
+                    if (e == ENTRY_CREATE || e == ENTRY_MODIFY) {
                         try {
                             Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES,
                                     StandardCopyOption.REPLACE_EXISTING);
+                            System.out.println("File: " + p.getFileName() + " saved!");
                         } catch (IOException ioe) {
-                            ioe.printStackTrace();
+                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
                         }
+                        // UE06 Tutor Feedback: remove only if successful -1 CORRECTED
+                        // COMMENT file should be removed from change queue either way, otherwise created and instantly
+                        // deleted file would stay in queue
                         fileChanges.removeSaveFile(p);
-                        System.out.println("File: " + p.getFileName() + " saved!");
-                    } else if (e.kind() == ENTRY_DELETE) {
+                    } else if (e == ENTRY_DELETE) {
                         try {
-                            Files.delete(dst.resolve(p.getFileName()));
+                            // UE06 Tutor Feedback: deleteIfExists -0,5 CORRECTED
+                            if (Files.exists(dst.resolve(p.getFileName()))) {
+                                Files.delete(dst.resolve(p.getFileName()));
+                                System.out.println("File: " + p.getFileName() + " deleted!");
+                            } else {
+                                System.out.println("File doesn't exists anymore - no delete action needed!");
+                            }
+                            // remove from queue either way - we don't want to try multiple times, if file doesn't exist anymore
                             fileChanges.removeSaveFile(p);
-                            System.out.println("File: " + p.getFileName() + " deleted!");
+                            System.out.println("File: " + p.getFileName() + " removed from queue!");
                         } catch (IOException ioe) {
                             ioe.printStackTrace();
                         }
@@ -76,7 +85,7 @@ public class FileSafe {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.saveRunnable = new SaveRunnable();
+        this.saveRunnable = new FileSafe.SaveRunnable();
     }
 
     protected void start() {
@@ -103,22 +112,8 @@ public class FileSafe {
             try {
                 Files.walk(src).forEach(f -> {
                     if (this.pathMatcher.matches(f)) {
-                        this.fileChanges.addSaveFile(f, new WatchEvent() {
-                            @Override
-                            public Kind kind() {
-                                return ENTRY_CREATE;
-                            }
-
-                            @Override
-                            public int count() {
-                                return 1;
-                            }
-
-                            @Override
-                            public Object context() {
-                                return f;
-                            }
-                        });
+                        // UE06 Tutor Feedback: don't use WatchEvent raw -0,5 CORRECTED
+                        this.fileChanges.addSaveFile(f, ENTRY_CREATE);
                         System.out.println(f);
                     }
                 });
@@ -127,7 +122,8 @@ public class FileSafe {
             }
 
             try {
-                WatchKey k = this.src.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+                // UE06 Tutor Feedback: k is assigned but never accessed -1 CORRECTED
+                this.src.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -141,7 +137,7 @@ public class FileSafe {
                         Path absPath = dirPath.resolve(relPath);
                         if ((pvt.kind() == ENTRY_CREATE || pvt.kind() == ENTRY_MODIFY || pvt.kind() == ENTRY_DELETE)
                                 && this.pathMatcher.matches(absPath) && !this.fileChanges.contains(absPath)) {
-                            this.fileChanges.addSaveFile(absPath, evt);
+                            this.fileChanges.addSaveFile(absPath, (WatchEvent.Kind<Path>) evt.kind());
                         }
                     }
                 } catch (InterruptedException e) {
