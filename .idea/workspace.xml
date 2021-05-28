@@ -23,10 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue07">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileChanges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileChanges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/DemoDBManager (prswe2.ue04).run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/Main (prswe2.ue03).run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/Main (prswe2.ue04.gradetable).run.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,8 +107,8 @@
       <recent name="prswe2.ss21.ue03.gradetable.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FileSafeMain (1)">
-    <configuration name="FileSafeMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="FileSafeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.filesafe.FileSafeMain" />
       <module name="jku" />
       <extension name="coverage">
@@ -122,80 +121,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSafeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue06.filesafe.FileSafeMain" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue06.filesafe.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KMeanPar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanPar" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue05.kmeans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KMeanSeq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanSeq" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue05.kmeans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParallelMaxMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.demo.max.ParallelMaxMain" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue05.demo.max.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.application.view)" />
-      <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo)" />
-      <item itemvalue="Application.Main (prswe2.ss21.ue03.demo.tableDemo.fxml)" />
-      <item itemvalue="Application.Main (prswe2.ss21.ue03.gradetable)" />
-      <item itemvalue="Application.Main (ue03.demo.application)" />
-      <item itemvalue="Application.Main (prswe2.ue03)" />
-      <item itemvalue="Application.DemoDBManager (prswe2.ue04)" />
-      <item itemvalue="Application.Main (prswe2.ue04.gradetable)" />
-      <item itemvalue="Application.FileSafeMain" />
-      <item itemvalue="Application.KMeanPar" />
-      <item itemvalue="Application.KMeanSeq" />
-      <item itemvalue="Application.ParallelMaxMain" />
-      <item itemvalue="Application.FileSafeMain (1)" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FileSafeMain (1)" />
         <item itemvalue="Application.FileSafeMain" />
-        <item itemvalue="Application.KMeanPar" />
-        <item itemvalue="Application.KMeanSeq" />
-        <item itemvalue="Application.ParallelMaxMain" />
       </list>
     </recent_temporary>
   </component>
@@ -210,13 +138,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00249" summary="pr.swe2.ue05">
-      <created>1618849948374</created>
-      <option name="number" value="00249" />
-      <option name="presentableId" value="LOCAL-00249" />
-      <option name="project" value="LOCAL" />
-      <updated>1618849948375</updated>
     </task>
     <task id="LOCAL-00250" summary="pr.swe2.ue05">
       <created>1618850273259</created>
@@ -554,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621806822005</updated>
     </task>
-    <option name="localTasksCounter" value="298" />
+    <task id="LOCAL-00298" summary="pr.swe2.ue07">
+      <created>1622228951045</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1622228951045</updated>
+    </task>
+    <option name="localTasksCounter" value="299" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
