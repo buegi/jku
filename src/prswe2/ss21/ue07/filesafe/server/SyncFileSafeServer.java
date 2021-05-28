@@ -26,12 +26,12 @@ public class SyncFileSafeServer extends FileSafeServer {
     public void start() throws IOException {
         while (!terminate) {
             try {
-                System.out.println("Server waiting to accept client");
+                System.out.println("FileSafeSyncServer waiting to accept client");
                 Socket clientSocket = server.accept();
-                System.out.println("Server accepted client");
+                System.out.println("FileSafeSyncServer accepted client");
                 new Thread(new SyncFileSafeServer.ClientHandler(clientSocket)).start();
             } catch (SocketException se) {
-                System.out.println("Server closed with " + se.toString());
+                System.out.println("FileSafeSyncServer closed with " + se.toString());
             }
         }
     }

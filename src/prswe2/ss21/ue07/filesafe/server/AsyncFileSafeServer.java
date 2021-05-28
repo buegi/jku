@@ -29,7 +29,7 @@ public class AsyncFileSafeServer extends FileSafeServer {
 
         // accept client loop
         while (!terminate) {
-            System.out.println("Server waiting to accept client");
+            System.out.println("FileSafeAsyncServer waiting to accept client");
             SocketChannel clientChannel = null;
             try {
 
