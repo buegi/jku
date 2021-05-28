@@ -23,11 +23,7 @@ public class FileSafeMain {
         } else {
             fileSafeServer = new AsyncFileSafeServer();
         }
-        try {
-            fileSafeServer.start();
-        } catch (IOException e) {
-            System.out.println("Server couldn't be started!");
-        }
+        fileSafeServer.init();
 
         // start file safe client
         FileSafe filesafe = new FileSafe(loginName);
@@ -38,7 +34,7 @@ public class FileSafeMain {
             char c = In.readChar();
             if (c == 'x') {
                 filesafe.stop();
-                // can also be removed, if server is running on another machine
+                // following lines can be removed, if server is running on another machine, or as own main
                 try {
                     fileSafeServer.terminate();
                 } catch (IOException e) {

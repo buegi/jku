@@ -15,4 +15,17 @@ public abstract class FileSafeServer {
 
     public abstract void terminate() throws IOException;
 
+    public void init() {
+        System.out.println("Server starting");
+        new Thread(() -> {
+            try {
+                this.start();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }).start();
+        System.out.println("Server started");
+    }
+
 }

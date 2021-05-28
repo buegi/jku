@@ -6,7 +6,6 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
-import java.nio.file.Path;
 
 public class AsyncFileSafeServer extends FileSafeServer {
 
@@ -38,7 +37,6 @@ public class AsyncFileSafeServer extends FileSafeServer {
                 System.out.println("Exception " + e.toString());
             }
         }
-
     }
 
     @Override
