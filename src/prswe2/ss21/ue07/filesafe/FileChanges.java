@@ -1,4 +1,4 @@
-package prswe2.ss21.ue07.filesafe.old;
+package prswe2.ss21.ue07.filesafe;
 
 import java.nio.file.Path;
 import java.nio.file.WatchEvent;

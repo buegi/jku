@@ -1,10 +1,12 @@
-package prswe2.ss21.ue07.filesafe.old;
+package prswe2.ss21.ue07.filesafe;
 
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
+import prswe2.ss21.ue07.filesafe.protocol.Constants;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 
@@ -15,8 +17,7 @@ public class FileSafe {
     private static final String FILES_GLOB = "glob:**.{java,xml,txt}";      // file types to save
 
     private final Path src;                                                 // path that should be saved
-    private final Path dst;                                                 // path that should be saved
-    private final boolean syncServer;                                       // defines if synchronous or asynchronous ServerType
+    private final String loginName;                                         // loginName, also folder name that is used on server
 
     private final FileChanges fileChanges;                                  // contains Info for Files to save
 
@@ -29,16 +30,14 @@ public class FileSafe {
     private SaveRunnable saveRunnable;
     private ScheduledExecutorService saveExecutor;
 
-    public FileSafe(Path src, Path dst, boolean syncServer) {
+    public FileSafe(Path src, String loginName) {
         this.src = src;
-        this.dst = dst;
-        this.syncServer = syncServer;
+        this.loginName = loginName;
         this.fileChanges = new FileChanges();
         this.pathMatcher = FileSystems.getDefault().getPathMatcher(FILES_GLOB);
         this.saveExecutor = Executors.newScheduledThreadPool(1);
         this.init();
         this.start();
-
     }
 
     private class SaveRunnable implements Runnable {
@@ -47,32 +46,40 @@ public class FileSafe {
             try {
                 fileChanges.getChangedFiles().forEach((p, e) -> {
                     if (e == ENTRY_CREATE || e == ENTRY_MODIFY) {
-                        try {
-                            Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES,
-                                    StandardCopyOption.REPLACE_EXISTING);
-                            System.out.println("File: " + p.getFileName() + " saved!");
-                        } catch (IOException ioe) {
-                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
-                        }
+
+                        // TODO use SyncClient if SyncServer or else use AsyncClient if AsyncServer
+
+
+//                        try {
+//                            Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES,
+//                                    StandardCopyOption.REPLACE_EXISTING);
+//                            System.out.println("File: " + p.getFileName() + " saved!");
+//                        } catch (IOException ioe) {
+//                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
+//                        }
                         // UE06 Tutor Feedback: remove only if successful -1 CORRECTED
                         // COMMENT file should be removed from change queue either way, otherwise created and instantly
                         // deleted file would stay in queue
+
                         fileChanges.removeSaveFile(p);
                     } else if (e == ENTRY_DELETE) {
-                        try {
-                            // UE06 Tutor Feedback: deleteIfExists -0,5 CORRECTED
-                            if (Files.exists(dst.resolve(p.getFileName()))) {
-                                Files.delete(dst.resolve(p.getFileName()));
-                                System.out.println("File: " + p.getFileName() + " deleted!");
-                            } else {
-                                System.out.println("File doesn't exists anymore - no delete action needed!");
-                            }
-                            // remove from queue either way - we don't want to try multiple times, if file doesn't exist anymore
-                            fileChanges.removeSaveFile(p);
-                            System.out.println("File: " + p.getFileName() + " removed from queue!");
-                        } catch (IOException ioe) {
-                            ioe.printStackTrace();
-                        }
+
+                        // TODO use SyncClient if SyncServer or else use AsyncClient if AsyncServer
+
+//                        try {
+//                            // UE06 Tutor Feedback: deleteIfExists -0,5 CORRECTED
+//                            if (Files.exists(dst.resolve(p.getFileName()))) {
+//                                Files.delete(dst.resolve(p.getFileName()));
+//                                System.out.println("File: " + p.getFileName() + " deleted!");
+//                            } else {
+//                                System.out.println("File doesn't exists anymore - no delete action needed!");
+//                            }
+//                            // remove from queue either way - we don't want to try multiple times, if file doesn't exist anymore
+//                            fileChanges.removeSaveFile(p);
+//                            System.out.println("File: " + p.getFileName() + " removed from queue!");
+//                        } catch (IOException ioe) {
+//                            ioe.printStackTrace();
+//                        }
                     }
                 });
             } catch (Exception e) {

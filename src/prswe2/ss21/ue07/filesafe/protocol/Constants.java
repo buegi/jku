@@ -9,12 +9,16 @@ public class Constants {
     public static final String SERVER = "localhost";
     public static final int PORT = 9876;
 
+    // select server type here: true for synchronous/blocking server, false for asynchronous/non-blocking
+    public static final boolean SYNC_SERVER = true;
+
     public static final String HELO_FROM = "HELO FROM ";
     public static final String LOGIN = "LOGIN ";
     public static final String OK_LOGIN = "OK LOGIN ";
     public static final String DONE = "DONE ";
     public static final String BYE = "BYE ";
     public static final String LINE_SEP = "\r\n";
+    public static final String EOF = "END OF FILE";
 
     private Constants() {
     }
