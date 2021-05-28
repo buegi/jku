@@ -1,7 +1,5 @@
 package prswe2.ss21.ue07.filesafe.client;
 
-import prswe2.ss21.ue07.demo.client.DemoClient;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,7 +24,7 @@ public class FileSafeClient {
     // -----
 
     public void init() throws IOException, InterruptedException {
-        DemoClient client = DemoClient.create(loginName);
+        FileSafeClient client = FileSafeClient.create(loginName);
         Thread clientThread = new Thread(() -> {
             try {
                 client.start();
