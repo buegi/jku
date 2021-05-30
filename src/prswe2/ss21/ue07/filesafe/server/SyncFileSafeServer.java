@@ -7,7 +7,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class SyncFileSafeServer extends FileSafeServer {
@@ -77,7 +76,7 @@ public class SyncFileSafeServer extends FileSafeServer {
 
                 // TODO receive event
                 msg = receive(in);
-                if (msg.startsWith(E_CREATE) || msg.startsWith(E_CHANGED)) {
+                if (msg.startsWith(E_CREATE) || msg.startsWith(E_MODIFY)) {
                     System.out.println(E_CREATE + " ok");
                     send(out, msg);
                     // TODO ack send file
@@ -89,8 +88,11 @@ public class SyncFileSafeServer extends FileSafeServer {
                     String fileName = msg;
                     send(out, msg);
 
-                    // TODO receive & create file
+                    // TODO receive & delete & create file
                     System.out.println("Receiving File: " + fileName);
+                    if (Files.exists(Paths.get(SERVER_ROOT + "//" + clientName + "//" + fileName))) {
+                        Files.delete(Paths.get(SERVER_ROOT + "//" + clientName + "//" + fileName));
+                    }
                     BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(SERVER_ROOT + "//" + clientName + "//" + fileName)));
                     BufferedReader fileInput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     do {
@@ -101,7 +103,6 @@ public class SyncFileSafeServer extends FileSafeServer {
                     } while (fileInput.ready());
                     fileOutput.close();
                     msg = END_OF_FILE;
-
 
                     // TODO ack end of file
                     send(out, msg);
@@ -129,7 +130,7 @@ public class SyncFileSafeServer extends FileSafeServer {
 
 
                 } else {
-                    System.out.println(E_CREATE + " or " + E_CHANGED + " or " + E_DELETE + "expected but received " + msg);
+                    System.out.println(E_CREATE + " or " + E_MODIFY + " or " + E_DELETE + "expected but received " + msg);
                     return;
                 }
 

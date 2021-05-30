@@ -15,6 +15,7 @@ public class FileSafeMain {
 
         String loginName = "Stefan";
 
+        // -------------------------------------------------------------------------------
         // just for ease of use the preferred server type is started on same machine
         // this can be removed and ServerMain can be started manually on another machine
         FileSafeServer fileSafeServer;
@@ -24,6 +25,7 @@ public class FileSafeMain {
             fileSafeServer = new AsyncFileSafeServer();
         }
         fileSafeServer.init();
+        // -------------------------------------------------------------------------------
 
         // start file safe client
         FileSafe filesafe = new FileSafe(loginName);

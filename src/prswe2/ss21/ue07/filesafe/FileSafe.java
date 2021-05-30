@@ -1,6 +1,7 @@
 package prswe2.ss21.ue07.filesafe;
 
 import prswe2.ss21.ue07.filesafe.client.FileSafeClient;
+import prswe2.ss21.ue07.filesafe.client.SyncFileSafeClient;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -15,7 +16,7 @@ import static java.nio.file.StandardWatchEventKinds.*;
 public class FileSafe {
 
     private static final int INITIAL_DELAY = 2;
-    private static final int SAVE_INTERVAL = 10;                            // saving frequency
+    private static final int SAVE_INTERVAL = 20;                            // saving frequency
     private static final String FILES_GLOB = "glob:**.{java,xml,txt}";      // file types to save
 
     private final String loginName;                                         // loginName, also folder name that is used on server
@@ -43,22 +44,22 @@ public class FileSafe {
     private class SaveRunnable implements Runnable {
         @Override
         public void run() {
-            try {
-                fileChanges.getChangedFiles().forEach((p, e) -> {
-                    if (e == ENTRY_CREATE || e == ENTRY_MODIFY) {
+            if (SYNC_SERVER) {
+                try {
+                    fileChanges.getChangedFiles().forEach((p, e) -> {
+                        if (e == ENTRY_CREATE || e == ENTRY_MODIFY) {
 
-                        // TODO use FileSafeClient to do file operations
+                            System.out.println("Action: " + e);
+                            try {
+                                FileSafeClient client = new SyncFileSafeClient(loginName);
+                                client.communicate(e.toString(), p.getFileName());
+                                System.out.println("File: " + p.getFileName() + " saved!");
+                            } catch (IOException ioException) {
+                                System.out.println("File: " + p.getFileName() + " not found (anymore)!");
+                            }
 
-                        System.out.println("Action: " + e);
-                        try {
-                            FileSafeClient client = new FileSafeClient(loginName);
-                            client.action(e.toString(), p.getFileName());
-                            System.out.println("File: " + p.getFileName() + " saved!");
-                        } catch (IOException ioException) {
-                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
-                        }
-
-
+// ------------------------------------------------------------------------------
+// please ignore these lines are corrections and feedback from ex06
 //                        try {
 //                            Files.copy(p, dst.resolve(p.getFileName()), StandardCopyOption.COPY_ATTRIBUTES,
 //                                    StandardCopyOption.REPLACE_EXISTING);
@@ -66,25 +67,25 @@ public class FileSafe {
 //                        } catch (IOException ioe) {
 //                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
 //                        }
-                        // UE06 Tutor Feedback: remove only if successful -1 CORRECTED
-                        // COMMENT file should be removed from change queue either way, otherwise created and instantly
-                        // deleted file would stay in queue
+                            // UE06 Tutor Feedback: remove only if successful -1 CORRECTED
+                            // COMMENT file should be removed from change queue either way, otherwise created and instantly
+                            // deleted file would stay in queue
+// -------------------------------------------------------------------------------
 
-                        fileChanges.removeSaveFile(p);
-                    } else if (e == ENTRY_DELETE) {
+                            fileChanges.removeSaveFile(p);
+                        } else if (e == ENTRY_DELETE) {
+                            System.out.println(e);
+                            try {
+                                SyncFileSafeClient client = new SyncFileSafeClient(loginName);
+                                client.communicate(e.toString(), p.getFileName());
+                                System.out.println("File: " + p.getFileName() + " deleted!");
+                            } catch (IOException ioException) {
+                                System.out.println("File: " + p.getFileName() + " not found (anymore)!");
+                            }
+                            fileChanges.removeSaveFile(p);
 
-                        // TODO use FileSafeClient to do file operations
-
-                        System.out.println(e);
-                        try {
-                            FileSafeClient client = new FileSafeClient(loginName);
-                            client.action(e.toString(), p.getFileName());
-                            System.out.println("File: " + p.getFileName() + " deleted!");
-                        } catch (IOException ioException) {
-                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
-                        }
-                        fileChanges.removeSaveFile(p);
-
+// ------------------------------------------------------------------------------
+// please ignore these lines are corrections and feedback from ex06
 //                        try {
 //                            // UE06 Tutor Feedback: deleteIfExists -0,5 CORRECTED
 //                            if (Files.exists(dst.resolve(p.getFileName()))) {
@@ -99,10 +100,20 @@ public class FileSafe {
 //                        } catch (IOException ioe) {
 //                            ioe.printStackTrace();
 //                        }
-                    }
-                });
-            } catch (Exception e) {
-                e.printStackTrace();
+// -------------------------------------------------------------------------------
+
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (!SYNC_SERVER) {
+
+                // TODO Async Client --------------------------------------------------
+
+
             }
         }
     }

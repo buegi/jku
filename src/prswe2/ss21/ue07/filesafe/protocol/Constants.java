@@ -24,7 +24,7 @@ public class Constants {
     public static final String BYE = "BYE ";
     public static final String LINE_SEP = "\r\n";
     public static final String E_CREATE = "ENTRY_CREATE";
-    public static final String E_CHANGED = "ENTRY_CHANGED";
+    public static final String E_MODIFY = "ENTRY_MODIFY";
     public static final String E_DELETE = "ENTRY_DELETE";
     public static final String SEND_FILE = "SEND FILE";
     public static final String END_OF_FILE = "END_OF_FILE";
