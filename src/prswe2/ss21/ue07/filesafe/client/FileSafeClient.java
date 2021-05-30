@@ -1,9 +1,6 @@
 package prswe2.ss21.ue07.filesafe.client;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 import java.nio.file.Path;
 
@@ -77,11 +74,13 @@ public class FileSafeClient {
         try (Socket socket = new Socket(SERVER, PORT);
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              PrintWriter out = new PrintWriter(socket.getOutputStream())) {
+            // HELO
             String reply = receive(in);
             if (!reply.startsWith(HELO_FROM)) {
                 System.out.println(HELO_FROM + "expected but received " + reply);
                 return;
             }
+            // LOGIN
             send(out, LOGIN + loginName);
             reply = receive(in);
             if (!reply.startsWith(OK_LOGIN)) {
@@ -89,19 +88,59 @@ public class FileSafeClient {
                 return;
             }
 
-            // TODO send event
-            send(out, action);
-            reply = receive(in);
-            if (!reply.startsWith(E_CREATE)) {
-                System.out.println(E_CREATE + " expected but received " + reply);
-                return;
+            // ACTION CREATE OR CHANGE
+            if (action.equals(E_CREATE) || action.equals(E_CHANGED)) {
+                send(out, action);
+                reply = receive(in);
+                if (!reply.startsWith(E_CREATE)) {
+                    System.out.println(E_CREATE + " expected but received " + reply);
+                    return;
+                }
+
+                // SEND_FILE
+                send(out, SEND_FILE);
+                reply = receive(in);
+                if (!reply.startsWith(SEND_FILE)) {
+                    System.out.println(SEND_FILE + "expected but received " + reply);
+                    return;
+                }
+
+
+                // send file name
+                send(out, file.toString());
+                reply = receive(in);
+                if (!reply.startsWith(file.toString())) {
+                    System.out.println(file + "expected but received " + reply);
+                    return;
+                }
+
+                // TODO send File
+                System.out.println("Sending file: " + file);
+                FileInputStream fi = new FileInputStream(CLIENT_SOURCE + "//" + file);
+                byte[] b = new byte[1024];
+                fi.read(b, 0, b.length);
+                OutputStream os = socket.getOutputStream();
+                os.write(b, 0, b.length);
+
             }
 
-            // TODO Send Filename
+            // ACTION DELETE
+            if (action.equals(E_DELETE)) {
+                send(out, E_DELETE);
+                reply = receive(in);
+                if (!reply.startsWith(E_DELETE)) {
+                    System.out.println(E_DELETE + "expected but received " + reply);
+                }
 
+                // send file name
+                send(out, file.toString());
+                reply = receive(in);
+                if (!reply.startsWith(file.toString())) {
+                    System.out.println(file + "expected but received " + reply);
+                }
+            }
 
-            // TODO send File
-
+            // DONE
             send(out, DONE);
             reply = receive(in);
             if (!reply.startsWith(BYE)) {

@@ -73,21 +73,56 @@ public class SyncFileSafeServer extends FileSafeServer {
                         System.out.println("User directory for " + clientName + " already existent!");
                     }
                 }
-
                 send(out, OK_LOGIN + clientName);
 
                 // TODO receive event
                 msg = receive(in);
                 if (msg.startsWith(E_CREATE) || msg.startsWith(E_CHANGED)) {
                     System.out.println(E_CREATE + " ok");
+                    send(out, msg);
+                    // TODO ack send file
+                    msg = receive(in);
+                    send(out, msg);
+
+                    // TODO receive file name
+                    msg = receive(in);
+                    String fileName = msg;
+                    send(out, msg);
+
+                    // TODO receive & create file
+                    System.out.println("Receiving File: " + fileName);
+                    byte[] b = new byte[1024];
+                    InputStream is = socket.getInputStream();
+                    FileOutputStream fo = new FileOutputStream(SERVER_ROOT + "//" + clientName + "//" + fileName);
+                    is.read(b, 0, b.length);
+                    fo.write(b, 0, b.length);
+
                 } else if (msg.startsWith(E_DELETE)) {
                     System.out.println(E_DELETE + " ok");
+                    send(out, msg);
+
+                    // TODO receive filename
+                    msg = receive(in);
+                    String fileName = msg;
+                    send(out, msg);
+
+                    // TODO delete File
+                    try {
+                        if (Files.exists(Paths.get(SERVER_ROOT + "//" + clientName).resolve(fileName))) {
+                            Files.delete(Paths.get(SERVER_ROOT + "//" + clientName + "//" + fileName));
+                            System.out.println("File: " + fileName + " deleted!");
+                        } else {
+                            System.out.println("File doesn't exists anymore - no delete action needed!");
+                        }
+                    } catch (IOException ioe) {
+                        ioe.printStackTrace();
+                    }
+
 
                 } else {
                     System.out.println(E_CREATE + " or " + E_CHANGED + " or " + E_DELETE + "expected but received " + msg);
                     return;
                 }
-                send(out, msg);
 
                 msg = receive(in);
                 if (!msg.startsWith(DONE)) {

@@ -27,6 +27,7 @@ public class Constants {
     public static final String E_CREATE = "ENTRY_CREATE";
     public static final String E_CHANGED = "ENTRY_CHANGED";
     public static final String E_DELETE = "ENTRY_DELETE";
+    public static final String SEND_FILE = "SEND FILE";
 
     private Constants() {
     }
