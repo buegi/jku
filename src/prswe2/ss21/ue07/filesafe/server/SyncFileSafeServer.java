@@ -91,12 +91,20 @@ public class SyncFileSafeServer extends FileSafeServer {
 
                     // TODO receive & create file
                     System.out.println("Receiving File: " + fileName);
-                    byte[] b = new byte[1024];
-                    InputStream fileInput = socket.getInputStream();
-                    FileOutputStream fileOutput = new FileOutputStream(SERVER_ROOT + "//" + clientName + "//" + fileName);
-                    fileInput.read(b, 0, b.length);
-                    fileOutput.write(b, 0, b.length);
+                    BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(SERVER_ROOT + "//" + clientName + "//" + fileName)));
+                    BufferedReader fileInput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    do {
+                        fileOutput.flush();
+                        String x = fileInput.readLine();
+                        String v = x.replace(END_OF_FILE, "");
+                        fileOutput.write(v);
+                    } while (fileInput.ready());
                     fileOutput.close();
+                    msg = END_OF_FILE;
+
+
+                    // TODO ack end of file
+                    send(out, msg);
 
                 } else if (msg.startsWith(E_DELETE)) {
                     System.out.println(E_DELETE + " ok");

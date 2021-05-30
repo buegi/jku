@@ -116,12 +116,22 @@ public class FileSafeClient {
 
                 // TODO send File
                 System.out.println("Sending file: " + file);
-                FileInputStream fileInput = new FileInputStream(CLIENT_SOURCE + "//" + file);
-                byte[] b = new byte[1024];
-                fileInput.read(b, 0, b.length);
-                OutputStream fileOutput = socket.getOutputStream();
-                fileOutput.write(b, 0, b.length);
+                BufferedReader fileInput = new BufferedReader(new FileReader(CLIENT_SOURCE + "//" + file));
+                BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+                while (fileInput.ready()) {
+                    fileOutput.flush();
+                    String x = fileInput.readLine();
+                    fileOutput.write(x);
+                }
                 fileInput.close();
+
+                // send end of file
+                send(out, END_OF_FILE);
+                reply = receive(in);
+                if (!reply.startsWith(END_OF_FILE)) {
+                    System.out.println(END_OF_FILE + " expected but received " + reply);
+                    return;
+                }
             }
 
             // ACTION DELETE
