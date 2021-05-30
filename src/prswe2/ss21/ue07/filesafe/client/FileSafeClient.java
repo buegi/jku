@@ -105,7 +105,6 @@ public class FileSafeClient {
                     return;
                 }
 
-
                 // send file name
                 send(out, file.toString());
                 reply = receive(in);
@@ -114,15 +113,15 @@ public class FileSafeClient {
                     return;
                 }
 
+
                 // TODO send File
                 System.out.println("Sending file: " + file);
-                FileInputStream fi = new FileInputStream(CLIENT_SOURCE + "//" + file);
+                FileInputStream fileInput = new FileInputStream(CLIENT_SOURCE + "//" + file);
                 byte[] b = new byte[1024];
-                fi.read(b, 0, b.length);
-                OutputStream os = socket.getOutputStream();
-                os.write(b, 0, b.length);
-                fi.close();
-
+                fileInput.read(b, 0, b.length);
+                OutputStream fileOutput = socket.getOutputStream();
+                fileOutput.write(b, 0, b.length);
+                fileInput.close();
             }
 
             // ACTION DELETE
