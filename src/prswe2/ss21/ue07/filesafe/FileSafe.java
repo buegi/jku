@@ -55,7 +55,6 @@ public class FileSafe {
                             client.action(e.toString(), p.getFileName());
                             System.out.println("File: " + p.getFileName() + " saved!");
                         } catch (IOException ioException) {
-                            ioException.printStackTrace();
                             System.out.println("File: " + p.getFileName() + " not found (anymore)!");
                         }
 
@@ -77,6 +76,14 @@ public class FileSafe {
                         // TODO use FileSafeClient to do file operations
 
                         System.out.println(e);
+                        try {
+                            FileSafeClient client = new FileSafeClient(loginName);
+                            client.action(e.toString(), p.getFileName());
+                            System.out.println("File: " + p.getFileName() + " deleted!");
+                        } catch (IOException ioException) {
+                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
+                        }
+                        fileChanges.removeSaveFile(p);
 
 //                        try {
 //                            // UE06 Tutor Feedback: deleteIfExists -0,5 CORRECTED

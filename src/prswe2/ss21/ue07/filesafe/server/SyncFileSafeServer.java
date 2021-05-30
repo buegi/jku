@@ -96,6 +96,7 @@ public class SyncFileSafeServer extends FileSafeServer {
                     FileOutputStream fo = new FileOutputStream(SERVER_ROOT + "//" + clientName + "//" + fileName);
                     is.read(b, 0, b.length);
                     fo.write(b, 0, b.length);
+                    fo.close();
 
                 } else if (msg.startsWith(E_DELETE)) {
                     System.out.println(E_DELETE + " ok");

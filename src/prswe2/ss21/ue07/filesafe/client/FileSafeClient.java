@@ -121,6 +121,7 @@ public class FileSafeClient {
                 fi.read(b, 0, b.length);
                 OutputStream os = socket.getOutputStream();
                 os.write(b, 0, b.length);
+                fi.close();
 
             }
 
