@@ -46,7 +46,6 @@ public class AsyncFileSafeServer extends FileSafeServer {
     }
 
     private class SelectorRunnable implements Runnable {
-
         @Override
         public void run() {
             try {

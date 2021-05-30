@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
+import static prswe2.ss21.ue07.filesafe.config.Configuration.*;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 

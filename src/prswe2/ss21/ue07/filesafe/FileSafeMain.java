@@ -1,6 +1,6 @@
 package prswe2.ss21.ue07.filesafe;
 
-import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
+import static prswe2.ss21.ue07.filesafe.config.Configuration.*;
 
 import prswe2.ss21.ue07.filesafe.server.AsyncFileSafeServer;
 import prswe2.ss21.ue07.filesafe.server.FileSafeServer;

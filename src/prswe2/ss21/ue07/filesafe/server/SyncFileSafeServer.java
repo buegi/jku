@@ -1,6 +1,6 @@
 package prswe2.ss21.ue07.filesafe.server;
 
-import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
+import static prswe2.ss21.ue07.filesafe.config.Configuration.*;
 
 import java.io.*;
 import java.net.ServerSocket;

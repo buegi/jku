@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.Socket;
 import java.nio.file.Path;
 
-import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
+import static prswe2.ss21.ue07.filesafe.config.Configuration.*;
 
 public class SyncFileSafeClient extends FileSafeClient {
 
