@@ -1,7 +1,6 @@
 package prswe2.ss21.ue07.filesafe;
 
 import prswe2.ss21.ue07.filesafe.client.FileSafeClient;
-import prswe2.ss21.ue07.filesafe.client.SyncFileSafeClient;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -16,7 +15,7 @@ import static java.nio.file.StandardWatchEventKinds.*;
 public class FileSafe {
 
     private static final int INITIAL_DELAY = 2;
-    private static final int SAVE_INTERVAL = 20;                            // saving frequency
+    private static final int SAVE_INTERVAL = 10;                            // saving frequency
     private static final String FILES_GLOB = "glob:**.{java,xml,txt}";      // file types to save
 
     private final String loginName;                                         // loginName, also folder name that is used on server
@@ -44,20 +43,18 @@ public class FileSafe {
     private class SaveRunnable implements Runnable {
         @Override
         public void run() {
-            if (SYNC_SERVER) {
-                try {
-                    fileChanges.getChangedFiles().forEach((p, e) -> {
-                        if (e == ENTRY_CREATE || e == ENTRY_MODIFY) {
+            try {
+                fileChanges.getChangedFiles().forEach((p, e) -> {
+                    if (e == ENTRY_CREATE || e == ENTRY_MODIFY) {
 
-                            System.out.println("Action: " + e);
-                            try {
-                                FileSafeClient client = new SyncFileSafeClient(loginName);
-                                client.communicate(e.toString(), p.getFileName());
-                                System.out.println("File: " + p.getFileName() + " saved!");
-                            } catch (IOException ioException) {
-                                System.out.println("File: " + p.getFileName() + " not found (anymore)!");
-                            }
-
+                        System.out.println("Action: " + e);
+                        try {
+                            FileSafeClient client = new FileSafeClient(loginName);
+                            client.communicate(e.toString(), p.getFileName());
+                            System.out.println("File: " + p.getFileName() + " saved!");
+                        } catch (IOException ioException) {
+                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
+                        }
 // ------------------------------------------------------------------------------
 // please ignore these lines are corrections and feedback from ex06
 //                        try {
@@ -67,23 +64,20 @@ public class FileSafe {
 //                        } catch (IOException ioe) {
 //                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
 //                        }
-                            // UE06 Tutor Feedback: remove only if successful -1 CORRECTED
-                            // COMMENT file should be removed from change queue either way, otherwise created and instantly
-                            // deleted file would stay in queue
+                        // UE06 Tutor Feedback: remove only if successful -1 CORRECTED
+                        // COMMENT file should be removed from change queue either way, otherwise created and instantly
+                        // deleted file would stay in queue
 // -------------------------------------------------------------------------------
-
-                            fileChanges.removeSaveFile(p);
-                        } else if (e == ENTRY_DELETE) {
-                            System.out.println(e);
-                            try {
-                                SyncFileSafeClient client = new SyncFileSafeClient(loginName);
-                                client.communicate(e.toString(), p.getFileName());
-                                System.out.println("File: " + p.getFileName() + " deleted!");
-                            } catch (IOException ioException) {
-                                System.out.println("File: " + p.getFileName() + " not found (anymore)!");
-                            }
-                            fileChanges.removeSaveFile(p);
-
+                    } else if (e == ENTRY_DELETE) {
+                        System.out.println(e);
+                        try {
+                            FileSafeClient client = new FileSafeClient(loginName);
+                            client.communicate(e.toString(), p.getFileName());
+                            System.out.println("File: " + p.getFileName() + " deleted!");
+                        } catch (IOException ioException) {
+                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
+                        }
+                    }
 // ------------------------------------------------------------------------------
 // please ignore these lines are corrections and feedback from ex06
 //                        try {
@@ -101,19 +95,10 @@ public class FileSafe {
 //                            ioe.printStackTrace();
 //                        }
 // -------------------------------------------------------------------------------
-
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            if (!SYNC_SERVER) {
-
-                // TODO Async Client --------------------------------------------------
-
-
+                    fileChanges.removeSaveFile(p);
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
