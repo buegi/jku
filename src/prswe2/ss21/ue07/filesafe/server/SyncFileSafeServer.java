@@ -100,6 +100,7 @@ public class SyncFileSafeServer extends FileSafeServer {
                         String x = fileInput.readLine();
                         String v = x.replace(END_OF_FILE, "");
                         fileOutput.write(v);
+                        fileOutput.flush();
                     } while (fileInput.ready());
                     fileOutput.close();
                     msg = END_OF_FILE;

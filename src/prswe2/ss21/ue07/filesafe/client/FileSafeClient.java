@@ -85,11 +85,12 @@ public class FileSafeClient {
                 System.out.println("Sending file: " + file);
                 BufferedReader fileInput = new BufferedReader(new FileReader(CLIENT_SOURCE + "//" + file));
                 BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-                do {
+                while (fileInput.ready()) {
                     fileOutput.flush();
                     String x = fileInput.readLine();
                     fileOutput.write(x);
-                } while (fileInput.ready());
+                    fileOutput.flush();
+                }
                 fileInput.close();
 
                 // send end of file

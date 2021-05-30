@@ -24,10 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue07">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/FileSafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/AsyncFileSafeClient.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/FileSafeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/FileSafeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/client/SyncFileSafeClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/SyncFileSafeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue07/filesafe/server/SyncFileSafeServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,13 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00271" summary="pr.swe2.ue05">
-      <created>1619913912040</created>
-      <option name="number" value="00271" />
-      <option name="presentableId" value="LOCAL-00271" />
-      <option name="project" value="LOCAL" />
-      <updated>1619913912040</updated>
     </task>
     <task id="LOCAL-00272" summary="pr.swe2.ue05">
       <created>1619991013053</created>
@@ -548,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622400747977</updated>
     </task>
-    <option name="localTasksCounter" value="320" />
+    <task id="LOCAL-00320" summary="pr.swe2.ue07">
+      <created>1622405490591</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1622405490592</updated>
+    </task>
+    <option name="localTasksCounter" value="321" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
