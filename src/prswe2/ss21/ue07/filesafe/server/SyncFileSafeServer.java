@@ -2,13 +2,13 @@ package prswe2.ss21.ue07.filesafe.server;
 
 import static prswe2.ss21.ue07.filesafe.protocol.Constants.*;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class SyncFileSafeServer extends FileSafeServer {
 
@@ -60,20 +60,34 @@ public class SyncFileSafeServer extends FileSafeServer {
             ) {
                 send(out, HELO_FROM + server.toString());
                 String msg = receive(in);
+                String clientName = msg.substring(6);
                 if (!msg.startsWith(LOGIN)) {
                     System.out.println(LOGIN + "expected but received " + msg);
                     return;
+                } else {
+                    File userDir = new File(SERVER_ROOT + "//" + clientName);
+                    if (!userDir.isDirectory()) {
+                        userDir.mkdir();
+                        System.out.println("User directory for " + clientName + " created!");
+                    } else {
+                        System.out.println("User directory for " + clientName + " already existent!");
+                    }
                 }
-                String clientName = msg.substring(6);
+
                 send(out, OK_LOGIN + clientName);
 
                 // TODO receive event
-//                msg = receive(in);
-//                if (!msg.startsWith(E_CREATE) || !msg.startsWith(E_CHANGED) || !msg.startsWith(E_DELETE)) {
-//                    System.out.println(E_CREATE + " expected but received " + msg);
-//                    return;
-//                }
-//                send(out, msg);
+                msg = receive(in);
+                if (msg.startsWith(E_CREATE) || msg.startsWith(E_CHANGED)) {
+                    System.out.println(E_CREATE + " ok");
+                } else if (msg.startsWith(E_DELETE)) {
+                    System.out.println(E_DELETE + " ok");
+
+                } else {
+                    System.out.println(E_CREATE + " or " + E_CHANGED + " or " + E_DELETE + "expected but received " + msg);
+                    return;
+                }
+                send(out, msg);
 
                 msg = receive(in);
                 if (!msg.startsWith(DONE)) {
@@ -81,12 +95,14 @@ public class SyncFileSafeServer extends FileSafeServer {
                     return;
                 }
                 send(out, BYE);
-            } catch (IOException e) {
+            } catch (
+                    IOException e) {
                 e.printStackTrace();
             }
             try {
                 socket.close();
-            } catch (IOException e) {
+            } catch (
+                    IOException e) {
                 e.printStackTrace();
             }
         }

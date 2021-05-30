@@ -49,13 +49,14 @@ public class FileSafe {
 
                         // TODO use FileSafeClient to do file operations
 
-                        System.out.println(e);
-
+                        System.out.println("Action: " + e);
                         try {
                             FileSafeClient client = new FileSafeClient(loginName);
-                            client.communicate();
+                            client.action(e.toString(), p.getFileName());
+                            System.out.println("File: " + p.getFileName() + " saved!");
                         } catch (IOException ioException) {
                             ioException.printStackTrace();
+                            System.out.println("File: " + p.getFileName() + " not found (anymore)!");
                         }
 
 
