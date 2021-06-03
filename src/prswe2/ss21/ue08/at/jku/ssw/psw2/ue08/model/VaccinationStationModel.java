@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 /**
  * This class describes a data model for the inventory system of a vaccination station. It manages different kinds
  * of {@link VaccineClass vaccines} and the quantity available for vaccination of each. Changes to this model can be
- * observed using appropriate {@link at.jku.ssw.psw2.ue08.sampleSolution.model.InventoryChangeListener change listeners}.
+ * observed using appropriate {@link prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.InventoryChangeListener change listeners}.
  *
  * @param <VaccineClass> type of vaccines managed by this model
  */

@@ -23,35 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue08 new data">
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/gui/VaccinationStationGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccinationStationModelImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccineImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/InventoryChangeListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/VaccinationStationModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/Vaccine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/callbacks/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/callbacks/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/deadlock/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/deadlock/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/dynamicproxy/DynamicProxyExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/helloworld/HelloWorlClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/helloworld/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/helloworld/HelloWorldServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/bank/impl/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/bank/impl/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/bank/io/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/contract/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/contract/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/contract/BankChangedListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/impl/AccountImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/impl/BankImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/rmi/RMIClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/rmi/RMIConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/rmi/rmibank/rmi/RMIServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/serializable/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/demo/serializable/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/VaccinationStationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/VaccinationStationModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,26 +107,13 @@
       <recent name="prswe2.ss21.ue03.gradetable.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FileSafeMain">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DemoClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.demo.client.DemoClientMain" />
       <module name="jku" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="prswe2.ss21.ue07.demo.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.demo.server.DemoServerMain" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue07.demo.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -200,20 +160,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.Main" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.DemoClientMain" />
       <item itemvalue="Application.DemoServerMainAsync" />
-      <item itemvalue="Application.DemoServerMain" />
       <item itemvalue="Application.FileSafeMain" />
       <item itemvalue="Application.FileSafeServerMain" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.FileSafeMain" />
         <item itemvalue="Application.FileSafeServerMain" />
         <item itemvalue="Application.DemoClientMain" />
         <item itemvalue="Application.DemoServerMainAsync" />
-        <item itemvalue="Application.DemoServerMain" />
       </list>
     </recent_temporary>
   </component>
@@ -228,13 +201,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00275" summary="pr.swe2.ue06">
-      <created>1620660613660</created>
-      <option name="number" value="00275" />
-      <option name="presentableId" value="LOCAL-00275" />
-      <option name="project" value="LOCAL" />
-      <updated>1620660613660</updated>
     </task>
     <task id="LOCAL-00276" summary="pr.swe2.ue06">
       <created>1620933878598</created>
@@ -572,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622413398727</updated>
     </task>
-    <option name="localTasksCounter" value="324" />
+    <task id="LOCAL-00324" summary="pr.swe2.ue08 new data">
+      <created>1622732906564</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1622732906565</updated>
+    </task>
+    <option name="localTasksCounter" value="325" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
