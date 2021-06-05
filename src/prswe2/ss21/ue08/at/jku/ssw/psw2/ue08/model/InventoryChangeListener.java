@@ -1,6 +1,5 @@
 package prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model;
 
-import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

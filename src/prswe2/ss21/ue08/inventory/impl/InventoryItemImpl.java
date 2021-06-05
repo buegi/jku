@@ -1,22 +1,21 @@
-package prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl;
+package prswe2.ss21.ue08.inventory.impl;
 
-import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
-
-import java.io.Serial;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public final class VaccineImpl extends UnicastRemoteObject implements Vaccine {
-    @Serial
-    private static final long serialVersionUID = 4140607777083645975L;
+import prswe2.ss21.ue08.inventory.model.InventoryItem;
 
-    private final String name;
+public final class InventoryItemImpl extends UnicastRemoteObject implements InventoryItem {
+
+	private static final long serialVersionUID = -8575938206383986452L;
+
+	private final String name;
 
     private String description;
     private int quantity;
 
-    public VaccineImpl(String name) throws RemoteException {
-        super();
+    protected InventoryItemImpl(String name) throws RemoteException {
+    	super();
         this.name = name;
         this.description = "";
         this.quantity = 0;
@@ -46,7 +45,7 @@ public final class VaccineImpl extends UnicastRemoteObject implements Vaccine {
     }
 
     /*
-     * This method is called to get the string displayed in the gui's list view of available vaccines. We override it to display the vaccine's name in the list.
+     * This method is called to get the string displayed in the gui's list view of available items. We override it to display the item's name in the list.
      */
     @Override
     public String toString() {

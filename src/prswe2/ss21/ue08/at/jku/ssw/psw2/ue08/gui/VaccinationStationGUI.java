@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.Serial;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -176,7 +177,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
 
         class InventoryChangeListenerClient extends UnicastRemoteObject implements InventoryChangeListener<VaccineClass> {
 
-            private static final long serialVersionUID = -4276006573559271628L;
+            @Serial
+            private static final long serialVersionUID = 4735474697783333362L;
 
             protected InventoryChangeListenerClient() throws RemoteException {
                 super();
@@ -185,13 +187,11 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             @Override
             public void onVaccineAdded(VaccineClass addedVaccine) throws RemoteException {
                 stockListModel.addElement(new DisplayVaccine(addedVaccine));
-
             }
 
             @Override
             public void onVaccineChanged(VaccineClass changedVaccine) throws RemoteException {
                 updateDetailsView();
-
             }
 
             @Override

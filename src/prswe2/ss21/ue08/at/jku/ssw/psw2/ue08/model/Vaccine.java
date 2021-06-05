@@ -7,10 +7,6 @@ import java.rmi.RemoteException;
  * Represents a vaccine administered by a {@link VaccinationStationModel}. Each vaccine provides a name, a more detailed description and how many doses of it are currently in stock.
  */
 
-// class changed log:
-// extends Remote
-// add throws RemoteException to methods
-
 public interface Vaccine extends Remote {
 
     /**

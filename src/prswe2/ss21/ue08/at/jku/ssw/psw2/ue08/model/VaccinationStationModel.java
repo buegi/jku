@@ -13,10 +13,6 @@ import java.util.NoSuchElementException;
  * @param <VaccineClass> type of vaccines managed by this model
  */
 
-// class changed log:
-// extends Remote
-// add throws RemoteException to methods
-
 public interface VaccinationStationModel<VaccineClass extends Vaccine> extends Remote {
 
     /**
