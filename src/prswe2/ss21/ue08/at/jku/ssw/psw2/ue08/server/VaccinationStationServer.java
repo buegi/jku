@@ -20,11 +20,11 @@ public class VaccinationStationServer {
     public VaccinationStationServer() {
         try {
             model = new VaccinationStationModelImpl();
-            this.registry = LocateRegistry.createRegistry(SERVER_PORT);
+            registry = LocateRegistry.createRegistry(SERVER_PORT);
             registry.bind(VACCINE_EXPORT_NAME, model);
             System.out.println("Server bound");
         } catch (Exception e) {
-
+            System.out.println("Couldn't initalize server");
         }
     }
 
@@ -34,7 +34,7 @@ public class VaccinationStationServer {
     }
 
     public void start() {
-        Thread terminateThread = new Thread(() -> {
+        Thread termThread = new Thread(() -> {
             System.out.println("Server started");
             System.out.println("[ENTER] terminates server");
             Scanner sc = new Scanner(System.in);
@@ -54,6 +54,6 @@ public class VaccinationStationServer {
             sc.close();
             System.exit(0);
         });
-        terminateThread.start();
+        termThread.start();
     }
 }

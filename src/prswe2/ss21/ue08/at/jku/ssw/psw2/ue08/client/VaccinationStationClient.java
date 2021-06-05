@@ -30,7 +30,6 @@ public class VaccinationStationClient {
         }
     }
 
-
     private static void insertExampleData(VaccinationStationModel<VaccineImpl> model) throws RemoteException {
         addVaccine(model, "Comirnaty", "Producer: BioNTech/Pfizer\nAge required: 16\nDoses required: 2", 100);
         addVaccine(model, "COVID-19 Vaccine Moderna", "Producer: Moderna\nAge required: 18\nDoses required: 2", 50);
