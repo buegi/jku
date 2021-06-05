@@ -23,9 +23,9 @@ public class Main {
         try {
             Registry registry = LocateRegistry.getRegistry(SERVER_HOST, SERVER_PORT);
             VaccinationStationModel model = (VaccinationStationModel) registry.lookup(VACCINE_EXPORT_NAME);
-            insertExampleData(model);
+            //insertExampleData(model);
             System.out.println("Remote model created, test data inserted");
-            //VaccinationStationGUI.startGui(model);
+            VaccinationStationGUI.startGui(model);
         } catch (RemoteException | NotBoundException e) {
             System.out.println("Couldn't register client");
         }

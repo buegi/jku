@@ -4,6 +4,7 @@ import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.InventoryChangeListener;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.VaccinationStationModel;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl> {
+public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl>, Serializable {
 
     private final List<VaccineImpl> vaccines;
     private final List<InventoryChangeListener<VaccineImpl>> listeners;
@@ -23,15 +24,33 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
     }
 
     private void fireVaccineAdded(VaccineImpl addedVaccine) {
-        listeners.forEach(l -> l.onVaccineAdded(addedVaccine));
+        listeners.forEach(l -> {
+            try {
+                l.onVaccineAdded(addedVaccine);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private void fireVaccineChanged(VaccineImpl changedVaccine) {
-        listeners.forEach(l -> l.onVaccineChanged(changedVaccine));
+        listeners.forEach(l -> {
+            try {
+                l.onVaccineChanged(changedVaccine);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private void fireVaccineRemoved(VaccineImpl removedVaccine) {
-        listeners.forEach(l -> l.onVaccineRemoved(removedVaccine));
+        listeners.forEach(l -> {
+            try {
+                l.onVaccineRemoved(removedVaccine);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     @Override

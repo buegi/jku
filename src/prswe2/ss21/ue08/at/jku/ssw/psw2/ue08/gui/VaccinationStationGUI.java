@@ -11,9 +11,9 @@ import java.awt.event.WindowEvent;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 
-public final class VaccinationStationGUI<VaccineClass extends Vaccine> implements Serializable{
+public final class VaccinationStationGUI<VaccineClass extends Vaccine> implements Serializable {
 
-    private static final class DisplayVaccine<VaccineClass extends Vaccine> {
+    private static final class DisplayVaccine<VaccineClass extends Vaccine> implements Serializable{
 
         private final VaccineClass vaccine;
 

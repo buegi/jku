@@ -1,0 +1,775 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"aec62a0e-e47a-445a-bf58-af92c29e1527\" name=\"Default Changelist\" comment=\"pr.swe2.ue07\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"AnnotationType\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1XUOEXlRCVg1LE2eoXV04XR9WCJ\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"Downloaded.Files.Path.Enabled\" value=\"false\" />\r\n    <property name=\"Repository.Attach.Annotations\" value=\"false\" />\r\n    <property name=\"Repository.Attach.JavaDocs\" value=\"false\" />\r\n    <property name=\"Repository.Attach.Sources\" value=\"false\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"ignore.preview.features.used\" value=\"true\" />\r\n    <property name=\"jdk.selected.JAVA_MODULE\" value=\"13\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/prswe2/ss21/ue07/inout\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.settingsdialog.IDE.editor.colors.Debugger\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue07\\inout\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue07\\filesafe\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue06\\filesafe\\inout\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\lib\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue04\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue07\\demo\\client\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue07\\demo\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue07\\demo\\server\\async\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue07\\demo\\server\" />\r\n      <recent name=\"C:\\dev\\intellij\\git\\jku\\src\\prswe2\\ss21\\ue07\\demo\\inout\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"swe2.ss20.ue10.demo\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"prswe2.ss21.ue07.filesafe.protocol\" />\r\n      <recent name=\"prswe2.ss21.ue03.gradetable.controller\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.FileSafeMain\">\r\n    <configuration name=\"DemoClientMain\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"prswe2.ss21.ue07.demo.client.DemoClientMain\" />\r\n      <module name=\"jku\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"prswe2.ss21.ue07.demo.client.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DemoServerMain\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"prswe2.ss21.ue07.demo.server.DemoServerMain\" />\r\n      <module name=\"jku\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"prswe2.ss21.ue07.demo.server.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DemoServerMainAsync\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"prswe2.ss21.ue07.demo.server.async.DemoServerMainAsync\" />\r\n      <module name=\"jku\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"prswe2.ss21.ue07.demo.server.async.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FileSafeMain\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"prswe2.ss21.ue07.filesafe.FileSafeMain\" />\r\n      <module name=\"jku\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"prswe2.ss21.ue07.filesafe.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FileSafeServerMain\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"prswe2.ss21.ue07.filesafe.server.FileSafeServerMain\" />\r\n      <module name=\"jku\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"prswe2.ss21.ue07.filesafe.server.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.DemoClientMain\" />\r\n      <item itemvalue=\"Application.DemoServerMainAsync\" />\r\n      <item itemvalue=\"Application.DemoServerMain\" />\r\n      <item itemvalue=\"Application.FileSafeMain\" />\r\n      <item itemvalue=\"Application.FileSafeServerMain\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.FileSafeMain\" />\r\n        <item itemvalue=\"Application.FileSafeServerMain\" />\r\n        <item itemvalue=\"Application.DemoClientMain\" />\r\n        <item itemvalue=\"Application.DemoServerMainAsync\" />\r\n        <item itemvalue=\"Application.DemoServerMain\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration>C:\\Users\\stefa\\AppData\\Roaming\\Subversion</configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"aec62a0e-e47a-445a-bf58-af92c29e1527\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1581097095402</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1581097095402</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00263\" summary=\"pr.swe2.ue05\">\r\n      <created>1619905512591</created>\r\n      <option name=\"number\" value=\"00263\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00263\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619905512591</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00264\" summary=\"pr.swe2.ue05\">\r\n      <created>1619905698678</created>\r\n      <option name=\"number\" value=\"00264\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00264\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619905698678</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00265\" summary=\"pr.swe2.ue05\">\r\n      <created>1619905779457</created>\r\n      <option name=\"number\" value=\"00265\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00265\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619905779457</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00266\" summary=\"pr.swe2.ue05\">\r\n      <created>1619907623737</created>\r\n      <option name=\"number\" value=\"00266\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00266\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619907623737</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00267\" summary=\"pr.swe2.ue05\">\r\n      <created>1619910715324</created>\r\n      <option name=\"number\" value=\"00267\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00267\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619910715324</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00268\" summary=\"pr.swe2.ue05\">\r\n      <created>1619911477762</created>\r\n      <option name=\"number\" value=\"00268\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00268\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619911477762</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00269\" summary=\"pr.swe2.ue05\">\r\n      <created>1619912438322</created>\r\n      <option name=\"number\" value=\"00269\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00269\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619912438322</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00270\" summary=\"pr.swe2.ue05\">\r\n      <created>1619912904667</created>\r\n      <option name=\"number\" value=\"00270\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00270\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619912904667</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00271\" summary=\"pr.swe2.ue05\">\r\n      <created>1619913912040</created>\r\n      <option name=\"number\" value=\"00271\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00271\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619913912040</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00272\" summary=\"pr.swe2.ue05\">\r\n      <created>1619991013053</created>\r\n      <option name=\"number\" value=\"00272\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00272\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619991013054</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00273\" summary=\"pr.swe2.ue05\">\r\n      <created>1619991518863</created>\r\n      <option name=\"number\" value=\"00273\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00273\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619991518863</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00274\" summary=\"pr.swe2.ue05\">\r\n      <created>1619992661162</created>\r\n      <option name=\"number\" value=\"00274\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00274\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619992661163</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00275\" summary=\"pr.swe2.ue06\">\r\n      <created>1620660613660</created>\r\n      <option name=\"number\" value=\"00275\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00275\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620660613660</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00276\" summary=\"pr.swe2.ue06\">\r\n      <created>1620933878598</created>\r\n      <option name=\"number\" value=\"00276\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00276\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620933878598</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00277\" summary=\"pr.swe2.ue06\">\r\n      <created>1620937818082</created>\r\n      <option name=\"number\" value=\"00277\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00277\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620937818082</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00278\" summary=\"pr.swe2.ue06\">\r\n      <created>1620939615869</created>\r\n      <option name=\"number\" value=\"00278\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00278\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620939615869</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00279\" summary=\"pr.swe2.ue06\">\r\n      <created>1620939999802</created>\r\n      <option name=\"number\" value=\"00279\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00279\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620939999802</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00280\" summary=\"pr.swe2.ue06\">\r\n      <created>1620940352290</created>\r\n      <option name=\"number\" value=\"00280\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00280\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620940352290</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00281\" summary=\"pr.swe2.ue06\">\r\n      <created>1620940643071</created>\r\n      <option name=\"number\" value=\"00281\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00281\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620940643071</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00282\" summary=\"pr.swe2.ue06\">\r\n      <created>1620943274737</created>\r\n      <option name=\"number\" value=\"00282\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00282\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620943274737</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00283\" summary=\"pr.swe2.ue06\">\r\n      <created>1620943501837</created>\r\n      <option name=\"number\" value=\"00283\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00283\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620943501837</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00284\" summary=\"pr.swe2.ue06\">\r\n      <created>1620943616948</created>\r\n      <option name=\"number\" value=\"00284\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00284\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620943616948</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00285\" summary=\"pr.swe2.ue06\">\r\n      <created>1620943786314</created>\r\n      <option name=\"number\" value=\"00285\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00285\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620943786314</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00286\" summary=\"pr.swe2.ue06\">\r\n      <created>1620944198065</created>\r\n      <option name=\"number\" value=\"00286\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00286\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620944198065</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00287\" summary=\"pr.swe2.ue06\">\r\n      <created>1620944448979</created>\r\n      <option name=\"number\" value=\"00287\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00287\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620944448979</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00288\" summary=\"pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)\">\r\n      <created>1620983294943</created>\r\n      <option name=\"number\" value=\"00288\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00288\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620983294943</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00289\" summary=\"pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)\">\r\n      <created>1620983369958</created>\r\n      <option name=\"number\" value=\"00289\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00289\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620983369958</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00290\" summary=\"pr.swe2.ue06, added initial sync\">\r\n      <created>1620984965463</created>\r\n      <option name=\"number\" value=\"00290\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00290\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620984965463</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00291\" summary=\"pr.swe2.ue06, added initial sync\">\r\n      <created>1620985072539</created>\r\n      <option name=\"number\" value=\"00291\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00291\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620985072539</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00292\" summary=\"pr.swe2.ue06, added initial sync\">\r\n      <created>1620985820887</created>\r\n      <option name=\"number\" value=\"00292\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00292\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620985820887</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00293\" summary=\"pr.swe2.ue06\">\r\n      <created>1621008727105</created>\r\n      <option name=\"number\" value=\"00293\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00293\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621008727105</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00294\" summary=\"pr.swe2.ue06\">\r\n      <created>1621009629424</created>\r\n      <option name=\"number\" value=\"00294\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00294\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621009629424</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00295\" summary=\"pr.swe2.ue06\">\r\n      <created>1621009843580</created>\r\n      <option name=\"number\" value=\"00295\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00295\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621009843581</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00296\" summary=\"pr.swe2.ue06\">\r\n      <created>1621023465057</created>\r\n      <option name=\"number\" value=\"00296\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00296\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621023465057</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00297\" summary=\"pr.swe2.ue07\">\r\n      <created>1621806822005</created>\r\n      <option name=\"number\" value=\"00297\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00297\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621806822005</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00298\" summary=\"pr.swe2.ue07\">\r\n      <created>1622228951045</created>\r\n      <option name=\"number\" value=\"00298\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00298\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622228951045</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00299\" summary=\"pr.swe2.ue07\">\r\n      <created>1622229206785</created>\r\n      <option name=\"number\" value=\"00299\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00299\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622229206786</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00300\" summary=\"pr.swe2.ue06 corrected\">\r\n      <created>1622229850638</created>\r\n      <option name=\"number\" value=\"00300\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00300\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622229850638</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00301\" summary=\"pr.swe2.ue07\">\r\n      <created>1622230611131</created>\r\n      <option name=\"number\" value=\"00301\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00301\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622230611131</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00302\" summary=\"pr.swe2.ue07\">\r\n      <created>1622230957543</created>\r\n      <option name=\"number\" value=\"00302\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00302\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622230957543</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00303\" summary=\"pr.swe2.ue07\">\r\n      <created>1622237004978</created>\r\n      <option name=\"number\" value=\"00303\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00303\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622237004978</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00304\" summary=\"pr.swe2.ue07\">\r\n      <created>1622240483952</created>\r\n      <option name=\"number\" value=\"00304\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00304\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622240483952</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00305\" summary=\"pr.swe2.ue07\">\r\n      <created>1622241279788</created>\r\n      <option name=\"number\" value=\"00305\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00305\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622241279788</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00306\" summary=\"pr.swe2.ue07\">\r\n      <created>1622241877413</created>\r\n      <option name=\"number\" value=\"00306\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00306\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622241877413</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00307\" summary=\"pr.swe2.ue07\">\r\n      <created>1622241973964</created>\r\n      <option name=\"number\" value=\"00307\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00307\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622241973964</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00308\" summary=\"pr.swe2.ue07\">\r\n      <created>1622242111356</created>\r\n      <option name=\"number\" value=\"00308\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00308\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622242111356</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00309\" summary=\"pr.swe2.ue07\">\r\n      <created>1622242572507</created>\r\n      <option name=\"number\" value=\"00309\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00309\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622242572507</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00310\" summary=\"pr.swe2.ue07\">\r\n      <created>1622245643628</created>\r\n      <option name=\"number\" value=\"00310\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00310\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622245643628</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00311\" summary=\"pr.swe2.ue07\">\r\n      <created>1622245771203</created>\r\n      <option name=\"number\" value=\"00311\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00311\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622245771203</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"312\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"ue11\" />\r\n    <MESSAGE value=\"exam\" />\r\n    <MESSAGE value=\"java 14.0.2\" />\r\n    <MESSAGE value=\"ok\" />\r\n    <MESSAGE value=\"pr.swe2\" />\r\n    <MESSAGE value=\"pr.swe2.ue01\" />\r\n    <MESSAGE value=\"pr.swe2.ue02\" />\r\n    <MESSAGE value=\"pr.swe2.ue03\" />\r\n    <MESSAGE value=\"pr.swe2.ue04\" />\r\n    <MESSAGE value=\"pr.swe2.ue05\" />\r\n    <MESSAGE value=\"pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)\" />\r\n    <MESSAGE value=\"pr.swe2.ue06, added inital sync\" />\r\n    <MESSAGE value=\"pr.swe2.ue06, added initial sync\" />\r\n    <MESSAGE value=\"pr.swe2.ue06\" />\r\n    <MESSAGE value=\"pr.swe2.ue06 corrected\" />\r\n    <MESSAGE value=\"pr.swe2.ue07\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"pr.swe2.ue07\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/tests/other/student/stdts/main/Test.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/tests/other/student/stdts/main/Test.java</url>\r\n          <line>16</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/tests/other/student/stdts/main/Test.java</url>\r\n          <line>17</line>\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/tests/other/student/stdts/main/Test.java</url>\r\n          <line>13</line>\r\n          <option name=\"timeStamp\" value=\"5\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/tests/other/student/stdts/main/Test.java</url>\r\n          <line>12</line>\r\n          <option name=\"timeStamp\" value=\"6\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/tests/other/student/stdts/main/Test.java</url>\r\n          <line>11</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.reflect.InvocationTargetException\" package=\"java.lang.reflect\" />\r\n          <option name=\"timeStamp\" value=\"8\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <watches-manager>\r\n      <configuration name=\"Application\">\r\n        <watch expression=\"s2.points\" />\r\n        <watch expression=\"s2.points\" />\r\n        <watch expression=\"stlist.head\" />\r\n      </configuration>\r\n    </watches-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/jku$All_in_jku.ic\" NAME=\"All in jku Coverage Results\" MODIFIED=\"1600719393874\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2bb6082b116add52520936d62c68907c15d84975)
++++ b/.idea/workspace.xml	(date 1622477763398)
+@@ -22,7 +22,7 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue07">
++    <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue05">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -34,8 +34,8 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Enum" />
+-        <option value="AnnotationType" />
+         <option value="Interface" />
++        <option value="AnnotationType" />
+         <option value="Class" />
+       </list>
+     </option>
+@@ -77,19 +77,17 @@
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="ignore.preview.features.used" value="true" />
+     <property name="jdk.selected.JAVA_MODULE" value="13" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/prswe2/ss21/ue07/inout" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit4.jar" />
+     <property name="project.structure.last.edited" value="Project" />
+     <property name="project.structure.proportion" value="0.15" />
+     <property name="project.structure.side.proportion" value="0.2" />
+-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Debugger" />
++    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\inout" />
+-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\filesafe" />
+-      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue06\filesafe\inout" />
+       <recent name="C:\dev\intellij\git\jku\lib" />
+       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue04" />
++      <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue03\gradetable\view" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\dev\intellij\git\jku\src\prswe2\ss21\ue07\demo\client" />
+@@ -102,30 +100,16 @@
+       <recent name="swe2.ss20.ue10.demo" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
+-      <recent name="prswe2.ss21.ue07.filesafe.protocol" />
+       <recent name="prswe2.ss21.ue03.gradetable.controller" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.FileSafeMain">
+-    <configuration name="DemoClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.demo.client.DemoClientMain" />
+-      <module name="jku" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="prswe2.ss21.ue07.demo.client.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="DemoServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.demo.server.DemoServerMain" />
++  <component name="RunManager" selected="Application.KMeanPar">
++    <configuration name="KMeanPar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanPar" />
+       <module name="jku" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="prswe2.ss21.ue07.demo.server.*" />
++          <option name="PATTERN" value="prswe2.ss21.ue05.kmeans.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -133,12 +117,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="DemoServerMainAsync" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.demo.server.async.DemoServerMainAsync" />
++    <configuration name="KMeanSeq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.kmeans.KMeanSeq" />
+       <module name="jku" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="prswe2.ss21.ue07.demo.server.async.*" />
++          <option name="PATTERN" value="prswe2.ss21.ue05.kmeans.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -146,12 +130,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="FileSafeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.filesafe.FileSafeMain" />
++    <configuration name="ParallelMaxMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue05.demo.max.ParallelMaxMain" />
+       <module name="jku" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="prswe2.ss21.ue07.filesafe.*" />
++          <option name="PATTERN" value="prswe2.ss21.ue05.demo.max.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -159,33 +143,25 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="FileSafeServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.filesafe.server.FileSafeServerMain" />
++    <configuration name="All in jku" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="jku" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="prswe2.ss21.ue07.filesafe.server.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
++      <option name="PACKAGE_NAME" value="" />
++      <option name="TEST_OBJECT" value="package" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <list>
+-      <item itemvalue="Application.DemoClientMain" />
+-      <item itemvalue="Application.DemoServerMainAsync" />
+-      <item itemvalue="Application.DemoServerMain" />
+-      <item itemvalue="Application.FileSafeMain" />
+-      <item itemvalue="Application.FileSafeServerMain" />
++      <item itemvalue="Application.KMeanSeq" />
++      <item itemvalue="Application.ParallelMaxMain" />
++      <item itemvalue="Application.KMeanPar" />
++      <item itemvalue="JUnit.All in jku" />
+     </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.FileSafeMain" />
+-        <item itemvalue="Application.FileSafeServerMain" />
+-        <item itemvalue="Application.DemoClientMain" />
+-        <item itemvalue="Application.DemoServerMainAsync" />
+-        <item itemvalue="Application.DemoServerMain" />
++        <item itemvalue="Application.KMeanPar" />
++        <item itemvalue="Application.KMeanSeq" />
++        <item itemvalue="Application.ParallelMaxMain" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -201,350 +177,350 @@
+       <option name="presentableId" value="Default" />
+       <updated>1581097095402</updated>
+     </task>
+-    <task id="LOCAL-00263" summary="pr.swe2.ue05">
+-      <created>1619905512591</created>
+-      <option name="number" value="00263" />
+-      <option name="presentableId" value="LOCAL-00263" />
++    <task id="LOCAL-00226" summary="pr.swe2.ue02">
++      <created>1616353286139</created>
++      <option name="number" value="00226" />
++      <option name="presentableId" value="LOCAL-00226" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619905512591</updated>
++      <updated>1616353286139</updated>
+     </task>
+-    <task id="LOCAL-00264" summary="pr.swe2.ue05">
+-      <created>1619905698678</created>
+-      <option name="number" value="00264" />
+-      <option name="presentableId" value="LOCAL-00264" />
++    <task id="LOCAL-00227" summary="pr.swe2.ue02">
++      <created>1616353319580</created>
++      <option name="number" value="00227" />
++      <option name="presentableId" value="LOCAL-00227" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619905698678</updated>
++      <updated>1616353319580</updated>
+     </task>
+-    <task id="LOCAL-00265" summary="pr.swe2.ue05">
+-      <created>1619905779457</created>
+-      <option name="number" value="00265" />
+-      <option name="presentableId" value="LOCAL-00265" />
++    <task id="LOCAL-00228" summary="pr.swe2.ue03">
++      <created>1617808910819</created>
++      <option name="number" value="00228" />
++      <option name="presentableId" value="LOCAL-00228" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619905779457</updated>
++      <updated>1617808910819</updated>
+     </task>
+-    <task id="LOCAL-00266" summary="pr.swe2.ue05">
+-      <created>1619907623737</created>
+-      <option name="number" value="00266" />
+-      <option name="presentableId" value="LOCAL-00266" />
++    <task id="LOCAL-00229" summary="pr.swe2.ue03">
++      <created>1617898747300</created>
++      <option name="number" value="00229" />
++      <option name="presentableId" value="LOCAL-00229" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619907623737</updated>
++      <updated>1617898747300</updated>
+     </task>
+-    <task id="LOCAL-00267" summary="pr.swe2.ue05">
+-      <created>1619910715324</created>
+-      <option name="number" value="00267" />
+-      <option name="presentableId" value="LOCAL-00267" />
++    <task id="LOCAL-00230" summary="pr.swe2.ue03">
++      <created>1617905020214</created>
++      <option name="number" value="00230" />
++      <option name="presentableId" value="LOCAL-00230" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619910715324</updated>
++      <updated>1617905020214</updated>
+     </task>
+-    <task id="LOCAL-00268" summary="pr.swe2.ue05">
+-      <created>1619911477762</created>
+-      <option name="number" value="00268" />
+-      <option name="presentableId" value="LOCAL-00268" />
++    <task id="LOCAL-00231" summary="pr.swe2.ue03">
++      <created>1617909703704</created>
++      <option name="number" value="00231" />
++      <option name="presentableId" value="LOCAL-00231" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619911477762</updated>
++      <updated>1617909703704</updated>
+     </task>
+-    <task id="LOCAL-00269" summary="pr.swe2.ue05">
+-      <created>1619912438322</created>
+-      <option name="number" value="00269" />
+-      <option name="presentableId" value="LOCAL-00269" />
++    <task id="LOCAL-00232" summary="pr.swe2.ue03">
++      <created>1617960228306</created>
++      <option name="number" value="00232" />
++      <option name="presentableId" value="LOCAL-00232" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619912438322</updated>
++      <updated>1617960228306</updated>
+     </task>
+-    <task id="LOCAL-00270" summary="pr.swe2.ue05">
+-      <created>1619912904667</created>
+-      <option name="number" value="00270" />
+-      <option name="presentableId" value="LOCAL-00270" />
++    <task id="LOCAL-00233" summary="pr.swe2.ue03">
++      <created>1617990086955</created>
++      <option name="number" value="00233" />
++      <option name="presentableId" value="LOCAL-00233" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619912904667</updated>
++      <updated>1617990086955</updated>
+     </task>
+-    <task id="LOCAL-00271" summary="pr.swe2.ue05">
+-      <created>1619913912040</created>
+-      <option name="number" value="00271" />
+-      <option name="presentableId" value="LOCAL-00271" />
++    <task id="LOCAL-00234" summary="pr.swe2.ue03">
++      <created>1617995368453</created>
++      <option name="number" value="00234" />
++      <option name="presentableId" value="LOCAL-00234" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619913912040</updated>
++      <updated>1617995368453</updated>
+     </task>
+-    <task id="LOCAL-00272" summary="pr.swe2.ue05">
+-      <created>1619991013053</created>
+-      <option name="number" value="00272" />
+-      <option name="presentableId" value="LOCAL-00272" />
++    <task id="LOCAL-00235" summary="pr.swe2.ue03">
++      <created>1617995648651</created>
++      <option name="number" value="00235" />
++      <option name="presentableId" value="LOCAL-00235" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619991013054</updated>
++      <updated>1617995648651</updated>
+     </task>
+-    <task id="LOCAL-00273" summary="pr.swe2.ue05">
+-      <created>1619991518863</created>
+-      <option name="number" value="00273" />
+-      <option name="presentableId" value="LOCAL-00273" />
++    <task id="LOCAL-00236" summary="pr.swe2.ue03">
++      <created>1617997189280</created>
++      <option name="number" value="00236" />
++      <option name="presentableId" value="LOCAL-00236" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619991518863</updated>
++      <updated>1617997189280</updated>
+     </task>
+-    <task id="LOCAL-00274" summary="pr.swe2.ue05">
+-      <created>1619992661162</created>
+-      <option name="number" value="00274" />
+-      <option name="presentableId" value="LOCAL-00274" />
++    <task id="LOCAL-00237" summary="pr.swe2.ue03">
++      <created>1618043497180</created>
++      <option name="number" value="00237" />
++      <option name="presentableId" value="LOCAL-00237" />
+       <option name="project" value="LOCAL" />
+-      <updated>1619992661163</updated>
++      <updated>1618043497180</updated>
+     </task>
+-    <task id="LOCAL-00275" summary="pr.swe2.ue06">
+-      <created>1620660613660</created>
+-      <option name="number" value="00275" />
+-      <option name="presentableId" value="LOCAL-00275" />
++    <task id="LOCAL-00238" summary="pr.swe2.ue03">
++      <created>1618061314394</created>
++      <option name="number" value="00238" />
++      <option name="presentableId" value="LOCAL-00238" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620660613660</updated>
++      <updated>1618061314394</updated>
+     </task>
+-    <task id="LOCAL-00276" summary="pr.swe2.ue06">
+-      <created>1620933878598</created>
+-      <option name="number" value="00276" />
+-      <option name="presentableId" value="LOCAL-00276" />
++    <task id="LOCAL-00239" summary="pr.swe2.ue03">
++      <created>1618082897774</created>
++      <option name="number" value="00239" />
++      <option name="presentableId" value="LOCAL-00239" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620933878598</updated>
++      <updated>1618082897775</updated>
+     </task>
+-    <task id="LOCAL-00277" summary="pr.swe2.ue06">
+-      <created>1620937818082</created>
+-      <option name="number" value="00277" />
+-      <option name="presentableId" value="LOCAL-00277" />
++    <task id="LOCAL-00240" summary="pr.swe2.ue03">
++      <created>1618084341354</created>
++      <option name="number" value="00240" />
++      <option name="presentableId" value="LOCAL-00240" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620937818082</updated>
++      <updated>1618084341354</updated>
+     </task>
+-    <task id="LOCAL-00278" summary="pr.swe2.ue06">
+-      <created>1620939615869</created>
+-      <option name="number" value="00278" />
+-      <option name="presentableId" value="LOCAL-00278" />
++    <task id="LOCAL-00241" summary="pr.swe2.ue03">
++      <created>1618340204183</created>
++      <option name="number" value="00241" />
++      <option name="presentableId" value="LOCAL-00241" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620939615869</updated>
++      <updated>1618340204183</updated>
+     </task>
+-    <task id="LOCAL-00279" summary="pr.swe2.ue06">
+-      <created>1620939999802</created>
+-      <option name="number" value="00279" />
+-      <option name="presentableId" value="LOCAL-00279" />
++    <task id="LOCAL-00242" summary="pr.swe2.ue04">
++      <created>1618703170137</created>
++      <option name="number" value="00242" />
++      <option name="presentableId" value="LOCAL-00242" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620939999802</updated>
++      <updated>1618703170137</updated>
+     </task>
+-    <task id="LOCAL-00280" summary="pr.swe2.ue06">
+-      <created>1620940352290</created>
+-      <option name="number" value="00280" />
+-      <option name="presentableId" value="LOCAL-00280" />
++    <task id="LOCAL-00243" summary="pr.swe2.ue04">
++      <created>1618703657121</created>
++      <option name="number" value="00243" />
++      <option name="presentableId" value="LOCAL-00243" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620940352290</updated>
++      <updated>1618703657121</updated>
+     </task>
+-    <task id="LOCAL-00281" summary="pr.swe2.ue06">
+-      <created>1620940643071</created>
+-      <option name="number" value="00281" />
+-      <option name="presentableId" value="LOCAL-00281" />
++    <task id="LOCAL-00244" summary="pr.swe2.ue05">
++      <created>1618845899352</created>
++      <option name="number" value="00244" />
++      <option name="presentableId" value="LOCAL-00244" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620940643071</updated>
++      <updated>1618845899352</updated>
+     </task>
+-    <task id="LOCAL-00282" summary="pr.swe2.ue06">
+-      <created>1620943274737</created>
+-      <option name="number" value="00282" />
+-      <option name="presentableId" value="LOCAL-00282" />
++    <task id="LOCAL-00245" summary="pr.swe2.ue05">
++      <created>1618849047150</created>
++      <option name="number" value="00245" />
++      <option name="presentableId" value="LOCAL-00245" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620943274737</updated>
++      <updated>1618849047150</updated>
+     </task>
+-    <task id="LOCAL-00283" summary="pr.swe2.ue06">
+-      <created>1620943501837</created>
+-      <option name="number" value="00283" />
+-      <option name="presentableId" value="LOCAL-00283" />
++    <task id="LOCAL-00246" summary="pr.swe2.ue05">
++      <created>1618849361260</created>
++      <option name="number" value="00246" />
++      <option name="presentableId" value="LOCAL-00246" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620943501837</updated>
++      <updated>1618849361260</updated>
+     </task>
+-    <task id="LOCAL-00284" summary="pr.swe2.ue06">
+-      <created>1620943616948</created>
+-      <option name="number" value="00284" />
+-      <option name="presentableId" value="LOCAL-00284" />
++    <task id="LOCAL-00247" summary="pr.swe2.ue05">
++      <created>1618849371976</created>
++      <option name="number" value="00247" />
++      <option name="presentableId" value="LOCAL-00247" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620943616948</updated>
++      <updated>1618849371976</updated>
+     </task>
+-    <task id="LOCAL-00285" summary="pr.swe2.ue06">
+-      <created>1620943786314</created>
+-      <option name="number" value="00285" />
+-      <option name="presentableId" value="LOCAL-00285" />
++    <task id="LOCAL-00248" summary="pr.swe2.ue05">
++      <created>1618849575226</created>
++      <option name="number" value="00248" />
++      <option name="presentableId" value="LOCAL-00248" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620943786314</updated>
++      <updated>1618849575226</updated>
+     </task>
+-    <task id="LOCAL-00286" summary="pr.swe2.ue06">
+-      <created>1620944198065</created>
+-      <option name="number" value="00286" />
+-      <option name="presentableId" value="LOCAL-00286" />
++    <task id="LOCAL-00249" summary="pr.swe2.ue05">
++      <created>1618849948374</created>
++      <option name="number" value="00249" />
++      <option name="presentableId" value="LOCAL-00249" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620944198065</updated>
++      <updated>1618849948375</updated>
+     </task>
+-    <task id="LOCAL-00287" summary="pr.swe2.ue06">
+-      <created>1620944448979</created>
+-      <option name="number" value="00287" />
+-      <option name="presentableId" value="LOCAL-00287" />
++    <task id="LOCAL-00250" summary="pr.swe2.ue05">
++      <created>1618850273259</created>
++      <option name="number" value="00250" />
++      <option name="presentableId" value="LOCAL-00250" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620944448979</updated>
++      <updated>1618850273259</updated>
+     </task>
+-    <task id="LOCAL-00288" summary="pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)">
+-      <created>1620983294943</created>
+-      <option name="number" value="00288" />
+-      <option name="presentableId" value="LOCAL-00288" />
++    <task id="LOCAL-00251" summary="pr.swe2.ue05">
++      <created>1618850707690</created>
++      <option name="number" value="00251" />
++      <option name="presentableId" value="LOCAL-00251" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620983294943</updated>
++      <updated>1618850707690</updated>
+     </task>
+-    <task id="LOCAL-00289" summary="pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)">
+-      <created>1620983369958</created>
+-      <option name="number" value="00289" />
+-      <option name="presentableId" value="LOCAL-00289" />
++    <task id="LOCAL-00252" summary="pr.swe2.ue05">
++      <created>1618850747767</created>
++      <option name="number" value="00252" />
++      <option name="presentableId" value="LOCAL-00252" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620983369958</updated>
++      <updated>1618850747767</updated>
+     </task>
+-    <task id="LOCAL-00290" summary="pr.swe2.ue06, added initial sync">
+-      <created>1620984965463</created>
+-      <option name="number" value="00290" />
+-      <option name="presentableId" value="LOCAL-00290" />
++    <task id="LOCAL-00253" summary="pr.swe2.ue05">
++      <created>1618850941921</created>
++      <option name="number" value="00253" />
++      <option name="presentableId" value="LOCAL-00253" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620984965463</updated>
++      <updated>1618850941921</updated>
+     </task>
+-    <task id="LOCAL-00291" summary="pr.swe2.ue06, added initial sync">
+-      <created>1620985072539</created>
+-      <option name="number" value="00291" />
+-      <option name="presentableId" value="LOCAL-00291" />
++    <task id="LOCAL-00254" summary="pr.swe2.ue05">
++      <created>1618851666265</created>
++      <option name="number" value="00254" />
++      <option name="presentableId" value="LOCAL-00254" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620985072539</updated>
++      <updated>1618851666265</updated>
+     </task>
+-    <task id="LOCAL-00292" summary="pr.swe2.ue06, added initial sync">
+-      <created>1620985820887</created>
+-      <option name="number" value="00292" />
+-      <option name="presentableId" value="LOCAL-00292" />
++    <task id="LOCAL-00255" summary="pr.swe2.ue05">
++      <created>1618851867260</created>
++      <option name="number" value="00255" />
++      <option name="presentableId" value="LOCAL-00255" />
+       <option name="project" value="LOCAL" />
+-      <updated>1620985820887</updated>
++      <updated>1618851867260</updated>
+     </task>
+-    <task id="LOCAL-00293" summary="pr.swe2.ue06">
+-      <created>1621008727105</created>
+-      <option name="number" value="00293" />
+-      <option name="presentableId" value="LOCAL-00293" />
++    <task id="LOCAL-00256" summary="pr.swe2.ue05">
++      <created>1618852531982</created>
++      <option name="number" value="00256" />
++      <option name="presentableId" value="LOCAL-00256" />
+       <option name="project" value="LOCAL" />
+-      <updated>1621008727105</updated>
++      <updated>1618852531982</updated>
+     </task>
+-    <task id="LOCAL-00294" summary="pr.swe2.ue06">
+-      <created>1621009629424</created>
+-      <option name="number" value="00294" />
+-      <option name="presentableId" value="LOCAL-00294" />
++    <task id="LOCAL-00257" summary="pr.swe2.ue05">
++      <created>1618853571310</created>
++      <option name="number" value="00257" />
++      <option name="presentableId" value="LOCAL-00257" />
+       <option name="project" value="LOCAL" />
+-      <updated>1621009629424</updated>
++      <updated>1618853571310</updated>
+     </task>
+-    <task id="LOCAL-00295" summary="pr.swe2.ue06">
+-      <created>1621009843580</created>
+-      <option name="number" value="00295" />
+-      <option name="presentableId" value="LOCAL-00295" />
++    <task id="LOCAL-00258" summary="pr.swe2.ue05">
++      <created>1618853643587</created>
++      <option name="number" value="00258" />
++      <option name="presentableId" value="LOCAL-00258" />
+       <option name="project" value="LOCAL" />
+-      <updated>1621009843581</updated>
++      <updated>1618853643587</updated>
+     </task>
+-    <task id="LOCAL-00296" summary="pr.swe2.ue06">
+-      <created>1621023465057</created>
+-      <option name="number" value="00296" />
+-      <option name="presentableId" value="LOCAL-00296" />
++    <task id="LOCAL-00259" summary="pr.swe2.ue05">
++      <created>1618854810076</created>
++      <option name="number" value="00259" />
++      <option name="presentableId" value="LOCAL-00259" />
+       <option name="project" value="LOCAL" />
+-      <updated>1621023465057</updated>
++      <updated>1618854810077</updated>
+     </task>
+-    <task id="LOCAL-00297" summary="pr.swe2.ue07">
+-      <created>1621806822005</created>
+-      <option name="number" value="00297" />
+-      <option name="presentableId" value="LOCAL-00297" />
++    <task id="LOCAL-00260" summary="pr.swe2.ue05">
++      <created>1618885893576</created>
++      <option name="number" value="00260" />
++      <option name="presentableId" value="LOCAL-00260" />
+       <option name="project" value="LOCAL" />
+-      <updated>1621806822005</updated>
++      <updated>1618885893576</updated>
+     </task>
+-    <task id="LOCAL-00298" summary="pr.swe2.ue07">
+-      <created>1622228951045</created>
+-      <option name="number" value="00298" />
+-      <option name="presentableId" value="LOCAL-00298" />
++    <task id="LOCAL-00261" summary="pr.swe2.ue05">
++      <created>1619710889458</created>
++      <option name="number" value="00261" />
++      <option name="presentableId" value="LOCAL-00261" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622228951045</updated>
++      <updated>1619710889458</updated>
+     </task>
+-    <task id="LOCAL-00299" summary="pr.swe2.ue07">
+-      <created>1622229206785</created>
+-      <option name="number" value="00299" />
+-      <option name="presentableId" value="LOCAL-00299" />
++    <task id="LOCAL-00262" summary="pr.swe2.ue05">
++      <created>1619904364732</created>
++      <option name="number" value="00262" />
++      <option name="presentableId" value="LOCAL-00262" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622229206786</updated>
++      <updated>1619904364733</updated>
+     </task>
+-    <task id="LOCAL-00300" summary="pr.swe2.ue06 corrected">
+-      <created>1622229850638</created>
+-      <option name="number" value="00300" />
+-      <option name="presentableId" value="LOCAL-00300" />
++    <task id="LOCAL-00263" summary="pr.swe2.ue05">
++      <created>1619905512591</created>
++      <option name="number" value="00263" />
++      <option name="presentableId" value="LOCAL-00263" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622229850638</updated>
++      <updated>1619905512591</updated>
+     </task>
+-    <task id="LOCAL-00301" summary="pr.swe2.ue07">
+-      <created>1622230611131</created>
+-      <option name="number" value="00301" />
+-      <option name="presentableId" value="LOCAL-00301" />
++    <task id="LOCAL-00264" summary="pr.swe2.ue05">
++      <created>1619905698678</created>
++      <option name="number" value="00264" />
++      <option name="presentableId" value="LOCAL-00264" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622230611131</updated>
++      <updated>1619905698678</updated>
+     </task>
+-    <task id="LOCAL-00302" summary="pr.swe2.ue07">
+-      <created>1622230957543</created>
+-      <option name="number" value="00302" />
+-      <option name="presentableId" value="LOCAL-00302" />
++    <task id="LOCAL-00265" summary="pr.swe2.ue05">
++      <created>1619905779457</created>
++      <option name="number" value="00265" />
++      <option name="presentableId" value="LOCAL-00265" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622230957543</updated>
++      <updated>1619905779457</updated>
+     </task>
+-    <task id="LOCAL-00303" summary="pr.swe2.ue07">
+-      <created>1622237004978</created>
+-      <option name="number" value="00303" />
+-      <option name="presentableId" value="LOCAL-00303" />
++    <task id="LOCAL-00266" summary="pr.swe2.ue05">
++      <created>1619907623737</created>
++      <option name="number" value="00266" />
++      <option name="presentableId" value="LOCAL-00266" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622237004978</updated>
++      <updated>1619907623737</updated>
+     </task>
+-    <task id="LOCAL-00304" summary="pr.swe2.ue07">
+-      <created>1622240483952</created>
+-      <option name="number" value="00304" />
+-      <option name="presentableId" value="LOCAL-00304" />
++    <task id="LOCAL-00267" summary="pr.swe2.ue05">
++      <created>1619910715324</created>
++      <option name="number" value="00267" />
++      <option name="presentableId" value="LOCAL-00267" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622240483952</updated>
++      <updated>1619910715324</updated>
+     </task>
+-    <task id="LOCAL-00305" summary="pr.swe2.ue07">
+-      <created>1622241279788</created>
+-      <option name="number" value="00305" />
+-      <option name="presentableId" value="LOCAL-00305" />
++    <task id="LOCAL-00268" summary="pr.swe2.ue05">
++      <created>1619911477762</created>
++      <option name="number" value="00268" />
++      <option name="presentableId" value="LOCAL-00268" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622241279788</updated>
++      <updated>1619911477762</updated>
+     </task>
+-    <task id="LOCAL-00306" summary="pr.swe2.ue07">
+-      <created>1622241877413</created>
+-      <option name="number" value="00306" />
+-      <option name="presentableId" value="LOCAL-00306" />
++    <task id="LOCAL-00269" summary="pr.swe2.ue05">
++      <created>1619912438322</created>
++      <option name="number" value="00269" />
++      <option name="presentableId" value="LOCAL-00269" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622241877413</updated>
++      <updated>1619912438322</updated>
+     </task>
+-    <task id="LOCAL-00307" summary="pr.swe2.ue07">
+-      <created>1622241973964</created>
+-      <option name="number" value="00307" />
+-      <option name="presentableId" value="LOCAL-00307" />
++    <task id="LOCAL-00270" summary="pr.swe2.ue05">
++      <created>1619912904667</created>
++      <option name="number" value="00270" />
++      <option name="presentableId" value="LOCAL-00270" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622241973964</updated>
++      <updated>1619912904667</updated>
+     </task>
+-    <task id="LOCAL-00308" summary="pr.swe2.ue07">
+-      <created>1622242111356</created>
+-      <option name="number" value="00308" />
+-      <option name="presentableId" value="LOCAL-00308" />
++    <task id="LOCAL-00271" summary="pr.swe2.ue05">
++      <created>1619913912040</created>
++      <option name="number" value="00271" />
++      <option name="presentableId" value="LOCAL-00271" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622242111356</updated>
++      <updated>1619913912040</updated>
+     </task>
+-    <task id="LOCAL-00309" summary="pr.swe2.ue07">
+-      <created>1622242572507</created>
+-      <option name="number" value="00309" />
+-      <option name="presentableId" value="LOCAL-00309" />
++    <task id="LOCAL-00272" summary="pr.swe2.ue05">
++      <created>1619991013053</created>
++      <option name="number" value="00272" />
++      <option name="presentableId" value="LOCAL-00272" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622242572507</updated>
++      <updated>1619991013054</updated>
+     </task>
+-    <task id="LOCAL-00310" summary="pr.swe2.ue07">
+-      <created>1622245643628</created>
+-      <option name="number" value="00310" />
+-      <option name="presentableId" value="LOCAL-00310" />
++    <task id="LOCAL-00273" summary="pr.swe2.ue05">
++      <created>1619991518863</created>
++      <option name="number" value="00273" />
++      <option name="presentableId" value="LOCAL-00273" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622245643628</updated>
++      <updated>1619991518863</updated>
+     </task>
+-    <task id="LOCAL-00311" summary="pr.swe2.ue07">
+-      <created>1622245771203</created>
+-      <option name="number" value="00311" />
+-      <option name="presentableId" value="LOCAL-00311" />
++    <task id="LOCAL-00274" summary="pr.swe2.ue05">
++      <created>1619992661162</created>
++      <option name="number" value="00274" />
++      <option name="presentableId" value="LOCAL-00274" />
+       <option name="project" value="LOCAL" />
+-      <updated>1622245771203</updated>
++      <updated>1619992661163</updated>
+     </task>
+-    <option name="localTasksCounter" value="312" />
++    <option name="localTasksCounter" value="275" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -571,13 +547,7 @@
+     <MESSAGE value="pr.swe2.ue03" />
+     <MESSAGE value="pr.swe2.ue04" />
+     <MESSAGE value="pr.swe2.ue05" />
+-    <MESSAGE value="pr.swe2.ue06&#10;(added termination and better &quot;logging&quot;)" />
+-    <MESSAGE value="pr.swe2.ue06, added inital sync" />
+-    <MESSAGE value="pr.swe2.ue06, added initial sync" />
+-    <MESSAGE value="pr.swe2.ue06" />
+-    <MESSAGE value="pr.swe2.ue06 corrected" />
+-    <MESSAGE value="pr.swe2.ue07" />
+-    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue07" />
++    <option name="LAST_COMMIT_MESSAGE" value="pr.swe2.ue05" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
