@@ -23,10 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue08">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04-Jun-21_5_10_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04-Jun-21_5_10_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05-Jun-21_10_11_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05-Jun-21_10_11_AM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30-May-21_9_29_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30-May-21_9_29_AM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31-May-21_6_16_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31-May-21_6_16_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/gui/VaccinationStationGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/gui/VaccinationStationGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/OriginalMain.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccinationStationModelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccinationStationModelImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccineImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/InventoryChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/InventoryChangeListener.java" afterDir="false" />
@@ -113,6 +116,32 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="DemoClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.demo.client.DemoClientMain" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue07.demo.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoServerMainAsync" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.demo.server.async.DemoServerMainAsync" />
+      <module name="jku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="prswe2.ss21.ue07.demo.server.async.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FileSafeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue07.filesafe.FileSafeMain" />
       <module name="jku" />
@@ -152,46 +181,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OriginalMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.OriginalMain" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VaccinationStationServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.server.VaccinationStationServer" />
-      <module name="jku" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.DemoClientMain" />
+      <item itemvalue="Application.DemoServerMainAsync" />
       <item itemvalue="Application.FileSafeMain" />
       <item itemvalue="Application.FileSafeServerMain" />
-      <item itemvalue="Application.VaccinationStationServer" />
-      <item itemvalue="Application.OriginalMain" />
       <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.OriginalMain" />
-        <item itemvalue="Application.VaccinationStationServer" />
         <item itemvalue="Application.FileSafeMain" />
         <item itemvalue="Application.FileSafeServerMain" />
+        <item itemvalue="Application.DemoClientMain" />
+        <item itemvalue="Application.DemoServerMainAsync" />
       </list>
     </recent_temporary>
   </component>
@@ -544,11 +547,11 @@
       <updated>1622732906565</updated>
     </task>
     <task id="LOCAL-00325" summary="pr.swe2.ue08">
-      <created>1622894040429</created>
+      <created>1622750590375</created>
       <option name="number" value="00325" />
       <option name="presentableId" value="LOCAL-00325" />
       <option name="project" value="LOCAL" />
-      <updated>1622894040429</updated>
+      <updated>1622750590375</updated>
     </task>
     <option name="localTasksCounter" value="326" />
     <servers />

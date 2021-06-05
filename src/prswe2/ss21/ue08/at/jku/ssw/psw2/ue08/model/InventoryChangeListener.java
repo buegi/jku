@@ -1,5 +1,6 @@
 package prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model;
 
+import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
@@ -8,7 +9,9 @@ import java.rmi.RemoteException;
  *
  * @param <VaccineClass> the implementation class of Vaccines in the observed model
  */
-public interface InventoryChangeListener<VaccineClass extends Vaccine> {
+
+
+public interface InventoryChangeListener<VaccineClass extends Vaccine> extends Remote {
 
     /**
      * Actions to be performed each time the station starts using a new kind of vaccine.

@@ -2,12 +2,10 @@ package prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl;
 
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
 
-import java.io.Serializable;
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public final class VaccineImpl extends UnicastRemoteObject implements Vaccine, Serializable {
+public final class VaccineImpl extends UnicastRemoteObject implements Vaccine {
 
     private final String name;
 

@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl>, Serializable {
+public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl> {
 
     private final List<VaccineImpl> vaccines;
     private final List<InventoryChangeListener<VaccineImpl>> listeners;

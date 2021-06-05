@@ -8,12 +8,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.Serializable;
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public final class VaccinationStationGUI<VaccineClass extends Vaccine> implements Serializable {
-
-    private static final class DisplayVaccine<VaccineClass extends Vaccine> implements Serializable{
+public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
+    private static final class DisplayVaccine<VaccineClass extends Vaccine> {
 
         private final VaccineClass vaccine;
 
@@ -63,7 +62,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> implement
     private final JButton removeStockButton;
     private final JButton editDescriptionButton;
 
-    private VaccinationStationGUI(VaccinationStationModel<VaccineClass> model) {
+    @SuppressWarnings("unchecked")
+    private VaccinationStationGUI(VaccinationStationModel<VaccineClass> model) throws RemoteException {
         frame = new JFrame();
         frame.setTitle("VaxMaster 2000");
         frame.setSize(800, 600);
@@ -174,23 +174,35 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> implement
             }
         });
 
-        // connect inventory model and display model
-        final InventoryChangeListener<VaccineClass> inventoryChangeListener = new InventoryChangeListener<VaccineClass>() {
-            @Override
-            public void onVaccineAdded(VaccineClass addedVaccine) {
-                stockListModel.addElement(new DisplayVaccine<>(addedVaccine));
+        class InventoryChangeListenerClient extends UnicastRemoteObject implements InventoryChangeListener<VaccineClass> {
+
+            private static final long serialVersionUID = -4276006573559271628L;
+
+            protected InventoryChangeListenerClient() throws RemoteException {
+                super();
             }
 
             @Override
-            public void onVaccineChanged(VaccineClass changedVaccine) {
+            public void onVaccineAdded(VaccineClass addedVaccine) throws RemoteException {
+                stockListModel.addElement(new DisplayVaccine(addedVaccine));
+
+            }
+
+            @Override
+            public void onVaccineChanged(VaccineClass changedVaccine) throws RemoteException {
                 updateDetailsView();
+
             }
 
             @Override
-            public void onVaccineRemoved(VaccineClass removedVaccine) {
+            public void onVaccineRemoved(VaccineClass removedVaccine) throws RemoteException {
                 stockListModel.removeElement(new DisplayVaccine<>(removedVaccine));
             }
-        };
+        }
+
+        // connect inventory model and display model
+        final InventoryChangeListener<VaccineClass> inventoryChangeListener = new InventoryChangeListenerClient();
+
 
         try {
             model.addListener(inventoryChangeListener);
@@ -214,7 +226,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> implement
         updateDetailsView();
     }
 
-    public static <VaccineClass extends Vaccine> void startGui(VaccinationStationModel<VaccineClass> model) {
+    public static <VaccineClass extends Vaccine> void startGui(VaccinationStationModel<VaccineClass> model) throws RemoteException {
         new VaccinationStationGUI<>(model).show();
     }
 
