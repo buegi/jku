@@ -8,8 +8,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.Serializable;
+import java.rmi.RemoteException;
 
-public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
+public final class VaccinationStationGUI<VaccineClass extends Vaccine> implements Serializable{
 
     private static final class DisplayVaccine<VaccineClass extends Vaccine> {
 
@@ -29,9 +31,16 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
          *
          * @return the description of the vaccine
          */
+
+        // added try/catch for RemoteException //TODO show error in GUI
         @Override
         public String toString() {
-            return vaccine.getName();
+            try {
+                return vaccine.getName();
+            } catch (RemoteException re) {
+                System.out.println("Couldn't get name from remote object!");
+                return "";
+            }
         }
 
         @Override
@@ -123,7 +132,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             if (selectedVaccine != null) {
                 try {
                     model.increaseQuantity(selectedVaccine.getVaccine(), (int) quantitySpinnerModel.getValue());
-                } catch (IllegalArgumentException error) {
+                } catch (IllegalArgumentException | RemoteException error) {
                     JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -133,7 +142,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             if (selectedVaccine != null) {
                 try {
                     model.decreaseQuantity(selectedVaccine.getVaccine(), (int) quantitySpinnerModel.getValue());
-                } catch (IllegalArgumentException error) {
+                } catch (IllegalArgumentException | RemoteException error) {
                     JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -150,7 +159,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             if (newName != null) {
                 try {
                     model.createVaccine(newName);
-                } catch (IllegalArgumentException error) {
+                } catch (IllegalArgumentException | RemoteException error) {
                     JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while creating a new vaccine", JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -160,7 +169,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             final DisplayVaccine<VaccineClass> selectedVaccine = stockListView.getSelectedValue();
             try {
                 model.removeVaccine(selectedVaccine.getVaccine());
-            } catch (IllegalArgumentException error) {
+            } catch (IllegalArgumentException | RemoteException error) {
                 JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while deleting vaccine", JOptionPane.ERROR_MESSAGE);
             }
         });
@@ -186,7 +195,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         try {
             model.addListener(inventoryChangeListener);
             model.getVaccines().forEach(element -> stockListModel.addElement(new DisplayVaccine<>(element)));
-        } catch (IllegalArgumentException error) {
+        } catch (IllegalArgumentException | RemoteException error) {
             throw new AssertionError("Error during initialization", error);
         }
         frame.addWindowListener(new WindowAdapter() {
@@ -194,7 +203,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             public void windowClosed(WindowEvent e) {
                 try {
                     model.removeListener(inventoryChangeListener);
-                } catch (IllegalArgumentException error) {
+                } catch (IllegalArgumentException | RemoteException error) {
                     // the application will now terminate anyways
                     throw new AssertionError("Error during closing", error);
                 }
@@ -252,7 +261,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             vaccineName.setText(vaccine.getName());
             vaccineDescription.setText(vaccine.getDescription());
             vaccineQuantity.setText(String.valueOf(vaccine.getQuantity()));
-        } catch (IllegalArgumentException error) {
+            //added remote exception
+        } catch (IllegalArgumentException | RemoteException error) {
             clearDetails();
             JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while retrieving vaccine details", JOptionPane.ERROR_MESSAGE);
         }
@@ -299,7 +309,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         reloadButton.addActionListener(e -> SwingUtilities.invokeLater(() -> {
             try {
                 descriptionPane.setText(editedVaccine.getDescription());
-            } catch (IllegalArgumentException error) {
+                // added RemoteException
+            } catch (IllegalArgumentException | RemoteException error) {
                 descriptionPane.setText("");
                 JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while loading description", JOptionPane.ERROR_MESSAGE);
             }
@@ -310,8 +321,12 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                 editDescription(model, editedVaccine, descriptionPane.getText());
             }
         });
-
-        descriptionPane.setText(editedVaccine.getDescription());
+        // added try/catch for remote exception //TODO show error in gui
+        try {
+            descriptionPane.setText(editedVaccine.getDescription());
+        } catch (RemoteException re) {
+            System.out.println("Couldn't get description from remote object!");
+        }
 
         frame.setVisible(true);
         descriptionPane.requestFocus();
@@ -321,7 +336,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         SwingUtilities.invokeLater(() -> {
             try {
                 model.setDescription(editedVaccine, newDescription);
-            } catch (IllegalArgumentException error) {
+            } catch (IllegalArgumentException | RemoteException error) {
                 JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while editing description", JOptionPane.ERROR_MESSAGE);
             }
         });

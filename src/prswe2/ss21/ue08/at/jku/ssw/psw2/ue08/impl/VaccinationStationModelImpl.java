@@ -4,17 +4,20 @@ import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.InventoryChangeListener;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.VaccinationStationModel;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public final class VaccinationStationModelImpl implements VaccinationStationModel<VaccineImpl> {
+public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl> {
 
     private final List<VaccineImpl> vaccines;
     private final List<InventoryChangeListener<VaccineImpl>> listeners;
 
-    public VaccinationStationModelImpl() {
+    public VaccinationStationModelImpl() throws RemoteException {
+        super();
         vaccines = new ArrayList<>();
         listeners = new ArrayList<>();
     }
@@ -41,7 +44,14 @@ public final class VaccinationStationModelImpl implements VaccinationStationMode
         if (name == null) {
             throw new IllegalArgumentException("Invalid name");
         }
-        return vaccines.stream().filter(i -> name.equals(i.getName())).findAny().orElseThrow(() -> new NoSuchElementException("No vaccine with name " + name));
+        return vaccines.stream().filter(i -> {
+            try {
+                return name.equals(i.getName());
+            } catch (RemoteException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }).findAny().orElseThrow(() -> new NoSuchElementException("No vaccine with name " + name));
     }
 
     @Override
@@ -51,18 +61,27 @@ public final class VaccinationStationModelImpl implements VaccinationStationMode
         }
 
         for (Vaccine existingVaccine : vaccines) {
-            if (name.equals(existingVaccine.getName())) {
-                throw new IllegalArgumentException("Duplicate vaccine: " + name);
+            // added try/catch //TODO show error in gui
+            try {
+                if (name.equals(existingVaccine.getName())) {
+                    throw new IllegalArgumentException("Duplicate vaccine: " + name);
+                }
+            } catch (RemoteException re) {
+                System.out.println("Error retrieving vaccine name");
+            }
+            // added try/catch //TODO show error in gui
+            try {
+                final VaccineImpl vaccine = new VaccineImpl(name);
+                vaccines.add(vaccine);
+                fireVaccineAdded(vaccine);
+            } catch (RemoteException re) {
+                System.out.println("Couldn't create new vaccine");
             }
         }
-
-        final VaccineImpl vaccine = new VaccineImpl(name);
-        vaccines.add(vaccine);
-        fireVaccineAdded(vaccine);
     }
 
     @Override
-    public void setDescription(VaccineImpl vaccine, String description) throws IllegalArgumentException {
+    public void setDescription(VaccineImpl vaccine, String description) throws IllegalArgumentException, RemoteException {
         if (vaccine == null || description == null) {
             throw new IllegalArgumentException("Invalid change");
         }
@@ -72,7 +91,7 @@ public final class VaccinationStationModelImpl implements VaccinationStationMode
     }
 
     @Override
-    public void increaseQuantity(VaccineImpl vaccine, int increase) throws IllegalArgumentException {
+    public void increaseQuantity(VaccineImpl vaccine, int increase) throws IllegalArgumentException, RemoteException {
         if (vaccine == null) {
             throw new IllegalArgumentException("Invalid vaccine to change");
         } else if (increase < 0) {
@@ -92,7 +111,7 @@ public final class VaccinationStationModelImpl implements VaccinationStationMode
     }
 
     @Override
-    public void decreaseQuantity(VaccineImpl vaccine, int decrease) throws IllegalArgumentException {
+    public void decreaseQuantity(VaccineImpl vaccine, int decrease) throws IllegalArgumentException, RemoteException {
         if (decrease < 0) {
             throw new IllegalArgumentException("Invalid quantity decrease: " + decrease);
         } else if (decrease == 0) {
