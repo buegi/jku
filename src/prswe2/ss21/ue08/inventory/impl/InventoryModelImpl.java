@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
 public final class InventoryModelImpl extends UnicastRemoteObject implements InventoryModel<InventoryItemImpl> {
 
 	private final ExecutorService executor;
-	private static final long serialVersionUID = -6314019986993602545L;
+	private static final long serialVersionUID = 849550926131522335L;
 	private final List<InventoryItemImpl> items;
     private final List<InventoryChangeListener<InventoryItemImpl>> listeners;
 

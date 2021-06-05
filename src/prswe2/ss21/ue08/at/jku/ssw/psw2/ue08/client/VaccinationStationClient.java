@@ -40,7 +40,7 @@ public class VaccinationStationClient {
     private static void addVaccine(VaccinationStationModel<VaccineImpl> model, String name, String description, int quantity) throws RemoteException {
         model.createVaccine(name);
         VaccineImpl vaccine = model.getVaccine(name);
-        model.setDescription(vaccine, description);
-        model.increaseQuantity(vaccine, quantity);
+//        model.setDescription(vaccine, description);
+//        model.increaseQuantity(vaccine, quantity);
     }
 }

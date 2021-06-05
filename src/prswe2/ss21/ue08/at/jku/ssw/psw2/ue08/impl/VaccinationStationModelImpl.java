@@ -15,10 +15,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl> {
+public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl>  {
     private final ExecutorService executorService;
     @Serial
-    private static final long serialVersionUID = 8000268302792550781L;
+    private static final long serialVersionUID = 854519024145157814L;
     private final List<VaccineImpl> vaccines;
     private final List<InventoryChangeListener<VaccineImpl>> listeners;
 

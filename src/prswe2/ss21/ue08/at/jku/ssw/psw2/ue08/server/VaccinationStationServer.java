@@ -24,7 +24,7 @@ public class VaccinationStationServer {
             registry.bind(VACCINE_EXPORT_NAME, model);
             System.out.println("Server bound");
         } catch (Exception e) {
-            System.out.println("Couldn't initalize server");
+            System.out.println("Couldn't initialize server");
         }
     }
 

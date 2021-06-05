@@ -203,7 +203,6 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         // connect inventory model and display model
         final InventoryChangeListener<VaccineClass> inventoryChangeListener = new InventoryChangeListenerClient();
 
-
         try {
             model.addListener(inventoryChangeListener);
             model.getVaccines().forEach(element -> stockListModel.addElement(new DisplayVaccine<>(element)));
