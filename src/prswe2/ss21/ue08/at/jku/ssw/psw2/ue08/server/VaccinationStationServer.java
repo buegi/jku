@@ -1,7 +1,5 @@
 package prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.server;
 
-import java.rmi.AccessException;
-import java.rmi.NoSuchObjectException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;

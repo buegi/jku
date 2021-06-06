@@ -34,7 +34,7 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
                 try {
                     l.onVaccineAdded(addedVaccine);
                 } catch (RemoteException e) {
-                    System.out.println("Connection to a client lost by adding an item. Remove listener: " + l);
+                    System.out.println("Client connection lost. Remove listener: " + l);
                     listeners.remove(l);
                 }
             }).isDone();
@@ -47,7 +47,7 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
                 try {
                     l.onVaccineChanged(changedVaccine);
                 } catch (RemoteException e) {
-                    System.out.println("Connection to a client lost by changing an item. Remove listener: " + l);
+                    System.out.println("Client connection lost. Remove listener: " + l);
                     listeners.remove(l);
                 }
             });
@@ -63,7 +63,7 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
                 try {
                     l.onVaccineRemoved(removedVaccine);
                 } catch (RemoteException e) {
-                    System.out.println("Connection to a client lost by removing an item. Remove listener: " + l);
+                    System.out.println("Client connection lost. Remove listener: " + l);
                     listeners.remove(l);
                 }
             });
@@ -84,7 +84,7 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
             try {
                 return name.equals(i.getName());
             } catch (RemoteException e) {
-                System.out.println("Trouble while filtering the right item: " + e);
+                System.out.println("Error filtering item: " + e);
             }
             return false;
         }).findAny().orElseThrow(() -> new NoSuchElementException("No vaccine with name " + name));
