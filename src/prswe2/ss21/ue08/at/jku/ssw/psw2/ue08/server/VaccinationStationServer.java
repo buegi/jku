@@ -44,7 +44,6 @@ public class VaccinationStationServer {
                 terminate = true;
                 System.out.println("Server terminated");
             }
-
             try {
                 registry.unbind(REGISTRY_NAME);
                 UnicastRemoteObject.unexportObject(vaccinationModel, true);

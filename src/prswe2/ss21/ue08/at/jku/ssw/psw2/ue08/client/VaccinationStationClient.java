@@ -17,7 +17,6 @@ public class VaccinationStationClient {
 
     private static VaccinationStationModel<VaccineImpl> vaccinationModel;
 
-    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         try {
             Registry registry = LocateRegistry.getRegistry(SERVER_ADDRESS, SERVER_PORT);

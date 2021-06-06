@@ -25,12 +25,6 @@
     <list default="true" id="aec62a0e-e47a-445a-bf58-af92c29e1527" name="Default Changelist" comment="pr.swe2.ue08">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/client/VaccinationStationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/client/VaccinationStationClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/gui/VaccinationStationGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/gui/VaccinationStationGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccinationStationModelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/impl/VaccinationStationModelImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/InventoryChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/InventoryChangeListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/VaccinationStationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/VaccinationStationModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/Vaccine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/model/Vaccine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/server/VaccinationStationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prswe2/ss21/ue08/at/jku/ssw/psw2/ue08/server/VaccinationStationServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,13 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581097095402</updated>
-    </task>
-    <task id="LOCAL-00284" summary="pr.swe2.ue06">
-      <created>1620943616948</created>
-      <option name="number" value="00284" />
-      <option name="presentableId" value="LOCAL-00284" />
-      <option name="project" value="LOCAL" />
-      <updated>1620943616948</updated>
     </task>
     <task id="LOCAL-00285" summary="pr.swe2.ue06">
       <created>1620943786314</created>
@@ -552,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622942401099</updated>
     </task>
-    <option name="localTasksCounter" value="333" />
+    <task id="LOCAL-00333" summary="pr.swe2.ue08">
+      <created>1622943734384</created>
+      <option name="number" value="00333" />
+      <option name="presentableId" value="LOCAL-00333" />
+      <option name="project" value="LOCAL" />
+      <updated>1622943734384</updated>
+    </task>
+    <option name="localTasksCounter" value="334" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
