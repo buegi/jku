@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 /**
  * This class describes a data model for the inventory system of a vaccination station. It manages different kinds
  * of {@link VaccineClass vaccines} and the quantity available for vaccination of each. Changes to this model can be
- * observed using appropriate {@link at.jku.ssw.psw2.ue08.sampleSolution.model.InventoryChangeListener change listeners}.
+ * observed using appropriate {@link prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.InventoryChangeListener change listeners}.
  *
  * @param <VaccineClass> type of vaccines managed by this model
  */
@@ -42,7 +42,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
     /**
      * Changes the {@link Vaccine#getDescription() description} of a vaccine.
      *
-     * @param vaccine     the vaccine to modify
+     * @param name        the vaccine to modify
      * @param description the new description
      * @throws IllegalArgumentException if the new description is null
      */
@@ -51,7 +51,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
     /**
      * Increases the number of stocked doses of a vaccine.
      *
-     * @param vaccine  the vaccine whose stock to increase
+     * @param name     the vaccine whose stock to increase
      * @param increase the number of added doses
      * @throws IllegalArgumentException if the increase is negative or the increase would exceed the capacity of the station
      */
@@ -60,7 +60,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
     /**
      * Decreases the number of stocked doses of a vaccine.
      *
-     * @param vaccine  the vaccine whose stock to decrease
+     * @param name     the vaccine whose stock to decrease
      * @param decrease the number of removed doses
      * @throws IllegalArgumentException if the decrease is negative or higher than the number of currently stocked vaccines
      */
@@ -69,7 +69,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
     /**
      * Deletes the given vaccine from the inventory system.
      *
-     * @param vaccine the vaccine to be removed
+     * @param name the vaccine to be removed
      * @throws IllegalArgumentException if the given name is null
      */
     void removeVaccine(String name) throws IllegalArgumentException, RemoteException;

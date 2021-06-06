@@ -24,18 +24,16 @@ public class VaccinationStationClient {
             vaccinationModel = (VaccinationStationModel<VaccineImpl>) registry.lookup(REGISTRY_NAME);
             insertExampleData(vaccinationModel);
             VaccinationStationGUI.startGui(vaccinationModel);
-        } catch (RemoteException e) {
+        } catch (RemoteException e1) {
             System.out.println("client <-> server connection error");
-        } catch (NotBoundException e) {
+        } catch (NotBoundException e1) {
             System.out.println("client registry error");
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e1) {
             try {
                 // start gui, even if example date is already inserted
                 VaccinationStationGUI.startGui(vaccinationModel);
-            } catch (RemoteException error) {
+            } catch (RemoteException e2) {
                 System.out.println("client <-> server connection error");
-                System.out.println(error);
             }
         }
     }
@@ -51,9 +49,8 @@ public class VaccinationStationClient {
         try {
             model.createVaccine(name);
             final Vaccine vaccine = model.getVaccine(name);
-            System.out.println(vaccine.getClass());
-            //model.setDescription(vaccine, description);
-            // model.increaseQuantity(vaccine, quantity);
+            model.setDescription(vaccine.getName(), description);
+            model.increaseQuantity(vaccine.getName(), quantity);
         } catch (IllegalArgumentException | RemoteException e) {
             System.out.println("Error inserting example data");
         }

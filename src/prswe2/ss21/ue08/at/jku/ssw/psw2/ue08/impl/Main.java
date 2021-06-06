@@ -4,6 +4,8 @@ import java.rmi.RemoteException;
 
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.gui.VaccinationStationGUI;
 
+// old main method can be ignored after rework to client/server rmi solution
+
 public class Main {
     public static void main(String[] args) throws RemoteException {
         final VaccinationStationModelImpl model = new VaccinationStationModelImpl();

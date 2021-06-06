@@ -4,6 +4,7 @@ import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.InventoryChangeListener;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.VaccinationStationModel;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
 
+import java.io.Serial;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ import java.util.concurrent.Executors;
 public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl> {
 
     private final ExecutorService executor;
+    @Serial
     private static final long serialVersionUID = 6016326677308718480L;
     private final List<VaccineImpl> vaccines;
     private final List<InventoryChangeListener<VaccineImpl>> listeners;
@@ -29,45 +31,39 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
     }
 
     private void fireVaccineAdded(VaccineImpl addedVaccine) {
-        listeners.forEach(l -> {
-            executor.submit(() -> {
-                try {
-                    l.onVaccineAdded(addedVaccine);
-                } catch (RemoteException e) {
-                    System.out.println("Client connection lost. Remove listener: " + l);
-                    listeners.remove(l);
-                }
-            }).isDone();
-        });
+        listeners.forEach(l -> executor.submit(() -> {
+            try {
+                l.onVaccineAdded(addedVaccine);
+            } catch (RemoteException e) {
+                System.out.println("Client connection lost. Remove listener: " + l);
+                listeners.remove(l);
+            }
+        }).isDone());
     }
 
     private void fireVaccineChanged(VaccineImpl changedVaccine) {
-        listeners.forEach(l -> {
-            executor.submit(() -> {
-                try {
-                    l.onVaccineChanged(changedVaccine);
-                } catch (RemoteException e) {
-                    System.out.println("Client connection lost. Remove listener: " + l);
-                    listeners.remove(l);
-                }
-            });
-        });
+        listeners.forEach(l -> executor.submit(() -> {
+            try {
+                l.onVaccineChanged(changedVaccine);
+            } catch (RemoteException e) {
+                System.out.println("Client connection lost. Remove listener: " + l);
+                listeners.remove(l);
+            }
+        }));
 
         System.gc();
         System.runFinalization();
     }
 
     private void fireVaccineRemoved(VaccineImpl removedVaccine) {
-        listeners.forEach(l -> {
-            executor.submit(() -> {
-                try {
-                    l.onVaccineRemoved(removedVaccine);
-                } catch (RemoteException e) {
-                    System.out.println("Client connection lost. Remove listener: " + l);
-                    listeners.remove(l);
-                }
-            });
-        });
+        listeners.forEach(l -> executor.submit(() -> {
+            try {
+                l.onVaccineRemoved(removedVaccine);
+            } catch (RemoteException e) {
+                System.out.println("Client connection lost. Remove listener: " + l);
+                listeners.remove(l);
+            }
+        }));
     }
 
     @Override
@@ -112,7 +108,8 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
         setDescription(getVaccine(editDescriptionItemName), description);
 
     }
-    public void setDescription(VaccineImpl vaccine, String description) throws IllegalArgumentException, RemoteException {
+
+    private void setDescription(VaccineImpl vaccine, String description) throws IllegalArgumentException, RemoteException {
         if (vaccine == null || description == null) {
             throw new IllegalArgumentException("Invalid change");
         }

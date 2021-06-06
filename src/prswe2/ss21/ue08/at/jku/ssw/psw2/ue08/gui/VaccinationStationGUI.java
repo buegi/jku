@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.Serial;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -132,9 +133,9 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                     String name = selectedVaccine.getVaccine().getName();
                     model.increaseQuantity(name, (int) quantitySpinnerModel.getValue());
                 } catch (IllegalArgumentException error) {
-                    JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, error.getMessage(), "Illegal Argument Exception: change quantity", JOptionPane.ERROR_MESSAGE);
                 } catch (RemoteException e1) {
-                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Exception: change quantity", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -145,9 +146,9 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                     String name = selectedVaccine.getVaccine().getName();
                     model.decreaseQuantity(name, (int) quantitySpinnerModel.getValue());
                 } catch (IllegalArgumentException error) {
-                    JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, error.getMessage(), "Illegal Argument Exception: change quantity", JOptionPane.ERROR_MESSAGE);
                 } catch (RemoteException e1) {
-                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Exception: change quantity", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -164,9 +165,9 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                 try {
                     model.createVaccine(newName);
                 } catch (IllegalArgumentException error) {
-                    JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while creating a new vaccine", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, error.getMessage(), "Illegal Argument Exception: create new vaccine", JOptionPane.ERROR_MESSAGE);
                 } catch (RemoteException e1) {
-                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Error while creating a new vaccine", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Exception: create new vaccine", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -177,15 +178,16 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                 String name = selectedVaccine.getVaccine().getName();
                 model.removeVaccine(name);
             } catch (IllegalArgumentException error) {
-                JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while deleting vaccine", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, error.getMessage(), "Illegal Argument Exception: delete vaccine", JOptionPane.ERROR_MESSAGE);
             } catch (RemoteException e1) {
-                JOptionPane.showMessageDialog(frame, e1.getMessage(), "Error while deleting vaccine", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Exception: delete vaccine", JOptionPane.ERROR_MESSAGE);
             }
         });
 
         // connect inventory model and display model
         class InventoryChangeListenerClient extends UnicastRemoteObject implements InventoryChangeListener<VaccineClass> {
 
+            @Serial
             private static final long serialVersionUID = 3206747352923358825L;
 
             protected InventoryChangeListenerClient() throws RemoteException {
@@ -207,7 +209,6 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                 stockListModel.removeElement(new DisplayVaccine<>(removedVaccine));
             }
         }
-        ;
 
         final InventoryChangeListener<VaccineClass> inventoryChangeListener = new InventoryChangeListenerClient();
 
@@ -215,7 +216,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             model.addListener(inventoryChangeListener);
             model.getVaccines().forEach(element -> stockListModel.addElement(new DisplayVaccine<>(element)));
         } catch (IllegalArgumentException error) {
-            throw new AssertionError("Error during initialization", error);
+            throw new AssertionError("Assertion Error: init", error);
         }
         frame.addWindowListener(new WindowAdapter() {
             @Override
@@ -223,11 +224,9 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                 try {
                     model.removeListener(inventoryChangeListener);
                 } catch (IllegalArgumentException error) {
-                    // the application will now terminate anyways
-                    throw new AssertionError("Error during closing", error);
+                    throw new AssertionError("Assertion Error: close", error);
                 } catch (RemoteException e1) {
-                    // TODO Auto-generated catch block
-                    e1.printStackTrace();
+                    System.out.println("Remote Exception: close");
                 }
             }
         });
@@ -283,21 +282,21 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             try {
                 vaccineName.setText(vaccine.getName());
             } catch (RemoteException error) {
-                JOptionPane.showMessageDialog(frame, error.getMessage(), "Remote Error while setting item name", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, error.getMessage(), "Remote Exception: set vaccine name", JOptionPane.ERROR_MESSAGE);
             }
             try {
                 vaccineDescription.setText(vaccine.getDescription());
             } catch (RemoteException error) {
-                JOptionPane.showMessageDialog(frame, error.getMessage(), "Remote Error while setting item description", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, error.getMessage(), "Remote Exception: set vaccine description", JOptionPane.ERROR_MESSAGE);
             }
             try {
                 vaccineQuantity.setText(String.valueOf(vaccine.getQuantity()));
             } catch (RemoteException error) {
-                JOptionPane.showMessageDialog(frame, error.getMessage(), "Remote Error while setting item quantity", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, error.getMessage(), "Remote Exception: set vaccine quantity", JOptionPane.ERROR_MESSAGE);
             }
         } catch (IllegalArgumentException error) {
             clearDetails();
-            JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while retrieving vaccine details", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, error.getMessage(), "Remote Exception: retrieve vaccine details", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -344,11 +343,11 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
                 try {
                     descriptionPane.setText(editedVaccine.getDescription());
                 } catch (RemoteException e1) {
-                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Error while setting item description", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Exception: set vaccine description", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (IllegalArgumentException error) {
                 descriptionPane.setText("");
-                JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while loading description", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, error.getMessage(), "Illegal Argument Exception: load vaccine description", JOptionPane.ERROR_MESSAGE);
             }
         }));
         frame.addWindowListener(new WindowAdapter() {
@@ -361,7 +360,7 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         try {
             descriptionPane.setText(editedVaccine.getDescription());
         } catch (RemoteException e1) {
-            JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Error while setting item description", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, e1.getMessage(), "Remote Error: set vaccine description", JOptionPane.ERROR_MESSAGE);
 
         }
 
@@ -373,13 +372,13 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         SwingUtilities.invokeLater(() -> {
             try {
                 try {
-                    String editDescriptionItemName = editedVaccine.getName();
-                    model.setDescription(editDescriptionItemName, newDescription);
+                    String name = editedVaccine.getName();
+                    model.setDescription(name, newDescription);
                 } catch (RemoteException e) {
-                    JOptionPane.showMessageDialog(frame, e.getMessage(), "Remote Error while editing description", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, e.getMessage(), "Remote Error: edit description", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (IllegalArgumentException error) {
-                JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while editing description", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(frame, error.getMessage(), "Illegal Argument Exception: edit description", JOptionPane.ERROR_MESSAGE);
             }
         });
     }

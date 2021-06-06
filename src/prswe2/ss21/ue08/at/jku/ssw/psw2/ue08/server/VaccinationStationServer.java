@@ -24,7 +24,7 @@ public class VaccinationStationServer {
             registry = LocateRegistry.createRegistry(SERVER_PORT);
             registry.bind(REGISTRY_NAME, vaccinationModel);
         } catch (Exception e) {
-            System.out.println("Error initializing model/registry");
+            System.out.println("Exception: init model and/or registry");
         }
     }
 
@@ -50,7 +50,7 @@ public class VaccinationStationServer {
                 UnicastRemoteObject.unexportObject(vaccinationModel, true);
                 UnicastRemoteObject.unexportObject(registry, true);
             } catch (RemoteException | NotBoundException e) {
-                e.printStackTrace();
+                System.out.println("Remote Exception: unbind and/or unexport");
             }
             sc.close();
             System.exit(0);
