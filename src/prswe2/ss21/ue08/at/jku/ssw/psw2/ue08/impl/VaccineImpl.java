@@ -1,14 +1,13 @@
 package prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl;
 
-import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
-
-import java.io.Serial;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
+import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
+
 public final class VaccineImpl extends UnicastRemoteObject implements Vaccine {
-    @Serial
-    private static final long serialVersionUID = 4140607777083645975L;
+
+    private static final long serialVersionUID = 1308670266308121463L;
 
     private final String name;
 

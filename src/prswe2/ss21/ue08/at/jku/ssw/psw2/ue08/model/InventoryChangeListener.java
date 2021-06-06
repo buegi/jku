@@ -8,8 +8,6 @@ import java.rmi.RemoteException;
  *
  * @param <VaccineClass> the implementation class of Vaccines in the observed model
  */
-
-
 public interface InventoryChangeListener<VaccineClass extends Vaccine> extends Remote {
 
     /**

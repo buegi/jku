@@ -1,30 +1,32 @@
 package prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.server;
 
-import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.VaccinationStationModelImpl;
-import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.VaccineImpl;
-import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.VaccinationStationModel;
-
-import static prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.server.Constants.*;
-
-import java.rmi.*;
+import java.rmi.AccessException;
+import java.rmi.NoSuchObjectException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
 
+import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.VaccinationStationModelImpl;
+import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.impl.VaccineImpl;
+import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.VaccinationStationModel;
+
+import static prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.constants.Constants.*;
+
 public class VaccinationStationServer {
 
-    private VaccinationStationModel<VaccineImpl> model;
+    private VaccinationStationModel<VaccineImpl> vaccinationModel;
     private Registry registry;
 
-    public VaccinationStationServer() {
+    private VaccinationStationServer() {
         try {
-            model = new VaccinationStationModelImpl();
+            vaccinationModel = new VaccinationStationModelImpl();
             registry = LocateRegistry.createRegistry(SERVER_PORT);
-            registry.bind(VACCINE_EXPORT_NAME, model);
-            System.out.println("Server bound");
+            registry.bind(REGISTRY_NAME, vaccinationModel);
         } catch (Exception e) {
-            System.out.println("Couldn't initialize server");
+            System.out.println("Error initializing model/registry");
         }
     }
 
@@ -33,8 +35,8 @@ public class VaccinationStationServer {
         server.start();
     }
 
-    public void start() {
-        Thread termThread = new Thread(() -> {
+    private void start() {
+        Thread terminateThread = new Thread(() -> {
             System.out.println("Server started");
             System.out.println("[ENTER] terminates server");
             Scanner sc = new Scanner(System.in);
@@ -44,9 +46,10 @@ public class VaccinationStationServer {
                 terminate = true;
                 System.out.println("Server terminated");
             }
+
             try {
-                registry.unbind(VACCINE_EXPORT_NAME);
-                UnicastRemoteObject.unexportObject(model, true);
+                registry.unbind(REGISTRY_NAME);
+                UnicastRemoteObject.unexportObject(vaccinationModel, true);
                 UnicastRemoteObject.unexportObject(registry, true);
             } catch (RemoteException | NotBoundException e) {
                 e.printStackTrace();
@@ -54,6 +57,6 @@ public class VaccinationStationServer {
             sc.close();
             System.exit(0);
         });
-        termThread.start();
+        terminateThread.start();
     }
 }

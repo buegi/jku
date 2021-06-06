@@ -4,7 +4,6 @@ import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.InventoryChangeListener;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.VaccinationStationModel;
 import prswe2.ss21.ue08.at.jku.ssw.psw2.ue08.model.Vaccine;
 
-import java.io.Serial;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -15,27 +14,27 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl>  {
-    private final ExecutorService executorService;
-    @Serial
-    private static final long serialVersionUID = 854519024145157814L;
+public final class VaccinationStationModelImpl extends UnicastRemoteObject implements VaccinationStationModel<VaccineImpl> {
+
+    private final ExecutorService executor;
+    private static final long serialVersionUID = 6016326677308718480L;
     private final List<VaccineImpl> vaccines;
     private final List<InventoryChangeListener<VaccineImpl>> listeners;
 
     public VaccinationStationModelImpl() throws RemoteException {
         super();
-        this.executorService = Executors.newCachedThreadPool();
+        this.executor = Executors.newCachedThreadPool();
         vaccines = new CopyOnWriteArrayList<>();
         listeners = new CopyOnWriteArrayList<>();
     }
 
     private void fireVaccineAdded(VaccineImpl addedVaccine) {
         listeners.forEach(l -> {
-            executorService.submit(() -> {
+            executor.submit(() -> {
                 try {
                     l.onVaccineAdded(addedVaccine);
                 } catch (RemoteException e) {
-                    System.out.println("Connection to a client lost");
+                    System.out.println("Connection to a client lost by adding an item. Remove listener: " + l);
                     listeners.remove(l);
                 }
             }).isDone();
@@ -44,26 +43,27 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
 
     private void fireVaccineChanged(VaccineImpl changedVaccine) {
         listeners.forEach(l -> {
-            executorService.submit(() -> {
+            executor.submit(() -> {
                 try {
                     l.onVaccineChanged(changedVaccine);
                 } catch (RemoteException e) {
-                    System.out.println("Connection to a client lost");
+                    System.out.println("Connection to a client lost by changing an item. Remove listener: " + l);
                     listeners.remove(l);
                 }
             });
         });
+
         System.gc();
         System.runFinalization();
     }
 
     private void fireVaccineRemoved(VaccineImpl removedVaccine) {
-        executorService.submit(() -> {
-            listeners.forEach(l -> {
+        listeners.forEach(l -> {
+            executor.submit(() -> {
                 try {
                     l.onVaccineRemoved(removedVaccine);
                 } catch (RemoteException e) {
-                    System.out.println("Connection to a client lost");
+                    System.out.println("Connection to a client lost by removing an item. Remove listener: " + l);
                     listeners.remove(l);
                 }
             });
@@ -84,7 +84,7 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
             try {
                 return name.equals(i.getName());
             } catch (RemoteException e) {
-                System.out.println("Cannot find vaccine");
+                System.out.println("Trouble while filtering the right item: " + e);
             }
             return false;
         }).findAny().orElseThrow(() -> new NoSuchElementException("No vaccine with name " + name));
@@ -93,17 +93,18 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
     @Override
     public void createVaccine(String name) throws IllegalArgumentException, RemoteException {
         if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Invalid name. Create vaccine failed");
+            throw new IllegalArgumentException("Invalid name");
         }
+
         for (Vaccine existingVaccine : vaccines) {
             if (name.equals(existingVaccine.getName())) {
                 throw new IllegalArgumentException("Duplicate vaccine: " + name);
             }
-            final VaccineImpl vaccine = new VaccineImpl(name);
-            vaccines.add(vaccine);
-            fireVaccineAdded(vaccine);
-            System.out.println("Vaccine added:" + name);
         }
+
+        final VaccineImpl vaccine = new VaccineImpl(name);
+        vaccines.add(vaccine);
+        fireVaccineAdded(vaccine);
     }
 
     @Override
