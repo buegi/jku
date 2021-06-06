@@ -21,7 +21,7 @@ public class Main {
     private static void addVaccine(VaccinationStationModelImpl model, String name, String description, int quantity) throws IllegalArgumentException, RemoteException {
         model.createVaccine(name);
         final VaccineImpl vaccine = model.getVaccine(name);
-        model.setDescription(vaccine, description);
-        model.increaseQuantity(vaccine, quantity);
+        //model.setDescription(vaccine, description);
+        //model.increaseQuantity(vaccine, quantity);
     }
 }

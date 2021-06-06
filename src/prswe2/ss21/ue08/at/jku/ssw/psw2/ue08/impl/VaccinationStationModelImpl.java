@@ -108,6 +108,10 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
     }
 
     @Override
+    public void setDescription(String editDescriptionItemName, String description) throws IllegalArgumentException, RemoteException {
+        setDescription(getVaccine(editDescriptionItemName), description);
+
+    }
     public void setDescription(VaccineImpl vaccine, String description) throws IllegalArgumentException, RemoteException {
         if (vaccine == null || description == null) {
             throw new IllegalArgumentException("Invalid change");
@@ -117,7 +121,11 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
     }
 
     @Override
-    public void increaseQuantity(VaccineImpl vaccine, int increase) throws IllegalArgumentException, RemoteException {
+    public void increaseQuantity(String name, int increase) throws IllegalArgumentException, RemoteException {
+        increaseQuantity(getVaccine(name), increase);
+    }
+
+    private void increaseQuantity(VaccineImpl vaccine, int increase) throws IllegalArgumentException, RemoteException {
         if (vaccine == null) {
             throw new IllegalArgumentException("Invalid vaccine to change");
         } else if (increase < 0) {
@@ -136,8 +144,11 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
         }
     }
 
-    @Override
-    public void decreaseQuantity(VaccineImpl vaccine, int decrease) throws IllegalArgumentException, RemoteException {
+    public void decreaseQuantity(String name, int decrease) throws IllegalArgumentException, RemoteException {
+        decreaseQuantity(getVaccine(name), decrease);
+    }
+
+    private void decreaseQuantity(VaccineImpl vaccine, int decrease) throws IllegalArgumentException, RemoteException {
         if (decrease < 0) {
             throw new IllegalArgumentException("Invalid quantity decrease: " + decrease);
         } else if (decrease == 0) {
@@ -153,7 +164,11 @@ public final class VaccinationStationModelImpl extends UnicastRemoteObject imple
     }
 
     @Override
-    public void removeVaccine(VaccineImpl vaccine) throws IllegalArgumentException, RemoteException {
+    public void removeVaccine(String name) throws IllegalArgumentException, RemoteException {
+        removeVaccine(getVaccine(name));
+    }
+
+    private void removeVaccine(VaccineImpl vaccine) throws IllegalArgumentException, RemoteException {
         final boolean removed = vaccines.remove(vaccine);
         if (removed) {
             fireVaccineRemoved(vaccine);

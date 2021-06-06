@@ -46,7 +46,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
      * @param description the new description
      * @throws IllegalArgumentException if the new description is null
      */
-    void setDescription(VaccineClass vaccine, String description) throws IllegalArgumentException, RemoteException;
+    void setDescription(String name, String description) throws IllegalArgumentException, RemoteException;
 
     /**
      * Increases the number of stocked doses of a vaccine.
@@ -55,7 +55,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
      * @param increase the number of added doses
      * @throws IllegalArgumentException if the increase is negative or the increase would exceed the capacity of the station
      */
-    void increaseQuantity(VaccineClass vaccine, int increase) throws IllegalArgumentException, RemoteException;
+    void increaseQuantity(String name, int increase) throws IllegalArgumentException, RemoteException;
 
     /**
      * Decreases the number of stocked doses of a vaccine.
@@ -64,7 +64,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
      * @param decrease the number of removed doses
      * @throws IllegalArgumentException if the decrease is negative or higher than the number of currently stocked vaccines
      */
-    void decreaseQuantity(VaccineClass vaccine, int decrease) throws IllegalArgumentException, RemoteException;
+    void decreaseQuantity(String name, int decrease) throws IllegalArgumentException, RemoteException;
 
     /**
      * Deletes the given vaccine from the inventory system.
@@ -72,7 +72,7 @@ public interface VaccinationStationModel<VaccineClass extends Vaccine> extends R
      * @param vaccine the vaccine to be removed
      * @throws IllegalArgumentException if the given name is null
      */
-    void removeVaccine(VaccineClass vaccine) throws IllegalArgumentException, RemoteException;
+    void removeVaccine(String name) throws IllegalArgumentException, RemoteException;
 
     /**
      * Adds a listener that is invoked when vaccines are added to or removed from this model.

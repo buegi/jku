@@ -51,6 +51,7 @@ public class VaccinationStationClient {
         try {
             model.createVaccine(name);
             final Vaccine vaccine = model.getVaccine(name);
+            System.out.println(vaccine.getClass());
             //model.setDescription(vaccine, description);
             // model.increaseQuantity(vaccine, quantity);
         } catch (IllegalArgumentException | RemoteException e) {

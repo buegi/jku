@@ -129,7 +129,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             final DisplayVaccine<VaccineClass> selectedVaccine = stockListView.getSelectedValue();
             if (selectedVaccine != null) {
                 try {
-                    model.increaseQuantity(selectedVaccine.getVaccine(), (int) quantitySpinnerModel.getValue());
+                    String name = selectedVaccine.getVaccine().getName();
+                    model.increaseQuantity(name, (int) quantitySpinnerModel.getValue());
                 } catch (IllegalArgumentException error) {
                     JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
                 } catch (RemoteException e1) {
@@ -141,7 +142,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
             final DisplayVaccine<VaccineClass> selectedVaccine = stockListView.getSelectedValue();
             if (selectedVaccine != null) {
                 try {
-                    model.decreaseQuantity(selectedVaccine.getVaccine(), (int) quantitySpinnerModel.getValue());
+                    String name = selectedVaccine.getVaccine().getName();
+                    model.decreaseQuantity(name, (int) quantitySpinnerModel.getValue());
                 } catch (IllegalArgumentException error) {
                     JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while changing quantity", JOptionPane.ERROR_MESSAGE);
                 } catch (RemoteException e1) {
@@ -172,7 +174,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         deleteVaccineButton.addActionListener(e -> {
             final DisplayVaccine<VaccineClass> selectedVaccine = stockListView.getSelectedValue();
             try {
-                model.removeVaccine(selectedVaccine.getVaccine());
+                String name = selectedVaccine.getVaccine().getName();
+                model.removeVaccine(name);
             } catch (IllegalArgumentException error) {
                 JOptionPane.showMessageDialog(frame, error.getMessage(), "Error while deleting vaccine", JOptionPane.ERROR_MESSAGE);
             } catch (RemoteException e1) {
@@ -370,7 +373,8 @@ public final class VaccinationStationGUI<VaccineClass extends Vaccine> {
         SwingUtilities.invokeLater(() -> {
             try {
                 try {
-                    model.setDescription(editedVaccine, newDescription);
+                    String editDescriptionItemName = editedVaccine.getName();
+                    model.setDescription(editDescriptionItemName, newDescription);
                 } catch (RemoteException e) {
                     JOptionPane.showMessageDialog(frame, e.getMessage(), "Remote Error while editing description", JOptionPane.ERROR_MESSAGE);
                 }
